@@ -1,7 +1,9 @@
 ## Hoofdstuk 2: Afbeeldingen, Links & DevTools
 
 ### Leerdoelen
+
 Na deze les kan de student:
+
 - Afbeeldingen toevoegen aan een webpagina
 - Links maken naar andere websites
 - DevTools gebruiken om HTML te inspecteren
@@ -10,17 +12,20 @@ Na deze les kan de student:
 ### Lesopbouw (90 minuten)
 
 **1. Terugblik & Huiswerk bespreken (10 min)**
+
 - Vraag wie het gelukt is
 - Bespreek veelgemaakte fouten (vergeten tags te sluiten, verkeerde nesting)
 
 **2. Afbeeldingen Toevoegen (25 min)**
+
 - **Uitleg:** Waarom afbeeldingen?
   - Maakt pagina interessanter
   - Vertelt meer over je verhaal
 
 - **Het `<img>` element:**
+
   ```html
-  <img src="images/foto.jpg" alt="Een foto van mij">
+  <img src="images/foto.jpg" alt="Een foto van mij" />
   ```
 
 - **Attributen uitleggen:**
@@ -38,11 +43,13 @@ Na deze les kan de student:
   - Vergeten alt-attribuut
 
 **3. Links Maken (20 min)**
+
 - **Uitleg:** Het 'HyperText' deel van HTML
   - Links verbinden pagina's
   - Navigatie door het internet
 
 - **Het `<a>` element:**
+
   ```html
   <a href="https://www.youtube.com">Mijn favoriete website</a>
   ```
@@ -54,11 +61,17 @@ Na deze les kan de student:
 - **Oefening:** Studenten voegen links toe:
   ```html
   <h2>Mijn Favoriete Websites</h2>
-  <p>Ik vind <a href="https://www.youtube.com">YouTube</a> een leuke website.</p>
-  <p>Voor mijn studie gebruik ik vaak <a href="https://www.w3schools.com">W3Schools</a>.</p>
+  <p>
+    Ik vind <a href="https://www.youtube.com">YouTube</a> een leuke website.
+  </p>
+  <p>
+    Voor mijn studie gebruik ik vaak
+    <a href="https://www.w3schools.com">W3Schools</a>.
+  </p>
   ```
 
 **4. DevTools Introductie (30 min)**
+
 - **Wat zijn DevTools?**
   - Gereedschap voor ontwikkelaars
   - Ingebouwd in elke browser
@@ -89,11 +102,14 @@ Na deze les kan de student:
   - Bekijk wat er in het `src` attribuut staat bij afbeeldingen
 
 **5. Afronding (5 min)**
+
 - Vragen beantwoorden
 - Preview volgende week: we gaan onze pagina mooi maken met kleuren!
 
-### Huiswerk
+### Opdracht
+
 Voeg toe aan je pagina van vorige week:
+
 - Minstens 2 afbeeldingen (in de juiste map!)
 - Minstens 3 links naar websites die jou interesseren
 - Gebruik DevTools om een website naar keuze te inspecteren en schrijf op:
@@ -101,4 +117,3 @@ Voeg toe aan je pagina van vorige week:
   - Hoeveel `<h1>` elementen de pagina heeft
 
 ---
-
