@@ -11,7 +11,7 @@ Na deze les kan de student:
 
 ### Lesopbouw
 
-**1. Terugblik & Huiswerk bespreken**
+**1. Terugblik **
 
 - Vraag wie het gelukt is
 - Bespreek veelgemaakte fouten (vergeten tags te sluiten, verkeerde nesting)

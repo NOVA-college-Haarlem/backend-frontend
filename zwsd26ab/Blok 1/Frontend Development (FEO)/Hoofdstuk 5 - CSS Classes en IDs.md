@@ -152,7 +152,7 @@ Na deze les kan de student:
 - Vragen?
 - Volgende week: Box model!
 
-### Huiswerk
+### Opdracht
 
 Herschrijf je hobby-pagina van week 4:
 
@@ -163,7 +163,7 @@ Herschrijf je hobby-pagina van week 4:
 
 **Extra uitdaging:**
 
-- Maak een class "button" voor je links die er als knoppen uitzien
+- Maak een class "link-button" voor je links die er als knoppen uitzien
 - Combineer classes (bijv. class="text large important")
 - Gebruik een ID voor je footer
 

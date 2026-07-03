@@ -113,7 +113,7 @@ Na deze les kan de student:
 - Voor content die op zichzelf kan staan
 - Bijvoorbeeld: blog posts, nieuwsartikelen, comments
 
-**`<footer>` - De voet**
+**`<footer>` - De footer**
 
 ```html
 <footer>
@@ -189,7 +189,7 @@ Na deze les kan de student:
     </main>
 
     <footer>
-      <p>&copy; 2024 Jan de Vries. Alle rechten voorbehouden.</p>
+      <p>&copy; 2026 Arthur Dent. Alle rechten voorbehouden.</p>
     </footer>
   </body>
 </html>
@@ -208,13 +208,14 @@ Na deze les kan de student:
 
 **Slecht voorbeeld:**
 
+<!-- prettier-ignore -->
 ```html
 <header>
-  <h1>Titel</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Over</a>
-  </nav>
+<h1>Titel</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#">Over</a>
+</nav>
 </header>
 ```
 
@@ -247,16 +248,17 @@ Na deze les kan de student:
 **Oefening:**
 Geef studenten deze rommelige code om te fixen:
 
+<!-- prettier-ignore -->
 ```html
 <header>
-  <h1>Website</h1>
-  <nav><a href="#">Home</a> <a href="#">Over</a></nav>
+<h1>Website</h1>
+<nav><a href="#">Home</a> <a href="#">Over</a></nav>
 </header>
 <main>
-  <section>
-    <h2>Sectie</h2>
-    <p>Tekst</p>
-  </section>
+<section>
+<h2>Sectie</h2>
+<p>Tekst</p>
+</section>
 </main>
 ```
 
@@ -305,7 +307,7 @@ Herschrijf je hobby-pagina met semantische HTML:
 - Samenvatting: Semantische HTML maakt je code begrijpelijk
 - Volgende week: Projectweek 2!
 
-### Huiswerk
+### Opdracht
 
 1. **Herschrijf je hobby-pagina** met alle semantische elementen:
    - `<header>` met navigatie

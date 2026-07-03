@@ -150,7 +150,7 @@ Laat studenten experimenteren:
 - Volgende week: Project week!
 - Vragen?
 
-### Huiswerk
+### Opdracht
 
 1. Maak je pagina mooi met CSS:
    - Kies een mooie achtergrondkleur

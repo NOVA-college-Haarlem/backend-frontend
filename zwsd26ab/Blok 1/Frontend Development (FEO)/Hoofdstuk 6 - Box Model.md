@@ -57,27 +57,6 @@ Teken op het bord of laat diagram zien:
 }
 ```
 
-**Verschillende kanten:**
-
-```css
-.card {
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-}
-
-/* Shorthand (boven rechts onder links - kloksgewijs): */
-.card {
-  padding: 10px 20px 10px 20px;
-}
-
-/* Nog korter (boven/onder rechts/links): */
-.card {
-  padding: 10px 20px;
-}
-```
-
 **Oefening:**
 
 ```html
@@ -146,22 +125,6 @@ Maak kaartjes met verschillende borders en probeer combinaties met padding.
 - Ruimte BUITEN het element
 - Duwt andere elementen weg
 - Is NIET deel van de achtergrondkleur
-
-**Voorbeelden:**
-
-```css
-.spacer {
-  margin: 20px;
-}
-
-.top-only {
-  margin-top: 30px;
-}
-
-.bottom-only {
-  margin-bottom: 15px;
-}
-```
 
 **Centreren met margin:**
 
@@ -236,7 +199,7 @@ Maak "kaartjes":
 - Vragen?
 - Volgende week: Semantische HTML!
 
-### Huiswerk
+### Opdracht
 
 Voeg toe aan je hobby-pagina:
 
@@ -271,7 +234,6 @@ Voeg toe aan je hobby-pagina:
 - Maak het verschil tussen padding en margin duidelijk met achtergrondkleuren
 - Geef praktische voorbeelden: "Een kaartje heeft altijd padding en margin"
 - Laat studenten professionele websites inspecteren - wat zien ze?
-- Herhaal de shorthand notaties meerdere keren (top, right, bottom, left)
 
 ### Veelgemaakte Fouten
 
