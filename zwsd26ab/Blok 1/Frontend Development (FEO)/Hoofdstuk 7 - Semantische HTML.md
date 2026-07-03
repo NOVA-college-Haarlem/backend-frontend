@@ -156,19 +156,19 @@ Na deze les kan de student:
     <header>
       <h1>Jan de Vries</h1>
       <nav>
-        <a href="#over">Over</a>
-        <a href="#projecten">Projecten</a>
+        <a href="#about">Over</a>
+        <a href="#projects">Projecten</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
-      <section id="over">
+      <section id="about">
         <h2>Over Mij</h2>
         <p>Ik ben een student Applicatie Ontwikkeling...</p>
       </section>
 
-      <section id="projecten">
+      <section id="projects">
         <h2>Mijn Projecten</h2>
 
         <article class="project">

@@ -39,13 +39,13 @@ Na deze les kan de student:
 **Voorbeeld:**
 
 ```html
-<p class="belangrijk">Deze tekst is belangrijk.</p>
+<p class="important">Deze tekst is belangrijk.</p>
 <p>Deze tekst is normaal.</p>
-<p class="belangrijk">Deze tekst is ook belangrijk.</p>
+<p class="important">Deze tekst is ook belangrijk.</p>
 ```
 
 ```css
-.belangrijk {
+.important {
   color: red;
   font-weight: bold;
 }
@@ -54,15 +54,15 @@ Na deze les kan de student:
 **Meerdere classes:**
 
 ```html
-<p class="belangrijk groot">Deze tekst heeft twee classes.</p>
+<p class="important large">Deze tekst heeft twee classes.</p>
 ```
 
 ```css
-.belangrijk {
+.important {
   color: red;
 }
 
-.groot {
+.large {
   font-size: 24px;
 }
 ```
@@ -84,11 +84,11 @@ Na deze les kan de student:
 **Voorbeeld:**
 
 ```html
-<h1 id="hoofd-titel">Welkom op Mijn Website</h1>
+<h1 id="main-title">Welkom op Mijn Website</h1>
 ```
 
 ```css
-#hoofd-titel {
+#main-title {
   color: darkblue;
   text-align: center;
 }
@@ -109,11 +109,11 @@ Na deze les kan de student:
 **Voorbeeld 1: Knoppenstijl**
 
 ```html
-<a href="#" class="knop">Klik hier</a> <a href="#" class="knop">Meer info</a>
+<a href="#" class="btn">Klik hier</a> <a href="#" class="btn">Meer info</a>
 ```
 
 ```css
-.knop {
+.btn {
   background-color: blue;
   color: white;
   padding: 10px;
@@ -126,7 +126,7 @@ Na deze les kan de student:
 ```html
 <p class="intro">Dit is de introductie tekst.</p>
 <p>Dit is normale tekst.</p>
-<p class="opmerking">Dit is een opmerking.</p>
+<p class="note">Dit is een opmerking.</p>
 ```
 
 ```css
@@ -135,7 +135,7 @@ Na deze les kan de student:
   font-weight: bold;
 }
 
-.opmerking {
+.note {
   font-style: italic;
   color: gray;
 }
@@ -144,7 +144,7 @@ Na deze les kan de student:
 **Gezamenlijke oefening:**
 
 - Maak een pagina met verschillende tekstsoorten
-- Gebruik classes voor: intro-tekst, belangrijke-info, footer-tekst
+- Gebruik classes voor: intro-text, important-info, footer-text
 - Gebruik één ID voor de hoofdtitel
 
 **6. Afronding**
@@ -164,7 +164,7 @@ Herschrijf je hobby-pagina van week 4:
 **Extra uitdaging:**
 
 - Maak een class "button" voor je links die er als knoppen uitzien
-- Combineer classes (bijv. class="tekst groot belangrijk")
+- Combineer classes (bijv. class="text large important")
 - Gebruik een ID voor je footer
 
 ### Controlelijst voor docent

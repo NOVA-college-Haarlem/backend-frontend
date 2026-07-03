@@ -51,7 +51,7 @@ Teken op het bord of laat diagram zien:
 **Voorbeelden:**
 
 ```css
-.kaart {
+.card {
   background-color: lightblue;
   padding: 20px;
 }
@@ -60,7 +60,7 @@ Teken op het bord of laat diagram zien:
 **Verschillende kanten:**
 
 ```css
-.kaart {
+.card {
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 10px;
@@ -68,12 +68,12 @@ Teken op het bord of laat diagram zien:
 }
 
 /* Shorthand (boven rechts onder links - kloksgewijs): */
-.kaart {
+.card {
   padding: 10px 20px 10px 20px;
 }
 
 /* Nog korter (boven/onder rechts/links): */
-.kaart {
+.card {
   padding: 10px 20px;
 }
 ```
@@ -106,15 +106,15 @@ Laat studenten experimenteren met verschillende padding waarden.
 **Voorbeelden:**
 
 ```css
-.omlijnd {
+.bordered {
   border: 2px solid black;
 }
 
-.gestippeld {
+.dotted {
   border: 3px dotted red;
 }
 
-.dik {
+.thick {
   border: 5px solid blue;
 }
 ```
@@ -150,15 +150,15 @@ Maak kaartjes met verschillende borders en probeer combinaties met padding.
 **Voorbeelden:**
 
 ```css
-.afstand {
+.spacer {
   margin: 20px;
 }
 
-.alleen-boven {
+.top-only {
   margin-top: 30px;
 }
 
-.alleen-onder {
+.bottom-only {
   margin-bottom: 15px;
 }
 ```
@@ -166,14 +166,14 @@ Maak kaartjes met verschillende borders en probeer combinaties met padding.
 **Centreren met margin:**
 
 ```css
-.gecentreerd {
+.centered {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* Of korter: */
-.gecentreerd {
+.centered {
   width: 50%;
   margin: 0 auto;
 }
@@ -211,19 +211,19 @@ Inspecteer een professionele website en kijk naar hun box model:
 Maak "kaartjes":
 
 ```html
-<div class="kaart">
+<div class="card">
   <h3>Kaart Titel</h3>
   <p>Wat informatie op de kaart.</p>
 </div>
 
-<div class="kaart">
+<div class="card">
   <h3>Nog een Kaart</h3>
   <p>Nog meer informatie.</p>
 </div>
 ```
 
 ```css
-.kaart {
+.card {
   background-color: white;
   border: 1px solid #ddd;
   padding: 20px;
@@ -243,7 +243,7 @@ Voeg toe aan je hobby-pagina:
 - Geef alle paragrafen `padding: 15px`
 - Voeg een `border` toe aan afbeeldingen
 - Gebruik `margin-bottom` om ruimte tussen secties te maken
-- Maak een "kaart" class die je kunt hergebruiken
+- Maak een "card" class die je kunt hergebruiken
 - Gebruik DevTools om je box model te inspecteren
 
 **Extra uitdaging:**
