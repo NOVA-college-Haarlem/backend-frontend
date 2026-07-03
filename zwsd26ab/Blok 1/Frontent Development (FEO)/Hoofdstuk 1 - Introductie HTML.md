@@ -3,7 +3,6 @@
 ## Algemene Informatie
 
 - **Doelgroep:** MBO studenten - niveau 4, eerstejaars
-- **Lesduur:** 90 minuten per week
 - **Tools:** VS Code, DevTools (vanaf week 2), Copilot (vanaf week 3)
 
 ---
@@ -19,15 +18,15 @@ Na deze les kan de student:
 - Een basis HTML-document opzetten met de juiste structuur
 - Headings en paragrafen toevoegen aan een webpagina
 
-### Lesopbouw (90 minuten)
+### Lesopbouw
 
-**1. Introductie (15 min)**
+**1. Introductie**
 
 - Verwelkoming en kennismaking
 - Wat gaan we leren dit blok?
 - Demo: laat een eenvoudige website zien en vertel dat zij dit gaan maken
 
-**2. Mappenstructuur (20 min)**
+**2. Mappenstructuur**
 
 - **Uitleg:** Waarom is een goede mappenstructuur belangrijk?
   - Overzicht houden van je bestanden
@@ -44,14 +43,14 @@ Na deze les kan de student:
   - Nieuwe map maken op C-schijf/Projecten: "mijn-website"
   - Submappen aanmaken: "images" en "css"
 
-**3. VS Code Introductie (10 min)**
+**3. VS Code Introductie**
 
 - VS Code openen
 - Map "mijn-website" openen in VS Code
 - Nieuw bestand aanmaken: index.html
 - Uitleggen interface: bestandenboom links, editor rechts
 
-**4. Basis HTML Structuur (25 min)**
+**4. Basis HTML Structuur**
 
 - **Uitleg:** Wat is HTML?
   - HyperText Markup Language
@@ -81,7 +80,7 @@ Na deze les kan de student:
   - `<title>` - Naam in het tabblad van de browser
   - `<body>` - Wat je daadwerkelijk ziet op de pagina
 
-**5. Headings en Paragrafen (15 min)**
+**5. Headings en Paragrafen**
 
 - **Uitleg:**
   - `<h1>` t/m `<h6>` - Koppen (h1 is grootste, h6 kleinste)
@@ -100,7 +99,7 @@ Na deze les kan de student:
   <p>In mijn vrije tijd houd ik van...</p>
   ```
 
-**6. Bestand openen in browser (5 min)**
+**6. Bestand openen in browser**
 
 - Demonstreer: rechtsklik op index.html → Open met → Browser
 - Laat studenten hun pagina openen

@@ -9,14 +9,14 @@ Na deze les kan de student:
 - DevTools gebruiken om HTML te inspecteren
 - De broncode van andere websites bekijken
 
-### Lesopbouw (90 minuten)
+### Lesopbouw
 
-**1. Terugblik & Huiswerk bespreken (10 min)**
+**1. Terugblik & Huiswerk bespreken**
 
 - Vraag wie het gelukt is
 - Bespreek veelgemaakte fouten (vergeten tags te sluiten, verkeerde nesting)
 
-**2. Afbeeldingen Toevoegen (25 min)**
+**2. Afbeeldingen Toevoegen**
 
 - **Uitleg:** Waarom afbeeldingen?
   - Maakt pagina interessanter
@@ -42,7 +42,7 @@ Na deze les kan de student:
   - Verkeerde pad (images/foto.jpg vs foto.jpg)
   - Vergeten alt-attribuut
 
-**3. Links Maken (20 min)**
+**3. Links Maken**
 
 - **Uitleg:** Het 'HyperText' deel van HTML
   - Links verbinden pagina's
@@ -70,7 +70,7 @@ Na deze les kan de student:
   </p>
   ```
 
-**4. DevTools Introductie (30 min)**
+**4. DevTools Introductie**
 
 - **Wat zijn DevTools?**
   - Gereedschap voor ontwikkelaars
@@ -101,7 +101,7 @@ Na deze les kan de student:
     - Een `<a>` element
   - Bekijk wat er in het `src` attribuut staat bij afbeeldingen
 
-**5. Afronding (5 min)**
+**5. Afronding**
 
 - Vragen beantwoorden
 - Preview volgende week: we gaan onze pagina mooi maken met kleuren!
