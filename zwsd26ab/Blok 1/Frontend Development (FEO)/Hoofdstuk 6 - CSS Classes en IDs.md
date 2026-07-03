@@ -1,4 +1,4 @@
-## Hoofdstuk 5: CSS Classes en IDs
+## Hoofdstuk 6: CSS Classes en IDs
 
 ### Leerdoelen
 
@@ -17,7 +17,20 @@ Na deze les kan de student:
 - Wat vonden jullie moeilijk?
 - Korte showcase: 2-3 studenten laten hun pagina zien
 
-**2. Probleem Schetsen**
+**2. Wat is een `<div>`?**
+
+- Een `<div>` is een **generieke container** — hij groepeert elementen zonder er betekenis aan toe te voegen
+- Gebruik je als er geen passend semantisch element is (zoals `<header>` of `<section>`)
+- Op zichzelf doet een `<div>` niets zichtbaars; je stijlt hem met CSS
+
+```html
+<div class="card">
+  <h2>Titel</h2>
+  <p>Wat tekst in een kaartje.</p>
+</div>
+```
+
+**3. Probleem Schetsen**
 
 - **Scenario:** Je hebt 3 paragrafen. Twee moeten blauw, één moet rood.
 - **Probeer samen met huidige kennis:**
@@ -28,7 +41,7 @@ Na deze les kan de student:
   ```
   Maar dan is die ene paragraaf ook blauw! Hoe lossen we dit op?
 
-**3. Classes Introductie**
+**4. Classes Introductie**
 
 **Wat zijn classes?**
 
@@ -73,7 +86,7 @@ Na deze les kan de student:
 - Geef sommige de class "highlight"
 - Style de highlight class met een gele achtergrond en dikke tekst
 
-**4. IDs Introductie**
+**5. IDs Introductie**
 
 **Wat zijn IDs?**
 
@@ -104,7 +117,7 @@ Na deze les kan de student:
 - IDs gebruik je weinig (misschien 1-3 per pagina)
 - Classes gebruik je vaak
 
-**5. Praktische Voorbeelden**
+**6. Praktische Voorbeelden**
 
 **Voorbeeld 1: Knoppenstijl**
 
@@ -147,7 +160,7 @@ Na deze les kan de student:
 - Gebruik classes voor: intro-text, important-info, footer-text
 - Gebruik één ID voor de hoofdtitel
 
-**6. Afronding**
+**7. Afronding**
 
 - Vragen?
 - Volgende week: Box model!

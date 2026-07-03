@@ -7,16 +7,20 @@
 ---
 
 ## Week 1: Introductie HTML
+
 **Leerdoelen:**
+
 - Uitleggen wat HTML is en waarvoor het gebruikt wordt
 - Een correcte mappenstructuur aanmaken voor een webproject
 - Een basis HTML-document opzetten met de juiste structuur
-- Headings en paragrafen toevoegen aan een webpagina
+- Headings, paragrafen en lijsten toevoegen aan een webpagina
 
 ---
 
 ## Week 2: Afbeeldingen en Links
+
 **Leerdoelen:**
+
 - Afbeeldingen toevoegen aan een webpagina
 - Links maken naar andere websites
 - DevTools gebruiken om HTML te inspecteren
@@ -24,41 +28,10 @@
 
 ---
 
-## Week 3: CSS Introductie
+## Week 3: Semantische HTML
+
 **Leerdoelen:**
-- Een externe CSS stylesheet aanmaken en linken
-- Basis CSS properties toepassen (kleuren, lettertypen)
-- Uitleggen wat Copilot is en hoe het te gebruiken
-- Verantwoord gebruik maken van Copilot
 
----
-
-## Week 4: Projectweek
-**Project:** "Mijn Hobby Pagina"
-**Focus:** Toepassen van week 1-3 kennis in een eigen project
-
----
-
-## Week 5: CSS Classes en IDs
-**Leerdoelen:**
-- Het verschil uitleggen tussen classes en IDs
-- Classes en IDs correct toepassen in HTML en CSS
-- Meerdere classes op één element gebruiken
-- Beslissen wanneer je een class of ID gebruikt
-
----
-
-## Week 6: Het Box Model
-**Leerdoelen:**
-- Het CSS box model uitleggen (content, padding, border, margin)
-- Padding en margin toepassen
-- Borders toevoegen en stylen
-- DevTools gebruiken om het box model te inspecteren
-
----
-
-## Week 7: Semantische HTML
-**Leerdoelen:**
 - Uitleggen waarom semantische HTML belangrijk is
 - Correct gebruik maken van `<header>`, `<main>`, `<footer>`, `<section>`, `<article>`
 - Code netjes inspringen voor leesbaarheid
@@ -66,17 +39,60 @@
 
 ---
 
-## Week 8: Projectweek 2
-**Project:** Uitgebreide portfolio/hobby website met alle geleerde technieken
+## Week 4: CSS Introductie
+
+**Leerdoelen:**
+
+- Een externe CSS stylesheet aanmaken en linken
+- Basis CSS properties toepassen (kleuren, lettertypen)
+
+---
+
+## Week 5: Projectweek 1
+
+**Project:** "Mijn Hobby Pagina"
+**Focus:** Toepassen van week 1-4 kennis in een eigen project (HTML + semantiek + CSS)
+
+---
+
+## Week 6: CSS Classes en IDs
+
+**Leerdoelen:**
+
+- Uitleggen wat een `<div>` is en wanneer je het gebruikt
+- Het verschil uitleggen tussen classes en IDs
+- Classes en IDs correct toepassen in HTML en CSS
+- Meerdere classes op één element gebruiken
+
+---
+
+## Week 7: Het Box Model
+
+**Leerdoelen:**
+
+- Het CSS box model uitleggen (content, padding, border, margin)
+- Padding en margin toepassen
+- Borders toevoegen en stylen
+- DevTools gebruiken om het box model te inspecteren
+
+---
+
+## Week 8: Copilot & Herhaling
+
+**Leerdoelen:**
+
+- GitHub Copilot verantwoord gebruiken als hulpmiddel
+- Eerder geleerde HTML- en CSS-concepten zelfstandig toepassen en verbeteren
 
 ---
 
 ## Wat heb je aan het einde van Blok 1 geleerd?
 
-✅ HTML structuur en semantische elementen
+✅ HTML structuur, lijsten en semantische elementen
 ✅ Basis CSS styling (kleuren, fonts, spacing)
 ✅ Box model (padding, margin, border)
-✅ Classes en IDs
+✅ Classes, IDs en de `<div>` container
 ✅ DevTools voor debugging
+✅ Verantwoord gebruik van AI (Copilot)
 ✅ Nette code schrijven
 ✅ Zelfstandig een simpele website bouwen

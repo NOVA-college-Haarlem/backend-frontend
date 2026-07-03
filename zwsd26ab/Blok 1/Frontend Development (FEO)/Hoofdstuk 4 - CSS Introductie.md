@@ -1,4 +1,4 @@
-## Hoofdstuk 3: CSS Introductie & Copilot
+## Hoofdstuk 4: CSS Introductie
 
 ### Leerdoelen
 
@@ -6,8 +6,6 @@ Na deze les kan de student:
 
 - Een externe CSS stylesheet aanmaken en linken
 - Basis CSS properties toepassen (kleuren, lettertypen)
-- Uitleggen wat Copilot is en hoe het te gebruiken
-- Verantwoord gebruik maken van Copilot
 
 ### Lesopbouw
 
@@ -111,52 +109,18 @@ Laat studenten experimenteren:
 - Verander het lettertype
 - Maak de h1 gecentreerd
 
-**5. Copilot Introductie**
+**5. Afronding**
 
-**Wat is Copilot?**
-
-- AI-assistent voor programmeren
-- Suggereert code terwijl je typt
-- Kan helpen, maar je moet het begrijpen!
-
-**Installatie:**
-
-- GitHub Copilot extensie in VS Code installeren
-- Inloggen met school-account
-
-**Demonstratie:**
-
-- Type een comment: `/* Maak de achtergrond groen */`
-- Laat zien hoe Copilot suggereert
-- Druk Tab om te accepteren
-
-**Belangrijke regels voor Copilot:**
-
-1. **Begrijp wat je accepteert** - Als je niet snapt wat Copilot voorstelt, gebruik het niet!
-2. **Test altijd** - Kijk in de browser of het werkt
-3. **Copilot is een hulpmiddel** - Jij blijft de programmeur
-4. **Leer eerst zelf** - Gebruik Copilot pas als je de basis begrijpt
-
-**Oefening met Copilot:**
-
-- Laat studenten comments typen:
-  - `/* Maak alle paragrafen grijs */`
-  - `/* Centreer de h2 koppen */`
-  - `/* Verander het lettertype naar Verdana */`
-- Bespreek: begrijpen jullie wat Copilot voorstelt?
-
-**6. Afronding**
-
-- Volgende week: Project week!
+- Volgende week: Projectweek!
 - Vragen?
 
 ### Opdracht
 
-1. Maak je pagina mooi met CSS:
-   - Kies een mooie achtergrondkleur
-   - Verander de tekstkleur zodat het goed leesbaar is
-   - Experimenteer met lettertypen
-   - Maak je h1 gecentreerd
-2. Probeer Copilot te gebruiken, maar controleer of je begrijpt wat het doet
+Maak je pagina mooi met CSS:
+
+- Kies een mooie achtergrondkleur
+- Verander de tekstkleur zodat het goed leesbaar is
+- Experimenteer met lettertypen
+- Maak je h1 gecentreerd
 
 ---

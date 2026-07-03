@@ -1,4 +1,4 @@
-## Hoofdstuk 7: Semantische HTML & Code Structuur
+## Hoofdstuk 3: Semantische HTML & Code Structuur
 
 ### Leerdoelen
 
@@ -305,7 +305,7 @@ Herschrijf je hobby-pagina met semantische HTML:
 
 - Vragen?
 - Samenvatting: Semantische HTML maakt je code begrijpelijk
-- Volgende week: Projectweek 2!
+- Volgende week: CSS! We gaan onze pagina mooi maken met kleuren.
 
 ### Opdracht
 

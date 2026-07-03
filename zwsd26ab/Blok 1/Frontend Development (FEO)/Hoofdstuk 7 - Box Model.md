@@ -1,4 +1,4 @@
-## Hoofdstuk 6: Het Box Model
+## Hoofdstuk 7: Het Box Model
 
 ### Leerdoelen
 
@@ -85,26 +85,14 @@ Laat studenten experimenteren met verschillende padding waarden.
 **Voorbeelden:**
 
 ```css
-.bordered {
-  border: 2px solid black;
+/* Border toevoegen aan een element: */
+.card {
+  border: 2px solid #333;
 }
 
-.dotted {
-  border: 3px dotted red;
-}
-
-.thick {
-  border: 5px solid blue;
-}
-```
-
-**Border properties apart:**
-
-```css
-.custom-border {
-  border-width: 3px;
-  border-style: solid;
-  border-color: green;
+/* Afbeeldingen een subtiele rand geven: */
+img {
+  border: 3px solid lightgray;
 }
 ```
 
@@ -197,7 +185,7 @@ Maak "kaartjes":
 **7. Afronding**
 
 - Vragen?
-- Volgende week: Semantische HTML!
+- Volgende week: Copilot & Herhaling!
 
 ### Opdracht
 

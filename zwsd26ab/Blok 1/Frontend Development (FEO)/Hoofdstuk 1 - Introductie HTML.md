@@ -17,6 +17,7 @@ Na deze les kan de student:
 - Een correcte mappenstructuur aanmaken voor een webproject
 - Een basis HTML-document opzetten met de juiste structuur
 - Headings en paragrafen toevoegen aan een webpagina
+- Lijsten maken met `<ul>`, `<ol>` en `<li>`
 
 ### Lesopbouw
 
@@ -25,6 +26,7 @@ Na deze les kan de student:
 - Verwelkoming en kennismaking
 - Wat gaan we leren dit blok?
 - Demo: laat een eenvoudige website zien en vertel dat zij dit gaan maken
+- **Brug naar SE-studenten:** Als system engineer beheer je servers waarop websites draaien. Begrijpen hoe een webpagina is opgebouwd helpt je bij troubleshooting, samenwerking met developers en het lezen van serverlogs.
 
 **2. Mappenstructuur**
 
@@ -99,7 +101,32 @@ Na deze les kan de student:
   <p>In mijn vrije tijd houd ik van...</p>
   ```
 
-**6. Bestand openen in browser**
+**7. Lijsten**
+
+- **Uitleg:**
+  - `<ul>` - Ongeordende lijst (opsommingstekens)
+  - `<ol>` - Geordende lijst (nummers)
+  - `<li>` - Lijst-item (altijd binnen `<ul>` of `<ol>`)
+
+- **Voorbeeld:**
+
+  ```html
+  <h2>Mijn Hobbies</h2>
+  <ul>
+    <li>Voetbal</li>
+    <li>Gamen</li>
+    <li>Muziek maken</li>
+  </ul>
+
+  <h2>Mijn Top 3 Films</h2>
+  <ol>
+    <li>Interstellar</li>
+    <li>The Dark Knight</li>
+    <li>Inception</li>
+  </ol>
+  ```
+
+- **Oefening:** Studenten vervangen hun hobby-paragraaf door een `<ul>` met minstens 3 items.
 
 - Demonstreer: rechtsklik op index.html → Open met → Browser
 - Laat studenten hun pagina openen
@@ -111,6 +138,7 @@ Maak een pagina over jezelf met:
 
 - Minstens 3 verschillende headings (h1, h2, h3)
 - Minstens 4 paragrafen
+- Minstens 1 lijst (`<ul>` of `<ol>`) met minstens 3 items
 - Onderwerpen: Je naam, waarom je deze opleiding doet, je hobby's, je favoriete eten
 
 ---

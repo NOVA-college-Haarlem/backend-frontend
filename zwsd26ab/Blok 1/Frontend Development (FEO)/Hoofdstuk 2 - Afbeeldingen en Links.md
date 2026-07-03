@@ -104,7 +104,7 @@ Na deze les kan de student:
 **5. Afronding**
 
 - Vragen beantwoorden
-- Preview volgende week: we gaan onze pagina mooi maken met kleuren!
+- Preview volgende week: Semantische HTML — hoe je HTML logisch structureert!
 
 ### Opdracht
 
