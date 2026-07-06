@@ -1,26 +1,42 @@
+# Blok 5 - Hoofdstuk 6 - Filters
+
+## Leerdoelen
+
+Na dit hoofdstuk kun je:
+
+- Een filterbar toevoegen aan een overzichtspagina
+- GET-parameters uitlezen en verwerken in een SQL-query
+- Dynamisch filterwaardes ophalen uit de database met een `foreach`
+
 ## Filtering
 
-Door filters kunnen we de gebruiker helpen om snel de juiste data te vinden.
+Door filters kunnen we de gebruiker helpen om snel de juiste data te vinden. We voegen een sidebar toe aan `tools_index.php` met klikbare filterlinks.
 
 ### Opdracht 1
 
-1. Filtering toevoegen.
-2. Op de pagina tools_index.php gaan we filters aanbrengen zodat de gebruiker op tools kan filteren.
-3. Voeg de volgende code toe aan `<main>`:
+1. Voeg een filterbar toe aan `tools_index.php`. Zet de volgende HTML **binnen** `<main>`, vóór de `<table>`:
+
 ```html
 <aside>
-    <h2>Filters</h2>
-    <ul>
-        <li><a href="tools_index.php?filter=brand&value=makita">makita</a></li>
-    </ul>
+  <h2>Filters</h2>
+  <ul>
+    <li><a href="tools_index.php?filter=brands&value=makita">Makita</a></li>
+  </ul>
 </aside>
 ```
-4. Daarnaast moeten we ook een class toevoegen aan `<main>`: `class="table"`
+
+2. Voeg de class `table` toe aan het `<main>`-element:
+
+```html
+<main class="table"></main>
+```
+
+> De GET-parameter `filter=brands` gebruik je straks in PHP om te bepalen op welke kolom je filtert.
 
 ### Opdracht 2
 
-1. Nu gaan we de CSS aanpassen.
-2. Voeg de volgende code toe:
+1. Voeg de volgende CSS toe aan `style.css` zodat de filterbar naast de tabel staat:
+
 ```css
 .table {
   display: flex;
@@ -31,54 +47,63 @@ Door filters kunnen we de gebruiker helpen om snel de juiste data te vinden.
   display: flex;
   justify-content: start;
   width: 12%;
-  height: 100vh;
   flex-direction: column;
 }
 
 .table aside h2 {
   font-size: 14px;
 }
-
 ```
 
 ### Opdracht 3
 
-1. Dan gaan we de code aanpassen zodat de gebruiker op tools kan filteren.
-2. Want als we nu op een filter klikken, dan gaat de gebruiker naar de tools_index.php pagina met een GET parameter.
-3. Test de code in je browser.
+Nu voegen we PHP toe aan `tools_index.php` zodat de filter ook echt werkt. Voeg de volgende code toe **na de eerste `fetchAll()`** (de query die alle tools ophaalt):
 
-### Opdracht 4
-
-We gaan nu PHP code toevoegen aan de `tools_index.php` pagina zodat de gebruiker op tools kan filteren.
-
-### Opdracht 5
-
-1. We gaan eerst controlleren welke filter en value de gebruiker heeft gekozen.
-2. Voeg de volgende code toe:
 ```php
 if (isset($_GET['filter']) && isset($_GET['value'])) {
     $filter = $_GET['filter'];
 
-    if($filter === 'brands'){
+    if ($filter === 'brands') {
         $filter = 'brands.brand_name';
     }
+
     $value = $_GET['value'];
+
+    // we hebben nu TWEE voorwaarden aan de WHERE clause toegevoegd
+    $sql = "SELECT * FROM tools JOIN brands ON brands.brand_id = tools.tool_brand WHERE tools.deleted_at IS NULL AND $filter = :value";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(['value' => $value]);
+    $tools = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 ```
 
-### Opdracht 6
+Test in de browser: klik op de filterlink en controleer of alleen Makita-tools getoond worden.
 
-1. We gaan nu de query aanpassen.
-2. Voeg de volgende code toe:
-```php  
-// we hebben nu TWEE voorwaarden aan de WHERE clause toegevoegd. Bestudeer deze code zelf.
- $sql = "SELECT * FROM tools JOIN brands ON brands.brand_id = tools.tool_brand WHERE tools.deleted_at IS NULL AND $filter = :value";
-$stmt = $conn->prepare($sql);
-$stmt->execute(['value' => $value]);
-$tools = $stmt->fetchAll(PDO::FETCH_ASSOC);
+### Opdracht 4: Dynamische filterlijst
+
+Een hardcoded link voor één merk is niet handig. Haal alle merken op uit de database en genereer de links automatisch:
+
+```php
+// Bovenaan tools_index.php, na de eerste query
+$stmt_brands = $conn->prepare("SELECT * FROM brands");
+$stmt_brands->execute();
+$brands = $stmt_brands->fetchAll(PDO::FETCH_ASSOC);
 ```
 
-### Opdracht 7
+Vervang de hardcoded `<li>` in de sidebar door een foreach:
 
-1. Maak nu nog meer filters aan. Bijvoorbeeld voor een alle ander bekende brands.
-2. Ga je een foreach gebruiken?
+```php
+<?php foreach ($brands as $brand): ?>
+    <li>
+        <a href="tools_index.php?filter=brands&value=<?= htmlspecialchars($brand['brand_name']) ?>">
+            <?= htmlspecialchars($brand['brand_name']) ?>
+        </a>
+    </li>
+<?php endforeach; ?>
+```
+
+Voeg ook een "Alle tools"-link toe zodat de gebruiker de filter kan resetten:
+
+```html
+<li><a href="tools_index.php">Alle tools</a></li>
+```

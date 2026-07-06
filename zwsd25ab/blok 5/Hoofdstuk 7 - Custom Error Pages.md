@@ -1,14 +1,25 @@
-# Week 6
+# Blok 5 - Hoofdstuk 7 - Custom Error Pages
 
-## Les 1 - Custom Error Pages
+## Leerdoelen
+
+Na dit hoofdstuk kun je:
+
+- Uitleggen wat HTTP-statuscodes zijn en wanneer je ze gebruikt
+- Custom foutpagina's maken voor 403 en 404
+- Gebruikers doorsturen naar de juiste foutpagina vanuit beveiligde PHP-bestanden
+- `http_response_code()` correct instellen
+
+## Les 1 — Custom Error Pages
 
 Tot nu toe tonen we simpele error berichten met `echo` en `exit`. Dit is niet gebruiksvriendelijk en ziet er niet professioneel uit. We gaan custom error pages maken voor:
+
 - **403 Forbidden**: Gebruiker heeft geen toegang tot de pagina
 - **404 Not Found**: Pagina bestaat niet
 
 ### Wat is een HTTP Status Code?
 
 Elke keer als je een webpagina bezoekt, stuurt de server een HTTP status code terug:
+
 - **200 OK**: Pagina succesvol geladen
 - **403 Forbidden**: Je mag deze pagina niet zien
 - **404 Not Found**: Pagina bestaat niet
@@ -52,6 +63,10 @@ require 'header.php';
 2. Test de pagina door direct naar `403.php` te navigeren in je browser.
 3. Wat zie je?
 
+> **Let op:** de foutpagina gebruikt `require 'header.php'` en `require 'footer.php'`. Zorg dat beide bestanden bestaan in je project. `footer.php` bevat doorgaans het sluitende `</main>` of `</body>`-gedeelte van je layout.
+
+> **`$_SESSION['email']`:** deze variabele is alleen beschikbaar als je die bij het inloggen opslaat in `login_process.php`. Voeg `$_SESSION['email'] = $user['email'];` toe naast `$_SESSION['user_id']` als je dit wilt tonen.
+
 ### Opdracht 2: 404 Not Found Error Page
 
 1. Maak een nieuw bestand aan genaamd `404.php`:
@@ -81,22 +96,21 @@ require 'header.php';
 
 2. Test de pagina door direct naar `404.php` te navigeren.
 
-### Opdracht 3: Gebruik Error Pages in je Applicatie
+### Opdracht 3: Gebruik Error Pages in de Applicatie
 
-Nu gaan we de bestaande error handling vervangen door redirects naar onze custom pages.
+Na hoofdstuk 5 gebruiken we al redirects voor niet-ingelogde of niet-gemachtigde gebruikers. We passen die redirects nu aan zodat ze naar onze custom foutpagina's verwijzen.
 
-1. **Vervang in `tools_delete.php`** de oude error messages:
+Pas dit aan in **zowel `tools_delete.php` als `tools_index.php`**:
 
 ```php
-// OUD:
+// OUD (na H5):
 if (!isset($_SESSION['user_id'])) {
-    echo "You are not logged in, please login. ";
-    echo "<a href='login.php'>Login here</a>";
+    header('Location: login.php');
     exit;
 }
 
-if ($_SESSION['role'] != 'administrator') {
-    echo "You are not allowed to view this page, please login as admin";
+if ($_SESSION['role'] !== 'administrator') {
+    header('Location: tools_index.php');
     exit;
 }
 
@@ -106,50 +120,18 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-if ($_SESSION['role'] != 'administrator') {
+if ($_SESSION['role'] !== 'administrator') {
     header('Location: 403.php');
     exit;
 }
 ```
 
-2. Test de code:
-   - Probeer `tools_delete.php` te bezoeken zonder ingelogd te zijn
-   - Wat gebeurt er?
+Test de code:
 
-### Opdracht 4: Vervang Error Messages in tools_index.php
+- Bezoek `tools_delete.php` of `tools_index.php` zonder ingelogd te zijn → zie je de 403-pagina?
+- Bezoek als normale user (niet admin) → zie je de 403-pagina?
 
-1. **Vervang in `tools_index.php`** de error messages:
-
-```php
-// OUD:
-if (!isset($_SESSION['user_id'])) {
-    echo "You are not logged in, please login. ";
-    echo "<a href='login.php'>Login here</a>";
-    exit;
-}
-
-if ($_SESSION['role'] != 'administrator') {
-    echo "You are not allowed to view this page, please login as admin";
-    exit;
-}
-
-// NIEUW:
-if (!isset($_SESSION['user_id'])) {
-    header('Location: 403.php');
-    exit;
-}
-
-if ($_SESSION['role'] != 'administrator') {
-    header('Location: 403.php');
-    exit;
-}
-```
-
-2. Test de code:
-   - Probeer `tools_index.php` te bezoeken zonder ingelogd te zijn
-   - Probeer `tools_index.php` te bezoeken als normale user (niet admin)
-
-### Opdracht 5: 404 Voor Niet-Bestaande Records
+### Opdracht 4: 404 Voor Niet-Bestaande Records
 
 We kunnen ook een 404 tonen als een tool niet gevonden wordt in de database.
 
@@ -158,7 +140,7 @@ We kunnen ook een 404 tonen als een tool niet gevonden wordt in de database.
 ```php
 <?php
 session_start();
-require 'database.php';
+require 'db.php';
 
 // Controleer of id meegegeven is
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -192,53 +174,53 @@ require 'header.php';
    - Ga naar `tools_detail.php?id=abc` (ongeldige waarde) → Wat zie je?
    - Ga naar een bestaande tool → Werkt de pagina nog steeds?
 
-### Opdracht 6: Styling Verbeteren
+### Opdracht 5: Styling Verbeteren
 
 1. Voeg CSS toe aan `style.css` voor betere error pages:
 
 ```css
 /* Error Pages */
 .error-page {
-    text-align: center;
-    padding: 60px 20px;
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .error-code {
-    font-size: 120px;
-    font-weight: bold;
-    margin: 0;
-    line-height: 1;
+  font-size: 120px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
 }
 
 .error-403 .error-code {
-    color: #e74c3c;
+  color: #e74c3c;
 }
 
 .error-404 .error-code {
-    color: #3498db;
+  color: #3498db;
 }
 
 .error-page h2 {
-    color: #333;
-    margin: 20px 0 10px;
-    font-size: 28px;
+  color: #333;
+  margin: 20px 0 10px;
+  font-size: 28px;
 }
 
 .error-page p {
-    color: #666;
-    font-size: 18px;
-    margin: 10px 0;
-    max-width: 600px;
+  color: #666;
+  font-size: 18px;
+  margin: 10px 0;
+  max-width: 600px;
 }
 
 .error-page .btn {
-    margin: 10px 5px;
-    display: inline-block;
+  margin: 10px 5px;
+  display: inline-block;
 }
 ```
 
@@ -296,7 +278,7 @@ require 'header.php';
 
 4. Test beide pagina's opnieuw. Zien ze er beter uit?
 
-### Opdracht 7: Pas Alle Beschermde Pagina's Aan
+### Opdracht 6: Pas Alle Beschermde Pagina's Aan
 
 1. Pas **alle beschermde pagina's** aan om de custom error pages te gebruiken in plaats van `echo` berichten:
    - `users_index.php`
@@ -306,6 +288,7 @@ require 'header.php';
    - `tool_update.php`
 
 2. Vervang in al deze bestanden:
+
 ```php
 // OUD:
 if (!isset($_SESSION['user_id'])) {
@@ -403,12 +386,14 @@ In deze les gaan we ons voorbereiden op het eindproject van Blok 5.
 Ga door je eigen code heen en controleer of je de volgende technieken beheerst:
 
 **Database & PDO:**
+
 - [ ] PDO database connectie met error handling
 - [ ] Prepared statements met placeholders (`:name`)
 - [ ] Foreign key constraints
 - [ ] JOIN queries
 
 **Security:**
+
 - [ ] `password_hash()` bij registratie
 - [ ] `password_verify()` bij login
 - [ ] `htmlspecialchars()` op alle output
@@ -416,6 +401,7 @@ Ga door je eigen code heen en controleer of je de volgende technieken beheerst:
 - [ ] Session management met role checks
 
 **CRUD Operaties:**
+
 - [ ] CREATE met INSERT INTO
 - [ ] READ met SELECT queries
 - [ ] UPDATE met prepared statements
@@ -423,6 +409,7 @@ Ga door je eigen code heen en controleer of je de volgende technieken beheerst:
 - [ ] Restore functionaliteit
 
 **User Experience:**
+
 - [ ] AJAX calls met fetch()
 - [ ] JSON data uitwisseling
 - [ ] Filtering met GET parameters
@@ -449,18 +436,21 @@ Ga door je eigen code heen en controleer of je de volgende technieken beheerst:
 Gebruik deze checklist voor je eindproject:
 
 **Bestandsstructuur:**
+
 - [ ] Logische naamgeving (tool_create.php, tool_create_process.php)
 - [ ] Gescheiden view en process bestanden
 - [ ] Header/footer includes gebruikt
 - [ ] Database connectie in apart bestand
 
 **Code Kwaliteit:**
+
 - [ ] Geen dubbele code (DRY principe)
 - [ ] Consistente indentatie
 - [ ] Duidelijke variabele namen
 - [ ] Comments bij complexe code
 
 **Security:**
+
 - [ ] Alle wachtwoorden gehashed
 - [ ] Alle queries prepared statements
 - [ ] Alle output escaped met htmlspecialchars()
@@ -468,6 +458,7 @@ Gebruik deze checklist voor je eindproject:
 - [ ] Input validatie op alle forms
 
 **Functionaliteit:**
+
 - [ ] CRUD operaties werken allemaal
 - [ ] Soft delete met restore functionaliteit
 - [ ] AJAX implementatie zonder page reload

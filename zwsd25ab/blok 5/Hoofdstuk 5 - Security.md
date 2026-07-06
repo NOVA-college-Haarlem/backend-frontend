@@ -1,107 +1,125 @@
-# Week 5
+# Blok 5 - Hoofdstuk 5 - Security
 
-## Les 1 - Security
+## Leerdoelen
+
+Na dit hoofdstuk kun je:
+
+- Pagina's beveiligen met een sessiecheck en rolcheck
+- Gebruikersinvoer valideren met `isset()`, `is_numeric()` en integer-cast
+- Foutafhandeling toepassen na een databaseoperatie
+- Een eenvoudig logboek bijhouden van acties
+
+## Les 1 — Security
 
 In deze les gaan we security toevoegen aan onze applicatie.
 
-### Opdracht 1
+### Opdracht 1: Sessiecheck en rolcheck
 
-1. Alleen ingelogde gebruikers mogen gebruik maken van de tools_delete.php pagina.
-2. Bouw dit verder uit met session checks.
+Niet-ingelogde gebruikers mogen `tools_delete.php` niet kunnen bereiken. Bovendien mag alleen een administrator tools verwijderen.
 
+Voeg bovenaan `tools_delete.php` (na `session_start()`) de volgende code toe:
 
-### Opdracht 2
+```php
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
 
-1. Het bestand tools_delete.php is nog niet veilig. We moeten het aanpassen. We gaan __input validation__ toevoegen.
-2. Voeg de volgende code toe:
+if ($_SESSION['role'] !== 'administrator') {
+    header('Location: tools_index.php');
+    exit;
+}
+```
+
+> **Waar komt `$_SESSION['role']` vandaan?**
+> Bij het inloggen sla je de gebruikersdata op in de sessie. Zorg ervoor dat je in `login_process.php` ook de `role` opslaat:
+>
+> ```php
+> $_SESSION['role'] = $user['role'];
+> ```
+>
+> De waarde `'administrator'` moet overeenkomen met de waarde in de `role`-kolom van de `users`-tabel.
+
+### Opdracht 2: Inputvalidatie
+
+Vóór de query moet je controleren of het meegestuurde `id` geldig is. Voeg dit toe onder de sessiecheck:
+
 ```php
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    // Toon een foutmelding
-    exit('Ongeldige ID');
+    header('Location: tools_index.php');
+    exit;
 }
-$id = (int)$_GET['id'];
+$id = (int) $_GET['id'];
 ```
 
-### Opdracht 3
+Pas daarna de query aan met een prepared statement:
 
-1. We passen de een klein beetje de code aan.
-2. Voeg de volgende code toe:
 ```php
-$result = $stmt->execute(
-        [':id' => $id]
-);
+require 'db.php';
+
+$stmt = $conn->prepare("UPDATE tools SET deleted_at = NOW() WHERE tool_id = :id");
+$result = $stmt->execute([':id' => $id]);
 ```
 
-### Opdracht 4
-3. Dan gaan we ook nog __error handling__ toevoegen.
-4. Voeg de volgende code toe:
+### Opdracht 3: Foutafhandeling
+
+Voeg na de `execute()` de volgende foutafhandeling toe:
+
 ```php
 if ($result) {
-    // Succes: redirect naar de tools_index.php pagina
-    header('Location: tools_index.php?deleted=1'); // we kunnen deze GET parameter gebruiken om een succes bericht te tonen
+    header('Location: tools_index.php?deleted=success');
     exit;
 } else {
-    // Failure: toon een foutmelding
-    echo 'Verwijderen mislukt. Probeer het opnieuw.';
+    header('Location: tools_index.php?deleted=failure');
+    exit;
 }
 ```
 
-Tot nu toe hebben we de volgende code in tools_delete.php:
+````
+
+### Opdracht 4: Volledige code
+
+Hieronder de gecombineerde, correcte versie van beide bestanden:
 ```php
 <?php
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    echo "You are not logged in, please login. ";
-    echo "<a href='login.php'>Login here</a>";
+    header('Location: login.php');
     exit;
 }
 
-if ($_SESSION['role'] != 'administrator') {
-    echo "You are not allowed to view this page, please login as admin";
-    exit;
-}   
-
-if($_SERVER["REQUEST_METHOD"] != "GET"){
-    echo "Huh? Wat doe je?";
+if ($_SESSION['role'] !== 'administrator') {
+    header('Location: tools_index.php');
     exit;
 }
 
-
-
-
-if(    isset($_GET['id'])   ){
-
-
-    if ( !is_numeric($_GET['id'])) {
-    // Toon een foutmelding
-        exit('Ongeldige ID');
-    }
-    $id = (int)$_GET['id'];
-
-    require 'database.php';
-
-    $id = $_GET["id"];
-
-    // $sql = "DELETE FROM tools WHERE tool_id = :id";
-
-
-    $sql = "UPDATE tools SET deleted_at = NOW() WHERE tool_id = :id";
-
-    $stmt = $conn->prepare($sql);
-
-    $result = $stmt->execute([':id' => $id]);
-
-    if($result){
-        header("location: tools_index.php?deleted=success");
-        exit;
-
-    }
-
-    header("Location: tools_index.php?deleted=failure");
+if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
+    header('Location: tools_index.php');
     exit;
-}   
-```
+}
+
+if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+    header('Location: tools_index.php');
+    exit;
+}
+
+$id = (int) $_GET['id'];
+
+require 'db.php';
+
+$sql = "UPDATE tools SET deleted_at = NOW() WHERE tool_id = :id";
+$stmt = $conn->prepare($sql);
+$result = $stmt->execute([':id' => $id]);
+
+if ($result) {
+    header('Location: tools_index.php?deleted=success');
+    exit;
+}
+
+header('Location: tools_index.php?deleted=failure');
+exit;
+````
 
 En `tools_index.php` moet er nu als volgt uit zien:
 
@@ -110,62 +128,32 @@ En `tools_index.php` moet er nu als volgt uit zien:
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    echo "You are not logged in, please login. ";
-    echo "<a href='login.php'>Login here</a>";
+    header('Location: login.php');
     exit;
 }
 
-if ($_SESSION['role'] != 'administrator') {
-    echo "You are not allowed to view this page, please login as admin";
+if ($_SESSION['role'] !== 'administrator') {
+    header('Location: tools_index.php');
     exit;
 }
 
-
-
-require 'database.php';
+require 'db.php';
 
 $sql = "SELECT * FROM tools JOIN brands ON brands.brand_id = tools.tool_brand WHERE tools.deleted_at IS NULL";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $tools = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-if (isset($_GET['filter']) && isset($_GET['value'])) {
-    $filter = $_GET['filter'];
-
-    if($filter === 'brands'){
-        $filter = 'brands.brand_name';
-    }
-
-    $value = $_GET['value'];
-
-    if ($filter && $value) {
-        $sql = "SELECT * FROM tools JOIN brands ON brands.brand_id = tools.tool_brand WHERE tools.deleted_at IS NULL AND $filter = :value";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute(['value' => $value]);
-        $tools = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-}
-
 require 'header.php';
 ?>
 <main class="table">
 
-    <?php if(isset($_GET['deleted'])):?>
-        <?php if($_GET['deleted'] == 'success'): ?>
-            <div class="alert-box">
-                Tool is verwijderd!
-            </div>
-        <?php endif; ?>
-        
+    <?php if (isset($_GET['deleted']) && $_GET['deleted'] === 'success'): ?>
+        <div class="alert-box">
+            Tool is verwijderd!
+        </div>
     <?php endif; ?>
 
-
-    <aside>
-        <h2>Filters</h2>
-        <ul>
-            <li><a href="tools_index.php?filter=brands&value=makita">makita</a></li>
-        </ul>
-    </aside>
     <table>
         <thead>
             <tr>
@@ -179,24 +167,17 @@ require 'header.php';
         <tbody>
             <?php foreach ($tools as $tool) : ?>
                 <tr>
-                    <td><?php echo htmlspecialchars( $tool['tool_name'] )    ?></td>
+                    <td><?php echo htmlspecialchars($tool['tool_name']) ?></td>
                     <td><?php echo htmlspecialchars($tool['tool_category']) ?></td>
                     <td><?php echo htmlspecialchars($tool['tool_price']) ?></td>
                     <td><?php echo htmlspecialchars($tool['brand_name']) ?></td>
                     <td>
-
                         <a href="tools_detail.php?id=<?php echo $tool['tool_id'] ?>">Bekijk</a>
                         <a href="tools_update.php?id=<?php echo $tool['tool_id'] ?>">Wijzig</a>
-                        
-                        
-
-
-                        <!-- <a href="tools_edit.php?id=<?php echo $tool['tool_id'] ?>">Wijzig</a> -->
                         <a href="tools_delete.php?id=<?php echo $tool['tool_id'] ?>"
-                        onclick="return confirm('weet je het zeker dat je deze tool wilt verwijderen?')"
-                        >
-                        Verwijder
-                    </a> 
+                           onclick="return confirm('Weet je zeker dat je deze tool wilt verwijderen?')">
+                            Verwijder
+                        </a>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -205,23 +186,14 @@ require 'header.php';
 </main>
 ```
 
-### Opdracht 5
+### Opdracht 5: Logboek
 
-1. Dan willen we dat geen gebruiker deze pagina kan benaderen die niet ingelogd is.
-2. Voeg de volgende code toe:
-```php
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php');
-    exit;
-}
-```
+1. Optioneel: voeg een logboek toe dat bijhoudt wie welke tool heeft verwijderd.
 
-### Opdracht 6
-
-1. Eventueel kunnen we ook nog een __logboek__ toevoegen.
-2. Voeg de volgende code toe:
 ```php
 if ($result) {
-    file_put_contents('delete.log', date('Y-m-d H:i:s') . " - Tool $id deleted by user {$_SESSION['user_id']}\n", FILE_APPEND);
+    file_put_contents('../logs/delete.log', date('Y-m-d H:i:s') . " - Tool $id deleted by user {$_SESSION['user_id']}\n", FILE_APPEND);
 }
 ```
+
+> ⚠️ Zet het logbestand **niet** in de webroot (`www/`), want dan is het via de browser bereikbaar (`http://localhost/delete.log`). Gebruik een map boven de webroot, zoals `../logs/delete.log`. Maak de map `logs/` aan naast de `www/`-map.
