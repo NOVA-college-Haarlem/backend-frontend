@@ -1,4 +1,4 @@
-## Week 6: Kleuren, Typografie en Navigatie
+## Hoofdstuk 6: Kleuren, Typografie en Navigatie
 
 ### Leerdoelen
 Na deze les kan de student:
@@ -10,7 +10,7 @@ Na deze les kan de student:
 ### Lesopbouw (90 minuten)
 
 **1. Terugblik (5 min)**
-- Kort checken: werken de buttons van vorige week met hover?
+- Kort checken: werken de buttons van vorig hoofdstuk met hover?
 
 **2. Kleurenschema en CSS-variabelen (25 min)**
 
@@ -49,7 +49,7 @@ Leg uit: hiërarchie = de bezoeker moet in één oogopslag zien wat belangrijk i
 
 **4. Horizontale navigatie stylen (30 min)**
 
-Herhaling + uitbreiding van de `<nav>` uit week 3:
+Herhaling + uitbreiding van de `<nav>` uit hoofdstuk 3:
 ```css
 nav {
     display: flex;
@@ -79,7 +79,7 @@ nav a.actief {
 
 **5. Afronding (10 min)**
 - Vragen?
-- Volgende week: complete website-opmaak - secties, hero's en footer combineren
+- Volgend hoofdstuk: complete website-opmaak - secties, hero's en footer combineren
 
 ### Huiswerk
 1. Definieer minimaal 4 CSS-variabelen in `:root` en gebruik ze overal waar die kleur voorkomt

@@ -1,10 +1,10 @@
-## Week 8: Eindproject - Complete Persoonlijke of Thema-website
+## Hoofdstuk 8: Eindproject - Complete Persoonlijke of Thema-website
 
 ### Projectomschrijving
-Afsluitende week van het herhalingsblok. Studenten leveren een complete, opgeschoonde one-page website op waarin alle onderdelen van Blok 3 samenkomen: externe CSS, classes/IDs, box model, semantische HTML, selectoren, buttons, kleurenschema met variabelen, typografie, navigatie en sectie-opmaak.
+Afsluitend hoofdstuk van het herhalingsblok. Studenten leveren een complete, opgeschoonde one-page website op waarin alle onderdelen van Blok 3 samenkomen: externe CSS, classes/IDs, box model, semantische HTML, selectoren, buttons, kleurenschema met variabelen, typografie, navigatie en sectie-opmaak.
 
 ### Leerdoelen
-Na deze week kan de student:
+Na dit hoofdstuk kan de student:
 - Zelfstandig een complete, nette one-page website opleveren
 - Design-keuzes (kleur, typografie, spacing) beargumenteren
 - Eigen werk presenteren en toelichten
@@ -37,7 +37,7 @@ Na deze week kan de student:
 - [ ] Call-to-action sectie
 - [ ] Eigen Google Font gebruikt
 
-### Weekplanning
+### Hoofdstukplanning
 
 **Les 1 (90 min): Bouwen**
 - 10 min: eisen doornemen, vragen beantwoorden

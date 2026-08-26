@@ -1,4 +1,4 @@
-## Week 2: Classes, IDs en het Box Model
+## Hoofdstuk 2: Classes, IDs en het Box Model
 
 ### Leerdoelen
 Na deze les kan de student:
@@ -69,7 +69,7 @@ De product-kaarten in de starter-website staan nu dicht op elkaar en de hero-sec
 
 **6. Afronding (5 min)**
 - Vragen?
-- Volgende week: semantische HTML - waarom `<div>` niet altijd de beste keuze is
+- Volgend hoofdstuk: semantische HTML - waarom `<div>` niet altijd de beste keuze is
 
 ### Huiswerk
 Werk verder aan `starter-website`:

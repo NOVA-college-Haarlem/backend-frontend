@@ -1,7 +1,7 @@
-## Week 1: Herhaling - Van Inline naar Externe CSS
+## Hoofdstuk 1: Herhaling - Van Inline naar Externe CSS
 
 ### Context voor de docent
-Dit is de eerste week van Blok 3 en bewust een **herhalingsweek**. Uit Blok 1 en 2 hebben studenten kennis van: inline CSS, een wireframe maken, naar een bestaande website kijken (inspecteren), en een kleine website bouwen. Externe CSS, classes/IDs en het box model zijn nog niet stevig eigen gemaakt.
+Dit is het eerste hoofdstuk van Blok 3 en bewust een **herhalingshoofdstuk**. Uit Blok 1 en 2 hebben studenten kennis van: inline CSS, een wireframe maken, naar een bestaande website kijken (inspecteren), en een kleine website bouwen. Externe CSS, classes/IDs en het box model zijn nog niet stevig eigen gemaakt.
 
 In plaats van zelf vanaf nul te laten bouwen, krijgen studenten een **kant-en-klare, werkende website** (`starter-website/index.html`) die volledig met **inline CSS** is gemaakt. Samen gaan jullie deze verbeteren. Dit werkt pedagogisch beter dan "bouw zelf iets" omdat:
 - Studenten meteen een compleet, werkend resultaat zien (geen white-page-syndroom)
@@ -123,7 +123,7 @@ Eén class, drie keer hergebruikt. Benoem expliciet: **dit is het hele punt van 
 **6. Afronding (10 min)**
 - Vragen?
 - Reflectie: "Wat is het verschil tussen hoe de website eruitziet en hoe de code eruitziet, na vandaag?" (antwoord: visueel niets, code veel beter)
-- Volgende week: classes, IDs en het box model verder oppakken
+- Volgend hoofdstuk: classes, IDs en het box model verder oppakken
 
 ### Huiswerk
 Maak de omzetting van `starter-website/index.html` helemaal af:

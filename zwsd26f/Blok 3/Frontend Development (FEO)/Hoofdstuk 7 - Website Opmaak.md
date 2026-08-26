@@ -1,4 +1,4 @@
-## Week 7: Complete Website-opmaak
+## Hoofdstuk 7: Complete Website-opmaak
 
 ### Leerdoelen
 Na deze les kan de student:
@@ -66,7 +66,7 @@ footer {
 
 **6. Afronding (10 min)**
 - Vragen?
-- Volgende week: eindproject - alles combineren
+- Volgend hoofdstuk: eindproject - alles combineren
 
 ### Huiswerk
 Werk de eigen website af tot een complete one-page site:
@@ -82,7 +82,7 @@ Werk de eigen website af tot een complete one-page site:
 - Experimenteer met een subtiele achtergrondafbeelding of gradient in de hero
 
 ### Tips voor docent
-- Dit is een goede week om studenten elkaars website te laten resizen (browservenster smaller maken) en te bespreken wat er breekt - bereidt voor op latere responsive-lessen
+- Dit is een goed hoofdstuk om studenten elkaars website te laten resizen (browservenster smaller maken) en te bespreken wat er breekt - bereidt voor op latere responsive-lessen
 - Laat zien hoe professionele websites `.container`-achtige classes gebruiken (DevTools op een bekende site)
 
 ### Veelgemaakte fouten

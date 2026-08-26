@@ -1,4 +1,4 @@
-## Week 5: CSS Selectoren Uitbreiden en Buttons Maken
+## Hoofdstuk 5: CSS Selectoren Uitbreiden en Buttons Maken
 
 ### Leerdoelen
 Na deze les kan de student:
@@ -93,7 +93,7 @@ Leg uit: `:hover` = tijdens muis erover, `:focus` = wanneer je met Tab erop navi
 
 **5. Afronding (10 min)**
 - Vragen?
-- Volgende week: kleuren, typografie en navigatie
+- Volgend hoofdstuk: kleuren, typografie en navigatie
 
 ### Huiswerk
 1. Voeg descendant selectors toe waar dat de CSS overzichtelijker maakt

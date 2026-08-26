@@ -1,4 +1,4 @@
-## Week 3: Semantische HTML en Nette Structuur
+## Hoofdstuk 3: Semantische HTML en Nette Structuur
 
 ### Leerdoelen
 Na deze les kan de student:
@@ -94,7 +94,7 @@ Laat studenten meetypen (niet kopiëren). Loop rond en check of de CSS-selectors
 
 **6. Afronding (5 min)**
 - Vragen?
-- Volgende week: projectweek - alles wat je tot nu toe hebt geleerd toepassen
+- Volgend hoofdstuk: projectweek - alles wat je tot nu toe hebt geleerd toepassen
 
 ### Huiswerk
 Maak `starter-website` volledig semantisch:

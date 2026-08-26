@@ -1,10 +1,10 @@
-## Week 4: Projectweek - Eigen Website Herbouwen
+## Hoofdstuk 4: Projectweek - Eigen Website Herbouwen
 
 ### Projectomschrijving
-Studenten bouwen hun eigen (hobby/portfolio) website uit Blok 1/2 opnieuw op, of breiden deze uit, met alles wat in week 1-3 herhaald is: externe CSS, classes/IDs, het box model en semantische HTML. Wie geen bruikbare eigen pagina heeft, gebruikt de RetroPixel-starter-website als basis en verzint een eigen variant (andere winkel, ander thema).
+Studenten bouwen hun eigen (hobby/portfolio) website uit Blok 1/2 opnieuw op, of breiden deze uit, met alles wat in hoofdstuk 1-3 herhaald is: externe CSS, classes/IDs, het box model en semantische HTML. Wie geen bruikbare eigen pagina heeft, gebruikt de RetroPixel-starter-website als basis en verzint een eigen variant (andere winkel, ander thema).
 
 ### Leerdoelen
-Na deze week kan de student:
+Na dit hoofdstuk kan de student:
 - Zelfstandig een website structureren met externe CSS en semantische HTML
 - Classes en IDs bewust en consistent toepassen
 - Spacing (padding/margin) gericht gebruiken voor een verzorgde uitstraling
@@ -25,7 +25,7 @@ Na deze week kan de student:
 - [ ] `<article>` gebruikt voor herhalende content (bijv. producten, projecten)
 - [ ] CSS-comments die secties markeren
 
-### Weekplanning
+### Hoofdstukplanning
 
 **Les 1 (90 min): Opzet**
 - 10 min: uitleg vereisten en voorbeelden
@@ -42,7 +42,7 @@ Na deze week kan de student:
 - Korte klassikale terugkoppeling: veelvoorkomende sterke punten en verbeterpunten
 
 ### Tips voor docent
-- Dit is een goed moment om te zien wie de herhaling echt heeft opgepikt - loop gericht langs studenten die in week 1-3 moeite hadden
+- Dit is een goed moment om te zien wie de herhaling echt heeft opgepikt - loop gericht langs studenten die in hoofdstuk 1-3 moeite hadden
 - Sta toe dat studenten de RetroPixel-starter als vertrekpunt gebruiken als ze zelf niets hebben - het doel is oefenen met structuur, niet per se origineel zijn
 - Vier zichtbare vooruitgang: leg oude (Blok 1/2) en nieuwe versie naast elkaar
 
