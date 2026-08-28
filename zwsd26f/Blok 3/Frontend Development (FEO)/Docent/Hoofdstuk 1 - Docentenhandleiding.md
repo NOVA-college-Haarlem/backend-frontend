@@ -1,54 +1,50 @@
-## Hoofdstuk 1: Herhaling - Van Inline naar Externe CSS
+## Hoofdstuk 1: Herhaling - Van Inline naar Externe CSS - Docentenhandleiding
 
-### Context voor de docent
-Dit is het eerste hoofdstuk van Blok 3 en bewust een **herhalingshoofdstuk**. Uit Blok 1 en 2 hebben studenten kennis van: inline CSS, een wireframe maken, naar een bestaande website kijken (inspecteren), en een kleine website bouwen. Externe CSS, classes/IDs en het box model zijn nog niet stevig eigen gemaakt.
+*Bij: `../Hoofdstuk 1 - Herhaling Van Inline naar Externe CSS.md` (studentversie)*
 
-In plaats van zelf vanaf nul te laten bouwen, krijgen studenten een **kant-en-klare, werkende website** (`starter-website/index.html`) die volledig met **inline CSS** is gemaakt. Samen gaan jullie deze verbeteren. Dit werkt pedagogisch beter dan "bouw zelf iets" omdat:
-- Studenten meteen een compleet, werkend resultaat zien (geen white-page-syndroom)
-- De fouten/verbeterpunten al ingebouwd zitten - je hoeft niet te wachten tot iemand vastloopt
-- Iedereen hetzelfde startpunt heeft, dus voorbeelden op het scherm gelden voor iedereen
+**Taakklasse 1 van 3** - RetroPixel (gameshop, `starter-website/index.html`)
+**PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → eerste (begeleide) Modify
+
+### Waarom deze opzet
+Studenten krijgen een **complete, werkende website** als startpunt - geen leeg canvas. Dat voorkomt het "witte pagina"-probleem en laat de verbeterpunten (duplicatie, geen structuur) meteen zien in plaats van dat studenten daar zelf tegenaan moeten lopen. Dit hoofdstuk is het begin van Taakklasse 1: drie hoofdstukken lang wordt dezelfde RetroPixel-site steeds verder verbeterd, tot en met een eigen variant in Hoofdstuk 3.
 
 ### Leerdoelen
 Na deze les kan de student:
 - Uitleggen wat het verschil is tussen inline CSS en een externe stylesheet
 - Een externe CSS stylesheet aanmaken en linken in de `<head>`
+- Benoemen welke problemen duplicatie van inline styles veroorzaakt
 - Herhaalde inline styles omzetten naar één herbruikbare class
-- Uitleggen waarom herhaling van code (duplicatie) een probleem is
 
-### Benodigdheden
-- `starter-website/index.html` voor iedere student (uitdelen via de leeromgeving of gedeelde map)
-- Beamer/scherm om live mee te coderen
+### AI-gebruik dit hoofdstuk
+**AI uit** tijdens Predict, Run en Investigate - dit hoofdstuk draait om code léren lezen, niet laten genereren. Bij de begeleide Modify aan het eind mag je een AI-suggestie bekijken, maar alleen als je kan uitleggen waaróm die klopt.
 
 ### Lesopbouw (90 minuten)
 
-**1. Activerende start (10 min)**
+**Predict (10 min)**
+Deel `starter-website/index.html` uit - **nog niet draaien**. Laat studenten in tweetallen de code lezen (niet de browser openen) en opschrijven: *"Wat voor website denk je dat dit wordt? En: wat valt je op aan hoe de CSS hier staat?"*
 
-Open `starter-website/index.html` in de browser en laat 'm zien. "Dit is de website van RetroPixel, een fictieve retro-gameshop. Hij werkt prima. Toch gaan we hem vandaag helemaal aanpassen. Wie ziet er al waarom, als we naar de code kijken?"
+**Run (10 min)**
+Open de pagina in de browser. Klopt de voorspelling? Laat zien: het is een complete, werkende website van "RetroPixel", een retro-gameshop.
 
-Open de code in VS Code. Laat de klas de `style="..."` attributen zien.
-- Vraag: "Wat valt op aan deze code?"
-- Sturen richting: alle styling staat tussen de HTML in, en dezelfde stijl (bijv. de drie product-kaarten) staat drie keer voluit uitgeschreven.
+**Investigate (25 min) - live coding, AI uit**
+Open de code in VS Code en stel vragen:
+- "Wat valt op aan deze code?" → sturen richting: alle styling staat tussen de HTML in (`style="..."`), en dezelfde stijl (de drie product-kaarten) staat drie keer voluit uitgeschreven.
+- "Als de klant de kleur `#6c5ce7` wil veranderen, op hoeveel plekken moet dat dan?" (laat ze tellen: minstens 5 plekken) → dit is de kernpijn van inline CSS.
+- Introduceer: **externe stylesheet** lost dit op - alle styling op één plek, herbruikbaar.
 
-**2. Terugblik: wat is inline CSS ook alweer? (10 min)**
-- Inline CSS = styling direct in het `style="..."` attribuut van een element
-- Kort herhalen: waarom hebben we dit in Blok 1/2 gebruikt? (snel, direct zichtbaar, makkelijk om te beginnen)
-- Nadeel bespreken aan de hand van de starter-website: "Als je de kleur `#6c5ce7` wilt veranderen, op hoeveel plekken moet je dat dan doen?" (laat ze tellen: minstens 5 plekken)
+**Modify - begeleid, eerste stap (35 min)**
 
-**3. Externe stylesheet aanmaken (20 min)**
-
-**Samen doen (I do → We do):**
-1. Maak in de projectmap een bestand `css/style.css`
-2. Link 'm in de `<head>`:
+**I do → We do:**
+1. Maak `css/style.css` aan en link 'm in de `<head>`:
 ```html
 <link rel="stylesheet" href="css/style.css">
 ```
-3. Pak het makkelijkste voorbeeld eerst: de `<body>` tag.
+2. Verplaats samen de simpelste regel, de `<body>`:
 
 Inline:
 ```html
 <body style="margin: 0; font-family: Arial;">
 ```
-
 Wordt:
 ```html
 <body>
@@ -59,13 +55,9 @@ body {
     font-family: Arial;
 }
 ```
+Ververs de browser - niets verandert visueel. Benoem expliciet: **de website blijft hetzelfde, de code wordt beter.** Dat is lastig te "zien" voor studenten die gewend zijn dat vooruitgang zichtbaar is.
 
-Laat de browser verversen - niets verandert visueel, en dat is precies het punt: "de website ziet er hetzelfde uit, maar de code is nu beter."
-
-**4. Zelf verder verplaatsen: header en hero (25 min)**
-
-Studenten verplaatsen zelf (in tweetallen) de inline styles van de header (`<div style="background-color: #222222...">`) en de hero-sectie naar de stylesheet, met logische class-namen:
-
+**You do (in tweetallen):** verplaats de inline styles van header en hero-sectie naar de stylesheet, met logische class-namen:
 ```html
 <div class="header">
     <div class="logo">RetroPixel</div>
@@ -76,13 +68,11 @@ Studenten verplaatsen zelf (in tweetallen) de inline styles van de header (`<div
     </div>
 </div>
 ```
-
 ```css
 .header {
     background-color: #222222;
     padding: 20px;
 }
-
 .logo {
     color: white;
     font-size: 28px;
@@ -91,62 +81,24 @@ Studenten verplaatsen zelf (in tweetallen) de inline styles van de header (`<div
 }
 ```
 
-**Loop rond en help.** Veelgestelde vraag: "Moet ik echt alles overtypen?" - Ja, typen (niet kopiëren) helpt de syntax te onthouden.
-
-**5. Het echte "aha"-moment: de product-kaarten (15 min)**
-
-Laat zien dat de drie product-divs bijna identieke inline styles hebben. Vraag: "Wat zou er gebeuren als we hier één class van maken?"
-
-```html
-<div class="product">
-    <img src="https://picsum.photos/seed/mario/250/150">
-    <h3>Super Mario Bros</h3>
-    <p class="jaar">Nintendo - 1985</p>
-    <p class="prijs">€ 34,99</p>
-    <a href="#" class="knop">In winkelwagen</a>
-</div>
-```
-
-```css
-.product {
-    background-color: white;
-    width: 250px;
-    display: inline-block;
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid #dfe4ea;
-}
-```
-
-Eén class, drie keer hergebruikt. Benoem expliciet: **dit is het hele punt van externe CSS met classes** - één keer stylen, overal toepassen.
-
-**6. Afronding (10 min)**
-- Vragen?
-- Reflectie: "Wat is het verschil tussen hoe de website eruitziet en hoe de code eruitziet, na vandaag?" (antwoord: visueel niets, code veel beter)
-- Volgend hoofdstuk: classes, IDs en het box model verder oppakken
+Loop rond en help. Sluit af met het echte "aha"-moment: laat zien dat de drie product-kaarten bijna identieke inline styles hebben, en vraag: "Wat zou er gebeuren als we hier één class van maken?" (Dit werken ze volgende week verder uit.)
 
 ### Huiswerk
-Maak de omzetting van `starter-website/index.html` helemaal af:
-1. Alle `style="..."` attributen zijn verwijderd uit de HTML
-2. Alle styling staat in `css/style.css`
-3. Gebruik classes voor elementen die vaker voorkomen (zoals de knoppen `.knop`)
-4. De website ziet er visueel exact hetzelfde uit als de originele versie
-5. Controleer met DevTools of er geen `style=` attributen zijn overgebleven
-
-**Extra uitdaging:**
-- Geef alle knoppen (`.knop`) dezelfde class en zorg dat je maar één keer de knop-styling hoeft te schrijven
-- Voeg een `:hover` effect toe aan de knoppen (mag nieuw zijn, mag met hulp van de docent/Copilot)
+Zet zo veel mogelijk secties van `starter-website/index.html` om naar de externe stylesheet:
+1. Header en hero-sectie volledig extern
+2. Geen `style=` meer op deze twee onderdelen
+3. Website ziet er visueel exact hetzelfde uit
+4. Controleer met DevTools of er geen `style=` attributen zijn overgebleven op de omgezette onderdelen
 
 ### Tips voor docent
-- Benadruk steeds: "de website verandert niet, de code wordt beter" - dit is een lastig concept voor studenten die gewend zijn dat vooruitgang zichtbaar is
+- Benadruk steeds: "de website verandert niet, de code wordt beter" - dit concept is lastig voor studenten die gewend zijn dat vooruitgang zichtbaar is
 - Laat expliciet zien hoe DevTools kan controleren of er nog inline styles over zijn (Elements-tab, zoek op `style=`)
-- Sommige studenten willen meteen dingen "verbeteren" qua design - stuur dat door naar de extra uitdaging of volgende weken, vandaag gaat het om de omzetting
 - Dit is een goede les om in tweetallen te doen: de een typt, de ander leest de originele inline style voor
 
 ### Veelgemaakte fouten
 1. Classname vergeten toe te voegen in de HTML nadat de CSS-regel al is aangemaakt
 2. Spatie vergeten tussen meerdere classes op één element
-3. Bestandspad van de stylesheet fout (`css/style.css` vs `style.css` - check de mapstructuur)
+3. Bestandspad van de stylesheet fout (`css/style.css` vs `style.css`)
 4. Selector in CSS zonder punt (`.` vergeten voor een class)
 
 ---

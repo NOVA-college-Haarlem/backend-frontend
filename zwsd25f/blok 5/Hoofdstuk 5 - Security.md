@@ -225,3 +225,47 @@ if ($result) {
     file_put_contents('delete.log', date('Y-m-d H:i:s') . " - Tool $id deleted by user {$_SESSION['user_id']}\n", FILE_APPEND);
 }
 ```
+
+## Les 2 - Omgevingsvariabelen en .env
+
+Tot nu toe staan database-gegevens (host, gebruikersnaam, wachtwoord) direct in `database.php`, en het wachtwoord van de databaseserver staat ook gewoon in `docker-compose.yaml`. Voor lokaal ontwikkelen met Docker is dat geen probleem. Maar in een echt project mag dit nooit: als je dit bestand naar Git pusht (bijvoorbeeld naar GitHub), staan je (productie-)wachtwoorden voor iedereen zichtbaar in de geschiedenis van de repository - ook als je ze later weer verwijdert, blijven ze terug te vinden in oudere commits.
+
+De oplossing is een **`.env`-bestand**: een apart bestand met alle geheime instellingen (databasewachtwoord, API-keys, etc.), dat je expliciet buiten Git houdt. Je code leest deze waarden dan in via variabelen, in plaats van ze hard te coderen. Dit is de industriestandaard-manier om secrets te scheiden van je broncode.
+
+### Opdracht 7 - Werken met een .env-bestand
+
+1. Maak een bestand `.env` aan in de root van je project:
+```
+DB_HOST=mariadb
+DB_NAME=tools4ever
+DB_USER=root
+DB_PASS=
+```
+2. Open (of maak) `.gitignore` en zorg dat `.env` hierin staat, samen met `vendor/` (deze mag ook nooit meegepusht worden):
+```
+.env
+vendor/
+```
+3. Maak een klein PHP-functietje dat het `.env`-bestand inleest (geen extra library nodig):
+```php
+function loadEnv($path) {
+    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        [$key, $value] = explode('=', $line, 2);
+        $_ENV[trim($key)] = trim($value);
+    }
+}
+```
+4. Pas `database.php` aan zodat de gegevens uit `.env` komen in plaats van hardcoded te zijn:
+```php
+loadEnv(__DIR__ . '/.env');
+
+$dbhost = $_ENV['DB_HOST'];
+$dbname = $_ENV['DB_NAME'];
+$dbuser = $_ENV['DB_USER'];
+$dbpass = $_ENV['DB_PASS'];
+
+$conn = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=utf8mb4", $dbuser, $dbpass);
+```
+5. Test of de applicatie nog steeds werkt.
+6. Reflectievraag: waarom is dit belangrijk zodra je een project naar een publieke GitHub-repository pusht? En waarom moet `.env` zelf juist wél op elke ontwikkelmachine aanwezig zijn, terwijl het niet in Git staat?

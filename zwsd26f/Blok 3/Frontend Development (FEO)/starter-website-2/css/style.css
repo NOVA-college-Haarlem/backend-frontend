@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1a1a2e;
+    padding: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav {
+    display: inline-block;
+    float: right;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #ff6b35;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 38px;
+}
+
+.hero p {
+    color: white;
+    font-size: 18px;
+}
+
+.knop-hero {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+#lessen {
+    padding: 40px 20px;
+}
+
+#lessen h2 {
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    width: 280px;
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #444444;
+}
+
+.knop-card-1 {
+    background-color: #ff6b35;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.knop-card-2 {
+    background-color: #ff6b35;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.knop-card-3 {
+    background-color: #ff6b35;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#abonnementen {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+}
+
+#abonnementen h2 {
+    font-size: 22px;
+}
+
+.plan {
+    background-color: white;
+    border: 1px solid #dddddd;
+    width: 280px;
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+}
+
+.plan h3 {
+    font-size: 18px;
+}
+
+.plan p {
+    font-size: 16px;
+    color: #444444;
+}
+
+.knop-plan-1 {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.knop-plan-2 {
+    background-color: #16162a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.knop-plan-3 {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer {
+    background-color: #1a1a2e;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin: 5px;
+}

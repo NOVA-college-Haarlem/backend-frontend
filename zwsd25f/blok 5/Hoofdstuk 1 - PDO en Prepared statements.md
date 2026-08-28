@@ -70,6 +70,32 @@ Een variabele direct plaatsen in een sql-statement is gevaarlijk. Het kan nameli
 3. Controleer of de database correct is ingevoegd.
 4. Ga in de browser naar `http://localhost en bekijk de website.
 
+## CHARACTER SET & COLLATION
+
+Een databasetabel heeft niet alleen kolommen en datatypes, maar ook een **character set** (welke tekens kan de database opslaan) en een **collation** (hoe worden teksten met elkaar vergeleken en gesorteerd, bijvoorbeeld wel of niet hoofdlettergevoelig).
+
+De meest gebruikte character set voor moderne webapplicaties is **`utf8mb4`**. Dit is de enige MySQL-charset die *alle* Unicode-tekens correct opslaat, inclusief emoji en tekens met accenten zoals ä, ë en ö. Oudere charsets zoals `latin1` (of varianten daarvan, zoals `latin1_swedish_ci` - de historische MySQL-default) kunnen deze tekens niet correct opslaan. Je krijgt dan geen foutmelding, maar corrupte tekens (zogeheten "mojibake") in plaats van bijvoorbeeld "Kärcher".
+
+**Waarom is dit belangrijk?**
+- Een gebruiker die "Kärcher" als merknaam invoert, kan corrupte data terugkrijgen als de tabel niet op `utf8mb4` staat.
+- Als verschillende tabellen in dezelfde database verschillende charsets gebruiken, kan dat bij `JOIN`-queries op tekstkolommen tot onverwacht gedrag leiden.
+- Dit soort problemen merk je pas als het misgaat (bij het eerste rare teken), niet meteen bij het aanmaken van de tabel - een reden om er als developer bewust naar te kijken.
+
+#### Opdracht 0.2 - Charset controleren en normaliseren
+
+1. Open phpMyAdmin en bekijk de tabel `users` (tabblad "Operations" of "Structure"). Welke charset/collation staat hier?
+2. Vergelijk dit met de tabellen `tools` en `brands`. Zijn ze hetzelfde?
+3. Zet alle tabellen naar `utf8mb4`:
+```sql
+ALTER TABLE users CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE tools CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE brands CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+4. Zorg dat ook je PDO-connectie zelf `utf8mb4` gebruikt (dit voorkomt dat PHP en de database elkaar verkeerd begrijpen):
+```php
+$conn = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=utf8mb4", $dbuser, $dbpass);
+```
+5. Test: voeg via het create-formulier een merk toe met een accent in de naam (bijvoorbeeld "Kärcher") en controleer of dit correct wordt opgeslagen én getoond.
 
 #### OPDRACHT 1: SQL-INJECTIE
 1. Log in met de volgende gegevens:

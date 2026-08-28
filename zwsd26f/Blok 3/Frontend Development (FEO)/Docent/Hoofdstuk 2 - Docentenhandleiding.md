@@ -1,4 +1,9 @@
-## Hoofdstuk 2: Classes, IDs en het Box Model
+## Hoofdstuk 2: Classes, IDs en het Box Model - Docentenhandleiding
+
+*Bij: `../Hoofdstuk 2 - Classes, IDs en Box Model.md` (studentversie)*
+
+**Taakklasse 1 van 3** - RetroPixel (vervolg)
+**PRIMM-fasen dit hoofdstuk:** korte Investigate-herhaling → Modify (hoofdmoot)
 
 ### Leerdoelen
 Na deze les kan de student:
@@ -7,77 +12,64 @@ Na deze les kan de student:
 - Padding, border en margin gericht toepassen om spacing-problemen op te lossen
 - DevTools gebruiken om het box model van een element te inspecteren
 
+### AI-gebruik dit hoofdstuk
+Investigate-onderdelen (classes vs. IDs, box model) **AI uit** - dit is theorie die je moet kunnen navertellen. Bij de Modify-oefeningen (spacing verbeteren) **mag AI**, mits je bij een steekproef kan uitleggen wat een regel doet.
+
 ### Lesopbouw (90 minuten)
 
-**1. Terugblik (10 min)**
-- Laat 2-3 studenten hun omgezette `starter-website` laten zien (met stylesheet)
-- Kort gezamenlijk checken: staat er nog ergens een `style=` in de HTML?
+**Terugblik / korte Run-Investigate (10 min)**
+Laat 2-3 studenten hun omgezette `starter-website` zien (met stylesheet). Check gezamenlijk: staat er nog ergens een `style=` in de HTML?
 
-**2. Classes vs. IDs (20 min)**
-
-**Herhaling met de RetroPixel-site als voorbeeld:**
-- `.product` is een **class** - drie elementen delen 'm
-- Het `id="contact"` op de footer-sectie is een **ID** - komt maar één keer voor
+**Investigate: Classes vs. IDs (20 min)**
+Aan de hand van de RetroPixel-CSS:
+- `.header` is een **class** - kan op meerdere elementen
+- Het `id="contact"` op de footer is een **ID** - komt maar één keer voor
 
 ```css
-.product {
-    background-color: white;
+.header {
+    background-color: #222222;
 }
-
 #contact {
     background-color: #222222;
 }
 ```
 
-**Vuistregel herhalen:**
-- Class: meerdere elementen, herbruikbaar → gebruik je vaak
-- ID: één uniek element per pagina → gebruik je zelden (denk: hoofdtitel, één specifieke sectie)
+**Vuistregel:** class = herbruikbaar, gebruik je vaak. ID = uniek, gebruik je zelden.
 
-**Korte oefening:** Laat studenten in de RetroPixel-CSS aanwijzen welke selectors classes zijn en welke IDs, en waarom dat logisch is.
+**Korte oefening:** laat studenten in de RetroPixel-CSS aanwijzen welke selectors classes zijn en welke IDs, en waarom dat logisch is.
 
-**3. Het Box Model herhalen (20 min)**
-
+**Investigate: Box Model (20 min)**
 Teken/toon het box model diagram (content → padding → border → margin).
 
 **Live probleem oplossen in de starter-website:**
-Bekijk de knoppen (`.knop`). De originele inline versie had:
+De knoppen (`.knop`) hadden origineel:
 ```css
 padding: 12px 12px;
 padding-left: 25px;
 padding-right: 25px;
 ```
-Dit is dubbelop en verwarrend. Los het samen op met de shorthand:
+Dit is dubbelop. Los het samen op met de shorthand:
 ```css
 .knop {
     padding: 12px 25px;
 }
 ```
 
-Leg de shorthand-volgorde nogmaals uit (boven, rechts, onder, links / of boven-onder, links-rechts).
-
-**4. Praktische toepassing: spacing verbeteren (25 min)**
-
-De product-kaarten in de starter-website staan nu dicht op elkaar en de hero-sectie voelt vol. Studenten gaan zelfstandig (of in tweetallen):
+**Modify: spacing verbeteren (30 min) - AI mag, met verantwoording**
+Zelfstandig of in tweetallen:
 - `margin-bottom` toevoegen tussen secties (`.hero`, `#over`, `#games`, `#contact`)
 - Consistente `padding` toepassen op elke sectie (bijv. `padding: 40px 20px` overal)
 - Een `border-radius` toevoegen aan de `.product` kaarten en de `.knop`
 
-**5. DevTools: box model inspecteren (10 min)**
-- Open DevTools, selecteer een `.product` element
-- Bekijk de box model visualisatie (oranje = padding, groen = margin)
-- Verander live de padding-waarde in DevTools en zie het effect, vóórdat je het in de CSS aanpast
-
-**6. Afronding (5 min)**
-- Vragen?
-- Volgend hoofdstuk: semantische HTML - waarom `<div>` niet altijd de beste keuze is
+**DevTools: box model inspecteren (10 min)**
+Open DevTools, selecteer een `.product` element, bekijk de box model visualisatie (oranje = padding, groen = margin). Verander live de padding-waarde in DevTools vóórdat je het in de CSS aanpast.
 
 ### Huiswerk
 Werk verder aan `starter-website`:
 1. Alle secties hebben consistente `padding`
-2. Er zit duidelijke `margin` tussen de secties (geen dingen die tegen elkaar aan plakken)
+2. Duidelijke `margin` tussen de secties (geen elementen die tegen elkaar aan plakken)
 3. De `.product` kaarten hebben een `border-radius`
 4. Gebruik minstens 1 nieuwe class die je zelf bedenkt (bijv. `.sectie-titel` voor alle `<h2>`'s)
-5. Inspecteer met DevTools of je box model klopt zoals je verwacht
 
 **Extra uitdaging:**
 - Voeg `box-shadow` toe aan de `.product` kaarten
@@ -85,7 +77,7 @@ Werk verder aan `starter-website`:
 
 ### Tips voor docent
 - Gebruik DevTools veel en laat studenten live padding/margin aanpassen - abstract concept wordt concreet zodra ze het zien veranderen
-- Herhaal het verschil padding (binnen de rand) vs. margin (buiten de rand) meerdere keren - dit blijft een blijvend verwarpunt
+- Herhaal het verschil padding (binnen de rand) vs. margin (buiten de rand) meerdere keren
 - Benoem expliciet: dit hebben jullie in Blok 1 al gezien, vandaag maken we het weer scherp
 
 ### Veelgemaakte fouten
