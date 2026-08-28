@@ -2,7 +2,7 @@
 
 **Opleiding:** MBO niveau 4, Software Development
 **Klas:** zwsd25f
-**Scope:** Blok 5 t/m Blok 8 (jaar 2) - dit document dekt Blok 5 en 6, zie Openstaande punten
+**Scope:** Blok 5 t/m Blok 8 (jaar 2) - dit document dekt Blok 5, 6 en 7, zie Openstaande punten
 **Bron:** `zwsd25f`
 
 > Zie `curriculum-jaar 1 - zwsd25f.md` voor Blok 3-4 van dit cohort. Dit document staat los van de curricula van zwsd26ab en zwsd26f.
@@ -15,10 +15,10 @@
 |---|---|---|
 | **5** | Uitgewerkt | Backend-verdieping: PDO, security, soft delete, AJAX, filtering, error handling (plain PHP) + eindproject |
 | **6** | Uitgewerkt | Laravel: MVC, Eloquent-relaties, CRUD, authenticatie/autorisatie, bestellingen (many-to-many) + projecten |
-| **7** | *nog niet in deze repo* | - |
+| **7** | Uitgewerkt | API's: consumeren, cachen, visualiseren, e-mail, een eigen REST API bouwen, full stack app + projectlessen |
 | **8** | *nog niet in deze repo* | - |
 
-Blok 7-8 zijn (nog) niet aanwezig in deze repo - dit cohort heeft op het moment van schrijven vermoedelijk Blok 6 net afgerond of is daar nog mee bezig.
+Blok 8 is (nog) niet aanwezig in deze repo - dit cohort heeft op het moment van schrijven vermoedelijk Blok 7 net afgerond of is daar nog mee bezig.
 
 ---
 
@@ -82,9 +82,34 @@ Zes themaprojecten om het Laravel-patroon zelfstandig te herhalen: Bibliotheek, 
 
 ---
 
-## 4. Eindbeeld na Jaar 2 (Blok 5-6, zoals aanwezig in deze repo)
+## 4. Blok 7 - API's & Full Stack Development
 
-Na deze twee blokken kan een zwsd25f-student:
+**Duur:** 6 hoofdstukken + projectlessen
+**Stack:** Laravel, externe API's (OpenWeatherMap, CoinGecko, REST Countries), Postman, Chart.js, Mailtrap
+**Focus:** eerst API's van anderen leren consumeren, dan zelf een REST API bouwen, en tot slot een complete full stack applicatie (database → eigen API → frontend)
+
+| # | Hoofdstuk | Leeruitkomsten |
+|---|---|---|
+| 1 | API Introductie & Postman | Wat een API is en waarvoor; API keys; Postman gebruiken om requests te testen; een externe API (OpenWeatherMap) consumeren; een eerste Laravel-service (`WeatherService`) die API-data ophaalt en toont |
+| 2 | Werken met API's in Laravel | Laravel's `Http`-facade; een Leaflet-kaart integreren; een eigen backend-endpoint dat een externe API doorgeeft; zoekfunctie met `fetch()`; foutafhandeling (404 bij niet-gevonden stad); een tweede API-call combineren (5-daagse voorspelling) |
+| 3 | API Caching & Crypto Dashboard | Waarom en hoe je API-data cachet in je eigen database (`fetched_at`, cache-vervaltijd); `updateOrCreate`; Carbon voor tijdsberekeningen; cache-status tonen in de UI; handmatige refresh-knop; casts voor datumvelden |
+| 4 | Data Visualisatie & E-mail | Chart.js (bar-, doughnut-charts) gevoed vanuit Eloquent-data; de `@json`-directive voor veilige data-overdracht naar JavaScript; e-mail versturen met Laravel's Mail-systeem (Mailable classes, Mailtrap als testomgeving); contactformulier met validatie |
+| 5 | Eigen REST API Bouwen | `routes/api.php` vs. `routes/web.php`; een aparte API-controller; API Resources om de JSON-output te controleren; volledige CRUD (GET/POST/DELETE) met validatie en de juiste HTTP-statuscodes; `Route::apiResource`; API beveiligen met een token-middleware |
+| 6 | Full Stack App: Esports Platform | Een nieuw Laravel-project koppelen aan een bestaande MySQL-database; API-ondersteuning installeren (`php artisan install:api`, Sanctum); Models en Eloquent-relaties (`belongsTo`) voor games/matches/teams; API Resources met relatiedata (teamnamen, niet alleen ID's); volledige CRUD; een frontend (Blade + `fetch()`) die de eigen API aanroept - de volledige cyclus van database tot scherm |
+
+**Eindresultaat Blok 7:** externe API's kunnen consumeren en cachen, data visualiseren en e-mails versturen vanuit Laravel, en zelfstandig een eigen, beveiligde REST API bouwen inclusief een frontend die deze aanroept - de volledige levenscyclus van een moderne webapplicatie.
+
+### Projectlessen Blok 7
+
+Vijf themaprojecten (in tweetallen), telkens een Laravel-applicatie met authenticatie, rollen en CRUD: Helpdesk Ticketsysteem, Campus Parking Systeem, Hardware Uitleen Systeem, Incident Registratie Systeem, Onderhoudsverzoeken Systeem. Beoordeeld met een rubric op 6 criteria (Database & ERD, Laravel Backend, Authenticatie & Autorisatie, Functionele Eisen, Code Begrip & MVC via individuele bevraging, GitHub & Samenwerking) - 18 punten totaal, omgezet naar een cijfer.
+
+> **Kwaliteitscontrole:** bij analyse bleek `projectlessen/Rubric Projectlessen Blok 7.md` oorspronkelijk gelabeld voor zwsd24ab (titel én voettekst) - gecorrigeerd naar zwsd25f. Ook een blocking bug in Hoofdstuk 6 (verkeerde Eloquent-relatienamen bij eager loading, crashte `/api/matches`) en een ontbrekende frontend-opdracht + Samenvatting zijn gefixt. Details in `.claude/versie.md` (2026-08-28).
+
+---
+
+## 5. Eindbeeld na Jaar 2 (Blok 5-7, zoals aanwezig in deze repo)
+
+Na deze drie blokken kan een zwsd25f-student:
 
 **Security & databases (Blok 5)**
 - PDO met prepared statements gebruiken i.p.v. onveilige string-concatenatie in queries
@@ -102,11 +127,18 @@ Na deze twee blokken kan een zwsd25f-student:
 - Authenticatie (Breeze) en autorisatie (Gates/Policies) implementeren
 - Many-to-many relaties met een pivot-tabel beheren (`attach`/`sync`/`detach`)
 
-**Vergelijking met zwsd26ab:** dit niveau ligt ruim voorbij waar zwsd26ab na jaar 1 staat. zwsd26ab's backend-pilot (PRIMM, zie `curriculum-jaar 1.md` §4b) eindigt bij CRUD in Laravel met basisvalidatie - zwsd25f gaat in Blok 5-6 daar al voorbij met security-verdieping (PDO/hashing/XSS/soft delete), AJAX, en in Laravel met Policies, FormRequests en many-to-many relaties. Dit is een goede referentie voor hoe het (nog te schrijven) curriculum-jaar 2 van zwsd26ab er inhoudelijk uit zou kunnen zien.
+**API's & Full Stack (Blok 7)**
+- Externe API's consumeren via Postman en Laravel's `Http`-facade
+- API-data cachen in een eigen database om onnodige externe calls te voorkomen
+- Data visualiseren met Chart.js en e-mails versturen vanuit Laravel (Mailable + Mailtrap)
+- Een eigen, beveiligde REST API bouwen: routes, Resources, validatie, HTTP-statuscodes, token-middleware
+- Een frontend bouwen die uitsluitend via `fetch()` met de eigen API communiceert (volledige full stack cyclus)
+
+**Vergelijking met zwsd26ab:** dit niveau ligt ruim voorbij waar zwsd26ab na jaar 1 staat. zwsd26ab's backend-pilot (PRIMM, zie `curriculum-jaar 1.md` §4b) eindigt bij CRUD in Laravel met basisvalidatie - zwsd25f gaat in Blok 5-7 daar al voorbij met security-verdieping (PDO/hashing/XSS/soft delete), AJAX, geavanceerde Laravel-features (Policies, FormRequests, many-to-many) en in Blok 7 zelfs met het bouwen van een eigen REST API en een complete full stack applicatie. Dit is een goede referentie voor hoe het (nog te schrijven) curriculum-jaar 2 van zwsd26ab er inhoudelijk uit zou kunnen zien.
 
 ---
 
-## 5. Openstaande punten
+## 6. Openstaande punten
 
-- **Blok 7 en 8 ontbreken** in deze repo - nog te documenteren zodra er materiaal is.
+- **Blok 8 ontbreekt** in deze repo - nog te documenteren zodra er materiaal is.
 - Zie ook `.claude/todo.md` voor de actuele stand van openstaand werk.

@@ -6,7 +6,7 @@
 
 - [ ] Curriculum jaar 2 voor zwsd26ab (Blok 5-8) uitwerken, zodra bekend is welke stof daar valt - `curriculum-jaar 2 - zwsd25f.md` kan hiervoor als inhoudelijke referentie dienen (vergelijkbaar traject, één cohort eerder)
 - [ ] zwsd25f Blok 1-2 documenteren zodra dat materiaal beschikbaar komt (nog steeds ontbrekend in de repo)
-- [ ] `curriculum-jaar 2 - zwsd25f.md` bijwerken met Blok 7 (materiaal is inmiddels verschenen en geanalyseerd/gefixt, zie Afgerond - het curriculumdocument zelf is nog niet bijgewerkt) en Blok 8 zodra dat er is
+- [ ] `curriculum-jaar 2 - zwsd25f.md` bijwerken met Blok 8 zodra dat materiaal er is (Blok 7 is inmiddels verwerkt, zie Afgerond)
 - [ ] Overige (niet-blocking) bevindingen uit de Blok 7-analyse nog niet opgepakt: Hoofdstuk 6 mixt Laravel Herd met `php artisan serve`/`localhost:8000`; `WeatherService` (Hoofdstuk 1) gebruikt `file_get_contents()` i.p.v. de `Http`-facade zonder foutafhandeling; `Coin::updateOrCreate(...)`-blok 3x gedupliceerd in Hoofdstuk 3; `apiResource` in Hoofdstuk 5 registreert een `update`-route die nooit is geïmplementeerd; typo "vevat" → "bevat" in Hoofdstuk 2
 - [ ] Navragen of het zwsd25f Blok 3 FEO-materiaal (Week 1 lijkt inhoudelijk niet bij het bestand te horen, Week 2-4 ontbreken) bewust zo is of een opschoonactie nodig heeft
 - [ ] Backend-curriculum voor Blok 4 ontwerpen (nog volledig open - frontend-formulieren uit Blok 4 zijn er wel klaar voor)
@@ -35,3 +35,4 @@
   - **Hoofdstuk 5** (Security): nieuwe "Les 2 - Omgevingsvariabelen en .env" + Opdracht 7 om credentials uit `database.php`/`docker-compose.yaml` naar een `.env`-bestand te verplaatsen
   - `Blok5_Leerdoelen_Samenvatting.md` bijgewerkt met bijpassende leerdoelen-bullets per week; de eerder toegevoegde docent-notitie daar is verwijderd (geen lesstof-equivalent nodig voor een samenvattingsdocument)
 - [x] zwsd25f Blok 7 geanalyseerd en top-3 bevindingen verwerkt in de lesstof (zie versie.md voor het volledige overzicht): blocking bug in Hoofdstuk 6 (verkeerde eager-load relatienamen) gefixt, ontbrekende frontend-opdracht + Samenvatting toegevoegd aan Hoofdstuk 6, klasnaam in `projectlessen/Rubric Projectlessen Blok 7.md` gecorrigeerd van zwsd24ab naar zwsd25f
+- [x] `curriculum-jaar 2 - zwsd25f.md` bijgewerkt met Blok 7: Blokoverzicht-tabel, nieuwe §4 "Blok 7 - API's & Full Stack Development" (hoofdstukoverzicht + projectlessen + kwaliteitscontrole-notitie), Eindbeeld (nu §5) uitgebreid met Blok 7-vaardigheden, Openstaande punten (nu §6) bijgewerkt zodat alleen Blok 8 nog als ontbrekend genoemd wordt

@@ -92,3 +92,11 @@ Bijgehouden per sessie/wijziging. Zie `todo.md` voor openstaande punten.
 - **Klasnaam gecorrigeerd in `projectlessen/Rubric Projectlessen Blok 7.md`:** stond op "zwsd24ab" (titel én voettekst) - zelfde patroon als de eerdere Blok 3 FEO-mismatch. Gecorrigeerd naar "zwsd25f". De 5 projectbeschrijvingen zelf hadden dit probleem niet.
 - **Bewust niet opgepakt** (staan als open punten in `todo.md`, niet gevraagd): Herd/`php artisan serve`-inconsistentie in Hoofdstuk 6, `file_get_contents()` zonder foutafhandeling in Hoofdstuk 1's `WeatherService`, drievoudige letterlijke duplicatie van het `updateOrCreate`-blok in Hoofdstuk 3, de nooit-geïmplementeerde `update`-route die `Route::apiResource` in Hoofdstuk 5 registreert, en een typo ("vevat" → "bevat") in Hoofdstuk 2.
 - `.claude/todo.md` bijgewerkt: Blok 7 als afgerond gemarkeerd, nieuw open punt voor het bijwerken van `curriculum-jaar 2 - zwsd25f.md` met Blok 7 (dat document zelf is nog niet aangepast), en de vier niet-opgepakte bevindingen als apart open punt genoteerd.
+
+**`curriculum-jaar 2 - zwsd25f.md` alsnog bijgewerkt met Blok 7** - de docent wees erop dat dit document, ondanks het open-punt in `todo.md`, feitelijk nog niet was aangepast.
+- Kop (Scope-regel) en Blokoverzicht-tabel bijgewerkt: Blok 7 staat nu op "Uitgewerkt" i.p.v. "nog niet in deze repo".
+- Nieuwe **§4 "Blok 7 - API's & Full Stack Development"** toegevoegd (tussen Blok 6 en Eindbeeld): hoofdstukoverzicht met leeruitkomsten voor alle 6 hoofdstukken, een "Projectlessen Blok 7"-subsectie (5 themaprojecten + rubric-opzet), en een korte kwaliteitscontrole-notitie die verwijst naar de fixes van dezelfde dag (blocking bug, ontbrekende frontend-opdracht, rubric-klasnaam).
+- **Eindbeeld** (was §4, nu §5) uitgebreid met een "API's & Full Stack (Blok 7)"-blok met vaardigheden, en de titel/inleidende zin aangepast van "Blok 5-6" naar "Blok 5-7".
+- **Vergelijking met zwsd26ab**-alinea bijgewerkt om Blok 7 (eigen REST API, full stack app) mee te nemen.
+- **Openstaande punten** (was §5, nu §6): "Blok 7 en 8 ontbreken" vervangen door "Blok 8 ontbreekt" (Blok 7 is nu gedocumenteerd).
+- `.claude/todo.md` bijgewerkt: het open punt over `curriculum-jaar 2 - zwsd25f.md` vervangen door een punt dat alleen nog Blok 8 betreft; afgerond werk toegevoegd.
