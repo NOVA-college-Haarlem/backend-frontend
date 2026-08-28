@@ -56,3 +56,43 @@ php artisan make:model Loan -mcr
 
 
 ### Tip: Commit regelmatig en werk met feature-branches. Succes!
+
+---
+
+## Sprintbacklog
+
+Zie `Sprintplanning Projectlessen.md` voor het volledige 8-weken-overzicht en `Scrum Introductie.md` voor hoe je hiermee werkt.
+
+### Sprint 1 - MVP: bekijken en aanvragen
+- Als gebruiker wil ik een account kunnen aanmaken en inloggen
+- Als gebruiker wil ik beschikbare hardware kunnen bekijken
+- Als gebruiker wil ik een uitleenverzoek kunnen indienen
+
+### Sprint 2 - Beheer en goedkeuring
+- Als gebruiker wil ik mijn eigen uitleenhistorie kunnen inzien
+- Als beheerder wil ik uitleenverzoeken kunnen goedkeuren of afwijzen
+- Als beheerder wil ik hardware kunnen toevoegen, bewerken en verwijderen
+
+### Sprint 3 - Overzicht van uitleningen
+- Als beheerder wil ik een overzicht zien van alle uitleningen (actief, te laat, retour)
+- Als gebruiker wil ik zien wanneer ik hardware moet terugbrengen
+- Als beheerder wil ik een item als "geretourneerd" kunnen markeren
+
+**→ Projectweek 1 + tussentijds assessment (zie `Sprintplanning Projectlessen.md`)**
+
+### Sprint 4 - Categorieën en verfijning
+- Als beheerder wil ik hardware kunnen indelen in categorieën
+- Als gebruiker wil ik duidelijke statusmeldingen zien bij mijn verzoek (in afwachting/goedgekeurd/afgewezen)
+- Als beheerder wil ik in één oogopslag zien welke items te laat zijn
+
+### Sprint 5 - Bonusfunctionaliteit
+- Als gebruiker wil ik een e-mailnotificatie krijgen bij goedkeuring van mijn verzoek of als een item te laat is
+- Als gebruiker wil ik hardware kunnen zoeken en filteren op categorie
+- Als beheerder wil ik (optioneel) een QR-code kunnen genereren voor snelle registratie
+
+### Sprint 6 - Kwaliteit en afronding
+- Als gebruiker wil ik dat het systeem responsive is zodat het ook op mobiel werkt
+- Als team willen we autorisatie testen (kan een gebruiker bij andermans uitleenhistorie?)
+- Als team willen we de code opschonen en documenteren (README)
+
+**→ Projectweek 2: eindoplevering en demo**

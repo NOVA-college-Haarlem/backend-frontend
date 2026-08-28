@@ -62,3 +62,43 @@ Wachtlijst bij volle bezetting
 
 
 Tip: Commit regelmatig en werk met feature-branches. Succes!
+
+---
+
+## Sprintbacklog
+
+Zie `Sprintplanning Projectlessen.md` voor het volledige 8-weken-overzicht en `Scrum Introductie.md` voor hoe je hiermee werkt.
+
+### Sprint 1 - MVP: voertuig en overzicht
+- Als gebruiker wil ik een account kunnen aanmaken en inloggen
+- Als gebruiker wil ik mijn voertuig(en) kunnen registreren (kenteken, type)
+- Als gebruiker wil ik beschikbare parkeerplaatsen per dag/tijdslot kunnen bekijken
+
+### Sprint 2 - Reserveren
+- Als gebruiker wil ik een parkeerplaats kunnen reserveren voor een dag/tijdslot
+- Als gebruiker wil ik mijn eigen reserveringen kunnen inzien
+- Als gebruiker wil ik een reservering kunnen annuleren
+
+### Sprint 3 - Beheer
+- Als beheerder wil ik parkeerplaatsen kunnen toevoegen, bewerken en verwijderen
+- Als beheerder wil ik parkeerzones kunnen beheren (bijv. bezoekers, personeel, elektrisch)
+- Als gebruiker wil ik niet kunnen reserveren op een plek/tijdslot die al bezet is (dubbele reservering voorkomen)
+
+**→ Projectweek 1 + tussentijds assessment (zie `Sprintplanning Projectlessen.md`)**
+
+### Sprint 4 - Overzicht en verfijning
+- Als beheerder wil ik een overzicht van alle reserveringen zien
+- Als beheerder wil ik de bezettingsgraad en statistieken kunnen bekijken
+- Als gebruiker wil ik een duidelijke foutmelding zien als een plek al bezet is
+
+### Sprint 5 - Bonusfunctionaliteit
+- Als gebruiker wil ik een e-mailbevestiging krijgen bij het maken van een reservering
+- Als beheerder wil ik een kalenderweergave van de beschikbaarheid zien
+- Als gebruiker wil ik mij op een wachtlijst kunnen zetten als alles bezet is
+
+### Sprint 6 - Kwaliteit en afronding
+- Als gebruiker wil ik dat het systeem responsive is zodat het ook op mobiel werkt
+- Als team willen we autorisatie testen (kan een gebruiker bij andermans reservering of voertuig?)
+- Als team willen we de code opschonen en documenteren (README)
+
+**→ Projectweek 2: eindoplevering en demo**

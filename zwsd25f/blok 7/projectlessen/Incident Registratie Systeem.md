@@ -71,3 +71,43 @@ php artisan make:model Location -mcr
 
 Commit regelmatig, werk met feature-branches en gebruik issues/board om taken te verdelen. Succes!
 
+---
+
+## Sprintbacklog
+
+Zie `Sprintplanning Projectlessen.md` voor het volledige 8-weken-overzicht en `Scrum Introductie.md` voor hoe je hiermee werkt.
+
+### Sprint 1 - MVP: melden en volgen
+- Als melder wil ik een account kunnen aanmaken en inloggen
+- Als melder wil ik een incident kunnen melden (titel, beschrijving, locatie, datum/tijd, type incident)
+- Als melder wil ik mijn eigen meldingen en hun status kunnen bekijken
+
+### Sprint 2 - Coördinator: opvolgen
+- Als coördinator wil ik alle meldingen kunnen inzien en filteren (op type, datum, status, locatie)
+- Als coördinator wil ik een incident aan een verantwoordelijke kunnen toewijzen
+- Als coördinator wil ik de status kunnen bijwerken en notities kunnen toevoegen
+
+### Sprint 3 - Beheer
+- Als beheerder wil ik incidenttypes en locaties kunnen beheren (toevoegen/bewerken/verwijderen)
+- Als beheerder wil ik gebruikers en rollen kunnen beheren
+- Als melder wil ik verplichte velden ingevuld moeten hebben voordat ik mijn melding kan versturen
+
+**→ Projectweek 1 + tussentijds assessment (zie `Sprintplanning Projectlessen.md`)**
+
+### Sprint 4 - Overzicht en verfijning
+- Als coördinator wil ik overzichten en eenvoudige statistieken zien (aantal incidenten per type, periode, locatie)
+- Als melder wil ik duidelijke status-updates zien op mijn melding
+- Als gebruiker wil ik duidelijke succes- en foutmeldingen zien bij elke actie
+
+### Sprint 5 - Bonusfunctionaliteit
+- Als melder wil ik een foto of document kunnen toevoegen aan mijn melding
+- Als coördinator wil ik incidenten kunnen exporteren naar CSV
+- Als melder/coördinator wil ik een e-mailnotificatie krijgen bij een nieuwe melding of statuswijziging
+
+### Sprint 6 - Kwaliteit en afronding
+- Als coördinator wil ik een dashboard met grafieken zien (incidenten per maand, per type, per locatie)
+- Als team willen we alle rollen en autorisatie grondig testen
+- Als team willen we de code opschonen en documenteren (README)
+
+**→ Projectweek 2: eindoplevering en demo**
+

@@ -74,3 +74,46 @@ Kies zelf of je een aparte `TicketStatus`-tabel gebruikt, of statussen als enum/
 
 Commit regelmatig en werk met feature-branches. Succes!
 
+---
+
+## Sprintbacklog
+
+Zie `Sprintplanning Projectlessen.md` voor het volledige 8-weken-overzicht en `Scrum Introductie.md` voor hoe je hiermee werkt.
+
+### Sprint 1 - MVP: melden en volgen
+- Als bezoeker wil ik een account kunnen aanmaken en inloggen zodat ik toegang krijg tot het systeem
+- Als melder wil ik een ticket kunnen aanmaken met titel, beschrijving, prioriteit en categorie zodat mijn probleem geregistreerd wordt
+- Als melder wil ik mijn eigen tickets in een overzicht zien zodat ik weet wat ik heb gemeld
+- Als melder wil ik de status van mijn ticket zien (nieuw/in behandeling/opgelost/gesloten)
+
+### Sprint 2 - Medewerker: behandelen
+- Als medewerker wil ik alle binnengekomen tickets zien zodat ik weet wat er speelt
+- Als medewerker wil ik tickets kunnen filteren op status/prioriteit/categorie zodat ik snel het juiste ticket vind
+- Als medewerker wil ik een ticket aan mezelf of een collega kunnen toewijzen
+- Als medewerker wil ik de status van een ticket kunnen aanpassen
+
+### Sprint 3 - Reacties en beheer
+- Als medewerker wil ik een reactie op een ticket kunnen plaatsen zodat de melder op de hoogte blijft
+- Als melder wil ik reacties van de helpdesk op mijn ticket kunnen lezen
+- Als beheerder wil ik categorieën en prioriteiten kunnen beheren (toevoegen/bewerken/verwijderen)
+- Als beheerder wil ik medewerkersaccounts kunnen beheren
+
+**→ Projectweek 1 + tussentijds assessment (zie `Sprintplanning Projectlessen.md`)**
+
+### Sprint 4 - Overzicht en verfijning
+- Als beheerder wil ik een overzicht zien met eenvoudige statistieken (aantal open tickets, gemiddelde afhandeltijd, tickets per categorie)
+- Als melder wil ik zelf een aanvulling/reactie op mijn eigen ticket kunnen plaatsen
+- Als gebruiker wil ik duidelijke succes- en foutmeldingen zien bij elke actie
+
+### Sprint 5 - Bonusfunctionaliteit
+- Als melder wil ik een e-mailnotificatie ontvangen bij een statuswijziging van mijn ticket
+- Als medewerker wil ik tickets kunnen zoeken op meerdere velden tegelijk (status, prioriteit, categorie, meldingsdatum)
+- Als medewerker wil ik een dashboard met mijn eigen openstaande tickets zien
+
+### Sprint 6 - Kwaliteit en afronding
+- Als gebruiker wil ik dat het systeem responsive is zodat het ook op mobiel werkt
+- Als team willen we alle rollen en autorisatie grondig testen zodat niemand bij data komt die niet voor hem is
+- Als team willen we de code opschonen en documenteren (README) zodat het project overdraagbaar is
+
+**→ Projectweek 2: eindoplevering en demo**
+

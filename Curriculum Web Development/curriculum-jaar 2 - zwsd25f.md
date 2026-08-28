@@ -99,9 +99,13 @@ Zes themaprojecten om het Laravel-patroon zelfstandig te herhalen: Bibliotheek, 
 
 **Eindresultaat Blok 7:** externe API's kunnen consumeren en cachen, data visualiseren en e-mails versturen vanuit Laravel, en zelfstandig een eigen, beveiligde REST API bouwen inclusief een frontend die deze aanroept - de volledige levenscyclus van een moderne webapplicatie.
 
-### Projectlessen Blok 7
+### Projectlessen Blok 7 - Scrum
 
-Vijf themaprojecten (in tweetallen), telkens een Laravel-applicatie met authenticatie, rollen en CRUD: Helpdesk Ticketsysteem, Campus Parking Systeem, Hardware Uitleen Systeem, Incident Registratie Systeem, Onderhoudsverzoeken Systeem. Beoordeeld met een rubric op 6 criteria (Database & ERD, Laravel Backend, Authenticatie & Autorisatie, Functionele Eisen, Code Begrip & MVC via individuele bevraging, GitHub & Samenwerking) - 18 punten totaal, omgezet naar een cijfer.
+De projectlessen (8 weken, na de 6 hoofdstukken) zijn opgezet volgens **Scrum**: tweetallen werken in wekelijkse sprints aan één van vijf themaprojecten - Helpdesk Ticketsysteem, Campus Parking Systeem, Hardware Uitleen Systeem, Incident Registratie Systeem, Onderhoudsverzoeken Systeem.
+
+**Opbouw:** Sprint 1-3 (MVP, rolgestuurd: gebruiker → medewerker/coördinator → beheerder) → **Projectweek 1 + tussentijds (formatief) assessment** → Sprint 4-6 (overzichten/statistieken, bonusfunctionaliteit, kwaliteit/afronding) → **Projectweek 2** (eindoplevering en demo). Elke sprint = 1 week, met Sprint Planning, dagelijkse stand-up, Sprint Review en Retrospective. Zie `projectlessen/Scrum Introductie.md` (de introductieles: begrippen, rollen, taakbord) en `projectlessen/Sprintplanning Projectlessen.md` (het volledige 8-weken-schema). Elk van de vijf projectbeschrijvingen heeft een kant-en-klare sprintbacklog (user stories per sprint, afgeleid van de eigen functionele eisen).
+
+Beoordeeld met een rubric op 6 criteria (Database & ERD, Laravel Backend, Authenticatie & Autorisatie, Functionele Eisen, Code Begrip & MVC via individuele bevraging, GitHub & Samenwerking) - 18 punten totaal, omgezet naar een cijfer. Het tussentijdse assessment na Sprint 3 telt niet mee in dit cijfer; het is puur formatief.
 
 > **Kwaliteitscontrole:** bij analyse bleek `projectlessen/Rubric Projectlessen Blok 7.md` oorspronkelijk gelabeld voor zwsd24ab (titel én voettekst) - gecorrigeerd naar zwsd25f. Ook een blocking bug in Hoofdstuk 6 (verkeerde Eloquent-relatienamen bij eager loading, crashte `/api/matches`) en een ontbrekende frontend-opdracht + Samenvatting zijn gefixt. Details in `.claude/versie.md` (2026-08-28).
 
