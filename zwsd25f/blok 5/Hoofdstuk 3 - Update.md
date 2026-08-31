@@ -9,6 +9,8 @@
       - [Opdracht 8](#opdracht-8)
       - [Opdracht 9](#opdracht-9)
       - [Opdracht 10](#opdracht-10)
+  - [Geld opslaan: centen of decimaal?](#geld-opslaan-centen-of-decimaal)
+      - [Opdracht 11 - Prijsmodel opschonen](#opdracht-11---prijsmodel-opschonen)
 
 ## Update
 
@@ -38,3 +40,28 @@ De Update is een belangrijk onderdeel van elke webapplicatie. Het is de proces v
 #### Opdracht 10
 
 1. Maak nu een update mogelijkheid voor brands, users en categories.
+
+## Geld opslaan: centen of decimaal?
+
+Bij het bouwen van het update-formulier voor `tool_price` kom je een veelvoorkomend probleem tegen: hoe sla je geldbedragen op?
+
+Er zijn twee gangbare aanpakken:
+1. **DECIMAL(10,2)** met het bedrag in euro's, bijvoorbeeld `14.99`. Duidelijk leesbaar, maar je moet oppassen dat je er nooit per ongeluk als `FLOAT` mee rekent (afrondingsfouten).
+2. **INT** met het bedrag in **centen**, bijvoorbeeld `1499` voor €14,99. Geen afrondingsproblemen bij optellen/aftrekken, maar je moet zelf altijd door 100 delen bij het tonen en met 100 vermenigvuldigen bij het invoeren.
+
+Het probleem in tools4ever: de kolom `tool_price` is `DECIMAL(10,2)`, maar de waarden die erin staan zijn eigenlijk centen (bijvoorbeeld `1499` in plaats van `14.99`). Dat is een **hybride** van de twee aanpakken hierboven, en dat geeft bugs zodra je ermee gaat rekenen of het correct wilt tonen - `number_format()` gaat er bijvoorbeeld standaard van uit dat `1499` echt "1499 euro" betekent.
+
+#### Opdracht 11 - Prijsmodel opschonen
+
+1. Bekijk de huidige waarden in `tool_price`. Kloppen deze als centen, of als euro's?
+2. Kies één aanpak en pas de bestaande data + de rest van de applicatie daarop aan:
+   - **Optie A (centen, aanbevolen):** laat de kolom `INT` en zorg dat je bij het tonen altijd deelt door 100:
+     ```php
+     echo "€" . number_format($tool['tool_price'] / 100, 2, ',', '.');
+     ```
+   - **Optie B (euro's):** update de bestaande waarden zodat ze echt euro's voorstellen, en toon het bedrag direct:
+     ```sql
+     UPDATE tools SET tool_price = tool_price / 100;
+     ```
+3. Pas `tool_update.php` en `tool_update_process.php` aan zodat het gekozen model overal consistent wordt toegepast (ook bij het aanmaken van nieuwe tools).
+4. Test: maak een nieuwe tool aan én update een bestaande tool, en controleer of de prijs overal correct wordt getoond.

@@ -7,6 +7,7 @@
 - Placeholders gebruiken in queries (`:name` syntax)
 - `fetch()` en `fetchAll()` methoden toepassen met `PDO::FETCH_ASSOC`
 - CRUD operaties: CREATE en READ met PDO
+- Character set en collation begrijpen, en tabellen normaliseren naar `utf8mb4`
 
 ## Week 2: Security & Update Functionaliteit
 - `htmlspecialchars()` gebruiken voor XSS-bescherming
@@ -14,6 +15,8 @@
 - UPDATE queries met prepared statements
 - Password hashing introduceren met `password_hash()`
 - Update functionaliteit voor brands, users en categories
+- UNIQUE constraints op databaseniveau afdwingen (bijv. `users.email`) en de resulterende PDO-foutmelding netjes afvangen
+- Geldbedragen consistent opslaan en tonen (centen in een `INT` vs. euro's in een `DECIMAL`)
 
 ## Week 3: Password Security
 - Wachtwoorden hashen bij registratie met `password_hash(PASSWORD_DEFAULT)`
@@ -42,7 +45,12 @@
 - Request method validatie (`$_SERVER["REQUEST_METHOD"]`)
 - Logboek bijhouden van acties
 
-**Les 2 - Filtering:**
+**Les 2 - Omgevingsvariabelen en .env:**
+- Waarom hardcoded credentials in `database.php`/`docker-compose.yaml` een risico zijn
+- Een `.env`-bestand opzetten en zelf inlezen in PHP
+- `.gitignore` correct instellen (`.env`, `vendor/`) zodat secrets nooit in Git terechtkomen
+
+**Les 3 - Filtering:**
 - Filtering implementeren met GET parameters
 - JOIN queries voor relaties tussen tabellen
 - Dynamische WHERE clauses bouwen

@@ -67,7 +67,7 @@ We hebben al een aantal validaties toegepast in de vorige lessen of er staan ook
 
 > - Wat gebeurt er bijvoorbeeld als je geen naam invult?
 > - Wat gebeurt als je geen prijs invult?
-
+> - Wat gebeurt er als je twee keer registreert met hetzelfde e-mailadres?
 
 Validatie voorbeeld code kun je vinden in blok 4 __Hoofdstuk 1 - Herhaling, Create en Validatie.__ [Link](../blok%204/backend%20development%20(beo)/Hoofdstuk%201%20-%20Herhaling%2C%20Create%20en%20Validatie.md)
 
@@ -81,6 +81,33 @@ Validatie voorbeeld code kun je vinden in blok 4 __Hoofdstuk 1 - Herhaling, Crea
 
 1. Pas validatie toe op alle formulieren binnen de applicatie van tools4ever.
 
+## UNIQUE CONSTRAINTS
+
+PHP-validatie checkt of data correct is vóórdat je iets opslaat. Maar wat gebeurt er als twee gebruikers *tegelijkertijd* hetzelfde registratieformulier versturen met hetzelfde e-mailadres? Als je alleen in PHP controleert of het e-mailadres al bestaat ("SELECT eerst, dan pas INSERT"), kan het voorkomen dat beide requests die controle doorstaan vóórdat één van de twee daadwerkelijk is opgeslagen - en dan heb je alsnog twee gebruikers met hetzelfde e-mailadres.
+
+De oplossing is een **UNIQUE constraint** op databaseniveau: de database zelf weigert dan een tweede rij met dezelfde waarde in die kolom, ongeacht wat de PHP-code doet. PHP-validatie blijft nuttig voor een snelle, vriendelijke foutmelding, maar de database-constraint is de echte garantie tegen dubbele data.
+
+#### Opdracht 8 - UNIQUE constraint toevoegen
+
+1. Controleer in phpMyAdmin (tabblad "Structure" → "Indexes") of er een UNIQUE constraint op `users.email` staat.
+2. Voeg deze toe met:
+```sql
+ALTER TABLE users ADD UNIQUE (email);
+```
+3. Probeer via het registratieformulier een gebruiker aan te maken met een e-mailadres dat al bestaat. Wat gebeurt er nu?
+4. Je ziet waarschijnlijk een lelijke PDO-foutmelding in plaats van een nette gebruikersmelding. Vang deze fout af in `user_add_process.php`:
+```php
+try {
+    $stmt->execute([...]);
+} catch (PDOException $e) {
+    if ($e->getCode() == 23000) {
+        echo "Dit e-mailadres is al in gebruik.";
+    } else {
+        echo "Er is iets misgegaan bij het opslaan.";
+    }
+}
+```
+5. Test opnieuw: eerst met een bestaand e-mailadres (nette foutmelding), daarna met een nieuw e-mailadres (registratie lukt).
 
 ## Hashing
 
