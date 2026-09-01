@@ -16,6 +16,9 @@ Na dit hoofdstuk kan je:
 ### AI-gebruik dit hoofdstuk
 Bij Predict, Run en Investigate: **geen AI** - dit hoofdstuk draait om code leren lezen. Bij de Modify-oefening mag je AI gebruiken, mits je kan uitleggen wat elke regel doet.
 
+### Kick-off: JavaScript met een knal
+Voordat je zelf gaat programmeren, laat de docent live zien wat JavaScript kan: met een paar regels code verandert een hele webpagina. Je hoeft dit nog niet te snappen of te kunnen - het is een voorproefje van waar dit vak naartoe gaat. Vandaag beginnen we bij de basis.
+
 ### Predict
 Bekijk `starter-website/js/script.js` - **nog niet draaien**. Schrijf op: *wat denk je dat er gebeurt als deze pagina wordt geopend?*
 ```js

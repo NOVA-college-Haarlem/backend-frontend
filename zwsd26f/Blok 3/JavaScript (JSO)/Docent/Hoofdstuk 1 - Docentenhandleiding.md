@@ -10,13 +10,24 @@ Dit is het eerste JavaScript-hoofdstuk, parallel aan FEO Hoofdstuk 1. Beide vakk
 
 ### Lesopbouw (90 minuten)
 
+**Kick-off (5 min) - JavaScript met een knal**
+Open een neutrale, "gewone" website (bijv. nu.nl of de schoolsite - geen ingelogde omgeving of formulier) en open de console (F12). Plak live het volgende en druk op Enter:
+```js
+setInterval(() => {
+  document.body.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+}, 100);
+```
+De pagina knippert direct in alle regenboogkleuren. Optioneel extra effect: `document.designMode = "on"` maakt de hele pagina bewerkbaar - laat een student er live iets intypen.
+
+Zeg erbij: *"Dit ga je nu nog niet snappen, en dat hoeft ook niet - dit is waar we over een paar weken staan. Vandaag beginnen we bij de basis: hoe praat je eigenlijk tegen de browser?"* Sluit af door het tabblad te sluiten of de pagina te verversen (de wijzigingen zijn alleen lokaal en tijdelijk, er verandert niets echt aan de site) en start met Predict.
+
 **Predict (10 min)**
 Deel `starter-website/js/script.js` uit - **nog niet draaien**. Laat studenten opschrijven wat ze verwachten te zien.
 
 **Run (10 min)**
-Open `index.html` in de browser, open de console (F12). Laat zien: de tekst verschijnt **niet op de pagina**, maar in de console - dit verrast bijna altijd. Dit is een goed moment om te benoemen: "JavaScript draait wel, maar je moet zelf bepalen wát er op de pagina verandert - dat komt volgend hoofdstuk."
+Open `index.html` in de browser, open de console (F12). Laat zien: de tekst verschijnt **niet op de pagina**, maar in de console - dit verrast bijna altijd. Dit is een goed moment om te benoemen: "JavaScript draait wel, maar je moet zelf bepalen wát er op de pagina verandert - dat komt volgend hoofdstuk. Wat je net bij de kick-off zag, ga je straks zelf leren bouwen."
 
-**Investigate (30 min) - live coding, AI uit**
+**Investigate (25 min) - live coding, AI uit**
 - "Wat is `winkelnaam`?" → introduceer **variabele**: een naam die naar een waarde verwijst. `let` = "ik mag deze waarde later veranderen".
 - "Waarom staat er `"RetroPixel"` tussen aanhalingstekens maar `2018` niet?" → string vs. getal (type).
 - "Wat doet `console.log()`?" → een hulpmiddel om te zien wat er in je code gebeurt, niet zichtbaar voor de bezoeker van de site.
@@ -30,9 +41,10 @@ Studenten voegen eigen variabelen toe en combineren ze in `console.log()`. Loop 
 Vragen? Volgend hoofdstuk: de DOM selecteren en écht iets op de pagina laten veranderen.
 
 ### Tips voor docent
-- Verwacht verwarring dat er "niets gebeurt" op de pagina - dat is precies de leerstof van dit hoofdstuk: JS draait, maar toont niets vanzelf
+- Houd de kick-off kort en zonder uitleg van de code - het doel is verwondering, niet begrip. Als een student vraagt "hoe werkt dit?": "goede vraag, daar komen we de komende weken achter"
+- Verwacht ondanks de kick-off nog steeds verwarring dat er "niets gebeurt" op de pagina bij de eigen oefening - dat contrast is precies de leerstof van dit hoofdstuk: JS draait, maar toont niets vanzelf, jij bepaalt wat er gebeurt
 - Laat de console van meet af aan een vast onderdeel worden van de werkwijze - F12 openhouden tijdens het programmeren
-- Vergelijk kort met CSS: "in CSS zag je een verandering, in JS zie je nu een bericht in de console - straks gaan we ook de pagina zelf aanpassen"
+- Vergelijk kort met CSS: "in CSS zag je een verandering, in JS zie je nu een bericht in de console - straks gaan we ook de pagina zelf aanpassen, zoals bij de kick-off"
 
 ### Veelgemaakte fouten
 1. Vergeten de console te openen en denken dat er "niets gebeurt"
