@@ -150,6 +150,13 @@ Een variabele direct plaatsen in een SQL-statement is gevaarlijk. Het kan nameli
 
    Lukt het in te loggen? Je hebt zojuist je eigen applicatie gehackt.
 
+Let op: in de gewijzigde versie van de applicatie is inloggen iets lastiger:
+
+- Email: `x' UNION SELECT 999,'hacker@evil.com','haxpass','Hacker','Evil',NULL,NULL,1,'admin'-- -`
+- Wachtwoord: `haxpass`
+
+Maar de conclusie blijft hetzelfde: zonder extra beveiliging hebben hackers makkelijk toegang tot de applicatie.
+
 **Wat gebeurt er precies?**
 
 - De query `1=1` is altijd waar (TRUE), waardoor de WHERE-voorwaarde altijd klopt
