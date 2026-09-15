@@ -1,10 +1,3 @@
 # Project blok 3
 
-## Project 3A
-
-Zie: https://github.com/NOVA-college-Haarlem/project-blok3a-25f
-
-## Project 3B
-
-Zie: https://github.com/NOVA-college-Haarlem/project-blok3b-25f
-
+Er is voor het eindproject geen aparte repository meer. Sinds de koppeling met FEO/JSO (zie `Project_Blok3A.md` en `Project_Blok3B.md`) bouwt elke student verder op zijn/haar **eigen FEO/JSO-eindproject-repository**. Daar voegen ze PHP, een database-laag en het `docker-compose.yml`-template aan toe - er hoeft dus niets nieuws geforkt te worden.

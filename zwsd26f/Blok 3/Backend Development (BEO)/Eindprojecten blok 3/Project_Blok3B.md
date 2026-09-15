@@ -1,96 +1,69 @@
-# Eindproject Blok 3 - Backend Development
+# Eindproject Blok 3B - Detailpagina & Extra functionaliteit (Projectweek 2)
 
 ## 📋 Projectomschrijving
 
-Je gaat een dynamische website bouwen met PHP en MySQL. Je hebt al een overzichtspagina gemaakt met data uit een database. Nu ga je de website uitbreiden met een detail pagina en extra functionaliteit.
-
-## 🎯 Projecten
-
-Je werkt aan één van de volgende projecten:
-
-| Project | Database | Thema |
-|---------|----------|-------|
-| **Gaming** | `games` | Videogame catalogus |
-| **Recipes** | `recipes` | Recepten website |
-| **Cars** | `cars` | Auto showroom |
-| **Fitness** | `workouts` | Workout database |
-| **Holidays** | `destinations` | Vakantie bestemmingen |
-| **Bookstore** | `books` | Online boekwinkel |
-| **Jewelry** | `jewelry` | Sieraden webshop |
-
-**Database**: Je hebt al de SQL file geïmporteerd in PHPMyAdmin (zie de `sql/` folder).
+Je breidt de backend die je in Blok 3A (Projectweek 1) op je eigen FEO/JSO-eindproject hebt gebouwd verder uit: een detailpagina en extra functionaliteit. Dezelfde site als in Blok 3A - nu een stap verder.
 
 ## ✅ Wat je al hebt
 
-- ✅ Een overzichtspagina met alle items uit de database
-- ✅ Database connectie (`database.php`)
-- ✅ Basic HTML structuur met menu
-- ✅ Docker environment
-- ✅ Geïmporteerde database met testdata
+- Een overzichtspagina die je eigen content-items uit de database toont
+- Database connectie (`database.php`)
+- Dynamisch menu (`menu.php`)
+- Docker-omgeving en geïmporteerde database
 
 ## 🛠️ Wat je moet bouwen
 
-### 1. Detail Pagina (Verplicht)
-Maak een detail pagina die **één specifiek item** uit de database toont.
+### 1. Detailpagina (Verplicht)
+
+Maak een detailpagina die **één specifiek item** uit jouw content toont (bijv. één game, één klimroute).
 
 **Vereisten:**
-- Gebruik GET parameters in de URL (bijvoorbeeld: `detail.php?id=5`)
-- Haal data op met een SELECT WHERE query
+- Gebruik GET-parameters in de URL (bijvoorbeeld: `detail.php?id=5`)
+- Haal data op met een SELECT WHERE-query
 - Toon alle relevante informatie van dat item
-- Style de pagina professioneel met CSS
-
-**Voorbeeld voor Gaming project:**
-```php
-// detail.php?id=1
-// Toont alle informatie over "The Witcher 3"
-```
+- Style de pagina in dezelfde stijl als de rest van je site
 
 ### 2. Navigatie (Verplicht)
-- Link van overzichtspagina naar detail pagina
-- "Terug naar overzicht" knop op detail pagina
-- Menu die werkt op alle pagina's
+- Link van overzichtspagina naar detailpagina (klik op een kaart → detailpagina)
+- "Terug naar overzicht"-knop op de detailpagina
+- Menu dat werkt op alle pagina's
 
-### 3. Extra Functionaliteit 
+### 3. Extra functionaliteit (kies 2 van de 4)
+
+Kies wat het beste past bij jouw eigen content:
 
 #### A: Filtering
-- Filter items op basis van een eigenschap
-- Bijvoorbeeld:
-  - Gaming: filter op genre/platform
-  - Bookstore: filter op genre/author
-  - Cars: filter op make/fuel_type
-  - Recipes: filter op category/difficulty
+- Filter items op een eigenschap die relevant is voor jouw thema (bijv. categorie, genre, moeilijkheidsgraad, prijsklasse)
+- Gebruik GET-parameters, zoals je in Hoofdstuk 5 hebt geoefend
 
 #### B: Zoekfunctionaliteit
 - Zoekbalk waarmee je items kunt zoeken
-- Gebruik SQL LIKE query voor zoeken
+- Gebruik SQL LIKE-query voor zoeken
 - Toon resultaten dynamisch
 
 #### C: Sortering
-- Sorteer items op prijs, naam, jaar, etc.
+- Sorteer items op prijs, naam, of een ander relevant veld
 - Knoppen voor oplopend/aflopend sorteren
-- Gebruik ORDER BY in SQL queries
+- Gebruik ORDER BY in SQL-queries
 
-#### D: Statistieken Pagina
-- Bereken en toon interessante statistieken
-- Bijvoorbeeld:
-  - Gaming: gemiddelde rating, aantal multiplayer games
-  - Bookstore: aantal boeken per genre, gemiddelde prijs
-  - Fitness: totale calorieën, aantal cardio workouts
+#### D: Statistiekenpagina
+- Bereken en toon interessante statistieken over jouw eigen content
+- Bijvoorbeeld: totaal aantal items, gemiddelde prijs, aantal per categorie
 
 ## 📁 Bestandsstructuur
 
 ```
-project/
-├── index.php              # Overzichtspagina (al gemaakt)
-├── detail.php             # Detail pagina (nieuw)
-├── database.php           # Database connectie (al gemaakt)
-├── menu.php               # Navigatie (al gemaakt)
-├── style.css              # Styling
+jouw-project/
+├── index.php               # Overzichtspagina (al gemaakt in Blok 3A)
+├── detail.php               # Detailpagina (nieuw)
+├── database.php             # Database connectie (al gemaakt)
+├── menu.php                 # Navigatie (al gemaakt)
+├── style.css                 # Je bestaande styling
 └── sql/
-    └── [jouw-project].sql # Database (al geïmporteerd)
+    └── [eigen-tabel].sql   # Database (al geïmporteerd)
 ```
 
-## 🎓 Technieken uit Blok 3
+## 🎓 Technieken uit Hoofdstuk 1 t/m 6
 
 Je **moet** de volgende technieken gebruiken:
 
@@ -112,11 +85,11 @@ Je **moet** de volgende technieken gebruiken:
 
 ### Dynamic Content
 - ✅ Data uit database tonen
-- ✅ GET parameters gebruiken
+- ✅ GET-parameters gebruiken
 - ✅ Dynamic HTML genereren
 
 ### Code Kwaliteit
-- ✅ DRY principle (Don't Repeat Yourself)
+- ✅ DRY-principe (Don't Repeat Yourself)
 - ✅ Modulaire code (aparte bestanden)
 - ✅ Duidelijke variabele namen
 
@@ -124,56 +97,53 @@ Je **moet** de volgende technieken gebruiken:
 
 | Criterium | Punten | Omschrijving |
 |-----------|--------|--------------|
-| **Detail Pagina** | 30% | Werkende detail pagina met alle data |
-| **Database Queries** | 20% | Correcte SQL queries met WHERE |
+| **Detailpagina** | 30% | Werkende detailpagina met alle data van jouw item |
+| **Database Queries** | 20% | Correcte SQL-queries met WHERE |
 | **Extra Functionaliteit** | 25% | 2 van de 4 opties werkend |
-| **Code Kwaliteit** | 15% | Nette code, DRY principle, comments |
-| **Styling** | 10% | Professionele uitstraling, CSS |
+| **Code Kwaliteit** | 15% | Nette code, DRY-principe, comments |
+| **Behoud van je eigen design** | 10% | Consistent met je bestaande site-stijl |
 
 **Totaal: 100%**
 
-## 🚀 Stappenplan
+## 🚀 Stappenplan (Projectweek 2)
 
-### Week 1
-1. ✅ Controleer dat je database correct is geïmporteerd
-2. ✅ Test je overzichtspagina
-3. 📝 Maak `detail.php` aan
-4. 📝 Bouw de detail pagina met GET parameter
-5. 📝 Test met verschillende IDs
+**Dag 1**
+1. ✅ Controleer dat je overzichtspagina uit Blok 3A nog werkt
+2. 📝 Maak `detail.php` aan
+3. 📝 Bouw de detailpagina met GET-parameter
+4. 📝 Test met verschillende id's
 
-### Week 2
-6. 📝 Link overzichtspagina naar detail pagina
-7. 📝 Kies 2 extra functionaliteiten
-8. 📝 Implementeer filtering OF zoeken
-9. 📝 Implementeer sortering OF statistieken
+**Dag 2**
+5. 📝 Link overzichtspagina naar detailpagina
+6. 📝 Kies 2 extra functionaliteiten die passen bij jouw content
+7. 📝 Implementeer filtering of zoeken
+8. 📝 Implementeer sortering of statistieken
 
-### Week 3
-10. 📝 Verbeter styling met CSS
-11. 📝 Test alle functionaliteit
-12. 📝 Code opschonen en comments toevoegen
-13. 📝 Final check met checklist
+**Dag 3**
+9. 📝 Style de nieuwe pagina's in dezelfde stijl als de rest van je site
+10. 📝 Test alle functionaliteit
+11. 📝 Code opschonen en comments toevoegen
+12. 📝 Final check met de checklist
 
 ## ✅ Checklist voor Inleveren
 
 **Functionaliteit:**
-- [ ] Detail pagina werkt met verschillende IDs
+- [ ] Detailpagina werkt met verschillende id's
 - [ ] Navigatie werkt tussen overzicht en detail
 - [ ] Minimaal 2 extra features werkend
 - [ ] Alle database queries werken correct
 - [ ] Geen PHP errors
 
 **Code Kwaliteit:**
-- [ ] DRY principle toegepast (menu in apart bestand)
+- [ ] DRY-principe toegepast (menu in apart bestand)
 - [ ] Database connectie in `database.php`
 - [ ] Duidelijke variabele namen
 - [ ] Comments bij complexe code
 - [ ] Nette indentatie
 
-**Styling:**
-- [ ] Professionele uitstraling
-- [ ] Responsive design (werkt op mobile)
-- [ ] Consistente kleuren en fonts
-- [ ] Overzichtelijke layout
+**Behoud van je eigen design:**
+- [ ] Detailpagina en extra features zien er consistent uit met de rest van je site
+- [ ] Responsive design (werkt op mobile, zoals de rest van je site)
 
 **Git:**
 - [ ] Reguliere commits met duidelijke messages
@@ -181,23 +151,21 @@ Je **moet** de volgende technieken gebruiken:
 
 ## 💡 Tips
 
-1. **Start simpel**: Maak eerst de detail pagina werkend voordat je extra features toevoegt
-2. **Test vaak**: Test na elke kleine wijziging of alles nog werkt
-3. **Gebruik PHPMyAdmin**: Kijk in PHPMyAdmin welke kolommen je database heeft
-4. **Console Debugging**: Gebruik `var_dump()` om te zien wat je queries teruggeven
-5. **Vraag hulp**: Als je vastloopt, vraag dan hulp aan medestudenten of docent
+1. **Start simpel**: maak eerst de detailpagina werkend voordat je extra features toevoegt
+2. **Test vaak**: test na elke kleine wijziging of alles nog werkt
+3. **Gebruik PHPMyAdmin**: kijk in PHPMyAdmin welke kolommen je database heeft
+4. **Console debugging**: gebruik `var_dump()` om te zien wat je queries teruggeven
+5. **Vraag hulp**: als je vastloopt, vraag dan hulp aan medestudenten of docent
 
 ## 📚 Handige Resources
 
-- **PHPMyAdmin**: http://localhost:8080 (bekijk je database structuur)
+- **PHPMyAdmin**: zie je docker-compose.yml voor de juiste poort - bekijk je database structuur
 - **PHP Manual**: https://www.php.net/manual/en/
 - **W3Schools PHP**: https://www.w3schools.com/php/
-- **Blok 3 Opdrachten**: Kijk terug naar Week 1-4 voor voorbeelden
+- **Blok 3 Opdrachten**: kijk terug naar Hoofdstuk 1-6 voor voorbeelden
 
 ## 📅 Deadline
 
-**Inleverdatum**: 16 oktober 2025
+**Inleverdatum**: Zie planning van je docent
 
-**Inleveren via**: Submit je project in Github
-
----
+**Inleveren via**: Submit je project in GitHub

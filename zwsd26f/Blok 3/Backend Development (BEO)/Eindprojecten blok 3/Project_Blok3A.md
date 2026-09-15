@@ -1,54 +1,46 @@
-# Eindproject Blok 3A - Overzichtspagina & Dynamisch Menu
+# Eindproject Blok 3A - Backend op je eigen site (Projectweek 1)
 
 ## 📋 Projectomschrijving
 
-Je gaat een dynamische website bouwen met PHP en MySQL. Je bouwt een **overzichtspagina** die data uit een database toont en een **dynamisch menu** dat op alle pagina's werkt. Dit project vormt de basis voor het vervolgproject in Blok 3B.
+Je bouwt geen los oefenproject, maar geeft **je eigen FEO/JSO-eindproject** (de RetroPixel- of Boulder Base-variant, of je eigen thema, die je in Frontend Development hebt gemaakt) een echte backend. De kaarten/items die je tot nu toe hardgecodeerd in HTML had staan, komen voortaan uit een database die je zelf ontwerpt. Dit project vormt de basis voor het vervolgproject in Blok 3B (Projectweek 2).
 
-## 🎯 Projecten
+**Waarom op je eigen site?** Je hebt deze site al gestyled, gestructureerd en (in JSO) interactief gemaakt. Nu voeg je er de laatste laag aan toe: écht dynamische data. Aan het eind van het blok heb je één site die je zelf helemaal hebt opgebouwd - front, interactie én data.
 
-Je werkt aan één van de volgende projecten:
+## ✅ Startpunt
 
-| Project | Database | Thema |
-|---------|----------|-------|
-| **Gaming** | `games` | Videogame catalogus |
-| **Recipes** | `recipes` | Recepten website |
-| **Cars** | `cars` | Auto showroom |
-| **Fitness** | `workouts` | Workout database |
-| **Holidays** | `destinations` | Vakantie bestemmingen |
-| **Bookstore** | `books` | Online boekwinkel |
-| **Jewelry** | `jewelry` | Sieraden webshop |
-
-**Database**: Importeer de SQL file in PHPMyAdmin (zie de `sql/` folder in je project).
+- Je RetroPixel- of Boulder Base-variant (of eigen thema) uit FEO Hoofdstuk 3/6, het liefst al bijgewerkt t/m FEO Hoofdstuk 7 (site-opmaak)
+- Je site bevat een overzicht met meerdere "items" (games, klimroutes, of wat je eigen thema ook is) - dat overzicht ga je dynamisch maken
 
 ## 🛠️ Wat je moet bouwen
 
+### 0. Project geschikt maken voor PHP (Verplicht)
+
+Je FEO/JSO-project heeft nog geen PHP/database-omgeving. Voeg die toe:
+
+1. Kopieer de `docker-compose.yml`-template van je docent naar de root van je eigen projectmap
+2. Start de omgeving: `docker compose up -d`
+3. Zet `index.html` om naar `index.php` (net als in Hoofdstuk 1)
+4. Open je browser op `http://localhost` - je bestaande site moet nog steeds werken
+
 ### 1. Overzichtspagina (Verplicht)
 
-Maak een overzichtspagina (`index.php`) die **alle items** uit de database toont.
+Je bestaande kaartenoverzicht (bijv. de game-cards van je RetroPixel-variant) moet nu **vanuit een database** komen in plaats van hardgecodeerde HTML.
 
 **Vereisten:**
+- Bedenk zelf een tabel die past bij jouw content (bijv. `games` met kolommen als `naam`, `categorie`, `prijs`, `beschrijving`, `afbeelding` - gebruik de attributen die je site al toont)
 - Database connectie via `database.php`
 - SELECT query om alle data op te halen
-- Foreach loop om de items te tonen
-- Professionele opmaak met HTML en CSS
-- Elk item in een kaart/card layout
+- Foreach loop om de items te tonen - de HTML/CSS-structuur (de "kaart") blijft hetzelfde als wat je al had, alleen de inhoud komt nu uit `$item['...']` in plaats van vast te staan
 
-**Voorbeeld voor Gaming project:**
-```php
-// index.php
-// Toont alle games uit de database in een grid van kaarten
-```
+### 2. Dynamisch menu (Verplicht)
 
-### 2. Dynamisch Menu (Verplicht)
-
-Maak een dynamisch menu dat op alle pagina's werkt.
+De navigatie die je al gestyled hebt (uit FEO Hoofdstuk 6), maak je nu dynamisch:
 
 **Vereisten:**
-- Apart bestand `menu.php` (DRY principle)
+- Apart bestand `menu.php` (DRY-principe)
 - Associatieve array met menu-items
 - Foreach loop om menu-items te genereren
-- Include/require in elke pagina
-- Menu moet werken op index.php en eventuele andere pagina's
+- Include/require in elke pagina - het resultaat moet er precies zo uitzien als je bestaande navigatie
 
 **Voorbeeld:**
 ```php
@@ -64,22 +56,16 @@ $menuItems = [
 <?php endforeach; ?>
 ```
 
-### 3. Project Setup
-
-- HTML bestanden omzetten naar PHP
-- Docker environment starten
-- Database importeren in PHPMyAdmin
-
 ## 📁 Bestandsstructuur
 
 ```
-project/
+jouw-project/
 ├── index.php              # Overzichtspagina met database data
 ├── database.php           # Database connectie
 ├── menu.php               # Dynamisch menu (include in elke pagina)
-├── style.css              # Styling
+├── style.css               # Je bestaande styling - blijft grotendeels ongewijzigd
 └── sql/
-    └── [jouw-project].sql # Database (te importeren in PHPMyAdmin)
+    └── [eigen-tabel].sql  # Zelf gemaakt, gebaseerd op je site-inhoud
 ```
 
 ## 🎓 Technieken uit Hoofdstuk 1 t/m 3
@@ -90,7 +76,7 @@ Je **moet** de volgende technieken gebruiken:
 - ✅ PHP tags (`<?php ?>`)
 - ✅ Variables en echo
 - ✅ Include/require voor menu
-- ✅ DRY principle (menu in apart bestand)
+- ✅ DRY-principe (menu in apart bestand)
 - ✅ Associatieve arrays
 - ✅ Foreach loop voor dynamisch menu
 
@@ -108,7 +94,7 @@ Je **moet** de volgende technieken gebruiken:
 - ✅ Kolomnamen uit database correct gebruiken
 
 ### Code Kwaliteit
-- ✅ DRY principle (Don't Repeat Yourself)
+- ✅ DRY-principe (Don't Repeat Yourself)
 - ✅ Modulaire code (aparte bestanden)
 - ✅ Duidelijke variabele namen
 
@@ -116,39 +102,35 @@ Je **moet** de volgende technieken gebruiken:
 
 | Criterium | Punten | Omschrijving |
 |-----------|--------|--------------|
-| **Overzichtspagina** | 40% | Alle items uit database correct getoond |
+| **Overzichtspagina** | 40% | Eigen content-items correct vanuit database getoond |
 | **Dynamisch Menu** | 25% | Menu met array en foreach, werkt op alle pagina's |
 | **Database** | 20% | Correcte connectie en SELECT query |
-| **Code Kwaliteit** | 10% | DRY principle, menu.php, duidelijke code |
-| **Styling** | 5% | Overzichtelijke layout, professionele uitstraling |
+| **Code Kwaliteit** | 10% | DRY-principe, menu.php, duidelijke code |
+| **Behoud van je eigen design** | 5% | Site ziet er nog steeds uit als jouw ontwerp, alleen nu dynamisch |
 
 **Totaal: 100%**
 
-## 🚀 Stappenplan
+## 🚀 Stappenplan (Projectweek 1)
 
-### Week 1
-1. 📝 Fork en clone je project repository
-2. 📝 Start Docker met `docker compose up -d`
-3. 📝 Importeer de SQL file in PHPMyAdmin (http://localhost:8080)
-4. 📝 Maak `database.php` met database connectie
-5. 📝 Test de connectie
+**Dag 1**
+1. 📝 Docker-compose toevoegen aan je eigen projectmap, `docker compose up -d`
+2. 📝 `index.html` omzetten naar `index.php`, controleer dat je site nog werkt
+3. 📝 Ontwerp je eigen databasetabel op basis van je site-inhoud
+4. 📝 Importeer de tabel in PHPMyAdmin
 
-### Week 2
-6. 📝 Maak `menu.php` met associatieve array en foreach
-7. 📝 Maak `index.php` met include voor menu
-8. 📝 Bouw de overzichtspagina: SELECT query + foreach loop
-9. 📝 Toon de data in kaarten/grid met HTML en CSS
+**Dag 2**
+5. 📝 Maak `database.php` met de database connectie, test de connectie
+6. 📝 Maak `menu.php` met associatieve array en foreach, include in je pagina's
 
-### Week 3
-10. 📝 Verbeter styling
-11. 📝 Test alle functionaliteit
-12. 📝 Code opschonen
-13. 📝 Final check met checklist
+**Dag 3**
+7. 📝 Vervang de hardgecodeerde kaarten in `index.php` door een SELECT-query + foreach-loop
+8. 📝 Controleer dat de site er nog precies zo uitziet als voorheen - nu met echte data
+9. 📝 Code opschonen, final check met de checklist
 
 ## ✅ Checklist voor Inleveren
 
 **Functionaliteit:**
-- [ ] Overzichtspagina toont alle items uit database
+- [ ] Overzichtspagina toont je eigen content-items uit de database
 - [ ] Dynamisch menu werkt op alle pagina's
 - [ ] Database connectie werkt
 - [ ] Geen PHP errors
@@ -160,9 +142,8 @@ Je **moet** de volgende technieken gebruiken:
 - [ ] Foreach loop voor menu en overzicht
 - [ ] Duidelijke variabele namen
 
-**Styling:**
-- [ ] Overzichtelijke layout
-- [ ] Items netjes weergegeven in grid/kaarten
+**Behoud van je eigen design:**
+- [ ] Site ziet er nog hetzelfde uit als je FEO-eindproduct - alleen data komt nu uit de database
 
 **Git:**
 - [ ] Reguliere commits met duidelijke messages
@@ -170,24 +151,26 @@ Je **moet** de volgende technieken gebruiken:
 
 ## 💡 Tips
 
-1. **Start met het menu**: Volg de stappen uit Hoofdstuk 1, Opdracht 7 en 8
-2. **Database eerst**: Controleer in PHPMyAdmin welke kolommen je tabel heeft
-3. **Kopieer de structuur**: Gebruik het Pokémon of Formula 1 voorbeeld als referentie
-4. **Test stap voor stap**: Test na elke wijziging of alles nog werkt
-5. **var_dump()**: Gebruik dit om te zien wat je query teruggeeft
+1. **Je hoeft de styling niet opnieuw te doen** - die heb je al. Focus op het vervangen van hardgecodeerde HTML door PHP + database-data die er hetzelfde uitziet
+2. **Start met het menu**: volg de stappen uit Hoofdstuk 1, Opdracht 7 en 8
+3. **Database eerst**: bepaal welke kolommen jouw content nodig heeft, vóór je gaat programmeren
+4. **Kopieer de structuur**: gebruik het Pokémon- of Formula 1-voorbeeld uit de les als referentie voor de PHP-code, niet voor de content
+5. **Test stap voor stap**: test na elke wijziging of alles nog werkt
+6. **var_dump()**: gebruik dit om te zien wat je query teruggeeft
 
 ## 📚 Referenties
 
 - **Hoofdstuk 1**: PHP basics, menu.php, dynamisch menu met array
 - **Hoofdstuk 2**: database.php, SELECT query, foreach met database data
-- **Hoofdstuk 3**: navbar.php, driver-table met database
+- **Hoofdstuk 3**: navbar.php, tabel met database
+- **Je eigen FEO Hoofdstuk 3/6/7-bestanden**: de HTML/CSS die je nu van data gaat voorzien
 
 ## 📅 Deadline
 
 **Inleverdatum**: Zie planning van je docent
 
-**Inleveren via**: Submit je project in Github
+**Inleveren via**: Submit je project in GitHub
 
 ---
 
-*Dit project vormt de basis voor Blok 3B, waar je de detail pagina en extra functionaliteit toevoegt.*
+*Dit project vormt de basis voor Blok 3B (Projectweek 2), waar je de detailpagina en extra functionaliteit toevoegt.*

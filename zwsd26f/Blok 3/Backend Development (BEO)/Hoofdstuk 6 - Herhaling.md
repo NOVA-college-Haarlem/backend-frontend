@@ -1,9 +1,9 @@
-# Week 6
+# Hoofdstuk 6 - Herhaling
 
 
 ## Les 1 - Herhaling Project: Tools4Ever
 
-In deze les gaan we alle geleerde concepten van week 1 t/m 5 herhalen in één nieuw project. Je gaat een website bouwen voor Kluswinkel "Tools4Ever" met twee losse entiteiten: **tools** en **brands**, **users**.
+In deze les gaan we alle geleerde concepten van Hoofdstuk 1 t/m 5 herhalen in één nieuw project. Je gaat een website bouwen voor Kluswinkel "Tools4Ever" met twee losse entiteiten: **tools** en **brands**, **users**.
 
 ### Projectomschrijving
 Tools4Ever wil een website waar bezoekers informatie kunnen bekijken over:
@@ -197,9 +197,9 @@ echo "<h2>Totaal users: " . $totaalUsers . "</h2>";
 
 ---
 
-## Samenvatting Blok 3 - Overzicht Week 1 t/m 5
+## Samenvatting Blok 3 - Overzicht Hoofdstuk 1 t/m 5
 
-### Week 1: Introductie PHP & Basis Concepten
+### Hoofdstuk 1: Introductie PHP & Basis Concepten
 
 **Kernonderwerpen:**
 - **PHP & SQL Introductie**: Kennismaking met dynamische websites waarbij gebruikers kunnen inloggen, registreren en data kunnen opslaan
@@ -230,7 +230,7 @@ echo "<h2>Totaal users: " . $totaalUsers . "</h2>";
 
 ---
 
-### Week 2: Database Integratie
+### Hoofdstuk 2: Database Integratie
 
 **Kernonderwerpen:**
 - **Database connecties** met MySQLi
@@ -259,7 +259,7 @@ echo "<h2>Totaal users: " . $totaalUsers . "</h2>";
 
 ---
 
-### Week 3: Nieuw Project - Formula 1
+### Hoofdstuk 3: Nieuw Project - Formula 1
 
 **Kernonderwerpen:**
 - Nieuwe project setup met Formula 1 thema
@@ -288,7 +288,7 @@ echo "<h2>Totaal users: " . $totaalUsers . "</h2>";
 
 ---
 
-### Week 4: Detail Pagina's & Teams
+### Hoofdstuk 4: Detail Pagina's & Teams
 
 **Kernonderwerpen:**
 - Detail pagina's voor individuele drivers
@@ -317,7 +317,7 @@ echo "<h2>Totaal users: " . $totaalUsers . "</h2>";
 
 ---
 
-### Week 5: Circuits, Images & Filtering
+### Hoofdstuk 5: Circuits, Images & Filtering
 
 **Kernonderwerpen:**
 - Circuits data toevoegen (herhaling van geleerde concepten)

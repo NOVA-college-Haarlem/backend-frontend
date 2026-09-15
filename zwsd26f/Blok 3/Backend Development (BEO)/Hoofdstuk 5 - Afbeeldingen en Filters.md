@@ -1,4 +1,4 @@
-# Week 5
+# Hoofdstuk 5 - Afbeeldingen en Filters
 
 ## Les 1 - Herhaling
 

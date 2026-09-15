@@ -8,6 +8,8 @@
 ### Projectomschrijving
 Afsluitend hoofdstuk van het JS-vak. Je voegt een JS-laag toe aan de website die je in FEO Hoofdstuk 8 als eindproject oplevert. Dezelfde site, nu ook interactief.
 
+**Let op:** dezelfde site krijgt in BEO (projectweek 1 en 2) ook nog een echte database-backend. Houd je HTML-structuur dus overzichtelijk - daar bouwt BEO straks op voort.
+
 ### Leerdoelen
 Na dit hoofdstuk kan je:
 - Zelfstandig JavaScript toevoegen aan een bestaande website

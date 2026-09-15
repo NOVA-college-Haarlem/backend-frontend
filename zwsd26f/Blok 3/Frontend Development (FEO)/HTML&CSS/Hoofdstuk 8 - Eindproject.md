@@ -8,6 +8,8 @@
 ### Projectomschrijving
 Afsluitend hoofdstuk van het herhalingsblok. Je levert een complete, opgeschoonde one-page website op waarin alle onderdelen van Blok 3 samenkomen. Dit mag een verdere uitwerking zijn van je eigen variant uit Hoofdstuk 3/6/7, of een nieuw eigen onderwerp - als de technieken maar allemaal terugkomen.
 
+**Let op:** deze site is niet alleen voor FEO. In JSO voeg je er interactiviteit aan toe, en in BEO bouw je er in projectweek 1 en 2 een echte database-backend voor (zie BEO `Eindprojecten blok 3/Project_Blok3A.md`). Houd je HTML-structuur dus overzichtelijk en herbruikbaar.
+
 ### Leerdoelen
 Na dit hoofdstuk kan je:
 - Zelfstandig een complete, nette one-page website opleveren
