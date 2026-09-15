@@ -46,9 +46,9 @@ De startsites zijn dezelfde bestanden als in FEO (`starter-website/index.html` e
 
 ## Taakklasse 2: Boulder Base (Hoofdstuk 4-6)
 
-### Hoofdstuk 4: Condities - if/else in de DOM
-**Leerdoelen:** `if`/`else`; vergelijkingsoperators; DOM-inhoud laten afhangen van een waarde
-**PRIMM-focus:** Predict/Run/Investigate op de gedupliceerde click-handlers in `script.js` (herkennen, nog niet oplossen) + Modify van een conditie-oefening
+### Hoofdstuk 4: Condities toepassen - actieplekken bij Boulder Base
+**Leerdoelen:** `if`/`else if`/`else` toepassen binnen een `addEventListener`; `event.target`; `.style` laten afhangen van een conditie (voortbouwend op reeds bekende if/else-kennis)
+**PRIMM-focus:** Predict/Run/Investigate op de gedupliceerde click-handlers in `script.js` (herkennen, nog niet oplossen) + Modify van conditie-logica op de abonnement-knoppen
 
 ### Hoofdstuk 5: Classes toggelen - dark mode & interactieve states
 **Leerdoelen:** `classList.add()/remove()/toggle()`; een dark-mode toggle koppelen aan de CSS-variabelen uit FEO Hoofdstuk 5
