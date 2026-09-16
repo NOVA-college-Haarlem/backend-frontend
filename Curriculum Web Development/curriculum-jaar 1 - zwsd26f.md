@@ -98,6 +98,7 @@ Volledige lesuitwerking: `zwsd26f/Blok 3/Frontend Development (FEO)/` (`blok3-sa
 | 1 | Wat is JavaScript? Variabelen en de Console | 1 | Script koppelen; variabelen (`let`) maken en vullen; `console.log()`; string-concatenatie |
 | 2 | De DOM Selecteren en Aanpassen | 1 | `document.querySelector()`; `.textContent` en `.style` aanpassen vanuit JS |
 | 3 | Klikken Laten Reageren en Eigen Variant | 1 | `addEventListener("click", ...)`; eigen functie schrijven; **Make:** klik-interactie op eigen RetroPixel-variant; AI-output debuggen |
+| 3b | Oefenen - querySelector en addEventListener | 1 | Vijf herhalingsoefeningen: `querySelector()` + `addEventListener()` combineren, zelf een `id` toevoegen, selecteren via index, andere events (`mouseover`/`mouseout`) |
 | 4 | Condities Toepassen - Actieplekken bij Boulder Base | 2 | `if`/`else if`/`else` binnen een `addEventListener`; `event.target`; `.style` laten afhangen van een conditie (bouwt voort op reeds bekende if/else-kennis) |
 | 5 | Classes Toggelen - Dark Mode | 2 | `classList.add/remove/toggle`; dark-mode toggle gekoppeld aan CSS-variabelen uit FEO Hoofdstuk 5 |
 | 6 | Arrays en Loops - Dynamische Code | 2 | Arrays; `forEach()`; JS-duplicatie (uit Hoofdstuk 4) herkennen en oplossen; **Make:** toegepast op eigen Boulder Base-variant; AI-output debuggen |

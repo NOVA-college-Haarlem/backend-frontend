@@ -42,6 +42,10 @@ De startsites zijn dezelfde bestanden als in FEO (`starter-website/index.html` e
 **Leerdoelen:** `addEventListener("click", ...)`; een functie schrijven; DOM aanpassen als reactie op een klik
 **PRIMM-focus:** Investigate → Modify → **Make**: klik-interactie op de eigen RetroPixel-variant + "Debug deze AI-output"
 
+### Hoofdstuk 3b: Oefenen - querySelector en addEventListener
+**Leerdoelen:** herhaling/automatisering van de combinatie `querySelector()` + `addEventListener()`; zelf een `id` toevoegen als selector-haakje; selecteren via een index; andere events dan `click` (`mouseover`/`mouseout`)
+**Type:** vijf losse oefeningen, geen nieuwe PRIMM-cyclus - overbrugt Hoofdstuk 3 (RetroPixel) en Hoofdstuk 4 (Boulder Base)
+
 ---
 
 ## Taakklasse 2: Boulder Base (Hoofdstuk 4-6)
