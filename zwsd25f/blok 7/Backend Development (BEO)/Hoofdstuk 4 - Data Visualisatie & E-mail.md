@@ -534,70 +534,18 @@ Voeg een grafiek toe aan `resources/views/coins/show.blade.php` die de prijs ver
 Bijna elke webapplicatie verstuurt e-mails: wachtwoord vergeten, orderbevestigingen, contactformulieren, notificaties. Laravel maakt dit eenvoudig met het **Mail** systeem.
 
 We gaan stap voor stap:
-1. Een mailservice instellen (Mailtrap voor testen)
-2. Een contactformulier bouwen
+1. Een contactformulier bouwen
+2. Een mailservice instellen (Mailtrap voor testen)
 3. Een Mailable class aanmaken
 4. De e-mail versturen
 
-**Belangrijk:** We gebruiken **Mailtrap** als testomgeving. Mailtrap is een dienst die e-mails opvangt zodat je kunt testen zonder daadwerkelijk e-mails te versturen naar echte adressen. Zo kun je veilig ontwikkelen.
-
 ---
 
-## Opdracht 6: Mailtrap instellen
-
-**Doel:** Een testomgeving voor e-mail opzetten
-
-### 6.1 Account aanmaken
-
-1. Ga naar https://mailtrap.io
-2. Klik op **Sign Up** en maak een gratis account aan (je kunt inloggen met je GitHub account).
-3. Na het inloggen zie je het Mailtrap dashboard.
-
-### 6.2 SMTP instellingen ophalen
-
-1. Klik in het dashboard op **Email Testing** in het linkermenu.
-2. Klik op **My Inbox**.
-3. Klik op **Show Credentials** of het tabje **SMTP Settings**.
-4. Je ziet de volgende gegevens:
-   - Host
-   - Port
-   - Username
-   - Password
-
-### 6.3 Laravel configureren
-
-Open het `.env` bestand van je **cryptodashboard** project en pas de mail-instellingen aan:
-
-```
-MAIL_MAILER=smtp
-MAIL_HOST=sandbox.smtp.mailtrap.io
-MAIL_PORT=2525
-MAIL_USERNAME=jouw_mailtrap_username
-MAIL_PASSWORD=jouw_mailtrap_password
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS="dashboard@cryptodashboard.test"
-MAIL_FROM_NAME="Crypto Dashboard"
-```
-
-Vervang `jouw_mailtrap_username` en `jouw_mailtrap_password` met de gegevens van Mailtrap.
-
-### 6.4 Config cache legen
-
-Na het aanpassen van het `.env` bestand moet je de config cache legen:
-
-```bash
-php artisan config:clear
-```
-
-**Checkpoint:** De configuratie is ingesteld. We gaan nu het formulier en de mail opbouwen.
-
----
-
-## Opdracht 7: Contactformulier bouwen
+## Opdracht 6: Contactformulier bouwen
 
 **Doel:** Een pagina met een contactformulier maken
 
-### 7.1 Route aanmaken
+### 6.1 Route aanmaken
 
 Voeg twee routes toe aan `routes/web.php`:
 
@@ -610,7 +558,7 @@ Route::post('/contact', [ContactController::class, 'send']);
 
 De eerste route (GET) toont het formulier. De tweede route (POST) verwerkt het verstuurde formulier.
 
-### 7.2 Controller aanmaken
+### 6.2 Controller aanmaken
 
 ```bash
 php artisan make:controller ContactController
@@ -634,7 +582,7 @@ class ContactController extends Controller
 }
 ```
 
-### 7.3 View aanmaken
+### 6.3 View aanmaken
 
 Maak `resources/views/contact.blade.php`:
 
@@ -753,7 +701,7 @@ Maak `resources/views/contact.blade.php`:
 </html>
 ```
 
-### 7.4 Uitleg van het formulier
+### 6.4 Uitleg van het formulier
 
 Een paar belangrijke Blade-elementen:
 
@@ -764,7 +712,59 @@ Een paar belangrijke Blade-elementen:
 | `@error('name')` | Toont een foutmelding als de validatie voor dit veld faalt. |
 | `session('success')` | Toont een succesbericht na het succesvol versturen van het formulier. |
 
-**Checkpoint:** Bezoek http://cryptodashboard.test/contact. Je ziet een contactformulier. Het verstuurt nog niets - dat bouwen we in de volgende opdrachten.
+**Checkpoint:** Bezoek http://cryptodashboard.test/contact. Je ziet een contactformulier. Het verstuurt nog niets - dat bouwen we in de volgende opdrachten. Eerst regelen we een testomgeving voor e-mail. (Standaard staat `MAIL_MAILER` in Laravel op `log` - zolang je Mailtrap nog niet hebt ingesteld, komt een verstuurde mail dus gewoon in `storage/logs/laravel.log` terecht in plaats van dat er een fout optreedt.)
+
+---
+
+**Belangrijk:** We gebruiken **Mailtrap** als testomgeving. Mailtrap is een dienst die e-mails opvangt zodat je kunt testen zonder daadwerkelijk e-mails te versturen naar echte adressen. Zo kun je veilig ontwikkelen.
+
+## Opdracht 7: Mailtrap instellen
+
+**Doel:** Een testomgeving voor e-mail opzetten
+
+### 7.1 Account aanmaken
+
+1. Ga naar https://mailtrap.io
+2. Klik op **Sign Up** en maak een gratis account aan (je kunt inloggen met je GitHub account).
+3. Na het inloggen zie je het Mailtrap dashboard.
+
+### 7.2 SMTP instellingen ophalen
+
+1. Klik in het dashboard op **Email Testing** in het linkermenu.
+2. Klik op **My Inbox**.
+3. Klik op **Show Credentials** of het tabje **SMTP Settings**.
+4. Je ziet de volgende gegevens:
+   - Host
+   - Port
+   - Username
+   - Password
+
+### 7.3 Laravel configureren
+
+Open het `.env` bestand van je **cryptodashboard** project en pas de mail-instellingen aan:
+
+```
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=jouw_mailtrap_username
+MAIL_PASSWORD=jouw_mailtrap_password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="dashboard@cryptodashboard.test"
+MAIL_FROM_NAME="Crypto Dashboard"
+```
+
+Vervang `jouw_mailtrap_username` en `jouw_mailtrap_password` met de gegevens van Mailtrap.
+
+### 7.4 Config cache legen
+
+Na het aanpassen van het `.env` bestand moet je de config cache legen:
+
+```bash
+php artisan config:clear
+```
+
+**Checkpoint:** De configuratie is ingesteld. Je contactformulier staat er al - in de volgende opdrachten voegen we validatie toe en versturen we de e-mail daadwerkelijk.
 
 ---
 
