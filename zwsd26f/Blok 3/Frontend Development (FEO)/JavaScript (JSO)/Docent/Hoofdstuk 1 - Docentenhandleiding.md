@@ -2,11 +2,11 @@
 
 *Bij: `../Hoofdstuk 1 - Wat is JavaScript, Variabelen en de Console.md` (studentversie)*
 
-**Taakklasse 1 van 3** - RetroPixel (gedeeld met FEO, `starter-website/`)
+**Taakklasse 1 van 3** - RetroPixel (gedeeld met FEO, eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel))
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → eerste Modify
 
 ### Waarom deze opzet
-Dit is het eerste JavaScript-hoofdstuk, parallel aan FEO Hoofdstuk 1. Beide vakken beginnen bij "Predict/Run/Investigate op aangeleverde code" - bewust dezelfde structuur, zodat studenten het PRIMM-ritme maar één keer per week hoeven te leren kennen, niet twee keer voor twee verschillende vakken. Gebruik dezelfde RetroPixel-site als FEO; er is nu een `js/script.js` aan gekoppeld.
+Dit is het eerste JavaScript-hoofdstuk, parallel aan FEO Hoofdstuk 1. Beide vakken beginnen bij "Predict/Run/Investigate op aangeleverde code" - bewust dezelfde structuur, zodat studenten het PRIMM-ritme maar één keer per week hoeven te leren kennen, niet twee keer voor twee verschillende vakken. Gebruik dezelfde RetroPixel-map als FEO (studenten hebben deze al bij FEO Hoofdstuk 1 uit de eigen GitHub-repo gefork en gekloond); er is nu een `js/script.js` aan gekoppeld.
 
 ### Lesopbouw (90 minuten)
 
@@ -22,7 +22,7 @@ De pagina knippert direct in alle regenboogkleuren. Optioneel extra effect: `doc
 Zeg erbij: *"Dit ga je nu nog niet snappen, en dat hoeft ook niet - dit is waar we over een paar weken staan. Vandaag beginnen we bij de basis: hoe praat je eigenlijk tegen de browser?"* Sluit af door het tabblad te sluiten of de pagina te verversen (de wijzigingen zijn alleen lokaal en tijdelijk, er verandert niets echt aan de site) en start met Predict.
 
 **Predict (10 min)**
-Deel `starter-website/js/script.js` uit - **nog niet draaien**. Laat studenten opschrijven wat ze verwachten te zien.
+Laat studenten `js/script.js` bekijken (in dezelfde RetroPixel-map die ze bij FEO Hoofdstuk 1 hebben gekloond) - **nog niet draaien**. Laat studenten opschrijven wat ze verwachten te zien.
 
 **Run (10 min)**
 Open `index.html` in de browser, open de console (F12). Laat zien: de tekst verschijnt **niet op de pagina**, maar in de console - dit verrast bijna altijd. Dit is een goed moment om te benoemen: "JavaScript draait wel, maar je moet zelf bepalen wát er op de pagina verandert - dat komt volgend hoofdstuk. Wat je net bij de kick-off zag, ga je straks zelf leren bouwen."

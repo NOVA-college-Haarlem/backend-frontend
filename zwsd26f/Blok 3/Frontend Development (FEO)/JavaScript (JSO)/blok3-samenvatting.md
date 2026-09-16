@@ -20,11 +20,11 @@ Studenten krijgen dit blok 1,5 uur per week Frontend (CSS/HTML) én 1,5 uur per 
 
 | Taakklasse | Hoofdstuk | Site (gedeeld met FEO) | Startcode | Kern |
 |---|---|---|---|---|
-| **1** | 1-3 | RetroPixel (`../Frontend Development (FEO)/starter-website/`) | `js/script.js` - console.log & variabelen | Wat is JS, de DOM selecteren en aanpassen, klik-interactie |
+| **1** | 1-3 | RetroPixel (eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel), gekloond bij FEO Hoofdstuk 1) | `js/script.js` - console.log & variabelen | Wat is JS, de DOM selecteren en aanpassen, klik-interactie |
 | **2** | 4-6 | Boulder Base (`../Frontend Development (FEO)/starter-website-2/`) | `js/script.js` - gedupliceerde click-handlers | Condities, classList (dark mode), arrays & loops |
 | **3** | 7-8 | Eigen eindproject (uit FEO) | - | Formulier-input lezen, JS-laag op het eindproject + verantwoording |
 
-De startsites zijn dezelfde bestanden als in FEO (`starter-website/index.html` en `starter-website-2/index.html`), nu met een gekoppeld `js/script.js`. Wijzigingen die een student in FEO aan de HTML/CSS doet, blijven gewoon werken voor de JS-lessen - de belangrijkste selectors in de lesstof zijn bewust **structureel** gekozen (bijv. `.card a`, `.plan a`, tag-namen) zodat ze niet afhankelijk zijn van of een student de CSS-refactor van die week al heeft afgerond.
+RetroPixel is dezelfde gekloonde map als in FEO (`index.html` en `js/script.js`, uit de eigen GitHub-repo); Boulder Base is nog dezelfde lokale bestanden als in FEO (`starter-website-2/index.html`). Wijzigingen die een student in FEO aan de HTML/CSS doet, blijven gewoon werken voor de JS-lessen - de belangrijkste selectors in de lesstof zijn bewust **structureel** gekozen (bijv. `.card a`, `.plan a`, tag-namen) zodat ze niet afhankelijk zijn van of een student de CSS-refactor van die week al heeft afgerond.
 
 ---
 

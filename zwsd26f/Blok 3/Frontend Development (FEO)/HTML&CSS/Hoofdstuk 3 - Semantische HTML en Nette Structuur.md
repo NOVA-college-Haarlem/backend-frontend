@@ -8,7 +8,7 @@
 ### Leerdoelen
 Na dit hoofdstuk kan je:
 - Uitleggen waarom semantische HTML belangrijk is
-- `<div>`-elementen in de starter-website vervangen door `<header>`, `<main>`, `<section>`, `<footer>`
+- `<div>`-elementen in je RetroPixel-project vervangen door `<header>`, `<main>`, `<section>`, `<footer>`
 - Code netjes inspringen voor leesbaarheid
 - Een eigen, getransformeerde variant van RetroPixel maken en de keuzes daarin verantwoorden
 - Een stuk AI-gegenereerde code controleren op fouten
@@ -17,7 +17,7 @@ Na dit hoofdstuk kan je:
 Investigate: **geen AI**. Modify: AI mag, mits verantwoord. **Make: AI mag vrij**, maar je moet aan het eind een willekeurig aangewezen regel kunnen uitleggen.
 
 ### Investigate: het probleem met `<div>`
-Bekijk de starter-website: bijna alles is een `<div>`. Wat vertelt `<div>` je over wat erin staat? De belangrijkste semantische elementen (uit Blok 1): `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`.
+Bekijk je RetroPixel-project: bijna alles is een `<div>`. Wat vertelt `<div>` je over wat erin staat? De belangrijkste semantische elementen (uit Blok 1): `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`.
 
 ### Modify: RetroPixel semantisch maken
 Van:

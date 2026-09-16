@@ -18,7 +18,7 @@ Investigate-onderdelen (classes vs. IDs, box model) **AI uit** - dit is theorie 
 ### Lesopbouw (90 minuten)
 
 **Terugblik / korte Run-Investigate (10 min)**
-Laat 2-3 studenten hun omgezette `starter-website` zien (met stylesheet). Check gezamenlijk: staat er nog ergens een `style=` in de HTML?
+Laat 2-3 studenten hun omgezette RetroPixel-project zien (met stylesheet). Check gezamenlijk: staat er nog ergens een `style=` in de HTML?
 
 **Investigate: Classes vs. IDs (20 min)**
 Aan de hand van de RetroPixel-CSS:
@@ -41,7 +41,7 @@ Aan de hand van de RetroPixel-CSS:
 **Investigate: Box Model (20 min)**
 Teken/toon het box model diagram (content → padding → border → margin).
 
-**Live probleem oplossen in de starter-website:**
+**Live probleem oplossen in het RetroPixel-project:**
 De knoppen (`.knop`) hadden origineel:
 ```css
 padding: 12px 12px;
@@ -65,7 +65,7 @@ Zelfstandig of in tweetallen:
 Open DevTools, selecteer een `.product` element, bekijk de box model visualisatie (oranje = padding, groen = margin). Verander live de padding-waarde in DevTools vóórdat je het in de CSS aanpast.
 
 ### Huiswerk
-Werk verder aan `starter-website`:
+Werk verder aan je RetroPixel-project:
 1. Alle secties hebben consistente `padding`
 2. Duidelijke `margin` tussen de secties (geen elementen die tegen elkaar aan plakken)
 3. De `.product` kaarten hebben een `border-radius`

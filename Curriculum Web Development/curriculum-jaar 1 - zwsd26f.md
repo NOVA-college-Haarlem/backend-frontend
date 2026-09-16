@@ -36,7 +36,7 @@ Alleen Blok 3 heeft op dit moment lesmateriaal voor 26F. Blok 1, 2 en 4 zijn nog
 
 | Taakklasse | Hoofdstuk | Startcode | Kern |
 |---|---|---|---|
-| **1** | 1-3 | `starter-website/` - RetroPixel (gameshop, inline CSS) | Van inline naar externe CSS, box model, semantische HTML |
+| **1** | 1-3 | RetroPixel (gameshop, inline CSS) - eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel) | Van inline naar externe CSS, box model, semantische HTML |
 | **2** | 4-6 | `starter-website-2/` - Boulder Base (boulderhal, al externe CSS maar met gebreken) | Selectoren, buttons, kleuren/typografie met CSS-variabelen, navigatie |
 | **3** | 7-8 | Boulder Base (afronden) + eigen project | Site-opmaak (containers/secties) en een volledig eigen eindproject |
 
@@ -87,7 +87,7 @@ Volledige lesuitwerking: `zwsd26f/Blok 3/Frontend Development (FEO)/` (`blok3-sa
 
 | Taakklasse | Hoofdstuk | Site (gedeeld met FEO) | Kern |
 |---|---|---|---|
-| **1** | 1-3 | RetroPixel (`starter-website/`) | Wat is JS, de DOM selecteren en aanpassen, klik-interactie |
+| **1** | 1-3 | RetroPixel (eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel)) | Wat is JS, de DOM selecteren en aanpassen, klik-interactie |
 | **2** | 4-6 | Boulder Base (`starter-website-2/`) | Condities, classList (dark mode), arrays & loops |
 | **3** | 7-8 | Eigen FEO-eindproject | Formulier-input lezen, JS-laag op het eindproject + verantwoording |
 

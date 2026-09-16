@@ -2,11 +2,11 @@
 
 *Bij: `../Hoofdstuk 1 - Herhaling Van Inline naar Externe CSS.md` (studentversie)*
 
-**Taakklasse 1 van 3** - RetroPixel (gameshop, `starter-website/index.html`)
+**Taakklasse 1 van 3** - RetroPixel (gameshop, eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel))
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → eerste (begeleide) Modify
 
 ### Waarom deze opzet
-Studenten krijgen een **complete, werkende website** als startpunt - geen leeg canvas. Dat voorkomt het "witte pagina"-probleem en laat de verbeterpunten (duplicatie, geen structuur) meteen zien in plaats van dat studenten daar zelf tegenaan moeten lopen. Dit hoofdstuk is het begin van Taakklasse 1: drie hoofdstukken lang wordt dezelfde RetroPixel-site steeds verder verbeterd, tot en met een eigen variant in Hoofdstuk 3.
+Studenten krijgen een **complete, werkende website** als startpunt - geen leeg canvas. Dat voorkomt het "witte pagina"-probleem en laat de verbeterpunten (duplicatie, geen structuur) meteen zien in plaats van dat studenten daar zelf tegenaan moeten lopen. Dit hoofdstuk is het begin van Taakklasse 1: drie hoofdstukken lang wordt dezelfde RetroPixel-site steeds verder verbeterd, tot en met een eigen variant in Hoofdstuk 3. RetroPixel staat in een eigen GitHub-repository; studenten forken en clonen 'm aan het begin van dit hoofdstuk en werken daarna in diezelfde map door (ook bij JS Hoofdstuk 1-3/3b).
 
 ### Leerdoelen
 Na deze les kan de student:
@@ -20,8 +20,11 @@ Na deze les kan de student:
 
 ### Lesopbouw (90 minuten)
 
+**Voorbereiding (10 min) - RetroPixel ophalen**
+Laat elke student inloggen op GitHub, de repo [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel) forken (**Fork** → **Create Fork**) en de eigen fork clonen naar de projectenmap: `git clone https://github.com/<jouw-github-username>/RetroPixel.git`. Benoem dat dit dezelfde map is die ze de komende weken blijven gebruiken, ook bij JavaScript Hoofdstuk 1-3.
+
 **Predict (10 min)**
-Deel `starter-website/index.html` uit - **nog niet draaien**. Laat studenten in tweetallen de code lezen (niet de browser openen) en opschrijven: *"Wat voor website denk je dat dit wordt? En: wat valt je op aan hoe de CSS hier staat?"*
+Laat studenten in tweetallen `index.html` lezen (niet de browser openen) - **nog niet draaien** - en opschrijven: *"Wat voor website denk je dat dit wordt? En: wat valt je op aan hoe de CSS hier staat?"*
 
 **Run (10 min)**
 Open de pagina in de browser. Klopt de voorspelling? Laat zien: het is een complete, werkende website van "RetroPixel", een retro-gameshop.
@@ -84,7 +87,7 @@ Ververs de browser - niets verandert visueel. Benoem expliciet: **de website bli
 Loop rond en help. Sluit af met het echte "aha"-moment: laat zien dat de drie product-kaarten bijna identieke inline styles hebben, en vraag: "Wat zou er gebeuren als we hier één class van maken?" (Dit werken ze volgende week verder uit.)
 
 ### Huiswerk
-Zet zo veel mogelijk secties van `starter-website/index.html` om naar de externe stylesheet:
+Zet zo veel mogelijk secties van `index.html` om naar de externe stylesheet:
 1. Header en hero-sectie volledig extern
 2. Geen `style=` meer op deze twee onderdelen
 3. Website ziet er visueel exact hetzelfde uit

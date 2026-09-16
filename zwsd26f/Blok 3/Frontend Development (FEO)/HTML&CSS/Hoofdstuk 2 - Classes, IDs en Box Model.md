@@ -55,7 +55,7 @@ Zelfstandig of in tweetallen:
 **DevTools:** open DevTools, selecteer een `.product` element, bekijk de box model-visualisatie (oranje = padding, groen = margin). Verander de padding-waarde live in DevTools vóórdat je het in de CSS aanpast.
 
 ### Huiswerk
-Werk verder aan `starter-website`:
+Werk verder aan je RetroPixel-project:
 1. Alle secties hebben consistente `padding`
 2. Duidelijke `margin` tussen de secties (geen elementen die tegen elkaar aan plakken)
 3. De `.product` kaarten hebben een `border-radius`

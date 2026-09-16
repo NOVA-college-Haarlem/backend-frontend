@@ -20,11 +20,11 @@ Klas 26F bleek na Blok 1-2 de basis (externe CSS, box model, semantische HTML) n
 
 | Taakklasse | Hoofdstukken | Startcode | Kern |
 |---|---|---|---|
-| **1** | Hoofdstuk 1-3 | `starter-website/` - RetroPixel (gameshop, inline CSS) | Van inline naar externe CSS, box model, semantische HTML |
+| **1** | Hoofdstuk 1-3 | RetroPixel (gameshop, inline CSS) - eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel) | Van inline naar externe CSS, box model, semantische HTML |
 | **2** | Hoofdstuk 4-6 | `starter-website-2/` - Boulder Base (boulderhal, al externe CSS maar met gebreken) | Selectoren, buttons, kleuren/typografie met CSS-variabelen, navigatie |
 | **3** | Hoofdstuk 7-8 | Boulder Base (afronden) + eigen project | Site-opmaak (containers/secties) en een volledig eigen eindproject |
 
-Beide startsites zijn **bewust onvolmaakt** (herhaalde inline styles, hardgecodeerde kleuren, inconsistente knoppen, geen containers) - de gebreken zíjn de lesstof. Studenten investigaten waarom iets niet klopt, en modificeren het gericht.
+RetroPixel staat in een eigen GitHub-repository (studenten forken en clonen 'm bij Hoofdstuk 1); Boulder Base (`starter-website-2/`) staat nog lokaal in deze repo. Beide startsites zijn **bewust onvolmaakt** (herhaalde inline styles, hardgecodeerde kleuren, inconsistente knoppen, geen containers) - de gebreken zíjn de lesstof. Studenten investigaten waarom iets niet klopt, en modificeren het gericht.
 
 ### Eigenaarschap: de Make-fase
 

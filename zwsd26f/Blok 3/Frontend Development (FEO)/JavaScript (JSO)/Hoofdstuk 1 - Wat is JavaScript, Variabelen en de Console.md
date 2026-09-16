@@ -2,8 +2,10 @@
 
 *Docentenhandleiding: `Docent/Hoofdstuk 1 - Docentenhandleiding.md`*
 
-**Taakklasse 1 van 3** - RetroPixel (gedeeld met FEO, `starter-website/`)
+**Taakklasse 1 van 3** - RetroPixel (gedeeld met FEO, eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel))
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → eerste Modify
+
+Je werkt verder in dezelfde gekloonde RetroPixel-map als bij FEO Hoofdstuk 1 - je hoeft niet opnieuw te clonen.
 
 ### Leerdoelen
 Na dit hoofdstuk kan je:
@@ -20,7 +22,7 @@ Bij Predict, Run en Investigate: **geen AI** - dit hoofdstuk draait om code lere
 Voordat je zelf gaat programmeren, laat de docent live zien wat JavaScript kan: met een paar regels code verandert een hele webpagina. Je hoeft dit nog niet te snappen of te kunnen - het is een voorproefje van waar dit vak naartoe gaat. Vandaag beginnen we bij de basis.
 
 ### Predict
-Bekijk `starter-website/js/script.js` - **nog niet draaien**. Schrijf op: *wat denk je dat er gebeurt als deze pagina wordt geopend?*
+Bekijk `js/script.js` - **nog niet draaien**. Schrijf op: *wat denk je dat er gebeurt als deze pagina wordt geopend?*
 ```js
 console.log("RetroPixel is geladen!");
 
@@ -31,7 +33,7 @@ console.log(winkelnaam + " bestaat sinds " + jaarOpgericht);
 ```
 
 ### Run
-Open `starter-website/index.html` in de browser. Open daarna de **console** (F12 → tabblad "Console"). Klopt je voorspelling? Waar verschijnt de tekst - op de pagina, of ergens anders?
+Open `index.html` in de browser. Open daarna de **console** (F12 → tabblad "Console"). Klopt je voorspelling? Waar verschijnt de tekst - op de pagina, of ergens anders?
 
 ### Investigate
 Beantwoord:

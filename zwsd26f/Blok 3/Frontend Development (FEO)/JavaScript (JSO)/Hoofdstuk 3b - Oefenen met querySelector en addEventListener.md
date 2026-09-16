@@ -1,6 +1,6 @@
 ## Hoofdstuk 3b: Oefenen - querySelector en addEventListener
 
-**Taakklasse 1 van 3** - RetroPixel (vervolg, `starter-website/`)
+**Taakklasse 1 van 3** - RetroPixel (vervolg, eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel))
 **Type:** herhalingsoefening (geen nieuwe PRIMM-cyclus) - tussen Hoofdstuk 3 en Hoofdstuk 4 in
 
 ### Waarom deze oefening
@@ -14,7 +14,7 @@ Na deze oefeningen kan je:
 - Ook andere events dan `click` gebruiken (`mouseover`, `mouseout`)
 
 ### Voorbereiding
-Open `starter-website/index.html` en `starter-website/js/script.js`. Alle oefeningen werken in dit bestaande `script.js` (onder de code die er al staat).
+Open `index.html` en `js/script.js` in je gekloonde RetroPixel-map. Alle oefeningen werken in dit bestaande `script.js` (onder de code die er al staat).
 
 ---
 

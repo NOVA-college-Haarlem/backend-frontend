@@ -8,7 +8,7 @@
 ### Leerdoelen
 Na deze les kan de student:
 - Uitleggen waarom semantische HTML belangrijk is
-- `<div>`-elementen in de starter-website vervangen door `<header>`, `<main>`, `<section>`, `<footer>`
+- `<div>`-elementen in het RetroPixel-project vervangen door `<header>`, `<main>`, `<section>`, `<footer>`
 - Code netjes inspringen voor leesbaarheid
 - Een eigen, getransformeerde variant van RetroPixel maken en de keuzes daarin verantwoorden
 - Een stuk AI-gegenereerde code controleren op fouten
@@ -19,10 +19,10 @@ Investigate (semantiek uitleggen) **AI uit**. Modify **mag met AI**, mits verant
 ### Lesopbouw (90 minuten)
 
 **Terugblik (5 min)**
-Kort checken: heeft iedereen consistente spacing in de starter-website?
+Kort checken: heeft iedereen consistente spacing in hun RetroPixel-project?
 
 **Investigate: het probleem met `<div>` (15 min)**
-Open de starter-website en laat zien: bijna alles is een `<div>`. Vraag: "Wat vertelt `<div>` je over wat erin staat?" (niets). Herhaal kort de belangrijkste semantische elementen (was Blok 1): `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`.
+Open het RetroPixel-project en laat zien: bijna alles is een `<div>`. Vraag: "Wat vertelt `<div>` je over wat erin staat?" (niets). Herhaal kort de belangrijkste semantische elementen (was Blok 1): `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`.
 
 **Modify: RetroPixel semantisch maken (35 min)**
 

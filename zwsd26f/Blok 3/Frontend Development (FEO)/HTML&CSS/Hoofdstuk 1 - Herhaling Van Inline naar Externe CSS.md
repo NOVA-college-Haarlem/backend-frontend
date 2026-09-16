@@ -2,8 +2,17 @@
 
 *Docentenhandleiding: `Docent/Hoofdstuk 1 - Docentenhandleiding.md`*
 
-**Taakklasse 1 van 3** - RetroPixel (gameshop, `starter-website/index.html`)
+**Taakklasse 1 van 3** - RetroPixel (gameshop, eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel))
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → eerste Modify
+
+### Voorbereiding: RetroPixel ophalen
+RetroPixel staat in een eigen GitHub-repository en is de startcode voor deze hele taakklasse (FEO Hoofdstuk 1-3 **én** JavaScript Hoofdstuk 1-3/3b) - je werkt de komende weken steeds in dezelfde gekloonde map.
+
+1. Log in op GitHub en ga naar [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel)
+2. Klik op **Fork** (rechtsboven) → **Create Fork**
+3. Open je eigen fork, klik op **Code** en kopieer de link
+4. Kloon de repo naar je projectenmap: `git clone https://github.com/<jouw-github-username>/RetroPixel.git`
+5. Open de map in je code-editor
 
 ### Leerdoelen
 Na dit hoofdstuk kan je:
@@ -16,7 +25,7 @@ Na dit hoofdstuk kan je:
 Bij Predict, Run en Investigate: **geen AI**. Bij de Modify-oefening aan het eind mag je een AI-suggestie bekijken, maar alleen als je kan uitleggen waaróm die klopt.
 
 ### Predict
-Bekijk `starter-website/index.html` - **nog niet draaien**. Schrijf op (in tweetallen): *"Wat voor website denk je dat dit wordt? En: wat valt je op aan hoe de CSS hier staat?"*
+Bekijk `index.html` - **nog niet draaien**. Schrijf op (in tweetallen): *"Wat voor website denk je dat dit wordt? En: wat valt je op aan hoe de CSS hier staat?"*
 
 ### Run
 Open de pagina in de browser. Klopt je voorspelling?
@@ -79,7 +88,7 @@ Ververs de browser - de website blijft er hetzelfde uitzien. Dat is precies de b
 **Tot slot:** bekijk de drie product-kaarten verderop in de pagina. Wat valt op aan hun inline styles? Wat zou er gebeuren als je hier één class van maakt? (Dit werk je volgend hoofdstuk verder uit.)
 
 ### Huiswerk
-Zet zo veel mogelijk secties van `starter-website/index.html` om naar de externe stylesheet:
+Zet zo veel mogelijk secties van `index.html` om naar de externe stylesheet:
 1. Header en hero-sectie volledig extern
 2. Geen `style=` meer op deze twee onderdelen
 3. Website ziet er visueel exact hetzelfde uit
