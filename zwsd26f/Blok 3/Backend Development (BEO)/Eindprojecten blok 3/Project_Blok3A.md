@@ -136,20 +136,6 @@ Je **moet** de volgende technieken gebruiken:
 - ✅ Modulaire code (aparte bestanden)
 - ✅ Duidelijke variabele namen
 
-## 📊 Beoordelingscriteria
-
-| Criterium | Punten | Omschrijving |
-|-----------|--------|--------------|
-| **Front-end bugs opgelost** | 5% | Uitlijning/states lessen-kaarten en navigatie gefixt, ontbrekende JS toegevoegd |
-| **Overzichtspagina** | 25% | Lessen-content correct vanuit database getoond |
-| **Detailpagina** | 20% | Werkende detailpagina via GET-parameter, toont ook niet-index-gegevens |
-| **Dynamisch Menu** | 20% | Menu met array en foreach, werkt op alle pagina's |
-| **Database** | 15% | Correcte connectie, SELECT (all) en SELECT WHERE (one) |
-| **Code Kwaliteit** | 10% | DRY-principe, menu.php, duidelijke code |
-| **Behoud van het Boulder Base-design** | 5% | Site ziet er nog steeds uit als het origineel, alleen nu dynamisch |
-
-**Totaal: 100%**
-
 ## 🚀 Stappenplan (Projectweek 1)
 
 **Dag 1**
@@ -169,6 +155,8 @@ Je **moet** de volgende technieken gebruiken:
 10. 📝 Code opschonen, final check met de checklist
 
 ## ✅ Checklist voor Inleveren
+
+Geen punten of percentages - de docent loopt onderstaande checklist met je na, en je moet elk afgevinkt onderdeel kort kunnen toelichten: wat het doet, en waarom je het zo hebt opgelost.
 
 **Front-end (vóór je met de database begint):**
 - [ ] Uitlijning en spacing van de lessen-kaarten en het contactformulier (padding/margin) zijn gefixt
