@@ -1,38 +1,51 @@
-# Eindproject Blok 3A - Backend op je eigen site (Projectweek 1)
+# Eindproject Blok 3A - Backend op de Boulder Base-website (Projectweek 1)
 
 ## 📋 Projectomschrijving
 
-Je bouwt geen los oefenproject, maar geeft **je eigen FEO/JSO-eindproject** (de RetroPixel- of Boulder Base-variant, of je eigen thema, die je in Frontend Development hebt gemaakt) een echte backend. De kaarten/items die je tot nu toe hardgecodeerd in HTML had staan, komen voortaan uit een database die je zelf ontwerpt. Dit project vormt de basis voor het vervolgproject in Blok 3B (Projectweek 2).
+Je bouwt geen los oefenproject, maar geeft de gezamenlijke **Boulder Base-website** een echte backend. De lessen-kaarten die nu nog hardgecodeerd in de HTML staan, komen voortaan uit een database, en elke les krijgt een eigen detailpagina met meer informatie. Dit project vormt de basis voor het vervolgproject in Blok 3B (Projectweek 2).
 
-**Waarom op je eigen site?** Je hebt deze site al gestyled, gestructureerd en (in JSO) interactief gemaakt. Nu voeg je er de laatste laag aan toe: écht dynamische data. Aan het eind van het blok heb je één site die je zelf helemaal hebt opgebouwd - front, interactie én data.
+**Waarom Boulder Base?** Iedereen start dit blok vanuit dezelfde website, zodat de focus volledig op de backend-technieken ligt. Voordat je aan de database begint, ruim je eerst de front-end op: er zitten nog een paar bewuste HTML/CSS-bugs in, en een stukje JavaScript ontbreekt nog.
+
+**Wat krijg je al kant-en-klaar aangeleverd?** De omgeving (`docker-compose.yml`) en de startsite staan al klaar in de `boulderbase-start`-repository, en de database-tabel met alle lesgegevens staat al klaar in `sql/lessen.sql`. Je hoeft dus geen omgeving in te richten en geen tabel te ontwerpen - dat komt later in je opleiding nog aan bod. Dit project focust op het uitlezen en tonen van data.
 
 ## ✅ Startpunt
 
-- Je RetroPixel- of Boulder Base-variant (of eigen thema) uit FEO Hoofdstuk 3/6, het liefst al bijgewerkt t/m FEO Hoofdstuk 7 (site-opmaak)
-- Je site bevat een overzicht met meerdere "items" (games, klimroutes, of wat je eigen thema ook is) - dat overzicht ga je dynamisch maken
+- De gezamenlijke Boulder Base-startsite uit `boulderbase-start/` (`index.html`, `les-detail.html`, `css/style.css`, `js/script.js`, `sql/lessen.sql`)
+- De site bevat een overzicht met de lessen-kaarten ("Onze lessen") - dat overzicht ga je dynamisch maken
+- `sql/lessen.sql` bevat méér gegevens per les dan er nu op de kaarten te zien zijn - de extra gegevens (instructeur, groepsgrootte, duur, benodigdheden, uitgebreide beschrijving) zijn bedoeld voor de detailpagina die je gaat bouwen
 
 ## 🛠️ Wat je moet bouwen
 
-### 0. Project geschikt maken voor PHP (Verplicht)
+### 0. Front-end bugs oplossen (Verplicht, eerst dit)
 
-Je FEO/JSO-project heeft nog geen PHP/database-omgeving. Voeg die toe:
+Voordat je de site dynamisch maakt, werkt de front-end nog niet helemaal goed. Los dit op vóórdat je met PHP begint:
 
-1. Kopieer de `docker-compose.yml`-template van je docent naar de root van je eigen projectmap
-2. Start de omgeving: `docker compose up -d`
-3. Zet `index.html` om naar `index.php` (net als in Hoofdstuk 1)
-4. Open je browser op `http://localhost` - je bestaande site moet nog steeds werken
+1. **Uitlijning en spacing (box model, Hoofdstuk 2)**: de kaarten bij "Onze lessen" lijken uitgelijnd, maar de padding en margin kloppen niet helemaal - gebruik DevTools om de afwijking te vinden en te fixen. Kijk ook kritisch naar de tekst in de kaarten en de velden van het contactformulier: staat er genoeg ruimte tussen?
+2. **Interactieve states (selectors, Hoofdstuk 4/6)**: geen enkele knop of navigatielink heeft nu een `:hover`- of `:focus`-state. Voeg die toe, consistent voor alle knop-varianten en de navigatie.
+3. **JavaScript**: er ontbreekt nog functionaliteit - implementeer waar nodig, bijvoorbeeld de dark mode-toggle (`#dark-mode-toggle`) en/of feedback op het contactformulier
 
-### 1. Overzichtspagina (Verplicht)
+Pas als de site er visueel en functioneel goed uitziet, ga je verder met stap 1.
 
-Je bestaande kaartenoverzicht (bijv. de game-cards van je RetroPixel-variant) moet nu **vanuit een database** komen in plaats van hardgecodeerde HTML.
+### 1. Omgeving starten (Verplicht)
+
+De repository is al PHP-klaar: `docker-compose.yml` en `index.php` staan er al in. Jij hoeft alleen te starten:
+1. Ga naar de `boulderbase-start`-repository op GitHub (Nova College) en fork deze naar je eigen account
+2. Clone de repository naar je eigen projectenmap
+3. Start de omgeving: `docker compose up -d`
+4. Open je browser op `http://localhost` - de site moet er nog precies zo uitzien als je 'm in stap 0 hebt opgeleverd
+5. Open PHPMyAdmin en importeer `sql/lessen.sql` (tabblad SQL, plak de inhoud, klik op Start/Go)
+
+### 2. Overzichtspagina (Verplicht)
+
+Het bestaande kaartenoverzicht met de lessen moet nu **vanuit de database** komen in plaats van hardgecodeerde HTML.
 
 **Vereisten:**
-- Bedenk zelf een tabel die past bij jouw content (bijv. `games` met kolommen als `naam`, `categorie`, `prijs`, `beschrijving`, `afbeelding` - gebruik de attributen die je site al toont)
 - Database connectie via `database.php`
-- SELECT query om alle data op te halen
+- SELECT query om alle lessen op te halen
 - Foreach loop om de items te tonen - de HTML/CSS-structuur (de "kaart") blijft hetzelfde als wat je al had, alleen de inhoud komt nu uit `$item['...']` in plaats van vast te staan
+- Gebruik op de kaart alleen de kolommen die er al op stonden (`naam`, `niveau`, `korte_beschrijving`, `prijs`) - de rest bewaar je voor de detailpagina
 
-### 2. Dynamisch menu (Verplicht)
+### 3. Dynamisch menu (Verplicht)
 
 De navigatie die je al gestyled hebt (uit FEO Hoofdstuk 6), maak je nu dynamisch:
 
@@ -56,19 +69,37 @@ $menuItems = [
 <?php endforeach; ?>
 ```
 
+### 4. Detailpagina (Verplicht, Hoofdstuk 4)
+
+Elke les krijgt een eigen detailpagina in `les-detail.php`, met **alle** gegevens van die ene les - dus ook de gegevens die niet op de overzichtspagina staan.
+
+**Vereisten:**
+- Link vanaf elke kaart op `index.php` 
+- In `les-detail.php`: lees de meegegeven `id`.
+- SELECT WHERE-query om alléén de gegevens van die ene les op te halen
+- Toon op de detailpagina minimaal 2 gegevens die **niet** op de overzichtspagina staan (bijv. `instructeur`, `groepsgrootte`, `duur_weken`, `benodigdheden` of `lange_beschrijving`)
+- Terug-link naar `index.php`
+- Style de pagina zelf af (de basis-HTML staat al klaar, maar heeft nog geen CSS)
+
+
 ## 📁 Bestandsstructuur
 
 ```
 jouw-project/
 ├── index.php              # Overzichtspagina met database data
+├── les-detail.php         # Detailpagina van één les (Hoofdstuk 4)
 ├── database.php           # Database connectie
 ├── menu.php               # Dynamisch menu (include in elke pagina)
-├── style.css               # Je bestaande styling - blijft grotendeels ongewijzigd
+├── css/
+│   └── style.css          # Boulder Base-styling - blijft grotendeels ongewijzigd (na de front-end-fix)
+|   js/
+|   └── script.js          # Boulder Base-JS - blijft grotendeels ongewijzigd (na de front-end-fix)
+├── docker-compose.yml     # Al aanwezig in de repository
 └── sql/
-    └── [eigen-tabel].sql  # Zelf gemaakt, gebaseerd op je site-inhoud
+    └── lessen.sql         # Al aanwezig, kant-en-klaar aangeleverd (incl. detailpagina-gegevens)
 ```
 
-## 🎓 Technieken uit Hoofdstuk 1 t/m 3
+## 🎓 Technieken uit Hoofdstuk 1 t/m 4
 
 Je **moet** de volgende technieken gebruiken:
 
@@ -93,6 +124,13 @@ Je **moet** de volgende technieken gebruiken:
 - ✅ Data uit database in tabel of grid
 - ✅ Kolomnamen uit database correct gebruiken
 
+### Hoofdstuk 4 - Detailpagina, dynamische link
+- ✅ Dynamische link met een GET-parameter (`?id=...`)
+- ✅ `$_GET['id']` uitlezen
+- ✅ SELECT WHERE-query voor één specifieke rij
+- ✅ `mysqli_fetch_assoc` voor één rij (i.p.v. `mysqli_fetch_all` voor meerdere)
+- ✅ `var_dump()` om te controleren wat je query teruggeeft
+
 ### Code Kwaliteit
 - ✅ DRY-principe (Don't Repeat Yourself)
 - ✅ Modulaire code (aparte bestanden)
@@ -102,35 +140,45 @@ Je **moet** de volgende technieken gebruiken:
 
 | Criterium | Punten | Omschrijving |
 |-----------|--------|--------------|
-| **Overzichtspagina** | 40% | Eigen content-items correct vanuit database getoond |
-| **Dynamisch Menu** | 25% | Menu met array en foreach, werkt op alle pagina's |
-| **Database** | 20% | Correcte connectie en SELECT query |
+| **Front-end bugs opgelost** | 5% | Uitlijning/states lessen-kaarten en navigatie gefixt, ontbrekende JS toegevoegd |
+| **Overzichtspagina** | 25% | Lessen-content correct vanuit database getoond |
+| **Detailpagina** | 20% | Werkende detailpagina via GET-parameter, toont ook niet-index-gegevens |
+| **Dynamisch Menu** | 20% | Menu met array en foreach, werkt op alle pagina's |
+| **Database** | 15% | Correcte connectie, SELECT (all) en SELECT WHERE (one) |
 | **Code Kwaliteit** | 10% | DRY-principe, menu.php, duidelijke code |
-| **Behoud van je eigen design** | 5% | Site ziet er nog steeds uit als jouw ontwerp, alleen nu dynamisch |
+| **Behoud van het Boulder Base-design** | 5% | Site ziet er nog steeds uit als het origineel, alleen nu dynamisch |
 
 **Totaal: 100%**
 
 ## 🚀 Stappenplan (Projectweek 1)
 
 **Dag 1**
-1. 📝 Docker-compose toevoegen aan je eigen projectmap, `docker compose up -d`
-2. 📝 `index.html` omzetten naar `index.php`, controleer dat je site nog werkt
-3. 📝 Ontwerp je eigen databasetabel op basis van je site-inhoud
-4. 📝 Importeer de tabel in PHPMyAdmin
+1. 📝 Fix de front-end bugs (spacing, hover/focus-states) en voeg ontbrekende JavaScript toe
+2. 📝 Clone de `boulderbase-start`-repository, `docker compose up -d`, controleer dat de site nog werkt
+3. 📝 Importeer `sql/lessen.sql` in PHPMyAdmin
 
 **Dag 2**
-5. 📝 Maak `database.php` met de database connectie, test de connectie
-6. 📝 Maak `menu.php` met associatieve array en foreach, include in je pagina's
+4. 📝 Maak `database.php` met de database connectie, test de connectie
+5. 📝 Maak `menu.php` met associatieve array en foreach, include in je pagina's
+6. 📝 Vervang de hardgecodeerde kaarten in `index.php` door een SELECT-query + foreach-loop
 
 **Dag 3**
-7. 📝 Vervang de hardgecodeerde kaarten in `index.php` door een SELECT-query + foreach-loop
-8. 📝 Controleer dat de site er nog precies zo uitziet als voorheen - nu met echte data
-9. 📝 Code opschonen, final check met de checklist
+7. 📝 Maak `les-detail.php`: haal met een SELECT WHERE-query de juiste les op
+8. 📝 Link elke kaart op `index.php` naar `les-detail.php`
+9. 📝 Toon op de detailpagina ook de gegevens die niet op de overzichtspagina staan, en style de pagina af
+10. 📝 Code opschonen, final check met de checklist
 
 ## ✅ Checklist voor Inleveren
 
+**Front-end (vóór je met de database begint):**
+- [ ] Uitlijning en spacing van de lessen-kaarten en het contactformulier (padding/margin) zijn gefixt
+- [ ] Alle knoppen en de navigatie hebben een `:hover`- en `:focus`-state
+- [ ] Ontbrekende JavaScript is toegevoegd waar nodig
+
 **Functionaliteit:**
-- [ ] Overzichtspagina toont je eigen content-items uit de database
+- [ ] Overzichtspagina toont de lessen-content uit de database
+- [ ] Klik op een les leidt naar een werkende detailpagina
+- [ ] Detailpagina toont minimaal 2 gegevens die niet op de overzichtspagina staan
 - [ ] Dynamisch menu werkt op alle pagina's
 - [ ] Database connectie werkt
 - [ ] Geen PHP errors
@@ -142,8 +190,8 @@ Je **moet** de volgende technieken gebruiken:
 - [ ] Foreach loop voor menu en overzicht
 - [ ] Duidelijke variabele namen
 
-**Behoud van je eigen design:**
-- [ ] Site ziet er nog hetzelfde uit als je FEO-eindproduct - alleen data komt nu uit de database
+**Behoud van het Boulder Base-design:**
+- [ ] Site ziet er nog hetzelfde uit als de opgeleverde front-end - alleen data komt nu uit de database
 
 **Git:**
 - [ ] Reguliere commits met duidelijke messages
@@ -151,19 +199,20 @@ Je **moet** de volgende technieken gebruiken:
 
 ## 💡 Tips
 
-1. **Je hoeft de styling niet opnieuw te doen** - die heb je al. Focus op het vervangen van hardgecodeerde HTML door PHP + database-data die er hetzelfde uitziet
+1. **Fix eerst de front-end bugs** - pas daarna ga je de styling in PHP hergebruiken, zodat je niet twee keer dezelfde fout overtypt
 2. **Start met het menu**: volg de stappen uit Hoofdstuk 1, Opdracht 7 en 8
-3. **Database eerst**: bepaal welke kolommen jouw content nodig heeft, vóór je gaat programmeren
-4. **Kopieer de structuur**: gebruik het Pokémon- of Formula 1-voorbeeld uit de les als referentie voor de PHP-code, niet voor de content
+3. **Bekijk `sql/lessen.sql` vóór je gaat programmeren**: weet welke kolommen er zijn en welke je op de index wel/niet gebruikt
+4. **Kopieer de structuur**: gebruik het Pokémon-, Formula 1- of driver-profile-voorbeeld uit de les als referentie voor de PHP-code, niet voor de content
 5. **Test stap voor stap**: test na elke wijziging of alles nog werkt
-6. **var_dump()**: gebruik dit om te zien wat je query teruggeeft
+6. **var_dump()**: gebruik dit om te zien wat je query teruggeeft - vooral handig bij de detailpagina om te checken of `$_GET['id']` de juiste les oplevert
 
 ## 📚 Referenties
 
 - **Hoofdstuk 1**: PHP basics, menu.php, dynamisch menu met array
 - **Hoofdstuk 2**: database.php, SELECT query, foreach met database data
 - **Hoofdstuk 3**: navbar.php, tabel met database
-- **Je eigen FEO Hoofdstuk 3/6/7-bestanden**: de HTML/CSS die je nu van data gaat voorzien
+- **Hoofdstuk 4**: detailpagina, GET-parameter, SELECT WHERE
+- **`boulderbase-start/`**: de Boulder Base-startsite (met front-end bugs) die je nu van data gaat voorzien
 
 ## 📅 Deadline
 
@@ -173,4 +222,4 @@ Je **moet** de volgende technieken gebruiken:
 
 ---
 
-*Dit project vormt de basis voor Blok 3B (Projectweek 2), waar je de detailpagina en extra functionaliteit toevoegt.*
+*Dit project vormt de basis voor Blok 3B (Projectweek 2), waar je verder bouwt op de overzichts- en detailpagina met extra functionaliteit (filtering, zoeken, sorteren of statistieken).*
