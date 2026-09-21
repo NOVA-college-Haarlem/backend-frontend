@@ -6,9 +6,9 @@ Je hebt een intakegesprek met Sanne, eigenaar van fitnessbedrijf "Work4Me". Ze v
 
 > "We zijn drie jaar geleden begonnen met een paar zaaltjes en zijn inmiddels uitgegroeid tot een fitnessclub met tientallen workouts per week - van hardlopen tot gewichtheffen. Op dit moment houden we alles nog bij in een Excel-bestand, en dat loopt vast.
 >
-> Ik wil een website waar bezoekers kunnen zien welke workouts we aanbieden, met een korte omschrijving en een foto. We bieden verschillende soorten workouts aan - denk aan cardio, kracht en flexibiliteit - en ik wil dat bezoekers makkelijk workouts van hetzelfde type bij elkaar kunnen vinden. Leden moeten kunnen inloggen op hun eigen account, en ik wil dat ze een workout vooraf kunnen boeken - nu bellen ze ons daarvoor nog, en dat kost te veel tijd. Een lid moet later ook terug kunnen zien welke workouts hij of zij heeft geboekt, ook de workouts die al geweest zijn.
+> Ik wil een website waar bezoekers kunnen zien welke workouts we aanbieden, met een korte omschrijving en een foto. We bieden verschillende soorten workouts aan - denk aan cardio, kracht en flexibiliteit - en ik wil dat bezoekers makkelijk workouts van hetzelfde type bij elkaar kunnen vinden. Leden moeten kunnen inloggen op hun eigen account, zodat ze hun eigen gegevens kunnen inzien.
 >
-> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe workouts toevoegen, bestaande workouts aanpassen, en zien wie zich voor een workout heeft aangemeld. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
+> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe workouts toevoegen (met het juiste type), bestaande workouts aanpassen, en een overzicht van onze leden kunnen bekijken. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
 >
 > Verder willen we, puur voor de post, de adresgegevens van onze leden bijhouden - denk aan een welkomstkaartje of een keer een flyer."
 
@@ -48,15 +48,12 @@ Deze eisen gelden voor alle projectthema's, ongeacht welk thema jouw groep heeft
 
 4. Als lid wil ik kunnen inloggen, zodat ik toegang krijg tot mijn eigen omgeving.
 5. Als lid wil ik mijn sessie kunnen beëindigen via een uitlog-link.
-6. Als lid wil ik een workout kunnen boeken, zodat ik verzekerd ben van een plek.
-7. Als lid wil ik een overzicht zien van de workouts die ik heb geboekt, ook de workouts die al geweest zijn, zodat ik mijn geschiedenis kan terugvinden.
-8. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
+6. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
 
 ### Medewerker
 
-9. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
-10. Als medewerker wil ik een overzicht zien van alle workouts in tabelvorm, zodat ik weet wat er aangeboden wordt.
-11. Als medewerker wil ik een nieuwe workout kunnen toevoegen en daarbij een type workout kunnen kiezen, zodat het aanbod up-to-date en overzichtelijk blijft.
-12. Als medewerker wil ik zien wie zich voor een workout heeft aangemeld, zodat ik de groepsgrootte kan bewaken.
-13. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
-14. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een workout kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.
+7. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
+8. Als medewerker wil ik een overzicht zien van alle workouts in tabelvorm, zodat ik weet wat er aangeboden wordt.
+9. Als medewerker wil ik een nieuwe workout kunnen toevoegen en daarbij een type workout kunnen kiezen, zodat het aanbod up-to-date en overzichtelijk blijft.
+10. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
+11. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een workout kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.
