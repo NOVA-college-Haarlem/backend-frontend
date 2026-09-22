@@ -6,9 +6,9 @@ Je hebt een intakegesprek met Fatima, bibliothecaris van bibliotheek "De Wijze U
 
 > "We hebben een mooie collectie boeken, maar we houden nog bij op papieren kaartjes wie welk boek heeft geleend. Regelmatig raken we het overzicht kwijt van wie wat heeft, en wanneer het terug moet.
 >
-> Ik wil een website waar bezoekers kunnen zien welke boeken we in de collectie hebben, met titel, auteur, categorie en een omslagfoto. Leden moeten kunnen inloggen op hun eigen account, en ik wil dat ze kunnen zien welke boeken zij op dit moment geleend hebben, en welke boeken ze in het verleden hebben geleend. Als een medewerker een boek uitleent, moet dat digitaal worden vastgelegd in plaats van op een kaartje.
+> Ik wil een website waar bezoekers kunnen zien welke boeken we in de collectie hebben, met titel, auteur en een omslagfoto. We delen onze boeken in op categorie - denk aan thrillers, romans en kinderboeken - en ik wil dat bezoekers makkelijk boeken van dezelfde categorie bij elkaar kunnen vinden. Leden moeten kunnen inloggen op hun eigen account, zodat ze hun eigen gegevens kunnen inzien.
 >
-> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe boeken toevoegen, bestaande boeken aanpassen, en zien wie welk boek heeft geleend. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
+> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe boeken toevoegen (met de juiste categorie), bestaande boeken aanpassen, en een overzicht van onze leden kunnen bekijken. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
 >
 > Verder willen we, puur voor de post, de adresgegevens van onze leden bijhouden - denk aan een herinnering als een boek te laat wordt teruggebracht."
 
@@ -48,15 +48,12 @@ Deze eisen gelden voor alle projectthema's, ongeacht welk thema jouw groep heeft
 
 4. Als lid wil ik kunnen inloggen, zodat ik toegang krijg tot mijn eigen omgeving.
 5. Als lid wil ik mijn sessie kunnen beëindigen via een uitlog-link.
-6. Als lid wil ik een boek kunnen lenen, zodat ik het mee naar huis kan nemen.
-7. Als lid wil ik een overzicht zien van de boeken die ik heb geleend, ook boeken die ik al heb teruggebracht, zodat ik mijn geschiedenis kan terugvinden.
-8. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
+6. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
 
 ### Medewerker
 
-9. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
-10. Als medewerker wil ik een overzicht zien van alle boeken in tabelvorm, zodat ik weet wat er in de collectie zit.
-11. Als medewerker wil ik een nieuw boek kunnen toevoegen, zodat de collectie up-to-date blijft.
-12. Als medewerker wil ik zien wie welk boek heeft geleend, zodat ik kan bijhouden wat er nog terug moet komen.
-13. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
-14. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een boek kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.
+7. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
+8. Als medewerker wil ik een overzicht zien van alle boeken in tabelvorm, zodat ik weet wat er in de collectie zit.
+9. Als medewerker wil ik een nieuw boek kunnen toevoegen en daarbij een categorie kunnen kiezen, zodat de collectie up-to-date en overzichtelijk blijft.
+10. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
+11. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een boek kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.

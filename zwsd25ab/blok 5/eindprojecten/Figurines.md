@@ -6,9 +6,9 @@ Je hebt een intakegesprek met Wendy, eigenaar van Vocaloid-winkel "Vocaloid Vaul
 
 > "We verkopen figurines van Vocaloid-personages zoals Hatsune Miku, Kagamine Rin & Len, Megurine Luka, KAITO en MEIKO. Sommige edities zijn gelimiteerd, en klanten willen die het liefst van tevoren vastleggen voordat ze uitverkocht zijn. Nu gaat dat via een groepsapp, en dat is chaos.
 >
-> Ik wil een website waar bezoekers kunnen zien welke figurines we verkopen, met personage, type figuur en een foto. Leden moeten kunnen inloggen op hun eigen account, en ik wil dat ze een figurine alvast kunnen bestellen of reserveren - vooral bij gelimiteerde edities is dat belangrijk. Een lid moet ook terug kunnen zien welke figurines hij of zij heeft besteld, ook bestellingen die al zijn opgehaald.
+> Ik wil een website waar bezoekers kunnen zien welke figurines we verkopen, met personage en een foto. We delen onze figurines in op type figuur - denk aan Nendoroid, Scale Figure en Figma - en ik wil dat bezoekers makkelijk figurines van hetzelfde type bij elkaar kunnen vinden. Leden moeten kunnen inloggen op hun eigen account, zodat ze hun eigen gegevens kunnen inzien.
 >
-> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe figurines toevoegen, bestaande figurines aanpassen, en zien wie welke figurine besteld heeft. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
+> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe figurines toevoegen (met het juiste type), bestaande figurines aanpassen, en een overzicht van onze leden kunnen bekijken. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
 >
 > Verder willen we, puur voor de post, de adresgegevens van onze leden bijhouden - denk aan een flyer bij een nieuwe release of een verjaardagskaartje."
 
@@ -48,15 +48,12 @@ Deze eisen gelden voor alle projectthema's, ongeacht welk thema jouw groep heeft
 
 4. Als lid wil ik kunnen inloggen, zodat ik toegang krijg tot mijn eigen omgeving.
 5. Als lid wil ik mijn sessie kunnen beëindigen via een uitlog-link.
-6. Als lid wil ik een figurine kunnen bestellen, zodat ik verzekerd ben van een exemplaar.
-7. Als lid wil ik een overzicht zien van de figurines die ik heb besteld, ook bestellingen die al zijn opgehaald, zodat ik mijn geschiedenis kan terugvinden.
-8. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
+6. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
 
 ### Medewerker
 
-9. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
-10. Als medewerker wil ik een overzicht zien van alle figurines in tabelvorm, zodat ik weet wat er aangeboden wordt.
-11. Als medewerker wil ik een nieuwe figurine kunnen toevoegen, zodat het aanbod up-to-date blijft.
-12. Als medewerker wil ik zien wie welke figurine besteld heeft, zodat ik de bestelling kan klaarzetten.
-13. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
-14. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een figurine kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.
+7. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
+8. Als medewerker wil ik een overzicht zien van alle figurines in tabelvorm, zodat ik weet wat er aangeboden wordt.
+9. Als medewerker wil ik een nieuwe figurine kunnen toevoegen en daarbij een type kunnen kiezen, zodat het aanbod up-to-date en overzichtelijk blijft.
+10. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
+11. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een figurine kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.

@@ -6,9 +6,9 @@ Je hebt een intakegesprek met Youssef, eigenaar van bioscoop "De Filmfanaten". H
 
 > "We draaien wekelijks tientallen films, van nieuwe releases tot klassiekers, en we merken dat mensen steeds vaker van tevoren willen weten wat er draait. Nu staat alles nog op een prikbord bij de ingang - dat werkt niet meer.
 >
-> Ik wil een website waar bezoekers kunnen zien welke films we draaien, met een omschrijving, genre en een poster. Leden moeten kunnen inloggen op hun eigen account, en ik wil dat ze alvast een reservering kunnen maken voor een film - nu moeten ze daarvoor bellen of langskomen, en dat kost ons te veel tijd aan de balie. Een lid moet ook kunnen terugzien welke films hij of zij heeft gereserveerd, ook de films die al geweest zijn.
+> Ik wil een website waar bezoekers kunnen zien welke films we draaien, met een omschrijving en een poster. We delen onze films in op genre - denk aan actie, comedy en drama - en ik wil dat bezoekers makkelijk films van hetzelfde genre bij elkaar kunnen vinden. Leden moeten kunnen inloggen op hun eigen account, zodat ze hun eigen gegevens kunnen inzien.
 >
-> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe films toevoegen, bestaande films aanpassen, en zien wie er voor welke film gereserveerd heeft. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
+> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe films toevoegen (met het juiste genre), bestaande films aanpassen, en een overzicht van onze leden kunnen bekijken. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
 >
 > Verder willen we, puur voor de post, de adresgegevens van onze leden bijhouden - denk aan een verjaardagskaartje of een flyer bij een nieuwe release."
 
@@ -48,15 +48,12 @@ Deze eisen gelden voor alle projectthema's, ongeacht welk thema jouw groep heeft
 
 4. Als lid wil ik kunnen inloggen, zodat ik toegang krijg tot mijn eigen omgeving.
 5. Als lid wil ik mijn sessie kunnen beëindigen via een uitlog-link.
-6. Als lid wil ik een film kunnen reserveren, zodat ik verzekerd ben van een plek.
-7. Als lid wil ik een overzicht zien van de films die ik heb gereserveerd, ook de films die al geweest zijn, zodat ik mijn geschiedenis kan terugvinden.
-8. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
+6. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
 
 ### Medewerker
 
-9. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
-10. Als medewerker wil ik een overzicht zien van alle films in tabelvorm, zodat ik weet wat er aangeboden wordt.
-11. Als medewerker wil ik een nieuwe film kunnen toevoegen, zodat het aanbod up-to-date blijft.
-12. Als medewerker wil ik zien wie er voor een film gereserveerd heeft, zodat ik de zaalbezetting kan bewaken.
-13. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
-14. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een film kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.
+7. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
+8. Als medewerker wil ik een overzicht zien van alle films in tabelvorm, zodat ik weet wat er aangeboden wordt.
+9. Als medewerker wil ik een nieuwe film kunnen toevoegen en daarbij een genre kunnen kiezen, zodat het aanbod up-to-date en overzichtelijk blijft.
+10. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
+11. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een film kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.

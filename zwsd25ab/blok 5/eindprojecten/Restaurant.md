@@ -6,9 +6,9 @@ Je hebt een intakegesprek met Marco, eigenaar van restaurant "De Gouden Gerechte
 
 > "We hebben een mooie kaart met gerechten, maar mensen bellen ons de hele dag door om te vragen wat erop staat en om vast iets te bestellen om af te halen. Dat is met twee man in de keuken niet meer te doen.
 >
-> Ik wil een website waar bezoekers kunnen zien welke gerechten we serveren, met een omschrijving, categorie en een foto. Leden moeten kunnen inloggen op hun eigen account, en ik wil dat ze alvast een gerecht kunnen bestellen om af te halen - nu moet dat allemaal telefonisch, en dat kost te veel tijd. Een lid moet ook terug kunnen zien welke gerechten hij of zij heeft besteld, ook bestellingen die al zijn opgehaald.
+> Ik wil een website waar bezoekers kunnen zien welke gerechten we serveren, met een omschrijving en een foto. We delen onze gerechten in op categorie - voorgerecht, hoofdgerecht en dessert - en ik wil dat bezoekers makkelijk gerechten van dezelfde categorie bij elkaar kunnen vinden. Leden moeten kunnen inloggen op hun eigen account, zodat ze hun eigen gegevens kunnen inzien.
 >
-> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe gerechten toevoegen, bestaande gerechten aanpassen, en zien wie welk gerecht besteld heeft. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
+> Mijn medewerkers moeten via een apart account kunnen inloggen op een beheeromgeving: nieuwe gerechten toevoegen (met de juiste categorie), bestaande gerechten aanpassen, en een overzicht van onze leden kunnen bekijken. Gewone bezoekers mogen dat natuurlijk niet kunnen zien.
 >
 > Verder willen we, puur voor de post, de adresgegevens van onze leden bijhouden - denk aan een kortingskaart of een flyer bij een nieuw seizoensmenu."
 
@@ -48,15 +48,12 @@ Deze eisen gelden voor alle projectthema's, ongeacht welk thema jouw groep heeft
 
 4. Als lid wil ik kunnen inloggen, zodat ik toegang krijg tot mijn eigen omgeving.
 5. Als lid wil ik mijn sessie kunnen beëindigen via een uitlog-link.
-6. Als lid wil ik een gerecht kunnen bestellen, zodat ik het kan komen ophalen.
-7. Als lid wil ik een overzicht zien van de gerechten die ik heb besteld, ook bestellingen die al zijn opgehaald, zodat ik mijn geschiedenis kan terugvinden.
-8. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
+6. Als lid wil ik mijn eigen gegevens kunnen inzien, zodat ik weet wat er over mij bekend is.
 
 ### Medewerker
 
-9. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
-10. Als medewerker wil ik een overzicht zien van alle gerechten in tabelvorm, zodat ik weet wat er aangeboden wordt.
-11. Als medewerker wil ik een nieuw gerecht kunnen toevoegen, zodat het menu up-to-date blijft.
-12. Als medewerker wil ik zien wie welk gerecht besteld heeft, zodat ik de bestelling kan klaarzetten.
-13. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
-14. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een gerecht kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.
+7. Als medewerker wil ik kunnen inloggen op een apart beheergedeelte, zodat gewone bezoekers dit niet kunnen zien.
+8. Als medewerker wil ik een overzicht zien van alle gerechten in tabelvorm, zodat ik weet wat er aangeboden wordt.
+9. Als medewerker wil ik een nieuw gerecht kunnen toevoegen en daarbij een categorie kunnen kiezen, zodat het menu up-to-date en overzichtelijk blijft.
+10. Als medewerker wil ik een overzicht van alle leden kunnen bekijken en op naam kunnen zoeken, zodat ik snel iemand kan terugvinden.
+11. Optioneel (Hoofdstuk 3): Als medewerker wil ik gegevens van een gerecht kunnen bijwerken, zodat foutieve informatie gecorrigeerd kan worden.
