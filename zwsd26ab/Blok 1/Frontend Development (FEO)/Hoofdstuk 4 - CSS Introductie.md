@@ -53,14 +53,20 @@ Na deze les kan de student:
   - Altijd afsluiten met `;`
   - Altijd tussen `{ }`
 
+  **Korte oefening: voorspel en probeer**
+
+  - Wat denk je dat `background-color: lightblue;` verandert?
+  - Pas de achtergrondkleur aan en ververs de pagina.
+  - Verander de kleur nog een keer. Welke waarde vind jij het prettigst?
+
 **3. Basis CSS Properties**
 
 **Kleuren:**
 
 ```css
 body {
-  background-color: #f0f0f0;
-  color: #333333;
+  background-color: lightgray;
+  color: black;
 }
 
 h1 {
@@ -68,11 +74,13 @@ h1 {
 }
 ```
 
-**Uitleg kleurnotaties:**
+Je kunt beginnen met kleurnamen, zoals `red`, `blue` en `lightgreen`. Soms zie je ook hex-kleurwaarden, zoals `#ff0000`. Die beginnen met `#`. Voor deze les zijn kleurnamen voldoende.
 
-- Naam: `red`, `blue`, `lightgreen`
-- Hex: `#ff0000`, `#0000ff`
-- RGB: `rgb(255, 0, 0)` (niet verplicht nu)
+**Korte oefening: kleur en contrast**
+
+- Kies een achtergrondkleur voor je pagina.
+- Kies een tekstkleur die goed leesbaar is op die achtergrond.
+- Laat je buur controleren of de tekst goed te lezen is.
 
 **Lettertypen:**
 
@@ -99,13 +107,11 @@ p {
 }
 ```
 
-**Oefening:**
-Laat studenten experimenteren:
+**Korte oefening: geef je titel aandacht**
 
-- Verander achtergrondkleur
-- Kies een andere kleur voor alle headings
-- Verander het lettertype
-- Maak de h1 gecentreerd
+- Verander het lettertype van de pagina.
+- Maak de hoofdtitel groter en centreer hem.
+- Kijk naar de pagina: is de titel nu makkelijker te vinden?
 
 **4. Meerdere Elementen Tegelijk Stylen**
 
@@ -121,6 +127,11 @@ h3 {
 ```
 
 - **Uitleg:** Alle drie de elementen krijgen nu dezelfde stijl in één keer
+
+**Korte oefening: minder dubbel werk**
+
+- Voeg een gegroepeerde selector toe voor `h1`, `h2` en `h3`.
+- Geef de headings dezelfde kleur en bekijk welke elementen veranderen.
 
 **5. Tekst Extra Opmaken**
 
@@ -141,6 +152,12 @@ p {
 - `line-height`: ruimte tussen regels, maakt tekst leesbaarder
 - `font-style`: `normal` of `italic`
 
+**Korte oefening: maak tekst prettig leesbaar**
+
+- Geef je paragrafen een `line-height` van `1.5`.
+- Maak één paragraaf cursief.
+- Zet `font-style` daarna terug op `normal`. Wat verandert er?
+
 **6. Links Stylen**
 
 - **Probleem schetsen:** Links zijn standaard blauw en onderstreept. Dat past niet altijd bij je pagina
@@ -154,6 +171,12 @@ a {
 
 - `text-decoration: none;` haalt de standaard onderstreping weg
 - `text-decoration: underline;` zet de onderstreping juist aan
+
+**Korte oefening: herken je links**
+
+- Geef je links een kleur die past bij je pagina.
+- Haal de onderstreping weg.
+- Controleer of je nog steeds duidelijk kunt zien welke tekst een link is.
 
 **7. Commentaar in CSS**
 
@@ -170,11 +193,6 @@ h1 {
 
 **Oefening:**
 Laat studenten experimenteren:
-
-- Groepeer alle headings met een komma
-- Verwijder de onderstreping van hun links
-- Voeg een `line-height` toe aan hun paragrafen
-- Zet een commentaarregel boven elke stijlregel om uit te leggen wat die doet
 
 ### Opdracht
 
@@ -205,7 +223,7 @@ Maak je pagina mooi met CSS:
 
 - [ ] Studenten hebben een externe stylesheet aangemaakt en gelinkt
 - [ ] Studenten begrijpen de opbouw selector - property - value
-- [ ] Studenten kunnen kleuren toepassen (naam en hex)
+- [ ] Studenten kunnen kleurnamen gebruiken en hex-kleurwaarden herkennen
 - [ ] Studenten kunnen lettertype en tekstuitlijning aanpassen
 - [ ] Studenten kunnen meerdere selectors groeperen met een komma
 - [ ] Studenten kunnen links stylen met `text-decoration`
