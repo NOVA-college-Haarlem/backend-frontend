@@ -53,7 +53,7 @@ Na deze les kan de student:
   - Altijd afsluiten met `;`
   - Altijd tussen `{ }`
 
-  **Korte oefening: voorspel en probeer**
+  **Opdracht 1: voorspel en probeer**
 
   - Wat denk je dat `background-color: lightblue;` verandert?
   - Pas de achtergrondkleur aan en ververs de pagina.
@@ -76,7 +76,7 @@ h1 {
 
 Je kunt beginnen met kleurnamen, zoals `red`, `blue` en `lightgreen`. Soms zie je ook hex-kleurwaarden, zoals `#ff0000`. Die beginnen met `#`. Voor deze les zijn kleurnamen voldoende.
 
-**Korte oefening: kleur en contrast**
+**Opdracht 2: kleur en contrast**
 
 - Kies een achtergrondkleur voor je pagina.
 - Kies een tekstkleur die goed leesbaar is op die achtergrond.
@@ -107,7 +107,7 @@ p {
 }
 ```
 
-**Korte oefening: geef je titel aandacht**
+**Opdracht 3: geef je titel aandacht**
 
 - Verander het lettertype van de pagina.
 - Maak de hoofdtitel groter en centreer hem.
@@ -128,7 +128,7 @@ h3 {
 
 - **Uitleg:** Alle drie de elementen krijgen nu dezelfde stijl in één keer
 
-**Korte oefening: minder dubbel werk**
+**Opdracht 4: minder dubbel werk**
 
 - Voeg een gegroepeerde selector toe voor `h1`, `h2` en `h3`.
 - Geef de headings dezelfde kleur en bekijk welke elementen veranderen.
@@ -152,7 +152,7 @@ p {
 - `line-height`: ruimte tussen regels, maakt tekst leesbaarder
 - `font-style`: `normal` of `italic`
 
-**Korte oefening: maak tekst prettig leesbaar**
+**Opdracht 5: maak tekst prettig leesbaar**
 
 - Geef je paragrafen een `line-height` van `1.5`.
 - Maak één paragraaf cursief.
@@ -172,7 +172,7 @@ a {
 - `text-decoration: none;` haalt de standaard onderstreping weg
 - `text-decoration: underline;` zet de onderstreping juist aan
 
-**Korte oefening: herken je links**
+**Opdracht 6: herken je links**
 
 - Geef je links een kleur die past bij je pagina.
 - Haal de onderstreping weg.
@@ -191,10 +191,12 @@ h1 {
 
 - Handig om te onthouden waarom je iets hebt gestyled
 
-**Oefening:**
-Laat studenten experimenteren:
+**Opdracht 7: leg je CSS uit**
 
-### Opdracht
+- Zet boven een CSS-regel een commentaar dat uitlegt wat de regel doet.
+- Verwijder het commentaar tijdelijk en controleer of het uiterlijk van je pagina verandert.
+
+### Opdracht 8: Maak je pagina mooi met CSS
 
 Maak je pagina mooi met CSS:
 
@@ -205,7 +207,7 @@ Maak je pagina mooi met CSS:
 - Style je links zodat ze geen onderstreping meer hebben
 - Voeg minstens één CSS-commentaar toe
 
-**Extra uitdaging (verdiepingsopdracht):**
+**Verdiepingsopdracht bij opdracht 8:**
 
 - Groepeer al je headings (`h1`, `h2`, `h3`) in één selector met een komma
 - Zoek zelf op wat `letter-spacing` doet en pas het toe op je hoofdtitel
