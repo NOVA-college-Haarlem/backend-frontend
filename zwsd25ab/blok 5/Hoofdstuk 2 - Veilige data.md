@@ -15,6 +15,7 @@
   - [Opdracht 6: PDO in user_add_process.php](#opdracht-6-pdo-in-user_add_processphp)
   - [Opdracht 7: Wachtwoord hashen](#opdracht-7-wachtwoord-hashen)
   - [Opdracht 8: Wachtwoord verifiëren bij inloggen](#opdracht-8-wachtwoord-verifi%C3%ABren-bij-inloggen)
+  - [Opdracht 9: Bestaande wachtwoorden hashen](#opdracht-9-bestaande-wachtwoorden-hashen)
 
 ## Code verbeteren
 
@@ -134,16 +135,14 @@ Controleer per formulier:
 ## Hashing
 
 In deze les gaan we hashing toevoegen aan de applicatie van tools4ever.
-Hashing is een proces waarbij een willekeurige tekst wordt omgezet in een unieke tekst. Deze tekst is onomkeerbaar en uniek.
-Hashing wordt gebruikt om wachtwoorden veilig op te slaan in de database.
+Hashing zet een wachtwoord om in een hash. Je kunt de hash niet terugrekenen naar het oorspronkelijke wachtwoord.
+Hashes worden gebruikt om wachtwoorden veilig op te slaan in de database.
 
 ### Opdracht 6: PDO in user_add_process.php
 
-1. Bij het registreren van een nieuwe gebruiker moeten we het wachtwoord hashen.
-2. We passen de bestaande code aan zodat de wachtwoord wordt hashed.
-3. Dit doen we in het bestand `user_add_process.php`.
-4. Heb je de bestaande code al aangepast naar PDO? Heb je dat nog niet gedaan? Pas de code aan zie hieronder.
-5. Test de code.
+1. Controleer of `user_add_process.php` al PDO gebruikt.
+2. Gebruik je nog `mysqli_*`-functies? Vervang de query door de PDO-code hieronder.
+3. Test of een nieuwe gebruiker wordt opgeslagen.
 
 ```php
 
@@ -167,7 +166,7 @@ if ($result) {
 }
 ```
 
-Nu gaan we het wachtwoord hashen bij het registreren van een nieuwe gebruiker.
+Nu gaan we ook het wachtwoord hashen bij het registreren van een nieuwe gebruiker.
 
 ### Opdracht 7: Wachtwoord hashen
 
@@ -208,3 +207,33 @@ if ($user && password_verify($password, $user['password'])) {
 ```
 
 2. Test door in te loggen met een gebruiker die je in opdracht 7 hebt aangemaakt (wachtwoord is nu gehashed in de database).
+
+### Opdracht 9: Bestaande wachtwoorden hashen
+
+Nieuwe accounts slaan hun wachtwoord nu als hash op. Accounts die al bestonden, kunnen nog een wachtwoord als gewone tekst in de database hebben staan. We zetten die bestaande wachtwoorden nu eenmalig om.
+
+1. Gebruik alleen dummyaccounts in je lokale oefendatabase. Open de tabel `users` in phpMyAdmin en bekijk de waarde van `password` bij een account dat je vóór opdracht 7 hebt aangemaakt. Vergelijk dit met een account dat je bij opdracht 7 hebt aangemaakt.
+2. Maak een back-up van de database.
+3. Voer onderstaande code één keer uit in een tijdelijk PHP-bestand. Voeg bovenaan het bestand de bestaande databaseverbinding toe. De code slaat wachtwoorden over die al gehasht zijn.
+
+```php
+<?php
+$users = $conn->query("SELECT email, password FROM users")->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $conn->prepare("UPDATE users SET password = :password WHERE email = :email");
+
+foreach ($users as $user) {
+  $passwordInfo = password_get_info($user['password']);
+
+  if ($passwordInfo['algo'] === null) {
+    $passwordHash = password_hash($user['password'], PASSWORD_DEFAULT);
+    $stmt->execute([
+      'password' => $passwordHash,
+      'email' => $user['email'],
+    ]);
+  }
+}
+?>
+```
+
+4. Vernieuw de tabel in phpMyAdmin en vergelijk de wachtwoorden opnieuw. Test of je met het oorspronkelijke wachtwoord kunt inloggen op zowel een bestaand account als een nieuw account.
+5. Verwijder het tijdelijke PHP-bestand na gebruik. Voer de code niet opnieuw uit; gebruik voor deze demonstratie geen echte wachtwoorden of productiegegevens.
