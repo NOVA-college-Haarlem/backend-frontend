@@ -116,3 +116,12 @@ Bijgehouden per sessie/wijziging. Zie `todo.md` voor openstaande punten.
 - **Overzichtsdocumenten bijgewerkt:** `Frontend Development (FEO)/blok3-samenvatting.md`, `JavaScript (JSO)/blok3-samenvatting.md` en `Curriculum Web Development/curriculum-jaar 1 - zwsd26f.md` (beide taakklasse-tabellen) verwijzen nu naar de GitHub-repo i.p.v. het lokale pad.
 - **Bewust ongewijzigd:** Boulder Base (`starter-website-2/`) staat nog lokaal in deze repo - de docent gaf aan dat de verplaatsing daarvan een aparte, latere stap is.
 - Lokale map `zwsd26f/Blok 3/Frontend Development (FEO)/starter-website/` verwijderd (`git rm`) - de code leeft nu alleen nog in de nieuwe repo.
+
+## 2026-10-01
+
+- **zwsd25ab - Blok 5 Hoofdstuk 8 toegevoegd:** `Hoofdstuk 8 - Betalen met een API (Mollie).md` (op verzoek van de docent; buiten de scope-afspraak van 2026-08-26, expliciet gevraagd)
+  - Bouwt voort op de AJAX-winkelwagen uit Hoofdstuk 4 (Tools4ever): winkelwagen → `orders` (alleen één-op-veel naar `users`, totaal als snapshot, `decimal`) → betaling via Mollie REST API met cURL (geen Composer nodig) → status zelf opvragen op `payment_return.php`
+  - Security-lijn sluit aan op H5/H7: totaal server-side berekenen, status nooit uit `$_GET`, eigenaarscontrole op bestellingen, API key in `config.php` + `.gitignore`, "Wat gaat hier mis?"-opdracht
+  - Webhook + ngrok als verdiepingsopdracht (Mollie kan localhost niet bereiken)
+  - `Blok5_Leerdoelen_Samenvatting.md` aangevuld met Week 7
+  - Bewust **geen** `order_items`-koppeltabel en geen transacties: veel-op-veel is bij zwsd25ab nog niet behandeld. De bestelling bewaart alleen totaal + status; welke tools er gekocht zijn wordt (nog) niet vastgelegd. Kan later uitgebreid worden zodra veel-op-veel aan bod is geweest
