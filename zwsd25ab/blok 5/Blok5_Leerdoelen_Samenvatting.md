@@ -63,6 +63,21 @@
 - Security checklist doorlopen
 - Functionaliteit volledig testen
 
+## Week 7: Betalen met een API (Mollie)
+**Les 1 - Van winkelwagen naar bestelling:**
+- Wat een API is en hoe een betaalprovider werkt
+- `orders` tabel met een één-op-veel relatie naar `users`
+- Totaalbedrag als snapshot opslaan, geld als `decimal(10,2)`
+- Totaalbedrag altijd op de server berekenen
+
+**Les 2 - Betalen via de Mollie API:**
+- Een externe API aanroepen met cURL (Authorization header, JSON)
+- API key veilig opslaan in `config.php` + `.gitignore`
+- Betaling aanmaken en doorsturen naar de checkout van Mollie
+- Betaalstatus zelf opvragen bij Mollie (nooit uit `$_GET`/`$_POST`)
+- Eigen bestellingen tonen met eigenaarscontrole
+- Verdieping: webhooks en ngrok
+
 ## Kernvaardigheden Samengevat
 
 ### Database & PDO
