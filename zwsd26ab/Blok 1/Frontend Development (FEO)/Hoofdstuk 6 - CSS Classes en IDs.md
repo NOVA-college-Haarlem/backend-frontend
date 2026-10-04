@@ -154,32 +154,6 @@ Na deze les kan de student:
 }
 ```
 
-**Gezamenlijke oefening:**
-
-- Maak een pagina met verschillende tekstsoorten
-- Gebruik classes voor: intro-text, important-info, footer-text
-- Gebruik één ID voor de hoofdtitel
-
-**7. Afronding**
-
-- Vragen?
-- Volgende week: Box model!
-
-### Opdracht
-
-Herschrijf je hobby-pagina van week 4:
-
-- Voeg minstens 3 verschillende classes toe
-- Gebruik 1 ID voor je hoofdtitel
-- Experimenteer met verschillende styles per class
-- Maak een class "highlight" voor tekst die extra moet opvallen
-
-**Extra uitdaging:**
-
-- Maak een class "link-button" voor je links die er als knoppen uitzien
-- Combineer classes (bijv. class="text large important")
-- Gebruik een ID voor je footer
-
 ### Controlelijst voor docent
 
 - [ ] Studenten begrijpen verschil tussen classes en IDs
@@ -198,3 +172,79 @@ Herschrijf je hobby-pagina van week 4:
 - Laat studenten elkaars werk bekijken voor inspiratie
 
 ---
+
+# Oefenpagina
+
+- Maak in je project "mijn-website" een nieuwe HTML-pagina aan: `classes.html`.
+- Kopieer de volgende HTML in die pagina:
+- Maak het bestand `css/classes.css`.
+- Maak in dat CSS-bestanden de opdrachten die uitgedeeld worden.
+
+```html
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oefenen met Classes en CSS</title>
+    <!-- Studenten koppelen hier hun eigen CSS-bestand -->
+    <link rel="stylesheet" href="css/classes.css">
+</head>
+<body>
+
+    <header>
+        <h1>Mijn Favoriete Media</h1>
+        <p>Een overzicht van toffe films, boeken en reviews.</p>
+    </header>
+
+    <main>
+        <!-- Sectie 1: Nieuws & Meldingen -->
+        <section>
+            <h2>Belangrijke Updates</h2>
+            <p>Welkom op de pagina! Kijk gerust rond naar alle aanbevelingen.</p>
+            <p>Let op: De filmavond van aanstaande vrijdag is verplaatst naar zaterdag!</p>
+            <p>Nieuwe reviews worden elke zondagavond geplaatst.</p>
+        </section>
+
+        <!-- Sectie 2: Boekenlijst -->
+        <section>
+            <h2>Leeslijst van deze maand</h2>
+            <ul>
+                <li>Harry Potter en de Steen der Wijzen</li>
+                <li>Dune (Duin)</li>
+                <li>De Helaasheid der Dingen</li>
+                <li>The Hobbit</li>
+            </ul>
+        </section>
+
+        <!-- Sectie 3: Filmkaarten -->
+        <section>
+            <h2>Aanbevolen Films</h2>
+            
+            <div>
+                <h3>Inception</h3>
+                <p>Een meeslepende sci-fi thriller over dromen binnen dromen.</p>
+                <button>Bekijk Trailer</button>
+            </div>
+
+            <div>
+                <h3>The Matrix</h3>
+                <p>Kies je de rode of de blauwe pil? Een absolute klassieker.</p>
+                <button>Bekijk Trailer</button>
+            </div>
+
+            <div>
+                <h3>Cats (2019)</h3>
+                <p>Een muzikale film die helaas door bijna iedereen werd gekraakt.</p>
+                <button>Bekijk Trailer</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Gemaakt door [Naam Student] - 2026</p>
+    </footer>
+
+</body>
+</html>
+```
