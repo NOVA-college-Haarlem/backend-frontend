@@ -173,12 +173,12 @@ Na deze les kan de student:
 
 ---
 
-# Oefenpagina
+# Opdracht: pas CSS toe op een nieuwe HTML-pagina
 
 - Maak in je project "mijn-website" een nieuwe HTML-pagina aan: `classes.html`.
 - Kopieer de volgende HTML in die pagina:
-- Maak het bestand `css/classes.css`.
-- Maak in dat CSS-bestanden de opdrachten die uitgedeeld worden.
+- Maak het bestand `css/classes.css` aan.
+- Verwerk in dat CSS-bestand de opdrachten die uitgedeeld worden.
 
 ```html
 <!DOCTYPE html>
