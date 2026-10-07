@@ -84,8 +84,8 @@ Zes themaprojecten om het Laravel-patroon zelfstandig te herhalen: Bibliotheek, 
 
 ## 4. Blok 7 - API's & Full Stack Development
 
-**Duur:** 6 hoofdstukken + projectlessen
-**Stack:** Laravel, externe API's (OpenWeatherMap, CoinGecko, REST Countries), Postman, Chart.js, Mailtrap
+**Duur:** 8 hoofdstukken + projectlessen
+**Stack:** Laravel, externe API's (OpenWeatherMap, CoinGecko, REST Countries), Postman, Chart.js, Mailtrap, queues/scheduler, PHPUnit
 **Focus:** eerst API's van anderen leren consumeren, dan zelf een REST API bouwen, en tot slot een complete full stack applicatie (database → eigen API → frontend)
 
 | # | Hoofdstuk | Leeruitkomsten |
@@ -96,6 +96,8 @@ Zes themaprojecten om het Laravel-patroon zelfstandig te herhalen: Bibliotheek, 
 | 4 | Data Visualisatie & E-mail | Chart.js (bar-, doughnut-charts) gevoed vanuit Eloquent-data; de `@json`-directive voor veilige data-overdracht naar JavaScript; e-mail versturen met Laravel's Mail-systeem (Mailable classes, Mailtrap als testomgeving); contactformulier met validatie |
 | 5 | Eigen REST API Bouwen | `routes/api.php` vs. `routes/web.php`; een aparte API-controller; API Resources om de JSON-output te controleren; volledige CRUD (GET/POST/DELETE) met validatie en de juiste HTTP-statuscodes; `Route::apiResource`; API beveiligen met een token-middleware |
 | 6 | Full Stack App: Esports Platform | Een nieuw Laravel-project koppelen aan een bestaande MySQL-database; API-ondersteuning installeren (`php artisan install:api`, Sanctum); Models en Eloquent-relaties (`belongsTo`) voor games/matches/teams; API Resources met relatiedata (teamnamen, niet alleen ID's); volledige CRUD; een frontend (Blade + `fetch()`) die de eigen API aanroept - de volledige cyclus van database tot scherm |
+| 7 | Jobs, Queues & Scheduler | Synchroon vs. asynchroon; jobs maken en dispatchen (`dispatch()` / `dispatchSync()`); database-queue en worker (`queue:work`); mislukte jobs met `$tries`/`$backoff`, `queue:failed` en `queue:retry`; de scheduler voor periodieke taken |
+| 8 | Automatisch Testen | Feature tests met `php artisan test`; veilige testdatabase (`:memory:`, `RefreshDatabase`); Arrange-Act-Assert; factories; de REST API uit H5 testen (statuscodes, JSON, validatie); een falende test lezen; `Http::fake()`, `Queue::fake()` en `Mail::fake()` voor API, jobs en e-mail |
 
 **Eindresultaat Blok 7:** externe API's kunnen consumeren en cachen, data visualiseren en e-mails versturen vanuit Laravel, en zelfstandig een eigen, beveiligde REST API bouwen inclusief een frontend die deze aanroept - de volledige levenscyclus van een moderne webapplicatie.
 
