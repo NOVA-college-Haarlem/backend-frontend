@@ -1,4 +1,4 @@
-;# Hoofdstuk 4 - Soft Delete & AJAX
+# Hoofdstuk 4 - Soft Delete & AJAX
 
 ## Inhoudsopgave
 
