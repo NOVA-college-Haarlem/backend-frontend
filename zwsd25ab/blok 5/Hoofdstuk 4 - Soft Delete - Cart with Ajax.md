@@ -290,6 +290,7 @@ ALTER TABLE `cart`
 ALTER TABLE `cart`
   ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`tool_id`) REFERENCES `tools` (`tool_id`);
+  ADD UNIQUE KEY `unique_user_tool` (`user_id`, `tool_id`);
 COMMIT;
 ```
 
