@@ -57,23 +57,7 @@ Teken op het bord of laat diagram zien:
 }
 ```
 
-**Oefening:**
-
-```html
-<div class="info-box">
-  <h2>Informatie</h2>
-  <p>Dit is een tekstblok met padding.</p>
-</div>
-```
-
-```css
-.info-box {
-  background-color: lightyellow;
-  padding: 20px;
-}
-```
-
-Laat studenten experimenteren met verschillende padding waarden.
+Laat zien hoe je padding live aanpast in DevTools.
 
 **3. Border**
 
@@ -103,9 +87,6 @@ img {
 - `dotted` - Stippen
 - `none` - Geen rand
 
-**Oefening:**
-Maak kaartjes met verschillende borders en probeer combinaties met padding.
-
 **4. Margin**
 
 **Wat is margin?**
@@ -134,42 +115,28 @@ Maak kaartjes met verschillende borders en probeer combinaties met padding.
 
 **Demonstratie:**
 
-1. Open een pagina met gestylede elementen
-2. Open DevTools (F12)
-3. Selecteer een element
-4. Kijk onderaan naar de "box model visualisatie"
-5. Zie de kleuren:
+1. Open DevTools (F12) op een willekeurige site
+2. Selecteer een element
+3. Kijk onderaan naar de "box model visualisatie"
+4. Zie de kleuren:
    - Groen = margin
    - Oranje/beige = padding
    - Blauw = content
 
-**Samen doen:**
+**Klassikaal voordoen (docent):**
 
-- Open eigen pagina
-- Inspecteer verschillende elementen
-- Bekijk hun box model
-- Verander live padding/margin in DevTools
-- Zie wat gebeurt
+- Open een willekeurige website (bijv. nos.nl of de eigen school-site)
+- Inspecteer een knop, een afbeelding en een tekstblok
+- Laat de box model visualisatie zien
+- Verander live padding, margin en border in DevTools
+- Laat zien dat een wijziging in DevTools niet blijvend is (refresh = weg)
 
-**Oefening:**
-Inspecteer een professionele website en kijk naar hun box model:
-
-- Hoeveel padding gebruiken ze voor knoppen?
-- Hoeveel margin tussen secties?
-
-**6. Praktische Oefening**
-
-Maak "kaartjes":
+**6. Voorbeeld: kaartje**
 
 ```html
 <div class="card">
   <h3>Kaart Titel</h3>
   <p>Wat informatie op de kaart.</p>
-</div>
-
-<div class="card">
-  <h3>Nog een Kaart</h3>
-  <p>Nog meer informatie.</p>
 </div>
 ```
 
@@ -182,27 +149,48 @@ Maak "kaartjes":
 }
 ```
 
-**7. Afronding**
+### Opdrachten
 
-- Vragen?
-- Volgende week: Copilot & Herhaling!
+**Opdracht 1: DevTools onderzoeken**
 
-### Opdracht
+Kies een website naar keuze (geen eigen pagina) en open DevTools (F12).
 
-Voeg toe aan je hobby-pagina:
+1. Inspecteer een knop. Noteer: hoeveel padding heeft hij? Welke border?
+2. Inspecteer een afbeelding. Hoe groot is de margin?
+3. Inspecteer een tekstblok. Wat is de content-breedte en -hoogte?
+4. Verander live de padding van de knop en de margin van een kopje. Wat gebeurt er?
+
+**Opdracht 2: Hobby-pagina uitbreiden**
+
+Pas het box model toe op je hobby-pagina:
 
 - Geef alle paragrafen `padding: 15px`
 - Voeg een `border` toe aan afbeeldingen
 - Gebruik `margin-bottom` om ruimte tussen secties te maken
-- Maak een "card" class die je kunt hergebruiken
-- Gebruik DevTools om je box model te inspecteren
+- Maak een `card` class die je kunt hergebruiken
+- Controleer het resultaat met DevTools en pas waarden aan tot het goed oogt
 
 **Extra uitdaging:**
 
-- Maak een "container" class die je content centreert met `margin: 0 auto`
+- Maak een `container` class: een "doos" om je hele pagina-inhoud heen met een vaste breedte, die je centreert. Zo wordt je pagina niet te breed op een groot scherm.
+
+  ```html
+  <body>
+    <div class="container">
+      <!-- hier komt al je content -->
+    </div>
+  </body>
+  ```
+
+  ```css
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+  ```
 - Experimenteer met verschillende border-styles (solid, dashed, dotted)
-- Maak een kaart met schaduw effect (research: `box-shadow`)
-- Gebruik `border-radius` om afgeronde hoeken te maken
+- Maak een kaart met schaduw (research: `box-shadow`)
+- Gebruik `border-radius` voor afgeronde hoeken
 
 ### Controlelijst voor docent
 
