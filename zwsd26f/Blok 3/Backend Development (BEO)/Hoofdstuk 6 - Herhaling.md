@@ -348,8 +348,16 @@ echo "<h2>Totaal users: " . $totaalUsers . "</h2>";
   ```html
   <a href="drivers-table.php?filter=nationality&value=Dutch">Dutch</a>
   ```
+- **Sorteren met ORDER BY** (`ASC` = oplopend, `DESC` = aflopend), gekozen via `?sort=...` en een `if` per sortering
+  ```php
+  if (isset($_GET['sort']) && $_GET['sort'] == 'naam') {
+      $query = "SELECT * FROM drivers ORDER BY surname ASC";
+  } else {
+      $query = "SELECT * FROM drivers";
+  }
+  ```
 
-**Nieuwe Skills:** API gebruik, dynamische filtering, database aanpassingen
+**Nieuwe Skills:** API gebruik, dynamische filtering, sorteren, database aanpassingen
 
 ---
 
@@ -459,6 +467,19 @@ if(isset($_GET['filter'])){
     $filter = $_GET['filter'];
     $value = $_GET['value'];
     $query = "SELECT * FROM tabel WHERE $filter = '$value'";
+} else {
+    $query = "SELECT * FROM tabel";
+}
+?>
+```
+
+### Sorteer Pattern
+```php
+<?php
+if (isset($_GET['sort']) && $_GET['sort'] == 'naam') {
+    $query = "SELECT * FROM tabel ORDER BY naam ASC";
+} elseif (isset($_GET['sort']) && $_GET['sort'] == 'naam-za') {
+    $query = "SELECT * FROM tabel ORDER BY naam DESC";
 } else {
     $query = "SELECT * FROM tabel";
 }

@@ -56,7 +56,7 @@ Maak een nieuwe pagina `voordelig.php` die alleen de lessen toont die **minder d
 - Toon de lessen met een `foreach`, met dezelfde kaarten als op `index.php`
 - Voeg de pagina toe aan de array in `menu.php`, zodat hij op elke pagina in het menu staat
 
-### 4. Uitbreiding (kies 1 van de 3)
+### 4. Uitbreiding (kies 1 van de 4)
 
 #### A: Aantal tonen (Hoofdstuk 7)
 - Laat boven de kaarten zien **hoeveel** lessen er getoond worden, zowel op `index.php` (ook als er een filter aanstaat) als op `voordelig.php`
@@ -71,6 +71,12 @@ Maak een nieuwe pagina `voordelig.php` die alleen de lessen toont die **minder d
 - Maak `statistieken.php` en voeg deze toe aan `menu.php`
 - Toon minimaal het totaal aantal lessen met `SELECT COUNT(*) as totaal FROM lessen`, zoals in Hoofdstuk 6, Opdracht 11
 - Toon ook hoeveel lessen er per niveau zijn: één `COUNT(*)`-query met een `WHERE` per niveau
+
+#### D: Sorteren (Hoofdstuk 5, Les 4)
+- Voeg op `index.php` sorteerlinks toe: minimaal **prijs laag → hoog** en **prijs hoog → laag** (`?sort=...`)
+- Gebruik een `if`/`elseif` per sortering met `ORDER BY prijs ASC` of `ORDER BY prijs DESC`, zoals in Hoofdstuk 5, Les 4
+- Een link **"Standaard"** zet de volgorde weer terug
+- Staat er een filter aan? Dan mag sorteren dat filter weer opheffen - je hoeft filter en sortering niet te combineren
 
 ## 📁 Bestandsstructuur
 
@@ -110,6 +116,7 @@ Je **moet** de volgende technieken gebruiken:
 ### Hoofdstuk 5 en 6 - Filters
 - ✅ `isset($_GET[...])` om te controleren of er een filter in de URL staat
 - ✅ SELECT WHERE met een waarde uit de URL
+- ✅ `ORDER BY ... ASC/DESC` met een `if` per sortering (alleen bij uitbreiding D)
 
 ### Hoofdstuk 7 - Code lezen en debuggen
 - ✅ `if ($les === null)` voor een niet-bestaand item
@@ -141,7 +148,7 @@ Je hebt 4,5 dag (08:30-14:00, met een uur pauze). Loop je voor op schema? Kies d
 10. 📝 Commit en push
 
 **Dag 4 - Uitbreiding en styling**
-11. 📝 Kies je uitbreiding (A, B of C) en bouw die
+11. 📝 Kies je uitbreiding (A, B, C of D) en bouw die
 12. 📝 Style de filterlinks en nieuwe pagina's in de stijl van Boulder Base
 
 **Dag 5 (ochtend) - Afronden en verantwoorden**
@@ -159,7 +166,7 @@ Geen punten of percentages - de docent loopt onderstaande checklist met je na, e
 - [ ] `les-detail.php?id=9999` toont "Deze les bestaat niet." zonder PHP errors
 - [ ] `voordelig.php` toont alleen lessen onder de prijsgrens
 - [ ] De nieuwe pagina('s) staan in het menu op elke pagina
-- [ ] Gekozen uitbreiding (A, B of C) werkt
+- [ ] Gekozen uitbreiding (A, B, C of D) werkt
 - [ ] Geen PHP errors
 
 **Code Kwaliteit:**
@@ -188,6 +195,7 @@ Geen punten of percentages - de docent loopt onderstaande checklist met je na, e
 
 - **Hoofdstuk 4**: detailpagina, `$_GET['id']`, SELECT WHERE
 - **Hoofdstuk 5, Les 3**: filter met `?filter=...&value=...`
+- **Hoofdstuk 5, Les 4**: sorteren met `?sort=...` en `ORDER BY`
 - **Hoofdstuk 6**: filter op tool brand, statistieken met `COUNT(*)`
 - **Hoofdstuk 7**: Opdracht 5 (niet-bestaand item afvangen), Opdracht 6 en 7 (`goedkoop.php`, `count()`, `?max=`)
 

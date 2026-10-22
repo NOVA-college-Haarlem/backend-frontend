@@ -1,4 +1,4 @@
-# Hoofdstuk 5 - Afbeeldingen en Filters
+# Hoofdstuk 5 - Afbeeldingen, Filters en Sorteren
 
 ## Les 1 - Herhaling
 
@@ -163,3 +163,74 @@ $drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
 1. Maak zelf nog twee filters aan. Bijvoorbeeld voor de teams en de circuits.
 
 
+
+
+## Les 4 - Sorteren
+
+Met een filter bepaal je **welke** rijen je ziet. Met sorteren bepaal je **in welke volgorde** je ze ziet. Dat doe je in SQL met `ORDER BY`.
+
+```sql
+SELECT * FROM drivers ORDER BY surname ASC
+```
+
+- `ORDER BY surname` - sorteer op de kolom `surname`
+- `ASC` - oplopend: A → Z, klein → groot, oud → nieuw (dit is de standaard)
+- `DESC` - aflopend: Z → A, groot → klein, nieuw → oud
+
+`ORDER BY` staat altijd **achteraan** in de query, dus ook ná een `WHERE`:
+
+```sql
+SELECT * FROM drivers WHERE nationality = 'Dutch' ORDER BY surname ASC
+```
+
+### Opdracht 1
+
+1. Open `drivers-table.php`.
+2. Pas de query aan zodat de drivers op achternaam gesorteerd worden:
+```php
+$query = "SELECT * FROM drivers ORDER BY surname ASC";
+```
+3. Test je code in de browser. Staan de drivers nu op alfabet?
+4. Verander `ASC` in `DESC`. Wat zie je nu?
+5. Sorteer op geboortedatum (`dob`). Wie staat er bovenaan bij `ASC`: de oudste of de jongste driver?
+
+### Opdracht 2
+
+De bezoeker moet zelf kunnen kiezen hoe er gesorteerd wordt. Net als bij het filter gebruiken we daarvoor de URL.
+
+1. Voeg boven de tabel in `drivers-table.php` de volgende links toe:
+```html
+<a href="drivers-table.php?sort=naam" class="text-blue-500 hover:underline">Naam (A-Z)</a>
+<a href="drivers-table.php?sort=leeftijd" class="text-blue-500 hover:underline">Oudste eerst</a>
+```
+2. Vervang de query bovenaan `drivers-table.php` door deze code:
+```php
+<?php
+if (isset($_GET['sort']) && $_GET['sort'] == 'naam') {
+    $query = "SELECT * FROM drivers ORDER BY surname ASC";
+} elseif (isset($_GET['sort']) && $_GET['sort'] == 'leeftijd') {
+    $query = "SELECT * FROM drivers ORDER BY dob ASC";
+} else {
+    $query = "SELECT * FROM drivers";
+}
+$result = mysqli_query($conn, $query);
+$drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
+?>
+```
+3. Test beide links in de browser. Kijk ook naar de URL.
+4. Typ zelf `drivers-table.php?sort=hallo` in de adresbalk. Wat gebeurt er, en waarom?
+
+> **Waarom een `if` per sortering?** Je zou ook `ORDER BY $sort` kunnen schrijven, maar dan komt alles wat iemand in de URL typt rechtstreeks in je query terecht. Met een `if` per sortering bepaal jij welke queries er bestaan. Wat er ook in de URL staat: er draait altijd een query die jij geschreven hebt.
+
+### Opdracht 3
+
+1. Voeg twee sorteringen toe aan `drivers-table.php`:
+    - `Naam (Z-A)` met `?sort=naam-za`
+    - `Jongste eerst` met `?sort=jongste`
+2. Je hebt hiervoor een extra `elseif` per sortering nodig. Welk woord verander je in de query?
+3. Voeg ook een link **"Standaard"** toe (`drivers-table.php` zonder `?sort=`).
+
+### Opdracht 4
+
+1. Maak zelf een sortering op de pagina met teams of circuits. Kies zelf op welke kolom (kijk in PHPMyAdmin welke kolommen er zijn).
+2. **Extra:** combineer je filter met sorteren. Zet `ORDER BY` achter de `WHERE` uit Les 3, zodat de Nederlandse drivers op achternaam staan.
