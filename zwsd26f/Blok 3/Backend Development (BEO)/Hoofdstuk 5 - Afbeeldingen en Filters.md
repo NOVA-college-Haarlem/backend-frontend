@@ -183,6 +183,25 @@ SELECT * FROM drivers ORDER BY surname ASC
 SELECT * FROM drivers WHERE nationality = 'Dutch' ORDER BY surname ASC
 ```
 
+### Opdracht 0: Geboortedatum omzetten naar een echte datum
+
+In de tabel `drivers` staat de geboortedatum (`dob`) als **tekst**, bijvoorbeeld `07/01/1985` (dag/maand/jaar). Tekst wordt teken voor teken gesorteerd, dus eigenlijk op de **dag**: `01/12/1999` komt dan vóór `07/01/1985`. Om goed op leeftijd te kunnen sorteren, zetten we de kolom eerst om naar het type `DATE`.
+
+1. Kijk in PHPMyAdmin naar de tabel `drivers`, tabblad **Structuur**. Welk type heeft de kolom `dob`?
+2. Ga naar het tabblad **SQL** van de database `formula1` en voer de volgende code uit:
+```sql
+-- 1. Datums als 07/01/1985 (dag/maand/jaar) omzetten naar 1985-01-07
+UPDATE drivers SET dob = DATE_FORMAT(STR_TO_DATE(dob, '%d/%m/%Y'), '%Y-%m-%d') WHERE dob LIKE '__/__/____';
+-- 2. Lege datums leegmaken (NULL)
+UPDATE drivers SET dob = NULL WHERE dob LIKE '';
+-- 3. De kolom omzetten van tekst naar een echte datum
+ALTER TABLE drivers MODIFY dob DATE NULL;
+```
+3. Kijk opnieuw bij **Structuur**: `dob` heeft nu het type `date`.
+4. Bekijk je driver-pagina's in de browser. De geboortedatum staat nu als `1985-01-07` (jaar-maand-dag) - zo slaat een database een datum op.
+
+> Je hoeft dit script maar **één keer** uit te voeren. Doe je het per ongeluk nog een keer, dan is dat niet erg: alle datums zijn dan al omgezet en er verandert niets meer.
+
 ### Opdracht 1
 
 1. Open `drivers-table.php`.
