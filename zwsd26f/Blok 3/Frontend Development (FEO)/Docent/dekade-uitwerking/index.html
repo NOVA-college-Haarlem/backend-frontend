@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café De Kade</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">Café De Kade</div>
+        <nav>
+            <a href="#menukaart">Menukaart</a>
+            <a href="#dagmenu">Dagmenu</a>
+            <a href="#reserveren">Reserveren</a>
+        </nav>
+        <button id="dark-toggle" class="knop">🌙 Dark mode</button>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>Lunchen aan het water</h1>
+            <p>Verse broodjes, soep en taart - elke dag van 9:00 tot 17:00.</p>
+            <a href="#reserveren" class="knop">Reserveer een tafel</a>
+        </div>
+    </section>
+
+    <section id="menukaart">
+        <div class="container">
+            <h2>Menukaart</h2>
+            <div class="kaarten">
+                <article class="kaart vega">
+                    <h3>Tosti De Kade</h3>
+                    <p>Zuurdesembrood, oude kaas en huisgemaakte chutney.</p>
+                    <p class="prijs">€ 6,75</p>
+                    <button class="knop bestel">Bestel</button>
+                </article>
+                <article class="kaart">
+                    <h3>Broodje zalm</h3>
+                    <p>Gerookte zalm, roomkaas, rode ui en kappertjes.</p>
+                    <p class="prijs">€ 8,50</p>
+                    <button class="knop bestel">Bestel</button>
+                </article>
+                <article class="kaart vega">
+                    <h3>Soep van de dag</h3>
+                    <p>Elke dag een andere soep, met brood en kruidenboter.</p>
+                    <p class="prijs">€ 5,25</p>
+                    <button class="knop bestel">Bestel</button>
+                </article>
+            </div>
+            <p id="totaal">Totaal: € 0</p>
+            <button id="leegmaken" class="knop">Leegmaken</button>
+            <button id="vega-filter" class="knop">Alleen vega</button>
+        </div>
+    </section>
+
+    <section id="dagmenu">
+        <div class="container">
+            <h2>Dagmenu</h2>
+            <ul id="dagmenu-lijst"></ul>
+        </div>
+    </section>
+
+    <section id="reserveren">
+        <div class="container">
+            <h2>Reserveren</h2>
+            <form id="reserveer-formulier">
+                <label for="naam">Naam</label>
+                <input type="text" id="naam">
+
+                <label for="personen">Aantal personen</label>
+                <input type="number" id="personen" min="1" value="2">
+
+                <button type="submit" class="knop">Reserveer</button>
+            </form>
+            <p id="feedback"></p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Café De Kade · Havenkade 12, Haarlem · 023 123 45 67</p>
+</footer>
+
+</body>
+</html>
