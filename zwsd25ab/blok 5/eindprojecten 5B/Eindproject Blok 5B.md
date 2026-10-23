@@ -37,7 +37,23 @@ In het verhaal van de opdrachtgever staan **geen tabellen, kolommen of relaties*
 - Waar zitten de **één-op-veel relaties** en waar is een **koppeltabel** nodig?
 - Welke kolommen **moeten** gevuld zijn (`NOT NULL`) en welke **mogen leeg** blijven (`NULL`)? In elk verhaal zit minimaal één gegeven dat niet altijd bekend is.
 
-> ✅ **Laat je ERD op maandag aftekenen voordat je gaat bouwen.**
+### ERD (maandag)
+
+Voordat je één regel code schrijft, maak je een **ERD** (Entity Relationship Diagram) van je database. Gebruik [dbdiagram.io](https://dbdiagram.io) of [draw.io](https://draw.io) en lever het op als `docs/erd.png` in je repository.
+
+Je ERD bevat:
+- Alle **tabellen** (entiteiten) met hun **kolommen** en **datatypes**
+- Per tabel de **primary key** (PK) en elke **foreign key** (FK)
+- De **relaties** tussen de tabellen, met de kardinaliteit erbij (**1** en **N**, bijvoorbeeld in kraaienpootnotatie)
+- Een **koppeltabel** waar een veel-op-veel relatie zit
+- Bij elke kolom of hij `NULL` mag zijn
+
+Werkwijze:
+1. Onderstreep in het verhaal van de opdrachtgever alle **zelfstandige naamwoorden** - dat zijn mogelijke tabellen of kolommen.
+2. Zoek de zinnen als *"een klant kan meerdere ..."* en *"een ... wordt door veel ... geboekt"* - daar zitten je relaties.
+3. Controleer of je met je ERD **elke userstory** kunt bouwen. Zoek bijvoorbeeld uit welke tabellen je moet koppelen voor de statistiekenpagina en de `LEFT JOIN`-lijst.
+
+> ✅ **Laat je ERD op maandag aftekenen voordat je gaat bouwen.** Verander je later in de week je database? Pas dan ook je ERD aan - ERD en `sql/database.sql` moeten aan het eind met elkaar kloppen.
 
 ## Technische eisen
 
@@ -88,7 +104,9 @@ Het dossier bevat minimaal:
 ## Checklist (aftekenen op donderdag)
 
 **Database en SQL**
-- [ ] ERD afgetekend (maandag)
+- [ ] ERD afgetekend (maandag) en opgeleverd als `docs/erd.png`
+- [ ] ERD bevat PK's, FK's, kardinaliteit (1/N), koppeltabel en `NULL`-kolommen
+- [ ] ERD klopt met `sql/database.sql`
 - [ ] `sql/database.sql` bouwt de hele database zonder fouten op
 - [ ] Minimaal 4 tabellen, minimaal 2 foreign keys, bewuste `NULL`/`NOT NULL`-keuzes
 - [ ] `sql/queries.sql` compleet volgens het SQL-dossier hierboven

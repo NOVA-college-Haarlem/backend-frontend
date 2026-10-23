@@ -19,7 +19,7 @@ Elke student is aan één van de zes thema's toegewezen - zie **[Studentverdelin
 
 | Dag | Wat |
 |-----|-----|
-| **Maandag** | ERD maken en **laten aftekenen**, daarna `sql/database.sql` schrijven (tabellen + testdata) |
+| **Maandag** | ERD maken (`docs/erd.png`) en **laten aftekenen**, daarna `sql/database.sql` schrijven (tabellen + testdata) |
 | **Dinsdag** | Bezoeker en lid: overzicht, detail, registreren, inloggen, filter, sorteren, kernactie via AJAX |
 | **Woensdag** | Medewerker: toevoegen, aanpassen, soft delete, overzichten met JOINs, statistiekenpagina, logboek |
 | **Donderdag** | Error pages, `try`/`catch`, SQL-dossier afmaken - **aan het einde van de dag laat je alles aftekenen** |
@@ -32,7 +32,8 @@ Elke student is aan één van de zes thema's toegewezen - zie **[Studentverdelin
 ## ✅ Voorbereiding op het mondeling (vrijdag)
 
 Zorg dat je kan uitleggen:
-- Waarom je je database zo hebt ontworpen: welke tabellen, waar de foreign keys zitten, en waarom een kolom `NULL` mag zijn
+- Je ERD: welke tabellen je hebt, waar de foreign keys zitten, waarom een relatie 1-op-veel of veel-op-veel is (en dus een koppeltabel nodig heeft), en waarom een kolom `NULL` mag zijn
+- Hoe je van het verhaal van de opdrachtgever bent gekomen tot je ERD
 - Hoe je je code hebt beveiligd (prepared statements, hashing, `htmlspecialchars()`, sessie- en rolcheck)
 - Een willekeurige regel uit je eigen code - wat doet die, en waarom staat die er?
 
