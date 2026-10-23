@@ -22,7 +22,7 @@ Elke student is aan één van de zes thema's toegewezen - zie **[Studentverdelin
 | **Maandag** | *Ochtend:* toetsen rekenen en AKT. *Middag:* ERD maken (`docs/erd.png`) en **laten aftekenen** |
 | **Dinsdag** | `sql/database.sql` schrijven (tabellen + testdata), daarna bezoeker: overzicht, detail, filter, sorteren |
 | **Woensdag** | Lid: registreren, inloggen, kernactie via AJAX, eigen overzicht, eigen gegevens aanpassen |
-| **Donderdag** | Medewerker: toevoegen, aanpassen, soft delete, overzichten met JOINs, statistiekenpagina, logboek |
+| **Donderdag** | Medewerker: toevoegen, aanpassen, soft delete, overzichten met `LEFT JOIN`, statistiekenpagina, logboek |
 | **Vrijdag** | Error pages, `try`/`catch`, SQL-dossier afmaken - **aan het einde van de dag laat je alles aftekenen** |
 | **Week erna** | Mondeling assessment |
 
@@ -33,7 +33,7 @@ Elke student is aan één van de zes thema's toegewezen - zie **[Studentverdelin
 ## ✅ Voorbereiding op het mondeling (week na het project)
 
 Zorg dat je kan uitleggen:
-- Je ERD: welke tabellen je hebt, waar de foreign keys zitten, waarom een relatie 1-op-veel of veel-op-veel is (en dus een koppeltabel nodig heeft), en waarom een kolom `NULL` mag zijn
+- Je ERD: welke tabellen je hebt, waar de foreign keys zitten, waarom een relatie één-op-veel is en aan welke kant de foreign key staat, en waarom een kolom `NULL` mag zijn
 - Hoe je van het verhaal van de opdrachtgever bent gekomen tot je ERD
 - Hoe je je code hebt beveiligd (prepared statements, hashing, `htmlspecialchars()`, sessie- en rolcheck)
 - Een willekeurige regel uit je eigen code - wat doet die, en waarom staat die er?
@@ -45,4 +45,4 @@ En de SQL-begrippen, toegepast op je eigen database:
 - Wanneer gebruik je `GROUP BY`, en wanneer `HAVING` in plaats van `WHERE`?
 - Wat doet `ORDER BY`?
 - Wat kun je met `INSERT INTO`?
-- Wanneer gebruik je een `INNER JOIN`, een `LEFT JOIN` en een `RIGHT JOIN`?
+- Wat doet een `LEFT JOIN`, en waarom staan er soms `NULL`-waardes in de uitvoer?

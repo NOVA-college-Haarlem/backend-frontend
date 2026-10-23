@@ -2,7 +2,7 @@
 
 ## Wat is dit?
 
-Dit is het eindproject voor de tweede helft van Blok 5. Je bouwt een complete webapplicatie voor een **nieuwe opdrachtgever**, met een thema dat je nog niet eerder hebt gebouwd. Je laat zien dat je alles uit **Hoofdstuk 1 t/m 7** beheerst én de **SQL-stof** van dit blok kunt toepassen: kolomfuncties, `GROUP BY`/`HAVING`, `DISTINCT`, `ORDER BY` en `INNER`/`LEFT`/`RIGHT JOIN`.
+Dit is het eindproject voor de tweede helft van Blok 5. Je bouwt een complete webapplicatie voor een **nieuwe opdrachtgever**, met een thema dat je nog niet eerder hebt gebouwd. Je laat zien dat je alles uit **Hoofdstuk 1 t/m 7** beheerst én de **SQL-stof** van dit blok kunt toepassen: kolomfuncties, `GROUP BY`/`HAVING`, `DISTINCT`, `ORDER BY` en `LEFT JOIN`.
 
 Je begint met een nieuwe repository, maar je mag je **eigen code** uit Eindproject 5A en de projectlessen als voorbeeld gebruiken (bijv. je `database.php`, je login of je header/footer). Je bouwt voor een ander thema, dus kopiëren zonder aanpassen werkt niet.
 
@@ -34,7 +34,7 @@ Je krijgt één van de zes thema's toegewezen - zie **[Studentverdeling.md](Stud
 In het verhaal van de opdrachtgever staan **geen tabellen, kolommen of relaties**. Het ontwerp is onderdeel van de opdracht. Leid uit het verhaal af:
 
 - Welke gegevens moet je opslaan, en in welke tabellen?
-- Waar zitten de **één-op-veel relaties** en waar is een **koppeltabel** nodig?
+- Waar zitten de **één-op-veel relaties**? In dit project gebruik je **alleen één-op-veel relaties** - geen veel-op-veel relaties en dus geen koppeltabellen.
 - Welke kolommen **moeten** gevuld zijn (`NOT NULL`) en welke **mogen leeg** blijven (`NULL`)? In elk verhaal zit minimaal één gegeven dat niet altijd bekend is.
 
 ### ERD (maandagmiddag)
@@ -44,13 +44,12 @@ Voordat je één regel code schrijft, maak je een **ERD** (Entity Relationship D
 Je ERD bevat:
 - Alle **tabellen** (entiteiten) met hun **kolommen** en **datatypes**
 - Per tabel de **primary key** (PK) en elke **foreign key** (FK)
-- De **relaties** tussen de tabellen, met de kardinaliteit erbij (**1** en **N**, bijvoorbeeld in kraaienpootnotatie)
-- Een **koppeltabel** waar een veel-op-veel relatie zit
+- De **relaties** tussen de tabellen, met de kardinaliteit erbij (**1** en **N**, bijvoorbeeld in kraaienpootnotatie). Alle relaties zijn **één-op-veel**.
 - Bij elke kolom of hij `NULL` mag zijn
 
 Werkwijze:
 1. Onderstreep in het verhaal van de opdrachtgever alle **zelfstandige naamwoorden** - dat zijn mogelijke tabellen of kolommen.
-2. Zoek de zinnen als *"een klant kan meerdere ..."* en *"een ... wordt door veel ... geboekt"* - daar zitten je relaties.
+2. Zoek de zinnen als *"een klant kan meerdere ..."* en *"elke ... hoort bij één ..."* - daar zitten je één-op-veel relaties. De foreign key komt altijd aan de **veel**-kant.
 3. Controleer of je met je ERD **elke userstory** kunt bouwen. Zoek bijvoorbeeld uit welke tabellen je moet koppelen voor de statistiekenpagina en de `LEFT JOIN`-lijst.
 
 > ✅ **Laat je ERD op maandagmiddag aftekenen voordat je gaat bouwen.** Verander je later in de week je database? Pas dan ook je ERD aan - ERD en `sql/database.sql` moeten aan het eind met elkaar kloppen.
@@ -70,7 +69,7 @@ Werkwijze:
 - **H3** - update-functionaliteit (zie de userstories van je thema)
 - **H4** - soft delete met `deleted_at` + herstellen, en minimaal één actie via **AJAX** (`fetch()`, zonder page reload)
 - **H5** - sessie- én rolcheck op elke beschermde pagina, formulieren alleen via `POST`, id's controleren met `is_numeric()`, een logboek van beheeracties
-- **H6** - een filter waarbij **minimaal 2 filters te combineren** zijn, met een `JOIN`
+- **H6** - een filter waarbij **minimaal 2 filters te combineren** zijn, met een `LEFT JOIN`
 - **H7** - eigen 403-, 404- en 500-pagina's met `http_response_code()`, databasefouten afgevangen met `try`/`catch`
 
 ### SQL-stof in je applicatie
@@ -78,8 +77,7 @@ Werkwijze:
 - **`GROUP BY` en `HAVING`**: minimaal één overzicht per groep (bijv. per categorie), en minimaal één keer `HAVING`
 - **`DISTINCT`**: de keuzelijst van je filter komt uit de database, zonder dubbele waardes
 - **`ORDER BY`**: bezoekers kunnen het aanbod sorteren (oplopend én aflopend)
-- **`INNER JOIN`**: overzichten met gegevens uit meerdere tabellen
-- **`LEFT JOIN`**: minimaal één overzicht dat ook rijen **zonder** koppeling toont (zie je thema)
+- **`LEFT JOIN`**: overzichten met gegevens uit meerdere tabellen, en minimaal één overzicht dat ook rijen **zonder** koppeling toont (zie je thema)
 
 ## SQL-dossier: `sql/queries.sql`
 
@@ -95,8 +93,8 @@ Het dossier bevat minimaal:
 - [ ] 1 query met `WHERE` én `ORDER BY`
 - [ ] Alle vijf de kolomfuncties: `MIN`, `MAX`, `COUNT`, `SUM`, `AVG`
 - [ ] 1 query met `GROUP BY` en 1 met `GROUP BY` + `HAVING`
-- [ ] **5 zelfbedachte JOIN-queries**, waarvan minimaal 1 `INNER JOIN`, 1 `LEFT JOIN` en 1 `RIGHT JOIN`
-- [ ] Bij de `LEFT JOIN` en de `RIGHT JOIN`: een comment die uitlegt welke rijen er **extra** in de uitvoer staan ten opzichte van een `INNER JOIN`
+- [ ] **5 zelfbedachte `LEFT JOIN`-queries**, waarvan minimaal 2 die ook rijen **zonder** koppeling tonen
+- [ ] Bij die 2 queries: een comment die uitlegt welke rijen er `NULL`-waardes krijgen, en waarom
 - [ ] 1 `INSERT INTO`, 1 `UPDATE` en 1 `DELETE` (op testdata - in je applicatie gebruik je soft delete)
 
 > Je mag de queries uit je applicatie hergebruiken in je dossier. Het dossier laat zien dat je ze ook zónder PHP kunt schrijven en uitleggen.
@@ -105,7 +103,7 @@ Het dossier bevat minimaal:
 
 **Database en SQL**
 - [ ] ERD afgetekend (maandagmiddag) en opgeleverd als `docs/erd.png`
-- [ ] ERD bevat PK's, FK's, kardinaliteit (1/N), koppeltabel en `NULL`-kolommen
+- [ ] ERD bevat PK's, FK's, kardinaliteit (1/N) en `NULL`-kolommen; alleen één-op-veel relaties
 - [ ] ERD klopt met `sql/database.sql`
 - [ ] `sql/database.sql` bouwt de hele database zonder fouten op
 - [ ] Minimaal 4 tabellen, minimaal 2 foreign keys, bewuste `NULL`/`NOT NULL`-keuzes

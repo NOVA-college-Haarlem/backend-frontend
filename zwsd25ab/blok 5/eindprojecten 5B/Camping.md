@@ -8,7 +8,7 @@ Je hebt een intakegesprek met Henk en Ayşe, de eigenaren van camping "De Duinpa
 >
 > Op de website willen we alle plekken laten zien: het nummer, het soort plek, de grootte in vierkante meters, of er stroom is, een foto, het maximaal aantal personen en de **prijs per nacht**. Gasten willen kunnen filteren op soort plek én op stroom, en sorteren op prijs of grootte.
 >
-> Gasten maken een account aan en **reserveren** een plek: een aankomstdatum, een vertrekdatum en het aantal personen. Een gast komt vaak elk jaar terug, en een plek wordt door veel gasten gereserveerd. Bij een reservering kan een gast een **opmerking** achterlaten, zoals 'we komen pas laat aan' - maar dat hoeft niet. En als iemand een **kenteken** opgeeft, mag die op de camping parkeren; zonder kenteken kan dat niet, en dat is ook prima. De prijs van de hele reservering moet bewaard blijven, ook als wij volgend jaar de prijzen verhogen. Op de pagina van een plek moet een gast met één klik kunnen zien of de plek in een bepaalde week **nog vrij** is, zonder dat de pagina opnieuw laadt.
+> Gasten maken een account aan en **reserveren** een plek: een aankomstdatum, een vertrekdatum en het aantal personen. Een gast komt vaak elk jaar terug, maar elke reservering is voor één plek. Een plek wordt in een seizoen vaak gereserveerd. Bij een reservering kan een gast een **opmerking** achterlaten, zoals 'we komen pas laat aan' - maar dat hoeft niet. En als iemand een **kenteken** opgeeft, mag die op de camping parkeren; zonder kenteken kan dat niet, en dat is ook prima. De prijs van de hele reservering moet bewaard blijven, ook als wij volgend jaar de prijzen verhogen. Op de pagina van een plek moet een gast met één klik kunnen zien of de plek in een bepaalde week **nog vrij** is, zonder dat de pagina opnieuw laadt.
 >
 > Wij en ons personeel loggen in op een beheeromgeving. We voegen plekken toe, passen prijzen aan, en zetten een plek uit als er onderhoud is - die moet daarna weer terug te zetten zijn. We willen alle reserveringen zien met de gast en de plek erbij, en een lijst van plekken die **dit seizoen nog niet gereserveerd** zijn, zodat we daar een aanbieding voor kunnen maken.
 >
@@ -29,7 +29,7 @@ Jij gaat deze applicatie voor De Duinpan bouwen. Setup, technische eisen en chec
 6. Als gast wil ik inloggen en uitloggen. *(H2)*
 7. Als gast wil ik op de pagina van een plek met één klik zien of die in een bepaalde week nog vrij is, zonder dat de pagina herlaadt. *(H4, AJAX)*
 8. Als gast wil ik een plek reserveren; een vertrekdatum vóór de aankomstdatum of te veel personen geeft een foutmelding. Opmerking en kenteken mogen leeg blijven. De totaalprijs wordt op de server berekend en bewaard. *(H1, H2, NULL)*
-9. Als gast wil ik een overzicht van **mijn** reserveringen zien, met het nummer en soort van de plek en de totaalprijs. *(H6, INNER JOIN)*
+9. Als gast wil ik een overzicht van **mijn** reserveringen zien, met het nummer en soort van de plek en de totaalprijs. *(H6, LEFT JOIN)*
 10. Als gast wil ik mijn eigen gegevens kunnen aanpassen. *(H3)*
 
 ### Medewerker
@@ -37,7 +37,7 @@ Jij gaat deze applicatie voor De Duinpan bouwen. Setup, technische eisen en chec
 12. Als medewerker wil ik een nieuwe plek toevoegen; lege of foute velden geven een foutmelding. *(H1, H2)*
 13. Als medewerker wil ik de gegevens en prijs van een plek kunnen aanpassen. *(H3)*
 14. Als medewerker wil ik een plek uitzetten voor onderhoud zonder dat die echt verwijderd wordt, en hem later terugzetten. *(H4)*
-15. Als medewerker wil ik een overzicht van alle reserveringen, met de gast en de plek erbij. *(H6, INNER JOIN)*
+15. Als medewerker wil ik een overzicht van alle reserveringen, met de gast en de plek erbij. *(H6, LEFT JOIN)*
 16. Als medewerker wil ik een lijst van plekken **zonder reserveringen**. *(LEFT JOIN)*
 17. Als eigenaar wil ik een statistiekenpagina met: het aantal plekken per soort, de gemiddelde, laagste en hoogste prijs per nacht, de omzet per soort, het gemiddeld aantal personen per reservering, en de soorten met meer dan tien reserveringen. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
 18. Als eigenaar wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. *(H5)*

@@ -8,7 +8,7 @@ Je hebt een intakegesprek met Dewi, bedrijfsleider van kringloopwinkel "Tweede R
 >
 > Op de website wil ik alle artikelen laten zien: naam, categorie, een foto, een omschrijving, de **staat** (als nieuw, goed of gebruikt) en de prijs. Klanten willen kunnen filteren op categorie én staat, en sorteren op prijs of op hoe nieuw het artikel in de winkel is.
 >
-> Klanten maken een account aan en kunnen een artikel **reserveren**: dan leggen wij het drie dagen apart. Een klant kan meerdere artikelen reserveren, en als een reservering verloopt, kan een andere klant hetzelfde artikel reserveren - dus een artikel kan door meerdere klanten na elkaar gereserveerd zijn. Reserveren moet met één klik gaan, zonder dat de pagina opnieuw laadt.
+> Klanten maken een account aan en kunnen een artikel **reserveren**: dan leggen wij het drie dagen apart. Een klant kan meerdere reserveringen hebben, maar elke reservering is voor één artikel. Als een reservering verloopt, kan iemand anders het artikel opnieuw reserveren - dus bij één artikel kunnen na elkaar meerdere reserveringen horen. Reserveren moet met één klik gaan, zonder dat de pagina opnieuw laadt.
 >
 > Veel spullen worden gebracht door vaste **donateurs**, en die willen we graag bedanken - van hen bewaren we naam en telefoonnummer. Maar heel veel spullen worden ook **anoniem** gebracht: dan weten we niet van wie het artikel is, en dat is prima. Bij elk artikel noteren we de datum van binnenkomst, en als het verkocht is ook de **verkoopdatum** - die is er natuurlijk nog niet zolang het artikel in de winkel staat.
 >
@@ -30,7 +30,7 @@ Jij gaat deze applicatie voor Tweede Ronde bouwen. Setup, technische eisen en ch
 5. Als bezoeker wil ik een account aanmaken; mijn wachtwoord wordt gehasht opgeslagen en het formulier wordt gecontroleerd. *(H2)*
 6. Als klant wil ik inloggen en uitloggen. *(H2)*
 7. Als klant wil ik met één klik een artikel reserveren, zonder dat de pagina herlaadt. Is het artikel al gereserveerd, dan krijg ik een melding. *(H4, AJAX)*
-8. Als klant wil ik een overzicht van **mijn** reserveringen zien, met de naam, categorie en prijs van het artikel. *(H6, INNER JOIN)*
+8. Als klant wil ik een overzicht van **mijn** reserveringen zien, met de naam, categorie en prijs van het artikel. *(H6, LEFT JOIN)*
 9. Als klant wil ik mijn eigen gegevens kunnen aanpassen. *(H3)*
 
 ### Medewerker
@@ -38,7 +38,7 @@ Jij gaat deze applicatie voor Tweede Ronde bouwen. Setup, technische eisen en ch
 11. Als medewerker wil ik een nieuw artikel toevoegen en optioneel een donateur kiezen; zonder donateur is het artikel anoniem. Lege of foute velden geven een foutmelding. *(H1, H2, NULL)*
 12. Als medewerker wil ik de prijs van een artikel aanpassen en een artikel als verkocht markeren (verkoopdatum invullen). *(H3)*
 13. Als medewerker wil ik een artikel uit de winkel halen zonder dat het echt verwijderd wordt, en het later terugzetten. *(H4)*
-14. Als medewerker wil ik een overzicht van alle reserveringen, met de klant en het artikel erbij. *(H6, INNER JOIN)*
+14. Als medewerker wil ik een overzicht van alle reserveringen, met de klant en het artikel erbij. *(H6, LEFT JOIN)*
 15. Als medewerker wil ik een lijst van **alle** donateurs met het aantal gebrachte artikelen - ook donateurs met 0 artikelen. *(LEFT JOIN, COUNT, GROUP BY)*
 16. Als bedrijfsleider wil ik een statistiekenpagina met: het aantal artikelen per categorie, de gemiddelde, laagste en hoogste prijs, de totale verkoopopbrengst, en de categorieën met een gemiddelde prijs boven de 20 euro. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
 17. Als bedrijfsleider wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. *(H5)*

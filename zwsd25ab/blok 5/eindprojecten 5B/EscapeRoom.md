@@ -8,7 +8,7 @@ Je hebt een intakegesprek met Noor, eigenaar van escape room "Locked Inn". Ze ve
 >
 > Op de website wil ik alle rooms laten zien: de naam, het thema, een sfeerfoto, een korte verhaallijn, de **moeilijkheidsgraad** van 1 tot 5, het minimale en maximale aantal spelers en de prijs per persoon. Bezoekers willen kunnen filteren op thema én moeilijkheidsgraad, en sorteren op prijs of moeilijkheid.
 >
-> Wie wil spelen, maakt een account aan en **boekt** een room op een datum en tijdstip, voor een bepaald aantal spelers. Iemand kan vaker boeken, en een room wordt door veel groepen geboekt. Het aantal spelers moet natuurlijk binnen het minimum en maximum van de room vallen. Op de pagina van een room willen spelers met één klik zien of een tijdstip **nog vrij** is, zonder dat de pagina opnieuw laadt.
+> Wie wil spelen, maakt een account aan en **boekt** een room op een datum en tijdstip, voor een bepaald aantal spelers. Iemand kan vaker boeken, maar elke boeking is voor één room. Een room wordt natuurlijk vaak geboekt. Het aantal spelers moet natuurlijk binnen het minimum en maximum van de room vallen. Op de pagina van een room willen spelers met één klik zien of een tijdstip **nog vrij** is, zonder dat de pagina opnieuw laadt.
 >
 > Na afloop noteert de spelleider de **ontsnaptijd** in minuten. Zolang er nog niet gespeeld is, is die er niet - en als een groep niet ontsnapt, blijft hij ook leeg. Soms geeft de spelleider een of meer **hints**, maar dat noteren we alleen als het gebeurt.
 >
@@ -31,7 +31,7 @@ Jij gaat deze applicatie voor Locked Inn bouwen. Setup, technische eisen en chec
 6. Als speler wil ik inloggen en uitloggen. *(H2)*
 7. Als speler wil ik op de pagina van een room met één klik zien of een datum en tijdstip nog vrij is, zonder dat de pagina herlaadt. *(H4, AJAX)*
 8. Als speler wil ik een room boeken; een aantal spelers buiten het minimum en maximum van de room geeft een foutmelding. *(H1, H2)*
-9. Als speler wil ik een overzicht van **mijn** boekingen zien, met de naam van de room en mijn ontsnaptijd (als die er is). *(H6, INNER JOIN)*
+9. Als speler wil ik een overzicht van **mijn** boekingen zien, met de naam van de room en mijn ontsnaptijd (als die er is). *(H6, LEFT JOIN)*
 10. Als speler wil ik mijn eigen gegevens kunnen aanpassen. *(H3)*
 
 ### Medewerker (spelleider)
@@ -39,7 +39,7 @@ Jij gaat deze applicatie voor Locked Inn bouwen. Setup, technische eisen en chec
 12. Als spelleider wil ik een nieuwe room toevoegen; lege of foute velden geven een foutmelding. *(H1, H2)*
 13. Als spelleider wil ik een room aanpassen, en bij een boeking de ontsnaptijd en het aantal hints invullen. Beide mogen leeg zijn. *(H3, NULL)*
 14. Als spelleider wil ik een room tijdelijk uitzetten zonder dat die echt verwijderd wordt, en hem later terugzetten. *(H4)*
-15. Als spelleider wil ik een overzicht van alle boekingen, met de room en de speler erbij. *(H6, INNER JOIN)*
+15. Als spelleider wil ik een overzicht van alle boekingen, met de room en de speler erbij. *(H6, LEFT JOIN)*
 16. Als spelleider wil ik een lijst van rooms die **nog nooit geboekt** zijn. *(LEFT JOIN)*
 17. Als eigenaar wil ik een statistiekenpagina met: het aantal boekingen per room, de snelste, langzaamste en gemiddelde ontsnaptijd per room, de totale omzet, en de rooms met een gemiddelde ontsnaptijd van meer dan 50 minuten. *(COUNT, MIN, MAX, AVG, SUM, GROUP BY, HAVING)*
 18. Als eigenaar wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. *(H5)*
