@@ -1,0 +1,123 @@
+# Eindproject Blok 5B (Hoofdstuk 1 t/m 7 + SQL)
+
+## Wat is dit?
+
+Dit is het eindproject voor de tweede helft van Blok 5. Je bouwt een complete webapplicatie voor een **nieuwe opdrachtgever**, met een thema dat je nog niet eerder hebt gebouwd. Je laat zien dat je alles uit **Hoofdstuk 1 t/m 7** beheerst én de **SQL-stof** van dit blok kunt toepassen: kolomfuncties, `GROUP BY`/`HAVING`, `DISTINCT`, `ORDER BY` en `INNER`/`LEFT`/`RIGHT JOIN`.
+
+Je begint met een nieuwe repository, maar je mag je **eigen code** uit Eindproject 5A en de projectlessen als voorbeeld gebruiken (bijv. je `database.php`, je login of je header/footer). Je bouwt voor een ander thema, dus kopiëren zonder aanpassen werkt niet.
+
+## Thema's
+
+Je krijgt één van de zes thema's toegewezen - zie **[Studentverdeling.md](Studentverdeling.md)**. De technische eisen zijn voor alle thema's **exact gelijk**.
+
+1. [Dierenasiel](Dierenasiel.md) - dierenasiel Pootjes & Co
+2. [Fietsverhuur](Fietsverhuur.md) - fietsverhuur Trapkracht
+3. [Escape Room](EscapeRoom.md) - escape room Locked Inn
+4. [Camping](Camping.md) - camping De Duinpan
+5. [Kringloop](Kringloop.md) - kringloopwinkel Tweede Ronde
+6. [Autogarage](Autogarage.md) - garage Sleutelwerk
+
+## Project setup
+
+1. Kloon op GitHub het project [Docker Template](https://github.com/NOVA-college-Haarlem/docker-template) (je kunt de default settings aanhouden).
+2. Kopieer de URL van de repository (via de groene knop "Code").
+3. Open de map waarin je je projecten bewaart met VS Code.
+4. Open de terminal en run `git clone <PASTE URL>`
+5. Verander in de Windows Verkenner de naam "docker-template" naar de naam van je project, bijvoorbeeld "dierenasiel" of "camping".
+6. Open dit project in VS Code.
+7. Verander in `.env` de naam `MYSQL_DATABASE` van "testdb" naar de naam van je project.
+8. Open de terminal en run `docker compose up -d`.
+9. Je website draait nu op http://localhost en PhpMyAdmin op http://localhost:8000/.
+
+## Let op: geen kant-en-klaar databaseontwerp
+
+In het verhaal van de opdrachtgever staan **geen tabellen, kolommen of relaties**. Het ontwerp is onderdeel van de opdracht. Leid uit het verhaal af:
+
+- Welke gegevens moet je opslaan, en in welke tabellen?
+- Waar zitten de **één-op-veel relaties** en waar is een **koppeltabel** nodig?
+- Welke kolommen **moeten** gevuld zijn (`NOT NULL`) en welke **mogen leeg** blijven (`NULL`)? In elk verhaal zit minimaal één gegeven dat niet altijd bekend is.
+
+> ✅ **Laat je ERD op maandag aftekenen voordat je gaat bouwen.**
+
+## Technische eisen
+
+### Database (SQL les 5 en 6)
+- Minimaal **4 tabellen**, waarvan minimaal 2 met een **foreign key**
+- Bij elke kolom een bewuste keuze voor `NULL` of `NOT NULL` - je kunt bij elke `NULL`-kolom uitleggen waarom die leeg mag zijn
+- Geld als `DECIMAL(10,2)`, nooit als `FLOAT`
+- Een bestand `sql/database.sql` dat je hele database vanaf nul opbouwt: eerst alle `CREATE TABLE`'s, dan de testdata - **eerst** de tabellen zonder foreign key, **daarna** de tabellen met foreign key
+- Genoeg testdata om je statistieken en filters te kunnen laten zien: minimaal 10 rijen in je hoofdtabel, en een paar rijen waar een `NULL`-kolom echt leeg is
+
+### PHP (Hoofdstuk 1 t/m 7)
+- **H1** - alle queries via PDO met prepared statements, geen variabelen direct in een SQL-string
+- **H2** - `htmlspecialchars()` op alle output, formulieren gevalideerd vóór opslag, wachtwoorden met `password_hash()` / `password_verify()`
+- **H3** - update-functionaliteit (zie de userstories van je thema)
+- **H4** - soft delete met `deleted_at` + herstellen, en minimaal één actie via **AJAX** (`fetch()`, zonder page reload)
+- **H5** - sessie- én rolcheck op elke beschermde pagina, formulieren alleen via `POST`, id's controleren met `is_numeric()`, een logboek van beheeracties
+- **H6** - een filter waarbij **minimaal 2 filters te combineren** zijn, met een `JOIN`
+- **H7** - eigen 403-, 404- en 500-pagina's met `http_response_code()`, databasefouten afgevangen met `try`/`catch`
+
+### SQL-stof in je applicatie
+- **Kolomfuncties**: een statistiekenpagina voor medewerkers met `COUNT`, `SUM`, `AVG`, `MIN` en `MAX` - elk minimaal één keer
+- **`GROUP BY` en `HAVING`**: minimaal één overzicht per groep (bijv. per categorie), en minimaal één keer `HAVING`
+- **`DISTINCT`**: de keuzelijst van je filter komt uit de database, zonder dubbele waardes
+- **`ORDER BY`**: bezoekers kunnen het aanbod sorteren (oplopend én aflopend)
+- **`INNER JOIN`**: overzichten met gegevens uit meerdere tabellen
+- **`LEFT JOIN`**: minimaal één overzicht dat ook rijen **zonder** koppeling toont (zie je thema)
+
+## SQL-dossier: `sql/queries.sql`
+
+Naast je applicatie lever je een bestand `sql/queries.sql` in. Daarin staan **minimaal 12 queries** die werken op jouw eigen database. Boven elke query staat in een comment welke vraag van de opdrachtgever de query beantwoordt:
+
+```sql
+-- Vraag: hoeveel fietsen hebben we per type?
+SELECT type, COUNT(*) AS aantal FROM fietsen GROUP BY type;
+```
+
+Het dossier bevat minimaal:
+- [ ] 1 query met `DISTINCT`
+- [ ] 1 query met `WHERE` én `ORDER BY`
+- [ ] Alle vijf de kolomfuncties: `MIN`, `MAX`, `COUNT`, `SUM`, `AVG`
+- [ ] 1 query met `GROUP BY` en 1 met `GROUP BY` + `HAVING`
+- [ ] **5 zelfbedachte JOIN-queries**, waarvan minimaal 1 `INNER JOIN`, 1 `LEFT JOIN` en 1 `RIGHT JOIN`
+- [ ] Bij de `LEFT JOIN` en de `RIGHT JOIN`: een comment die uitlegt welke rijen er **extra** in de uitvoer staan ten opzichte van een `INNER JOIN`
+- [ ] 1 `INSERT INTO`, 1 `UPDATE` en 1 `DELETE` (op testdata - in je applicatie gebruik je soft delete)
+
+> Je mag de queries uit je applicatie hergebruiken in je dossier. Het dossier laat zien dat je ze ook zónder PHP kunt schrijven en uitleggen.
+
+## Checklist (aftekenen op donderdag)
+
+**Database en SQL**
+- [ ] ERD afgetekend (maandag)
+- [ ] `sql/database.sql` bouwt de hele database zonder fouten op
+- [ ] Minimaal 4 tabellen, minimaal 2 foreign keys, bewuste `NULL`/`NOT NULL`-keuzes
+- [ ] `sql/queries.sql` compleet volgens het SQL-dossier hierboven
+
+**Functionaliteit**
+- [ ] Alle userstories van je thema werken
+- [ ] Statistiekenpagina met `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`, `GROUP BY` en `HAVING`
+- [ ] Filter met minimaal 2 combineerbare filters en een keuzelijst met `DISTINCT`
+- [ ] Sorteren oplopend én aflopend
+- [ ] Overzicht met `LEFT JOIN` (rijen zonder koppeling)
+- [ ] Minimaal één actie via AJAX
+
+**Security**
+- [ ] Alle queries via PDO met prepared statements
+- [ ] Wachtwoorden gehasht en geverifieerd
+- [ ] Alle output ge-escaped met `htmlspecialchars()`
+- [ ] Formulieren gevalideerd, alleen via `POST` verwerkt
+- [ ] Sessie- én rolcheck op alle beschermde pagina's
+- [ ] Logboek van beheeracties
+
+**Foutafhandeling**
+- [ ] Soft delete + herstellen
+- [ ] 403-, 404- en 500-pagina's
+- [ ] Databasefouten afgevangen met `try`/`catch`
+
+**Code kwaliteit**
+- [ ] Logische naamgeving en gescheiden view/process-bestanden
+- [ ] Database connectie in een apart bestand, header/footer via `include`
+- [ ] Geen dubbele code
+- [ ] Regelmatige commits met duidelijke messages
+
+Voor de leerdoelen per week, zie `../Blok5_Leerdoelen_Samenvatting.md`.
