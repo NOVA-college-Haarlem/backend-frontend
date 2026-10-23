@@ -41,8 +41,10 @@ Jij gaat deze applicatie voor Trapkracht bouwen. Setup, technische eisen en chec
 14. Als medewerker wil ik een fiets uit de verhuur halen zonder dat die echt verwijderd wordt, en hem later terugzetten. *(H4)*
 15. Als medewerker wil ik een overzicht van alle reserveringen, met de klant en de fiets erbij. *(H6, LEFT JOIN)*
 16. Als medewerker wil ik een lijst van fietsen die **nog nooit verhuurd** zijn. *(LEFT JOIN)*
-17. Als eigenaar wil ik een statistiekenpagina met: het aantal fietsen per type, de gemiddelde, laagste en hoogste dagprijs, de omzet per type, en de types die meer dan vijf keer verhuurd zijn. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
-18. Als eigenaar wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. *(H5)*
+
+### Admin (eigenaar)
+17. Als admin wil ik een statistiekenpagina met: het aantal fietsen per type, de gemiddelde, laagste en hoogste dagprijs, de omzet per type, en de types die meer dan vijf keer verhuurd zijn. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
+18. Als admin wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. Een medewerker die de statistieken of het logboek opent, ziet een 403-pagina. *(H5, H7)*
 
 ### Developer
 19. Als developer wil ik dat alle queries via PDO met prepared statements lopen en alle output via `htmlspecialchars()`. *(H1, H2)*

@@ -41,8 +41,10 @@ Jij gaat deze applicatie voor Locked Inn bouwen. Setup, technische eisen en chec
 14. Als spelleider wil ik een room tijdelijk uitzetten zonder dat die echt verwijderd wordt, en hem later terugzetten. *(H4)*
 15. Als spelleider wil ik een overzicht van alle boekingen, met de room en de speler erbij. *(H6, LEFT JOIN)*
 16. Als spelleider wil ik een lijst van rooms die **nog nooit geboekt** zijn. *(LEFT JOIN)*
-17. Als eigenaar wil ik een statistiekenpagina met: het aantal boekingen per room, de snelste, langzaamste en gemiddelde ontsnaptijd per room, de totale omzet, en de rooms met een gemiddelde ontsnaptijd van meer dan 50 minuten. *(COUNT, MIN, MAX, AVG, SUM, GROUP BY, HAVING)*
-18. Als eigenaar wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. *(H5)*
+
+### Admin (eigenaar)
+17. Als admin wil ik een statistiekenpagina met: het aantal boekingen per room, de snelste, langzaamste en gemiddelde ontsnaptijd per room, de totale omzet, en de rooms met een gemiddelde ontsnaptijd van meer dan 50 minuten. *(COUNT, MIN, MAX, AVG, SUM, GROUP BY, HAVING)*
+18. Als admin wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. Een medewerker die de statistieken of het logboek opent, ziet een 403-pagina. *(H5, H7)*
 
 ### Developer
 19. Als developer wil ik dat alle queries via PDO met prepared statements lopen en alle output via `htmlspecialchars()`. *(H1, H2)*

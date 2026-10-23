@@ -38,8 +38,10 @@ Jij gaat deze applicatie voor Pootjes & Co bouwen. Setup, technische eisen en ch
 13. Als verzorger wil ik een dier uit de lijst halen zonder dat het echt verwijderd wordt, en het later kunnen terugzetten. *(H4)*
 14. Als verzorger wil ik een overzicht van alle aanvragen, met het dier en de aanvrager erbij. *(H6, LEFT JOIN)*
 15. Als verzorger wil ik een lijst van dieren **zonder aanvragen** zien. *(LEFT JOIN)*
-16. Als coördinator wil ik een statistiekenpagina met: het aantal dieren per soort, de gemiddelde, laagste en hoogste adoptieprijs, de opbrengst van goedgekeurde adopties, en de soorten met meer dan drie aanvragen. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
-17. Als coördinator wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. *(H5)*
+
+### Admin (coördinator)
+16. Als admin wil ik een statistiekenpagina met: het aantal dieren per soort, de gemiddelde, laagste en hoogste adoptieprijs, de opbrengst van goedgekeurde adopties, en de soorten met meer dan drie aanvragen. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
+17. Als admin wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. Een medewerker die de statistieken of het logboek opent, ziet een 403-pagina. *(H5, H7)*
 
 ### Developer
 18. Als developer wil ik dat alle queries via PDO met prepared statements lopen en alle output via `htmlspecialchars()`. *(H1, H2)*

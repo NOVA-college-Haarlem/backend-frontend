@@ -41,8 +41,10 @@ Jij gaat deze applicatie voor Sleutelwerk bouwen. Setup, technische eisen en che
 14. Als medewerker wil ik een dienst uitzetten zonder dat die echt verwijderd wordt, en hem later terugzetten. *(H4)*
 15. Als medewerker wil ik alle afspraken zien met klant, kenteken, dienst en monteur erbij, en filteren op monteur én dienst tegelijk. De keuzelijst met monteurs komt uit de database, zonder dubbele waardes. Afspraken **zonder** monteur staan er ook in. *(H6, LEFT JOIN, DISTINCT)*
 16. Als medewerker wil ik een lijst van auto's die **nog nooit een afspraak** hebben gehad. *(LEFT JOIN)*
-17. Als eigenaar wil ik een statistiekenpagina met: het aantal afspraken per dienst, de gemiddelde prijs per afspraak, het oudste en nieuwste bouwjaar, de omzet per dienst, en de merken waarvan we meer dan twee auto's hebben. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
-18. Als eigenaar wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. *(H5)*
+
+### Admin (eigenaar)
+17. Als admin wil ik een statistiekenpagina met: het aantal afspraken per dienst, de gemiddelde prijs per afspraak, het oudste en nieuwste bouwjaar, de omzet per dienst, en de merken waarvan we meer dan twee auto's hebben. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
+18. Als admin wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. Een medewerker die de statistieken of het logboek opent, ziet een 403-pagina. *(H5, H7)*
 
 ### Developer
 19. Als developer wil ik dat alle queries via PDO met prepared statements lopen en alle output via `htmlspecialchars()`. *(H1, H2)*

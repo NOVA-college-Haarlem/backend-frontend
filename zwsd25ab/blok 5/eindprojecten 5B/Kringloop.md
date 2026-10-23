@@ -40,8 +40,10 @@ Jij gaat deze applicatie voor Tweede Ronde bouwen. Setup, technische eisen en ch
 13. Als medewerker wil ik een artikel uit de winkel halen zonder dat het echt verwijderd wordt, en het later terugzetten. *(H4)*
 14. Als medewerker wil ik een overzicht van alle reserveringen, met de klant en het artikel erbij. *(H6, LEFT JOIN)*
 15. Als medewerker wil ik een lijst van **alle** donateurs met het aantal gebrachte artikelen - ook donateurs met 0 artikelen. *(LEFT JOIN, COUNT, GROUP BY)*
-16. Als bedrijfsleider wil ik een statistiekenpagina met: het aantal artikelen per categorie, de gemiddelde, laagste en hoogste prijs, de totale verkoopopbrengst, en de categorieën met een gemiddelde prijs boven de 20 euro. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
-17. Als bedrijfsleider wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. *(H5)*
+
+### Admin (bedrijfsleider)
+16. Als admin wil ik een statistiekenpagina met: het aantal artikelen per categorie, de gemiddelde, laagste en hoogste prijs, de totale verkoopopbrengst, en de categorieën met een gemiddelde prijs boven de 20 euro. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
+17. Als admin wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. Een medewerker die de statistieken of het logboek opent, ziet een 403-pagina. *(H5, H7)*
 
 ### Developer
 18. Als developer wil ik dat alle queries via PDO met prepared statements lopen en alle output via `htmlspecialchars()`. *(H1, H2)*

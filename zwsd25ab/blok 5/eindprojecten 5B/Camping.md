@@ -39,8 +39,10 @@ Jij gaat deze applicatie voor De Duinpan bouwen. Setup, technische eisen en chec
 14. Als medewerker wil ik een plek uitzetten voor onderhoud zonder dat die echt verwijderd wordt, en hem later terugzetten. *(H4)*
 15. Als medewerker wil ik een overzicht van alle reserveringen, met de gast en de plek erbij. *(H6, LEFT JOIN)*
 16. Als medewerker wil ik een lijst van plekken **zonder reserveringen**. *(LEFT JOIN)*
-17. Als eigenaar wil ik een statistiekenpagina met: het aantal plekken per soort, de gemiddelde, laagste en hoogste prijs per nacht, de omzet per soort, het gemiddeld aantal personen per reservering, en de soorten met meer dan tien reserveringen. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
-18. Als eigenaar wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. *(H5)*
+
+### Admin (eigenaar)
+17. Als admin wil ik een statistiekenpagina met: het aantal plekken per soort, de gemiddelde, laagste en hoogste prijs per nacht, de omzet per soort, het gemiddeld aantal personen per reservering, en de soorten met meer dan tien reserveringen. *(COUNT, AVG, MIN, MAX, SUM, GROUP BY, HAVING)*
+18. Als admin wil ik een logboek zien van wie wat heeft gedaan in het beheergedeelte. Een medewerker die de statistieken of het logboek opent, ziet een 403-pagina. *(H5, H7)*
 
 ### Developer
 19. Als developer wil ik dat alle queries via PDO met prepared statements lopen en alle output via `htmlspecialchars()`. *(H1, H2)*

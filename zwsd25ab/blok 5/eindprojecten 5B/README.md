@@ -35,6 +35,7 @@ Elke student is aan één van de zes thema's toegewezen - zie **[Studentverdelin
 Zorg dat je kan uitleggen:
 - Je ERD: welke tabellen je hebt, waar de foreign keys zitten, waarom een relatie één-op-veel is en aan welke kant de foreign key staat, en waarom een kolom `NULL` mag zijn
 - Hoe je van het verhaal van de opdrachtgever bent gekomen tot je ERD
+- Waarom rollen in een aparte tabel staan, en hoe je rolcheck zorgt dat een medewerker niet bij het logboek kan
 - Hoe je je code hebt beveiligd (prepared statements, hashing, `htmlspecialchars()`, sessie- en rolcheck)
 - Een willekeurige regel uit je eigen code - wat doet die, en waarom staat die er?
 

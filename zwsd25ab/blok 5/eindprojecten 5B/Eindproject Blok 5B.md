@@ -44,6 +44,7 @@ Voordat je één regel code schrijft, maak je een **ERD** (Entity Relationship D
 Je ERD bevat:
 - Alle **tabellen** (entiteiten) met hun **kolommen** en **datatypes**
 - Per tabel de **primary key** (PK) en elke **foreign key** (FK)
+- De tabellen `roles` en `users` met de relatie ertussen (zie *Gebruikers en rollen* hieronder)
 - De **relaties** tussen de tabellen, met de kardinaliteit erbij (**1** en **N**, bijvoorbeeld in kraaienpootnotatie). Alle relaties zijn **één-op-veel**.
 - Bij elke kolom of hij `NULL` mag zijn
 
@@ -63,12 +64,51 @@ Werkwijze:
 - Een bestand `sql/database.sql` dat je hele database vanaf nul opbouwt: eerst alle `CREATE TABLE`'s, dan de testdata - **eerst** de tabellen zonder foreign key, **daarna** de tabellen met foreign key
 - Genoeg testdata om je statistieken en filters te kunnen laten zien: minimaal 10 rijen in je hoofdtabel, en een paar rijen waar een `NULL`-kolom echt leeg is
 
+### Gebruikers en rollen
+
+In elk thema zijn er drie soorten gebruikers: een **klant** (of lid, gast, speler), een **medewerker** en een **admin**. Elke soort mag andere dingen:
+
+| Rol | Mag |
+|-----|-----|
+| klant | de eigen gegevens, reserveringen/boekingen/aanvragen bekijken en aanmaken |
+| medewerker | het beheergedeelte: toevoegen, aanpassen, soft delete, de overzichten |
+| admin | alles wat een medewerker mag, plus de **statistiekenpagina** en het **logboek** |
+
+Een admin is dus geen aparte soort mens, maar een **gebruiker met een andere rol**. Dat leg je zo vast in je database:
+- Een tabel `roles` met de rollen (`id`, `name`). Deze tabel heeft geen foreign key, dus die vul je in `database.sql` als **eerste**.
+- Eén tabel `users` voor **alle** gebruikers, met een kolom `role_id` als **foreign key** naar `roles`. Een rol heeft veel gebruikers, een gebruiker heeft één rol: een **één-op-veel** relatie.
+- **Geen** aparte tabellen als `admins`, `medewerkers` of `klanten`, en **geen** rol als losse tekst in `users`.
+- Wie zich registreert, krijgt op de server automatisch de rol klant - de rol komt **nooit** uit het formulier.
+- Medewerkers en de admin zet je in je testdata in `database.sql`.
+
+Bij het inloggen haal je de naam van de rol op met een `LEFT JOIN` en zet je die in de sessie, net als in Hoofdstuk 5:
+
+```php
+$stmt = $pdo->prepare('SELECT users.*, roles.name AS role
+                       FROM users
+                       LEFT JOIN roles ON users.role_id = roles.id
+                       WHERE users.email = ?');
+$stmt->execute([$email]);
+$user = $stmt->fetch();
+// na password_verify():
+$_SESSION['role'] = $user['role'];
+```
+
+Een pagina waar medewerker én admin mogen komen, controleer je met `in_array()`:
+
+```php
+if (!in_array($_SESSION['role'], ['medewerker', 'admin'])) {
+    header('Location: 403.php');
+    exit;
+}
+```
+
 ### PHP (Hoofdstuk 1 t/m 7)
 - **H1** - alle queries via PDO met prepared statements, geen variabelen direct in een SQL-string
 - **H2** - `htmlspecialchars()` op alle output, formulieren gevalideerd vóór opslag, wachtwoorden met `password_hash()` / `password_verify()`
 - **H3** - update-functionaliteit (zie de userstories van je thema)
 - **H4** - soft delete met `deleted_at` + herstellen, en minimaal één actie via **AJAX** (`fetch()`, zonder page reload)
-- **H5** - sessie- én rolcheck op elke beschermde pagina, formulieren alleen via `POST`, id's controleren met `is_numeric()`, een logboek van beheeracties
+- **H5** - sessie- én rolcheck op elke beschermde pagina (klant, medewerker en admin - zie *Gebruikers en rollen*), formulieren alleen via `POST`, id's controleren met `is_numeric()`, een logboek van beheeracties
 - **H6** - een filter waarbij **minimaal 2 filters te combineren** zijn, met een `LEFT JOIN`
 - **H7** - eigen 403-, 404- en 500-pagina's met `http_response_code()`, databasefouten afgevangen met `try`/`catch`
 
@@ -122,7 +162,8 @@ Het dossier bevat minimaal:
 - [ ] Wachtwoorden gehasht en geverifieerd
 - [ ] Alle output ge-escaped met `htmlspecialchars()`
 - [ ] Formulieren gevalideerd, alleen via `POST` verwerkt
-- [ ] Sessie- én rolcheck op alle beschermde pagina's
+- [ ] Rollen in een aparte tabel `roles`, `users.role_id` als foreign key
+- [ ] Sessie- én rolcheck op alle beschermde pagina's; statistieken en logboek alleen voor de admin
 - [ ] Logboek van beheeracties
 
 **Foutafhandeling**
