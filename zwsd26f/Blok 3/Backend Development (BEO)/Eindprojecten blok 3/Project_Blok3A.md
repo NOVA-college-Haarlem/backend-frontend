@@ -210,4 +210,4 @@ Geen punten of percentages - de docent loopt onderstaande checklist met je na, e
 
 ---
 
-*Dit project vormt de basis voor Blok 3B (Projectweek 2), waar je verder bouwt op de overzichts- en detailpagina met extra functionaliteit (filteren, een niet-bestaande les afvangen en een pagina met voordelige lessen).*
+*Dit project vormt de basis voor Blok 3B (Projectweek 2), waar je verder bouwt op de overzichts- en detailpagina met extra functionaliteit (filteren, sorteren, een niet-bestaande les afvangen en een pagina met voordelige lessen).*
