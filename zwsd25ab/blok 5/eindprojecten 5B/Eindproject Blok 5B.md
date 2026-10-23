@@ -37,7 +37,7 @@ In het verhaal van de opdrachtgever staan **geen tabellen, kolommen of relaties*
 - Waar zitten de **één-op-veel relaties** en waar is een **koppeltabel** nodig?
 - Welke kolommen **moeten** gevuld zijn (`NOT NULL`) en welke **mogen leeg** blijven (`NULL`)? In elk verhaal zit minimaal één gegeven dat niet altijd bekend is.
 
-### ERD (maandag)
+### ERD (maandagmiddag)
 
 Voordat je één regel code schrijft, maak je een **ERD** (Entity Relationship Diagram) van je database. Gebruik [dbdiagram.io](https://dbdiagram.io) of [draw.io](https://draw.io) en lever het op als `docs/erd.png` in je repository.
 
@@ -53,7 +53,7 @@ Werkwijze:
 2. Zoek de zinnen als *"een klant kan meerdere ..."* en *"een ... wordt door veel ... geboekt"* - daar zitten je relaties.
 3. Controleer of je met je ERD **elke userstory** kunt bouwen. Zoek bijvoorbeeld uit welke tabellen je moet koppelen voor de statistiekenpagina en de `LEFT JOIN`-lijst.
 
-> ✅ **Laat je ERD op maandag aftekenen voordat je gaat bouwen.** Verander je later in de week je database? Pas dan ook je ERD aan - ERD en `sql/database.sql` moeten aan het eind met elkaar kloppen.
+> ✅ **Laat je ERD op maandagmiddag aftekenen voordat je gaat bouwen.** Verander je later in de week je database? Pas dan ook je ERD aan - ERD en `sql/database.sql` moeten aan het eind met elkaar kloppen.
 
 ## Technische eisen
 
@@ -101,10 +101,10 @@ Het dossier bevat minimaal:
 
 > Je mag de queries uit je applicatie hergebruiken in je dossier. Het dossier laat zien dat je ze ook zónder PHP kunt schrijven en uitleggen.
 
-## Checklist (aftekenen op donderdag)
+## Checklist (aftekenen op vrijdag)
 
 **Database en SQL**
-- [ ] ERD afgetekend (maandag) en opgeleverd als `docs/erd.png`
+- [ ] ERD afgetekend (maandagmiddag) en opgeleverd als `docs/erd.png`
 - [ ] ERD bevat PK's, FK's, kardinaliteit (1/N), koppeltabel en `NULL`-kolommen
 - [ ] ERD klopt met `sql/database.sql`
 - [ ] `sql/database.sql` bouwt de hele database zonder fouten op
