@@ -3,10 +3,10 @@
 ## Week 1: Herhaling & CSS Selectoren Uitbreiden
 
 ### Algemene Informatie
-- **Doelgroep:** MBO studenten die Blok 1 hebben afgerond
+- **Doelgroep:** MBO-4-studenten die Blok 1 hebben afgerond
 - **Lesduur:** 90 minuten
 - **Voorkennis:** HTML basis, CSS basis, box model, classes & IDs
-- **Tools:** VS Code, Browser DevTools
+- **Tools:** VSCodium, Browser DevTools
 
 ---
 
@@ -23,43 +23,7 @@ Na deze les kan de student:
 
 ### Lesopbouw (90 minuten)
 
-**1. Welkom Terug & Terugblik Blok 1 (15 min)**
-
-**Snelle Check:**
-Vraag aan de klas:
-- "Wat is het box model?" (content, padding, border, margin)
-- "Wat is het verschil tussen een class en een ID?" (class herbruikbaar, ID uniek)
-- "Hoe maak je ruimte binnen een element?" (padding)
-- "Hoe maak je ruimte tussen elementen?" (margin)
-
-**Demo: Even Opfrissen**
-```html
-<div class="voorbeeld">
-    <h2>Voorbeeld</h2>
-    <p>Dit is een paragraaf met padding en margin.</p>
-</div>
-```
-
-```css
-.voorbeeld {
-    background-color: lightblue;
-    padding: 20px;        /* Ruimte binnen */
-    margin: 20px;         /* Ruimte buiten */
-    border: 2px solid blue;
-    border-radius: 10px;
-}
-```
-
-**Wat gaan we dit blok leren?**
-- Mooie buttons maken
-- Professionele cards bouwen
-- Navigatie stylen
-- Formulieren mooi maken
-- En nog veel meer CSS trucjes!
-
----
-
-**2. Descendant Selectors (20 min)**
+**2. Descendant Selectors**
 
 **Wat is een Descendant Selector?**
 Een descendant selector selecteert elementen die *binnen* een ander element zitten.
@@ -112,31 +76,9 @@ Een descendant selector selecteert elementen die *binnen* een ander element zitt
 - Specifieke styling voor specifieke plekken
 - Code blijft overzichtelijker
 
-**Oefening 1 (10 min):**
-```html
-<div class="blog">
-    <h1>Mijn Blog</h1>
-    <article class="post">
-        <h2>Post Titel</h2>
-        <p>Dit is de intro tekst.</p>
-        <p>Dit is de body tekst.</p>
-    </article>
-    <aside class="sidebar">
-        <h3>Over Mij</h3>
-        <p>Tekst in de sidebar.</p>
-    </aside>
-</div>
-```
-
-**Opdrachten:**
-1. Maak alle `<p>` binnen `.post` grijs
-2. Maak de `<h2>` binnen `.post` blauw
-3. Maak alle `<p>` binnen `.sidebar` klein (font-size: 14px)
-4. Maak alle headings (h1, h2, h3) binnen `.blog` een lettertype Arial
-
 ---
 
-**3. Child Selector (>) (10 min)**
+**3. Child Selector (>)**
 
 **Wat is het verschil met Descendant?**
 - Descendant: selecteert ALLE kinderen (ook dieper genest)
@@ -202,9 +144,86 @@ Als je ALLEEN de directe kinderen wilt stylen, niet alles dieper.
 }
 ```
 
+**Oefening 1 - Descendant selector vs Child selector:**
+
+1. Maak een nieuwe HTML-pagina `mijnblog.html`
+2. Typ `!` en dan Enter
+3. Plak de volgende code in de `<body>`
+
+```html
+<div class="blog">
+    <h1>Mijn Blog</h1>
+    <article class="post">
+        <h2>Post Titel</h2>
+        <p>Dit is de intro tekst.</p>
+        <p>Dit is de body tekst.</p>
+        <section class="content">
+            <p>Dit is een geneste paragraaf in een section</p>
+        </section>
+    </article>
+    <aside class="sidebar">
+        <h3>Over Mij</h3>
+        <p>Tekst in de sidebar.</p>
+        <div class="widget">
+            <p>Dit is een paragraaf in een widget div</p>
+        </div>
+    </aside>
+</div>
+```
+
+**Opdrachten (gebruik Descendant Selector):**
+
+1. Maak alle `<p>` ERGENS binnen `.post` grijs (ook die in `.content`)
+2. Maak alle `<p>` ERGENS binnen `.sidebar` klein (font-size: 14px) (ook die in `.widget`)
+
+**Opdrachten (gebruik Child Selector):**
+
+3. Maak de `<h2>` die DIRECT kind is van `.post` blauw
+4. Maak alle headings (h1, h2, h3) die DIRECT kinderen zijn van `.blog` een lettertype Arial
+5. Maak alle `<p>` die DIRECT kinderen zijn van `.post` **onderlijnd** (niet die in `.content`)
+
+**Verwacht resultaat:**
+
+- Opdracht 1 & 2: Alle paragrafen, ook geneste, krijgen de styling
+- Opdracht 3, 4, 5: Alleen DIRECTE kinderen worden gestyld (geneste elementen niet)
+
 ---
 
-**4. Adjacent Sibling Selector (+) (10 min)**
+**Oefening 2 (10 min) - Adjacent Sibling (+) en Multiple Selectors (,):**
+
+```html
+<div class="artikel">
+    <h2>Interessante Titel</h2>
+    <p>Dit is de intro paragraaf direct na de titel.</p>
+    <p>Dit is een normale paragraaf.</p>
+    <p>Nog een paragraaf.</p>
+    
+    <h2>Tweede Titel</h2>
+    <p>Dit is weer de intro paragraaf na een titel.</p>
+    <p>Nog een normale paragraaf.</p>
+    
+    <h3>Kleine Titel</h3>
+    <span>Dit is een span, niet een p</span>
+    <p>Deze p komt niet direct na h3</p>
+</div>
+```
+
+**Opdrachten:**
+
+1. **Adjacent Sibling:** Maak ALLEEN de EERSTE `<p>` na elke `<h2>` vetgedrukt (font-weight: bold) en groen (color: green)
+2. **Multiple Selectors:** Maak alle `<h2>` EN `<h3>` grijs (color: gray) met lettertype Arial
+3. **Combinatie:** Maak de EERSTE `<p>` na `<h2>` EN `<h3>` een groter lettertype (font-size: 18px)
+
+**Tip:** Voor opdracht 3 kun je twee adjacent sibling selectors combineren met komma!
+
+**Verwacht resultaat:**
+- Opdracht 1: Alleen de intro paragrafen na h2 zijn groen en vet
+- Opdracht 2: h2 en h3 zijn grijs met Arial
+- Opdracht 3: Intro paragrafen (na h2 EN h3) zijn groter (note: na h3 geen p direct, dus dit werkt alleen voor h2)
+
+---
+
+**4. Adjacent Sibling Selector (+)**
 
 **Wat doet het?**
 Selecteert een element dat DIRECT NA een ander element komt.
@@ -246,7 +265,7 @@ h1 + p {
 
 ---
 
-**5. Multiple Selectors (,) (10 min)**
+**5. Multiple Selectors (,)**
 
 **Wat is het?**
 Meerdere elementen dezelfde styling geven.
@@ -297,9 +316,11 @@ h1 p {
 }
 ```
 
+
+
 ---
 
-**6. Pseudo-classes: :hover en :focus (20 min)**
+**6. Pseudo-classes: :hover en :focus**
 
 **Wat zijn pseudo-classes?**
 Speciale selectors voor specifieke states van elementen.
@@ -366,7 +387,7 @@ form input:focus {
 }
 ```
 
-**Oefening 2 (10 min):**
+**Oefening 2:**
 Maak deze HTML na en style het:
 ```html
 <div class="card">
@@ -385,7 +406,7 @@ Maak deze HTML na en style het:
 
 ---
 
-**7. Grote Oefening: Combineer Alles (15 min)**
+**7. Grote Oefening: Combineer Alles**
 
 **Opdracht:**
 Gegeven deze HTML, schrijf de CSS:
@@ -434,7 +455,7 @@ Gegeven deze HTML, schrijf de CSS:
 
 ---
 
-### Huiswerk
+### Extra uitdaging
 
 **Opdracht 1: Selector Oefeningen (15 variaties)**
 
