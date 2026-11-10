@@ -1,0 +1,29 @@
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:11.4
+    environment:
+      MARIADB_ROOT_PASSWORD: password
+      MARIADB_DATABASE: smaakmakers
+    volumes:
+      - dbdata:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:5.2
+    ports:
+      - "8000:80"
+    environment:
+      PMA_HOST: mariadb
+    depends_on:
+      - mariadb
+
+volumes:
+  dbdata:

@@ -16,7 +16,7 @@
 | **1** | *nog niet uitgewerkt voor deze klas* | - | - | - |
 | **2** | *nog niet uitgewerkt voor deze klas* | - | - | - |
 | **3** | **Uitgewerkt** | Herhalings-/inhaalblok, 4C/ID + PRIMM (Hoofdstuk 1-8) | Introductie JavaScript, zelfde ontwerp (Hoofdstuk 1-8) | - |
-| **4** | *nog niet uitgewerkt* | - | - | - |
+| **4** | **Uitgewerkt** (nog niet gegeven) | Formulieren: structuur, keuzevelden, HTML-validatie, styling, responsive en toegankelijk (Hoofdstuk 1-6) - zie `zwsd26f/Blok 4/Frontend Development (FEO)/blok4-samenvatting.md` | Data-gedreven pagina's: functies/`return`, elementen maken, objecten + `fetch`, filteren, client- vs. server-side validatie (Hoofdstuk 1-6) - zie `zwsd26f/Blok 4/Frontend Development (FEO)/JavaScript (JSO)/blok4-samenvatting.md`; startsite `starter-website-3/` (De Smaakmakers) | POST/CREATE, server-side validatie, registreren, inloggen/sessions, JOINS, zoeken, dashboard (Hoofdstuk 1-9) op dezelfde site - zie `zwsd26f/Blok 4/Backend Development (BEO)/blok4-samenvatting.md` |
 
 Alleen Blok 3 heeft op dit moment lesmateriaal voor 26F. Blok 1, 2 en 4 zijn nog open - zie Openstaande punten.
 
@@ -71,7 +71,7 @@ Elke taakklasse bevat één **"Debug deze AI-output"**-oefening (Hoofdstuk 3, 6 
 
 **Toetsing Hoofdstuk 8:** naast de gebruikelijke productrubric weegt een kort **verantwoordingsgesprek** (5 min/student) mee als apart criterium - de docent wijst een willekeurige regel aan, de student legt uit wat die doet en waarom. Dit voorkomt dat een werkende site zonder begrip als voldoende telt.
 
-Volledige lesuitwerking: `zwsd26f/Blok 3/Frontend Development (FEO)/` (`blok3-samenvatting.md` + Hoofdstuk 1-8, elk met een studentversie in de hoofdmap en een docentenhandleiding in `Docent/`).
+Volledige lesuitwerking: `zwsd26f/Blok 3/Frontend Development (FEO)/` (`blok3-samenvatting.md` + Hoofdstuk 1-8, elk met een studentversie in de hoofdmap en een docentenhandleiding in `Docent/` in de docentenrepo (`__docent lesprogramma`)).
 
 ---
 
@@ -109,7 +109,7 @@ Volledige lesuitwerking: `zwsd26f/Blok 3/Frontend Development (FEO)/` (`blok3-sa
 
 **Toetsing Hoofdstuk 8:** zelfde opzet als FEO - naast een productrubric een kort verantwoordingsgesprek per student. Overweeg de FEO- en JS-gesprekken op dezelfde dag te plannen, zodat het als één eindpresentatie van de eigen site voelt.
 
-Volledige lesuitwerking: `zwsd26f/Blok 3/JavaScript (JSO)/` (`blok3-samenvatting.md` + Hoofdstuk 1-8, elk met een studentversie in de hoofdmap en een docentenhandleiding in `Docent/`).
+Volledige lesuitwerking: `zwsd26f/Blok 3/JavaScript (JSO)/` (`blok3-samenvatting.md` + Hoofdstuk 1-8, elk met een studentversie in de hoofdmap en een docentenhandleiding in `Docent/` in de docentenrepo (`__docent lesprogramma`)).
 
 ---
 

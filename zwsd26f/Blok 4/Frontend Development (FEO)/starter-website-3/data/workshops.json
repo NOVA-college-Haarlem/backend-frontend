@@ -1,0 +1,8 @@
+[
+    { "id": 1, "titel": "Verse pasta maken", "categorie": "Italiaans", "datum": "zaterdag 5 december", "prijs": 45, "plekken": 8 },
+    { "id": 2, "titel": "Sushi voor beginners", "categorie": "Aziatisch", "datum": "zaterdag 12 december", "prijs": 55, "plekken": 0 },
+    { "id": 3, "titel": "Brood bakken", "categorie": "Bakken", "datum": "zaterdag 19 december", "prijs": 39.5, "plekken": 4 },
+    { "id": 4, "titel": "Vegetarisch kerstdiner", "categorie": "Vegetarisch", "datum": "zondag 20 december", "prijs": 65, "plekken": 10 },
+    { "id": 5, "titel": "Thaise curry's", "categorie": "Aziatisch", "datum": "zaterdag 9 januari", "prijs": 49, "plekken": 6 },
+    { "id": 6, "titel": "Taarten en gebak", "categorie": "Bakken", "datum": "zaterdag 16 januari", "prijs": 42.5, "plekken": 2 }
+]
