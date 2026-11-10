@@ -12,6 +12,8 @@ Lesmateriaal voor de opleiding Software Development (MBO niveau 4) van NOVA Coll
 
 ## Indeling per klas
 
+De klascode bestaat uit `zwsd`, het jaar van instroom en de klas. Een `f` betekent instroom in **februari** (bijvoorbeeld `zwsd26f`: instroom februari 2026).
+
 | Map | Inhoud |
 |---|---|
 | `zwsd26f/` | Blok 1-4: FEO, JavaScript en BEO op één doorlopend project per blok |
