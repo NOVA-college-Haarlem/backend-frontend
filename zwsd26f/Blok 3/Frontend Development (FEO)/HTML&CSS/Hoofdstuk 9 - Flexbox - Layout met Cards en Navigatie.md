@@ -1,7 +1,5 @@
 ## Hoofdstuk 9: Flexbox - Layout met Cards en Navigatie
 
-*Docentenhandleiding: `Docent/Hoofdstuk 9 - Docentenhandleiding.md`*
-
 **Taakklasse 4 (verdieping)** - Layout: Flexbox & Responsive. Startcode: **jouw eigen Boulder Base** (uit Hoofdstuk 4-7), daarna je eindproject uit Hoofdstuk 8
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → Modify → korte Make
 

@@ -1,7 +1,5 @@
 ## Hoofdstuk 5: Kleuren, Typografie en CSS-variabelen
 
-*Docentenhandleiding: `Docent/Hoofdstuk 5 - Docentenhandleiding.md`*
-
 **Taakklasse 2 van 3** - Boulder Base (vervolg)
 **PRIMM-fasen dit hoofdstuk:** korte Investigate → Modify
 

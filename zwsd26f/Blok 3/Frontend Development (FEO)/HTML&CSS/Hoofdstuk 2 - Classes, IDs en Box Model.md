@@ -1,7 +1,5 @@
 ## Hoofdstuk 2: Classes, IDs en het Box Model
 
-*Docentenhandleiding: `Docent/Hoofdstuk 2 - Docentenhandleiding.md`*
-
 **Taakklasse 1 van 3** - RetroPixel (vervolg)
 **PRIMM-fasen dit hoofdstuk:** korte Investigate-herhaling → Modify
 

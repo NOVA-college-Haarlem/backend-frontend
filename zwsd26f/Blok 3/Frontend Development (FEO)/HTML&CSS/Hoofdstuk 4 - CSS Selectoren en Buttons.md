@@ -1,7 +1,5 @@
 ## Hoofdstuk 4: CSS Selectoren en Buttons
 
-*Docentenhandleiding: `Docent/Hoofdstuk 4 - Docentenhandleiding.md`*
-
 **Taakklasse 2 van 3** - Boulder Base (boulderhal, `starter-website-2/index.html`)
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → Modify
 

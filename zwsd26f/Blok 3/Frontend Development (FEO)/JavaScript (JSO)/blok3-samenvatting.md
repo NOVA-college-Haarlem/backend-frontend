@@ -12,7 +12,7 @@ Studenten krijgen dit blok 1,5 uur per week Frontend (CSS/HTML) én 1,5 uur per 
 
 **Zie voor de onderliggende didactiek** (4C/ID, PRIMM, AI-beleid, Make-fase = eigenaarschap): `../Frontend Development (FEO)/blok3-samenvatting.md`. Dat ontwerp wordt hier één-op-één toegepast op JavaScript, niet opnieuw uitgelegd.
 
-**Bestandsstructuur:** net als bij FEO heeft elk hoofdstuk twee bestanden - `Hoofdstuk N - ....md` (studentversie) en `Docent/Hoofdstuk N - Docentenhandleiding.md` (lesregie, tips, veelgemaakte fouten, AI-toelichting, beoordelingscriteria).
+**Bestandsstructuur:** net als bij FEO heeft elk hoofdstuk twee bestanden - `Hoofdstuk N - ....md` (studentversie) en `Docent/Hoofdstuk N - Docentenhandleiding.md` in de docentenrepo (`__docent lesprogramma`) (lesregie, tips, veelgemaakte fouten, AI-toelichting, beoordelingscriteria).
 
 ---
 

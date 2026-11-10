@@ -1,7 +1,5 @@
 ## Hoofdstuk 10: Responsive Design en Media Queries
 
-*Docentenhandleiding: `Docent/Hoofdstuk 10 - Docentenhandleiding.md`*
-
 **Taakklasse 4 (verdieping)** - Layout: Flexbox & Responsive (vervolg). Startcode: **jouw Boulder Base met Flexbox** (uit Hoofdstuk 9), daarna je eindproject
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → Modify → **Make**
 

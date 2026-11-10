@@ -4,7 +4,7 @@
 **Duur:** 8 hoofdstukken, verdeeld over 3 taakklassen
 **Focus:** Herhaling & Inhaalslag - opgebouwd volgens 4C/ID (hele taken, oplopend in complexiteit) en PRIMM (Predict-Run-Investigate-Modify-Make)
 
-**Bestandsstructuur:** elk hoofdstuk heeft twee bestanden - `Hoofdstuk N - ....md` is de schone, studentgerichte versie (leerdoelen, opdrachten, huiswerk); `Docent/Hoofdstuk N - Docentenhandleiding.md` bevat de volledige lesregie, tips, veelgemaakte fouten en (bij Hoofdstuk 8) de beoordelingscriteria.
+**Bestandsstructuur:** elk hoofdstuk heeft twee bestanden - `Hoofdstuk N - ....md` is de schone, studentgerichte versie (leerdoelen, opdrachten, huiswerk); `Docent/Hoofdstuk N - Docentenhandleiding.md` in de docentenrepo (`__docent lesprogramma`) bevat de volledige lesregie, tips, veelgemaakte fouten en (bij Hoofdstuk 8) de beoordelingscriteria.
 
 ---
 

@@ -1,7 +1,5 @@
 ## Hoofdstuk 3: Klikken Laten Reageren + Eigen Variant
 
-*Docentenhandleiding: `Docent/Hoofdstuk 3 - Docentenhandleiding.md`*
-
 **Taakklasse 1 van 3** - RetroPixel (afronding)
 **PRIMM-fasen dit hoofdstuk:** Investigate → Modify → **Make** (eigen variant)
 

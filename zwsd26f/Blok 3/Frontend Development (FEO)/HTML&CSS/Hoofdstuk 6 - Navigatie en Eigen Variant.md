@@ -1,7 +1,5 @@
 ## Hoofdstuk 6: Navigatie en Eigen Variant
 
-*Docentenhandleiding: `Docent/Hoofdstuk 6 - Docentenhandleiding.md`*
-
 **Taakklasse 2 van 3** - Boulder Base (afronding)
 **PRIMM-fasen dit hoofdstuk:** Modify (navigatie) → **Make** (eigen variant)
 

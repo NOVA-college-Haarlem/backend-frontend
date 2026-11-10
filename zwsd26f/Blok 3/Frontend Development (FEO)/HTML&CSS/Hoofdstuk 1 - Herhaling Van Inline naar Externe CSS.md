@@ -1,7 +1,5 @@
 ## Hoofdstuk 1: Herhaling - Van Inline naar Externe CSS
 
-*Docentenhandleiding: `Docent/Hoofdstuk 1 - Docentenhandleiding.md`*
-
 **Taakklasse 1 van 3** - RetroPixel (gameshop, eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel))
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → eerste Modify
 

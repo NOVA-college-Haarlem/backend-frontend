@@ -1,7 +1,5 @@
 ## Hoofdstuk 4: Condities Toepassen - Actieplekken bij Boulder Base
 
-*Docentenhandleiding: `Docent/Hoofdstuk 4 - Docentenhandleiding.md`*
-
 **Taakklasse 2 van 3** - Boulder Base (gedeeld met FEO, `starter-website-2/`)
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → Modify
 
