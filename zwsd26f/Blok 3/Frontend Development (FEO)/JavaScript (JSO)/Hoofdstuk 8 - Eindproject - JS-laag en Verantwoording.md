@@ -1,7 +1,5 @@
 ## Hoofdstuk 8: Eindproject - JS-laag + Verantwoording
 
-*Docentenhandleiding: `Docent/Hoofdstuk 8 - Docentenhandleiding.md`*
-
 **Taakklasse 3 van 3** - volledige **Make**, op het FEO-eindproject
 **PRIMM-fase dit hoofdstuk:** Make + verantwoordingsgesprek
 

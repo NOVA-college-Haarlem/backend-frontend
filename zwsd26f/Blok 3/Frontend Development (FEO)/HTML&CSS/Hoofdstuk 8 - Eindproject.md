@@ -1,7 +1,5 @@
 ## Hoofdstuk 8: Eindproject - Complete Website + Verantwoording
 
-*Docentenhandleiding: `Docent/Hoofdstuk 8 - Docentenhandleiding.md`*
-
 **Taakklasse 3 van 3** - volledige **Make**
 **PRIMM-fase dit hoofdstuk:** Make + verantwoordingsgesprek
 

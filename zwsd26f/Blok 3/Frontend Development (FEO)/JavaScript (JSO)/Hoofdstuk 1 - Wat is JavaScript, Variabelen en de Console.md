@@ -1,7 +1,5 @@
 ## Hoofdstuk 1: Wat is JavaScript? Variabelen & de Console
 
-*Docentenhandleiding: `Docent/Hoofdstuk 1 - Docentenhandleiding.md`*
-
 **Taakklasse 1 van 3** - RetroPixel (gedeeld met FEO, eigen repo: [NOVA-college-Haarlem/RetroPixel](https://github.com/NOVA-college-Haarlem/RetroPixel))
 **PRIMM-fasen dit hoofdstuk:** Predict → Run → Investigate → eerste Modify
 

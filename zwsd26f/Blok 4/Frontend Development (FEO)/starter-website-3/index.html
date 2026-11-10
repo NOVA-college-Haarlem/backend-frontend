@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Smaakmakers - Kookworkshops</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">De Smaakmakers</div>
+        <nav>
+            <a href="#workshops">Workshops</a>
+            <a href="#inschrijven">Inschrijven</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <h1>Leer koken als een chef</h1>
+        <p>Kookworkshops in kleine groepen - voor iedereen die van eten houdt</p>
+        <a href="#workshops" class="knop">Bekijk workshops</a>
+    </section>
+
+    <section id="workshops" class="container">
+        <h2>Onze workshops</h2>
+
+        <div class="cards">
+            <article class="card">
+                <h3>Verse pasta maken</h3>
+                <p class="categorie">Italiaans</p>
+                <p>Zaterdag 5 december</p>
+                <p class="prijs">€ 45</p>
+                <p>Nog 8 plekken</p>
+                <a href="#inschrijven" class="knop">Schrijf je in</a>
+            </article>
+
+            <article class="card">
+                <h3>Sushi voor beginners</h3>
+                <p class="categorie">Aziatisch</p>
+                <p>Zaterdag 12 december</p>
+                <p class="prijs">€55,-</p>
+                <p class="vol">Vol!</p>
+                <a href="#inschrijven" class="knop">Schrijf je in</a>
+            </article>
+
+            <article class="card">
+                <h3>Brood bakken</h3>
+                <p class="categorie">Bakken</p>
+                <p>Zaterdag 19 december</p>
+                <p class="prijs">€ 39,50</p>
+                <p>Nog 4 plekken</p>
+                <a href="#inschrijven" class="knop">Schrijf je in</a>
+            </article>
+
+            <article class="card">
+                <h3>Vegetarisch kerstdiner</h3>
+                <p class="categorie">Vegetarisch</p>
+                <p>Zondag 20 december</p>
+                <p class="prijs">65 euro</p>
+                <p>Nog 10 plekken</p>
+                <a href="#inschrijven" class="knop">Schrijf je in</a>
+            </article>
+
+            <article class="card">
+                <h3>Thaise curry's</h3>
+                <p class="categorie">Aziatisch</p>
+                <p>Zaterdag 9 januari</p>
+                <p class="prijs">€ 49,00</p>
+                <p>Nog 6 plekken</p>
+                <a href="#inschrijven" class="knop">Schrijf je in</a>
+            </article>
+
+            <article class="card">
+                <h3>Taarten en gebak</h3>
+                <p class="categorie">Bakken</p>
+                <p>Zaterdag 16 januari</p>
+                <p class="prijs">€ 42,5</p>
+                <p>Nog 2 plekken</p>
+                <a href="#inschrijven" class="knop">Schrijf je in</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="inschrijven" class="container">
+        <h2>Inschrijven</h2>
+        <p id="gekozen"></p>
+
+        <form action="verwerk.php" method="post">
+            <input type="text" name="naam" placeholder="Naam">
+
+            <input type="text" name="email" placeholder="E-mailadres">
+
+            Telefoon (optioneel)
+            <input type="text" name="telefoon">
+
+            <select name="workshop" id="workshop">
+                <option value="">-- Kies een workshop --</option>
+                <option value="1">Verse pasta maken</option>
+                <option value="2">Sushi voor beginners</option>
+                <option value="3">Brood bakken</option>
+                <option value="4">Vegetarisch kerstdiner</option>
+                <option value="5">Thaise curry's</option>
+                <option value="6">Taarten en gebak</option>
+            </select>
+
+            Aantal personen
+            <input type="text" name="aantal" value="1">
+
+            <textarea name="opmerking" placeholder="Allergieën of opmerkingen"></textarea>
+
+            <input type="checkbox" name="akkoord"> Ik ga akkoord met de voorwaarden
+
+            <input type="hidden" name="prijs" id="prijs" value="0">
+
+            <button type="submit">Verstuur</button>
+        </form>
+    </section>
+</main>
+
+<footer id="contact">
+    <div class="container">
+        <p>De Smaakmakers - Pannenlaan 12, Haarlem</p>
+        <p>info@desmaakmakers.nl</p>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

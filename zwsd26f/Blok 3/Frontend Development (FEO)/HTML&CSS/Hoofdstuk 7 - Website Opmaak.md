@@ -1,7 +1,5 @@
 ## Hoofdstuk 7: Complete Website-opmaak
 
-*Docentenhandleiding: `Docent/Hoofdstuk 7 - Docentenhandleiding.md`*
-
 **Taakklasse 3 van 3** - eigen variant (van RetroPixel of Boulder Base) wordt afgerond
 **PRIMM-fasen dit hoofdstuk:** Predict → Investigate → Modify
 

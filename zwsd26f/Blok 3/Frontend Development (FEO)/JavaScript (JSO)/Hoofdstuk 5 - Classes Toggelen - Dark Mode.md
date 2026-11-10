@@ -1,7 +1,5 @@
 ## Hoofdstuk 5: Classes Toggelen - Dark Mode & Interactieve States
 
-*Docentenhandleiding: `Docent/Hoofdstuk 5 - Docentenhandleiding.md`*
-
 **Taakklasse 2 van 3** - Boulder Base (vervolg)
 **PRIMM-fasen dit hoofdstuk:** Investigate → Modify
 

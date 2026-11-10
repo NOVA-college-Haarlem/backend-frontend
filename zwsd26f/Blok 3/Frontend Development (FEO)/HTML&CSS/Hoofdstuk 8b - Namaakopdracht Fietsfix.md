@@ -1,7 +1,5 @@
 ## Hoofdstuk 8b: Namaakopdracht - Fietsfix
 
-*Docentenhandleiding: `Docent/Hoofdstuk 8b - Docentenhandleiding.md`*
-
 **Extra opdracht bij het eindproject** - alle technieken uit Hoofdstuk 1 t/m 8
 **PRIMM-fase:** Make (naar een ontwerp)
 

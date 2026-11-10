@@ -1,7 +1,5 @@
 ## Hoofdstuk 2: De DOM Selecteren en Aanpassen
 
-*Docentenhandleiding: `Docent/Hoofdstuk 2 - Docentenhandleiding.md`*
-
 **Taakklasse 1 van 3** - RetroPixel (vervolg)
 **PRIMM-fasen dit hoofdstuk:** Investigate → Modify
 

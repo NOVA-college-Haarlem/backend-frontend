@@ -1,7 +1,5 @@
 ## Hoofdstuk 7: Formulier-input Lezen & Feedback Tonen
 
-*Docentenhandleiding: `Docent/Hoofdstuk 7 - Docentenhandleiding.md`*
-
 **Taakklasse 3 van 3** - Boulder Base contactformulier / eigen variant
 **PRIMM-fasen dit hoofdstuk:** Predict → Investigate → Modify
 
