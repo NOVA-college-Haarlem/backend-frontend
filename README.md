@@ -12,7 +12,17 @@ Lesmateriaal voor de opleiding Software Development (MBO niveau 4) van NOVA Coll
 
 ## Indeling per klas
 
-De klascode bestaat uit `zwsd`, het jaar van instroom en de klas. Een `f` betekent instroom in **februari** (bijvoorbeeld `zwsd26f`: instroom februari 2026).
+Een klascode bestaat uit vier delen:
+
+| Deel | Betekenis |
+|---|---|
+| `zw` | Locatie **Zijlweg** |
+| `sd` | **Software Developer** |
+| `26` | Jaar van instroom |
+| `a`, `b`, `ab` | Klas A, klas B, of beide klassen samen |
+| `f` | Instroom in **februari** |
+
+Voorbeelden: `zwsd25ab` is klas A en B van 2025, `zwsd26f` is de februari-instroom van 2026.
 
 | Map | Inhoud |
 |---|---|
