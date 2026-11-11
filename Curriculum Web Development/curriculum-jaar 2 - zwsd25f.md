@@ -2,7 +2,7 @@
 
 **Opleiding:** MBO niveau 4, Software Development
 **Klas:** zwsd25f
-**Scope:** Blok 5 t/m Blok 8 (jaar 2) - dit document dekt Blok 5, 6 en 7, zie Openstaande punten
+**Scope:** Blok 5 t/m Blok 8 (jaar 2) - dit document dekt Blok 5, 6 en 7; Blok 8 is gedeeltelijk gevuld, zie Openstaande punten
 **Bron:** `zwsd25f`
 
 > Zie `curriculum-jaar 1 - zwsd25f.md` voor Blok 3-4 van dit cohort. Dit document staat los van de curricula van zwsd26ab en zwsd26f.
@@ -16,9 +16,9 @@
 | **5** | Uitgewerkt | Backend-verdieping: PDO, security, soft delete, AJAX, filtering, error handling (plain PHP) + eindproject |
 | **6** | Uitgewerkt | Laravel: MVC, Eloquent-relaties, CRUD, authenticatie/autorisatie, bestellingen (many-to-many) + projecten |
 | **7** | Uitgewerkt | API's: consumeren, cachen, visualiseren, e-mail, een eigen REST API bouwen, full stack app + projectlessen |
-| **8** | *nog niet in deze repo* | - |
+| **8** | Gedeeltelijk | Lessenreeks *Je code mondeling toelichten* (4 lessen): eigen Laravel-app verantwoorden met WHWA, design patterns, kwaliteit en beveiliging, proefassessment. `blok 8/Je code mondeling toelichten.md`; docentenhandleiding in de docentenrepo |
 
-Blok 8 is (nog) niet aanwezig in deze repo - dit cohort heeft op het moment van schrijven vermoedelijk Blok 7 net afgerond of is daar nog mee bezig.
+Van Blok 8 staat alleen de lessenreeks *Je code mondeling toelichten* in deze repo (voorbereiding op het mondeling assessment).
 
 ---
 
@@ -146,5 +146,5 @@ Na deze drie blokken kan een zwsd25f-student:
 
 ## 6. Openstaande punten
 
-- **Blok 8 ontbreekt** in deze repo - nog te documenteren zodra er materiaal is.
+- **Blok 8 is gedeeltelijk:** alleen de lessenreeks *Je code mondeling toelichten*. Overige inhoud nog te documenteren.
 - Zie ook `.claude/todo.md` voor de actuele stand van openstaand werk.
