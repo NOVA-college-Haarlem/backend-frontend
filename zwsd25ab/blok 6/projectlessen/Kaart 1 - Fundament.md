@@ -8,6 +8,8 @@
 
 > 💡 Op deze kaart staat bij elke stap precies wat je in de terminal typt. Vanaf kaart 2 doe je het commit-deel zelf: na elke stap die werkt, commit en push je.
 
+> 🔄 **Heb je in les 1 al een eigen repository `solestore` gemaakt?** Volg dan eerst [Overstap naar GitHub-kaarten](Overstap%20naar%20GitHub-kaarten.md) en ga daarna verder bij Deel B.
+
 ---
 
 ## Deel A — Project en GitHub
@@ -60,47 +62,40 @@ git branch -M main
 
 Typ nog een keer `git branch`. Nu moet er `* main` staan.
 
-### Stap 4: Maak een repository op GitHub
+### Stap 4: Maak je repository op GitHub
 
-1. Ga naar https://github.com en log in.
-2. Klik rechtsboven op **+** en kies **New repository**.
-3. Repository name: `solestore`.
-4. Laat **alles** verder leeg: geen README, geen .gitignore, geen license.
+Je repository maak je in de organisatie van school, vanuit een **template**. Daarin zitten de kaarten en de commitcheck al.
+
+1. Open https://github.com/Nova-College-Haarlem-Students/ZWSD25AB---Projectlessen-Blok-6
+2. Klik op de groene knop **Use this template** en kies **Create a new repository**.
+3. Kies bij **Owner** de organisatie `Nova-College-Haarlem-Students` (**niet** je eigen account). Anders ziet je docent je kaarten niet.
+4. Repository name: `solestore-` met daarachter je GitHub-naam, bijvoorbeeld `solestore-pietjansen`.
 5. Klik op **Create repository**.
-6. Je ziet nu een pagina met een URL zoals `https://github.com/jouwnaam/solestore.git`. Kopieer die URL.
+6. Ga naar het tabblad **Actions**. Zie je een groene knop om workflows aan te zetten? Klik erop.
+7. Klik op de groene knop **Code** en kopieer de URL.
 
 ### Stap 5: Koppel je project aan GitHub en push
 
 Typ in de terminal (plak jouw URL):
 
 ```bash
-git remote add origin https://github.com/jouwnaam/solestore.git
+git remote add origin https://github.com/Nova-College-Haarlem-Students/solestore-jouwnaam.git
+git pull origin main --allow-unrelated-histories --no-rebase --no-edit
 git push -u origin main
 ```
 
-Ververs de pagina op GitHub. Je ziet nu de bestanden van je project.
+> 💡 `--allow-unrelated-histories` is nodig omdat je project en de repository op GitHub nog niets van elkaar weten. Git voegt ze nu samen.
 
 > ❗ Zie je `error: src refspec main does not match any`? Dan heet je branch nog `master`. Ga terug naar stap 3.
 
-### Stap 6: Zet de commitcheck aan
+### Stap 6: Controleer je repository
 
-1. Maak in je project de map `.github`, en daarin de map `workflows`. Let op de punt voor `github`.
-2. Kopieer het bestand [commitcheck.yml](commitcheck.yml) naar `.github/workflows/commitcheck.yml`.
-3. Commit en push:
+Ververs je repository op GitHub en controleer:
 
-```bash
-git add .
-git commit -m "K1: voeg commitcheck toe"
-git push
-```
+- [ ] Je ziet je Laravel-bestanden (`app`, `routes`, `resources`, ...)
+- [ ] Bij **Issues** staat **Kaart 1 — Fundament**. Duurt het langer dan een minuut? Ga naar **Actions → Kaarten → Run workflow**.
 
-4. Klik op GitHub op het tabblad **Actions**. Je ziet een groen vinkje bij *Commitcheck*.
-
-> 💡 Vanaf nu controleert GitHub bij elke push of je commitberichten met `K1:`, `K2:`, ... beginnen. Een rood kruis betekent dat er een commit zonder kaartnummer tussen zat. Daar krijg je geen straf voor, maar zorg dat de volgende wel goed is.
-
-### Stap 7: Lever je link in
-
-Zet de link naar je repository (`https://github.com/jouwnaam/solestore`) in de Moodle-opdracht.
+> 💡 Vanaf nu controleert GitHub bij elke push of je commitberichten met `K1:`, `K2:`, ... beginnen (tabblad **Actions**, *Commitcheck*). Een rood kruis betekent dat er een commit zonder kaartnummer tussen zat. Daar krijg je geen straf voor, maar zorg dat de volgende wel goed is.
 
 ---
 
@@ -118,7 +113,7 @@ git push
 > - ✅ `K1: voeg Brand model en migration toe`
 > - ❌ `update`, `fix`, `K1: dingen`
 
-### Stap 8: Statische pagina's
+### Stap 7: Statische pagina's
 Maak de routes en views `/`, `/over` en `/contact` met tekst over SoleStore (zie H1 opdracht 3).
 
 ```bash
@@ -127,7 +122,7 @@ git commit -m "K1: voeg home, over en contact pagina toe"
 git push
 ```
 
-### Stap 9: Merken in de database
+### Stap 8: Merken in de database
 Maak een model, migration en seeder voor **Brand** met de kolommen `name`, `country` en `description` (mag leeg zijn: `nullable()`). Seed minimaal **5 merken**. Controleer met `php artisan migrate:fresh --seed`.
 
 ```bash
@@ -136,7 +131,7 @@ git commit -m "K1: voeg Brand model, migration en seeder toe"
 git push
 ```
 
-### Stap 10: Merken tonen
+### Stap 9: Merken tonen
 Maak een `BrandController` met `index` en `show`. `/brands` toont alle merken, `/brands/{id}` toont één merk. Een id dat niet bestaat, geeft een 404 (`findOrFail`).
 
 ```bash
@@ -145,7 +140,7 @@ git commit -m "K1: toon overzicht en detailpagina van merken"
 git push
 ```
 
-### Stap 11: Sneakers in de database
+### Stap 10: Sneakers in de database
 Maak een model, migration en seeder voor **Sneaker** met de kolommen `name`, `colorway`, `release_year`, `description` en `brand_id`. Maak `brand_id` een foreign key: `$table->foreignId('brand_id')->constrained();`. Seed minimaal **10 sneakers**, verdeeld over de merken.
 
 > Let op: de seeder van merken moet in `DatabaseSeeder` **vóór** de seeder van sneakers staan. Waarom?
@@ -156,7 +151,7 @@ git commit -m "K1: voeg Sneaker model, migration en seeder toe"
 git push
 ```
 
-### Stap 12: Sneakers tonen
+### Stap 11: Sneakers tonen
 Maak een `SneakerController` met `index` en `show`. `/sneakers` toont alle sneakers, `/sneakers/{id}` toont één sneaker. Een id dat niet bestaat, geeft een 404.
 
 ```bash
@@ -169,27 +164,21 @@ git push
 
 ## Deel C — Aftekenen
 
-### Stap 13: Controleer jezelf
-Loop de **aftekencriteria** hieronder na. Werkt alles? Kijk op GitHub of je laatste commit erop staat (en of de commitcheck groen is).
+### Stap 12: Controleer jezelf
+Loop de **aftekencriteria** hieronder na. Werkt alles? Kijk op GitHub of je laatste commit erop staat en of de commitcheck groen is.
 
-### Stap 14: Zet een tag
-Een tag is een label op je laatste commit. Zo is precies te zien welke versie de docent heeft afgetekend.
+### Stap 13: Zet je kaart klaar
+1. Ga op GitHub naar **Issues** en open **Kaart 1 — Fundament**.
+2. Typ onderaan als reactie: `/klaar` en klik op **Comment**.
+3. Na een halve minuut krijgt de kaart het label **aftekenen** en verschijnt er een overzicht van je commits. Je staat nu in de wachtrij van je docent.
 
-```bash
-git tag kaart-1
-git push origin kaart-1
-```
+> ❗ Sluit de kaart **niet** zelf. Alleen je docent kan aftekenen.
 
-Controleer op GitHub: klik op **Tags** (naast de branchnaam). Daar staat `kaart-1`.
+### Stap 14: Laat aftekenen
+Je docent komt langs. Je laat in de browser zien dat alles werkt, en je beantwoordt een uitlegvraag.
 
-> ❗ Heb je na het taggen nog iets aangepast voordat de docent heeft afgetekend? Verplaats de tag dan naar je nieuwste commit:
-> ```bash
-> git tag -f kaart-1
-> git push -f origin kaart-1
-> ```
-
-### Stap 15: Laat aftekenen
-Steek je hand op. Je laat in de browser zien dat alles werkt, en je beantwoordt een uitlegvraag.
+- **Goed?** Je docent sluit de kaart. **Kaart 2** verschijnt bij Issues.
+- **Nog niet goed?** Je krijgt feedback op de kaart. Pas aan, commit, push en typ opnieuw `/klaar`.
 
 ---
 
@@ -199,9 +188,8 @@ Steek je hand op. Je laat in de browser zien dat alles werkt, en je beantwoordt 
 - [ ] `/`, `/over` en `/contact` werken
 - [ ] `/brands`, `/brands/{id}`, `/sneakers` en `/sneakers/{id}` werken; een onbekend id geeft een 404
 - [ ] `sneakers.brand_id` is een foreign key naar `brands`
-- [ ] Repository staat op GitHub op de branch `main`, de commitcheck is groen
-- [ ] Minimaal **6 commits** met `K1:` ervoor, één per stap
-- [ ] Tag `kaart-1` is gepusht
+- [ ] Repository staat in `Nova-College-Haarlem-Students` op de branch `main`, de commitcheck is groen
+- [ ] Minimaal **5 commits** met `K1:` ervoor, één per stap
 
 ## Uitlegvraag (de docent kiest er één)
 
@@ -211,8 +199,3 @@ Steek je hand op. Je laat in de browser zien dat alles werkt, en je beantwoordt 
 - Waarom moet de seeder van merken vóór die van sneakers?
 - Wat is het verschil tussen `git commit` en `git push`?
 
----
-
-| Afgetekend | Datum | Commit (tag `kaart-1`) | Paraaf docent |
-|------------|-------|------------------------|---------------|
-| ☐ | | | |
