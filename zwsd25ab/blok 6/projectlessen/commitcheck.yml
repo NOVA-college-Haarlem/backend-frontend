@@ -1,0 +1,22 @@
+# Zet dit bestand in je project op: .github/workflows/commitcheck.yml
+# Bij elke push controleert GitHub of je commitberichten beginnen met
+# een kaartnummer (K1: ... t/m K6: ...) of een userstory (US3: ...).
+name: Commitcheck
+
+on: push
+
+jobs:
+  commitberichten:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Controleer commitberichten
+        env:
+          COMMITS: ${{ toJson(github.event.commits) }}
+        run: |
+          fout=$(printf '%s' "$COMMITS" | jq -r '.[].message | split("\n")[0]' | grep -Ev '^((K|US)[0-9]+: |Merge )' || true)
+          if [ -n "$fout" ]; then
+            echo "::error::Deze commits beginnen niet met een kaartnummer (bijv. 'K2: ...'):"
+            echo "$fout"
+            exit 1
+          fi
+          echo "Alle commitberichten zijn in orde."
