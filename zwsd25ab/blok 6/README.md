@@ -44,16 +44,25 @@ In dit lesprogramma leer je hoe je een website maakt met Laravel. Laravel is een
 | Hoofdstuk | Onderwerp | Week |
 |-----------|-----------|------|
 | [Hoofdstuk 1](Hoofdstuk%201%20-%20Introductie%20Laravel.md) | Project Setup en Basis Functionaliteit | 1 |
-| [Hoofdstuk 1b](Hoofdstuk%201b%20-%20Producten.md) | Herhaling MVC voor producten | 1 |
-| [Hoofdstuk 1c](Hoofdstuk%201c%20-%20Detailpagina.md) | Detailpagina's voor categorieen en producten | 1 |
-| [Hoofdstuk 1d](Hoofdstuk%201d%20-%20Layout%20files.md) | Gedeelde layout met props en attribute merge | 1 |
-| [Hoofdstuk 2](Hoofdstuk%202%20-%20Models%20en%20Relaties.md) | Models en Relaties | 2 |
-| [Hoofdstuk 3](Hoofdstuk%203%20-%20CRUD%20Formulieren%20en%20Validatie.md) | CRUD Formulieren en Validatie | 3 |
-| [Hoofdstuk 4](Hoofdstuk%204%20-%20Authenticatie%20en%20Middleware.md) | Authenticatie en Middleware | 4 |
-| [Hoofdstuk 5](Hoofdstuk%205%20-%20Reviews%20en%20Autorisatie.md) | Reviews en Autorisatie | 5 |
-| [Hoofdstuk 6](Hoofdstuk%206%20-%20Bestellingen%20en%20Many-to-Many.md) | Bestellingen en Many-to-Many | 6 |
-| [Hoofdstuk 7](Hoofdstuk%207%20-%20Herhaling%20en%20Verdieping.md) | Herhaling en Verdieping | 7 |
+| [Hoofdstuk 2](Hoofdstuk%202%20-%20Producten.md) | Herhaling MVC voor producten | 1 |
+| [Hoofdstuk 3](Hoofdstuk%203%20-%20Detailpagina.md) | Detailpagina's voor categorieën en producten | 1 |
+| [Hoofdstuk 4](Hoofdstuk%204%20-%20Layout%20files.md) | Gedeelde layout met props en attribute merge | 2 |
+| [Hoofdstuk 5](Hoofdstuk%205%20-%20Eloquent%20relaties%20in%20views.md) | Eloquent relaties in views | 2 |
+| [Hoofdstuk 6](Hoofdstuk%206%20-%20Models%20en%20Relaties.md) | Models en Relaties | 2 |
+| [Hoofdstuk 7](Hoofdstuk%207%20-%20CRUD%20Formulieren%20en%20Validatie.md) | CRUD Formulieren en Validatie | 3 |
+| — | **Projectweek A**: [Eindproject 6A](eindprojecten%206A/Eindproject%20Blok%206A.md) + mondeling | — |
+| [Hoofdstuk 8](Hoofdstuk%208%20-%20Authenticatie%20en%20Middleware.md) | Authenticatie en Middleware | 4 |
+| [Hoofdstuk 9](Hoofdstuk%209%20-%20Reviews%20en%20Autorisatie.md) | Reviews en Autorisatie | 5 |
+| [Hoofdstuk 10](Hoofdstuk%2010%20-%20Bestellingen%20en%20Many-to-Many.md) | Bestellingen en Many-to-Many | 6 |
+| [Hoofdstuk 11](Hoofdstuk%2011%20-%20Herhaling%20en%20Verdieping.md) | Herhaling en Verdieping | 6 |
+| — | **Projectweek B**: [Eindproject 6B](eindprojecten%206B/Eindproject%20Blok%206B.md), mondeling de week erna | — |
 | [Samenvatting H1-3](Samenvatting%20Hoofdstukken%201-3.md) | Samenvatting eerste drie hoofdstukken | — |
+
+## Projectlessen
+
+Elke donderdag (2 × 1,5 uur) bouw je onder begeleiding de sneakerwinkel **SoleStore**, met één aftekenkaart per week. Zie [projectlessen/README.md](projectlessen/README.md).
+
+Docent: commits van alle studenten controleren met `scripts/commit-rapport.sh repos.txt > rapport.md` (uitleg bovenin het script).
 
 ---
 
