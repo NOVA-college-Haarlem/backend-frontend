@@ -76,10 +76,29 @@ Je repository maak je in de organisatie van school, vanuit een **template**. Daa
 
 ### Stap 5: Koppel je project aan GitHub en push
 
-Typ in de terminal (plak jouw URL):
+Kijk eerst of je project al aan een repository gekoppeld is:
+
+```bash
+git remote -v
+```
+
+**Zie je niets?** Koppel je project dan (plak jouw URL uit stap 4):
 
 ```bash
 git remote add origin https://github.com/Nova-College-Haarlem-Students/solestore-jouwnaam.git
+```
+
+**Zie je al regels met `origin`?** Dan is er al een koppeling. Vervang die door jouw nieuwe URL:
+
+```bash
+git remote set-url origin https://github.com/Nova-College-Haarlem-Students/solestore-jouwnaam.git
+```
+
+Controleer het met `git remote -v`. Je ziet twee regels met `origin` en jouw **nieuwe** URL.
+
+Haal nu de kaarten op en push je project:
+
+```bash
 git pull origin main --allow-unrelated-histories --no-rebase --no-edit
 git push -u origin main
 ```

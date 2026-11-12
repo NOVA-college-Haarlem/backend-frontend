@@ -43,6 +43,11 @@ git remote -v
 
 Je ziet twee regels met de **nieuwe** URL.
 
+> ❗ Zie je `error: No such remote 'origin'`? Dan had je project nog geen koppeling. Gebruik dan `add` in plaats van `set-url`:
+> ```bash
+> git remote add origin https://github.com/Nova-College-Haarlem-Students/solestore-jouwnaam.git
+> ```
+
 ## Stap 4: Haal de kaarten op en push
 
 ```bash
