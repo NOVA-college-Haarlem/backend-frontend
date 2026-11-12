@@ -4,7 +4,7 @@
 
 In de theorielessen bouw je de **Spelshop**. Op donderdag (2 × 1,5 uur projectles) bouw je met dezelfde stof een tweede webshop: **SoleStore**, een sneakerwinkel. Iedereen bouwt hetzelfde project, onder begeleiding van de docent.
 
-Het werk is verdeeld over **kaarten**, net als bij een examen. Eén kaart per lesweek. Een kaart is pas af als de docent hem heeft **afgetekend**.
+Het werk is verdeeld over **kaarten**, net als bij een een eindproject. Eén kaart per lesweek. Een kaart is pas af als de docent hem heeft **afgetekend**.
 
 Zo zie je in de projectweek of je de stof echt zelf kunt toepassen. Daar krijg je namelijk een **ander** project, zonder begeleiding.
 
