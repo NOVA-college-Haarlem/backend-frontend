@@ -1,9 +1,9 @@
 # Frontend Ontwikkeling - Blok 2
 
-## Week 5: Lijsten en Navigatie
+## Week 5: Navigatie & HTML Structuur
 
 ### Algemene Informatie
-- **Doelgroep:** MBO studenten
+- **Doelgroep:** MBO-4 studenten (SE & SD)
 - **Lesduur:** 90 minuten
 - **Voorkennis:** HTML lists, CSS selectoren, hover effecten
 - **Tools:** VS Code, Browser
@@ -13,113 +13,46 @@
 ### Leerdoelen
 Na deze les kan de student:
 - HTML lists stylen (`<ul>`, `<ol>`, `<li>`)
-- List-style properties gebruiken
-- Horizontale navigatie maken (zonder Flexbox)
-- Verticale/sidebar navigatie stylen
+- Horizontale navigatie maken
+- Verticale navigatie stylen
 - Active/current state toevoegen aan links
-- Dropdown menu hints maken
-- Footer link groepen stylen
-- Breadcrumb navigatie maken
+- Semantische HTML elementen begrijpen (`<nav>`, `<header>`, `<main>`, `<footer>`)
+- Weten waarom semantische HTML belangrijk is
 
 ---
 
 ### Lesopbouw (90 minuten)
 
-**1. HTML Lists Herhaling (10 min)**
+**1. HTML Lists Recap (10 min)**
 
 **Twee soorten lists:**
 
 ```html
-<!-- Unordered List (bullets) -->
 <ul>
     <li>Item 1</li>
     <li>Item 2</li>
-    <li>Item 3</li>
 </ul>
 
-<!-- Ordered List (nummers) -->
 <ol>
     <li>Stap 1</li>
     <li>Stap 2</li>
-    <li>Stap 3</li>
 </ol>
 ```
 
-**Wanneer gebruik je wat?**
-- `<ul>`: Volgorde maakt niet uit (navigatie, features, links)
-- `<ol>`: Volgorde is belangrijk (stappen, rankings, instructions)
-
----
-
-**2. List Styling Basics (15 min)**
-
-**list-style-type:**
-```css
-/* Bullets weghalen */
-ul {
-    list-style-type: none;
-}
-
-/* Verschillende bullets */
-ul { list-style-type: disc; }    /* ● Standaard */
-ul { list-style-type: circle; }  /* ○ Holle cirkel */
-ul { list-style-type: square; }  /* ■ Vierkant */
-
-/* Nummers stylen */
-ol { list-style-type: decimal; }     /* 1, 2, 3 */
-ol { list-style-type: upper-alpha; } /* A, B, C */
-ol { list-style-type: lower-roman; } /* i, ii, iii */
-```
-
-**list-style-position:**
+**List Styling Basics:**
 ```css
 ul {
-    list-style-position: outside;  /* Standaard */
-}
-
-ul {
-    list-style-position: inside;  /* Bullets binnen tekst */
-}
-```
-
-**Padding en margin resetten:**
-```css
-ul, ol {
-    padding: 0;
-    margin: 0;
-    list-style: none;  /* Shorthand: verwijdert bullets EN padding */
-}
-```
-
-**Custom bullets met emoji's:**
-```html
-<ul class="custom-list">
-    <li>✅ Afgerond</li>
-    <li>⏳ In Progress</li>
-    <li>❌ Te Doen</li>
-</ul>
-```
-
-```css
-.custom-list {
     list-style: none;
     padding: 0;
-}
-
-.custom-list li {
-    padding-left: 25px;
-    margin-bottom: 10px;
+    margin: 0;
 }
 ```
 
-**Oefening 1 (5 min):**
-Maak een lijst met 5 items en probeer 3 verschillende list-style-types uit.
-
 ---
 
-**3. Horizontale Navigatie Maken (20 min)**
+**2. Horizontale Navigatie (25 min)**
 
-**HTML Structuur:**
+**HTML:**
 ```html
 <nav class="horizontal-nav">
     <ul>
@@ -131,58 +64,18 @@ Maak een lijst met 5 items en probeer 3 verschillende list-style-types uit.
 </nav>
 ```
 
-**Methode 1: display: inline-block**
+**CSS Stap voor Stap:**
+
+Stap 1: Bullets weg
 ```css
 .horizontal-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #333;
-}
-
-.horizontal-nav li {
-    display: inline-block;  /* Naast elkaar */
-}
-
-.horizontal-nav a {
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.horizontal-nav a:hover {
-    background-color: #555;
 }
 ```
 
-**Methode 2: float (ouderwets)**
-```css
-.horizontal-nav li {
-    float: left;
-}
-
-.horizontal-nav::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-```
-
-**Stap voor stap samen opbouwen:**
-
-Stap 1: Bullets weg, basis styling
-```css
-.horizontal-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #333;
-}
-```
-
-Stap 2: Li's naast elkaar
+Stap 2: Items naast elkaar
 ```css
 .horizontal-nav li {
     display: inline-block;
@@ -201,17 +94,21 @@ Stap 3: Links stylen
 
 Stap 4: Hover effect
 ```css
+.horizontal-nav {
+    background-color: #333;
+}
+
 .horizontal-nav a:hover {
     background-color: #555;
 }
 ```
 
-**Oefening 2 (10 min):**
-Maak een horizontale navigatie met 5 links en jouw favoriete kleuren.
+**Oefening 1 (10 min):**
+Maak een horizontale navigatie met 5 links.
 
 ---
 
-**4. Active/Current State (10 min)**
+**3. Active State (10 min)**
 
 **Wat is een active state?**
 Laat zien op welke pagina je bent.
@@ -231,43 +128,30 @@ Laat zien op welke pagina je bent.
 ```css
 .horizontal-nav a {
     color: white;
-    /* ... basis styling ... */
+    /* basis styling */
 }
 
 .horizontal-nav a.active {
     background-color: #007bff;
     font-weight: bold;
 }
-
-/* Of met :hover stijl */
-.horizontal-nav a.active {
-    background-color: #555;
-    border-bottom: 3px solid #007bff;
-}
 ```
 
-**Met pseudo-class :active (bij klikken):**
-```css
-.horizontal-nav a:active {
-    background-color: #000;
-}
-```
-
-**Oefening 3 (5 min):**
-Voeg een active state toe aan je navigatie.
+**Oefening 2 (5 min):**
+Voeg active state toe aan je navigatie.
 
 ---
 
-**5. Verticale/Sidebar Navigatie (15 min)**
+**4. Verticale/Sidebar Navigatie (20 min)**
 
 **HTML:**
 ```html
 <nav class="sidebar-nav">
     <ul>
-        <li><a href="#dashboard">📊 Dashboard</a></li>
-        <li><a href="#profile">👤 Profile</a></li>
-        <li><a href="#settings">⚙️ Settings</a></li>
-        <li><a href="#logout">🚪 Logout</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#logout">Logout</a></li>
     </ul>
 </nav>
 ```
@@ -285,10 +169,6 @@ Voeg een active state toe aan je navigatie.
     margin: 0;
 }
 
-.sidebar-nav li {
-    /* Niet inline-block! Gewoon block (standaard) */
-}
-
 .sidebar-nav a {
     display: block;
     padding: 15px 20px;
@@ -301,7 +181,6 @@ Voeg een active state toe aan je navigatie.
 .sidebar-nav a:hover {
     background-color: #34495e;
     border-left-color: #3498db;
-    padding-left: 25px;  /* Schuift iets naar rechts */
 }
 
 .sidebar-nav a.active {
@@ -310,248 +189,102 @@ Voeg een active state toe aan je navigatie.
 }
 ```
 
-**Sub-menu (nested list):**
-```html
-<nav class="sidebar-nav">
-    <ul>
-        <li>
-            <a href="#products">Producten</a>
-            <ul class="submenu">
-                <li><a href="#laptops">Laptops</a></li>
-                <li><a href="#phones">Telefoons</a></li>
-            </ul>
-        </li>
-    </ul>
-</nav>
-```
-
-```css
-.submenu {
-    padding-left: 20px;
-    display: none;  /* Verborgen, later toggle met JS */
-}
-
-.submenu li a {
-    font-size: 14px;
-    padding: 10px 20px;
-}
-```
-
-**Oefening 4 (10 min):**
-Maak een verticale sidebar navigatie met emoji's en hover effecten.
+**Oefening 3 (10 min):**
+Maak een verticale sidebar navigatie met hover effects.
 
 ---
 
-**6. Breadcrumb Navigatie (10 min)**
+**5. Semantische HTML (20 min)**
 
-**Wat zijn breadcrumbs?**
-"Je bent hier" pad: Home > Producten > Laptops
+**Wat zijn semantische elementen?**
+HTML elementen die betekenis dragen, niet alleen `<div>`.
 
-**HTML:**
+**Basis structuur:**
 ```html
-<nav class="breadcrumb">
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Producten</a></li>
-        <li>Laptops</li>
-    </ul>
-</nav>
-```
+<header>
+    <h1>Mijn Website</h1>
+    <nav>...</nav>
+</header>
 
-**CSS:**
-```css
-.breadcrumb ul {
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-}
+<main>
+    <article>
+        <h2>Blog Post</h2>
+        <p>Inhoud</p>
+    </article>
+</main>
 
-.breadcrumb li {
-    display: inline;
-    font-size: 14px;
-    color: #666;
-}
-
-.breadcrumb li + li::before {
-    content: " > ";  /* Pijltje tussen items */
-    padding: 0 8px;
-    color: #999;
-}
-
-.breadcrumb a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-```
-
-**Met emoji pijltjes:**
-```css
-.breadcrumb li + li::before {
-    content: " → ";  /* Of: " / " */
-}
-```
-
----
-
-**7. Footer Link Groepen (10 min)**
-
-**HTML:**
-```html
 <footer>
-    <div class="footer-links">
-        <div class="link-group">
-            <h4>Bedrijf</h4>
-            <ul>
-                <li><a href="#about">Over Ons</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#careers">Vacatures</a></li>
-            </ul>
-        </div>
-
-        <div class="link-group">
-            <h4>Support</h4>
-            <ul>
-                <li><a href="#help">Help Center</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-        </div>
-    </div>
+    <p>Copyright</p>
 </footer>
 ```
 
-**CSS:**
-```css
-footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 40px 20px;
-}
+**Waarom semantische HTML?**
+- ✅ Search engines begrijpen de pagina beter
+- ✅ Accessibility: screenreaders werken beter
+- ✅ Code is duidelijker voor andere developers
+- ✅ Betere SEO (Search Engine Optimization)
 
-.footer-links {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+**Belangrijkste elementen:**
+- `<header>` - Bovenaan pagina (logo, navigatie)
+- `<nav>` - Navigatie links
+- `<main>` - Hoofd content
+- `<article>` - Zelfstandig artikel/blog post
+- `<section>` - Thema section
+- `<aside>` - Zijbalk
+- `<footer>` - Onderaan pagina
 
-.link-group {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 60px;
-}
+**NIET doen:**
+```html
+<!-- ❌ FOUT: alles in <div> -->
+<div class="nav">...</div>
+<div class="content">...</div>
+<div class="footer">...</div>
 
-.link-group h4 {
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
-.link-group ul {
-    list-style: none;
-    padding: 0;
-}
-
-.link-group li {
-    margin-bottom: 10px;
-}
-
-.link-group a {
-    color: #bdc3c7;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.link-group a:hover {
-    color: white;
-}
+<!-- ✅ GOED: semantische elementen -->
+<nav>...</nav>
+<main>...</main>
+<footer>...</footer>
 ```
 
+**Oefening 4 (5 min):**
+Neem een oude pagina en herstructureer met semantische elementen.
+
 ---
 
-**8. Grote Oefening: Complete Navigation System (10 min)**
+**6. Grote Oefening: Complete Navigation System (10 min)**
 
 **Opdracht:**
-Maak een pagina met 3 navigatie types:
+Maak een pagina met:
+1. Header met logo
+2. Horizontale navigatie (met active state)
+3. Main content
+4. Footer
 
-1. **Top Navigatie** (horizontaal)
-   - 5 links
-   - Hover effect
-   - Active state
+```html
+<header>
+    <h1>Mijn Website</h1>
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">Over</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-2. **Sidebar Navigatie** (verticaal)
-   - 6 links met emoji's
-   - Hover effect met border-left
-   - Active state
+<main>
+    <article>
+        <h2>Welkom!</h2>
+        <p>Dit is mijn website.</p>
+    </article>
+</main>
 
-3. **Breadcrumb**
-   - Home > Section > Page
-   - Met pijltjes
+<footer>
+    <p>Copyright 2024</p>
+</footer>
+```
 
-4. **Footer Links**
-   - 3 kolommen
-   - Elk met titel en 4 links
-
----
-
-### Huiswerk
-
-**Hoofdopdracht: Navigation Library**
-
-Maak een HTML pagina met 6 verschillende navigatie stijlen:
-
-1. **Dark Top Navigation**
-   - Donkere achtergrond (#333)
-   - Witte tekst
-   - Hover effect
-   - Active state
-
-2. **Light Top Navigation**
-   - Lichte achtergrond (#f8f9fa)
-   - Donkere tekst
-   - Border-bottom bij hover/active
-
-3. **Colored Sidebar Navigation**
-   - Je favoriete kleur als achtergrond
-   - Emoji's voor elk item
-   - Slide in effect bij hover (padding-left groter)
-
-4. **Minimal Breadcrumb**
-   - Simpele pijltjes
-   - Subtiele kleuren
-
-5. **Footer Link Groups**
-   - 4 kolommen met links
-   - Social media sectie
-
-6. **Dropdown Hint**
-   - Link met "▼" om aan te geven dat er submenu is
-   - Submenu altijd zichtbaar (geen JS toggle)
-
-**Technische eisen:**
-- Alle navigaties gebruiken `<ul>` en `<li>`
-- list-style: none overal
-- Hover effecten met transitions
-- Active states duidelijk zichtbaar
-- Nette CSS met comments
-
-**Opdracht 2: Eigen Portfolio Navigation**
-
-Maak navigatie voor je eindproject portfolio:
-- Top navigatie met je secties (Home, Projecten, Over, Contact)
-- Kies een stijl die bij jou past
-- Mobile versie: alle links onder elkaar (media query!)
-
-**Opdracht 3: Inspiratie Onderzoek**
-
-Bezoek 5 websites en screenshot hun navigatie:
-- Welke styles gebruiken ze?
-- Horizontal of vertical?
-- Welke hover effecten?
-- Active states?
-
-Documenteer je bevindingen.
+Style met CSS. Maak de navegatie mooi en responsive.
 
 ---
 
@@ -560,20 +293,19 @@ Documenteer je bevindingen.
 - [ ] Studenten kunnen horizontale navigatie maken
 - [ ] Studenten kunnen verticale navigatie stylen
 - [ ] Studenten kunnen active states toevoegen
-- [ ] Studenten kunnen breadcrumbs maken
-- [ ] Studenten kunnen footer link groepen maken
+- [ ] Studenten begrijpen semantische HTML
+- [ ] Studenten weten waarom semantiek belangrijk is
 
 ### Tips voor Docent
 - **Laat echte websites zien:** Navigatie is overal!
 - **DevTools:** Inspecteer navigatie van bekende sites
-- **display: inline-block** kan lastig zijn - herhaal het!
+- **Semantieke HTML:** Benadruk het belang voor SEO en accessibility
 - **Veelgemaakte fout:** list-style vergeten te verwijderen
-- **Veelgemaakte fout:** padding/margin niet resetten
-- **Motivatie:** "Navigatie is essentieel voor elke website!"
-- **Live coding:** Bouw samen een navigatie vanaf scratch
+- **Veelgemaakte fout:** display: inline-block spacing issues
+- **Live coding:** Bouw samen een navigatie naar structuur op
 
 ### Resources
-- [Navigation Examples](https://codepen.io/search/pens?q=navigation)
-- [CSS Navigation Tutorial](https://www.w3schools.com/css/css_navbar.asp)
+- [MDN: Semantic HTML](https://developer.mozilla.org/en-US/docs/Glossary/Semantic_HTML)
+- [W3C: Navigation](https://www.w3.org/WAI/tutorials/page-structure/navigation/)
 
 ---

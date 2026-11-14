@@ -1,53 +1,55 @@
-# Week 8: Eindproject - "Complete Website"
+# Week 7: Eindproject - "Complete Website"
 
 ## Projectomschrijving
-Bouw een complete, professioneel uitziende website met ALLE technieken uit Blok 2. Dit is je kans om te laten zien wat je hebt geleerd!
+Bouw een complete website met ALLE technieken uit Blok 2. Publish het online!
+
+Dit is je capstone: laat zien dat je HTML, CSS, Navigatie, Design en Deployment beheerst.
 
 ## Leerdoelen
 Na deze week kan de student:
 - Een complete website zelfstandig bouwen
-- Alle Blok 2 technieken toepassen
-- Design keuzes maken en uitleggen
-- Code netjes organiseren
-- Presenteren voor de klas
+- Alle Blok 2 technieken combineren
+- Website publiceren naar GitHub Pages
+- Design keuzes maken
 
 ## Projecteisen
 
 ### Minimale Vereisten (Voldoende)
 
-**Technisch - Moet erin:**
-- [ ] Professionele navigatie (horizontaal, styled, hover)
-- [ ] Minimaal 5 verschillende button styles
-- [ ] Consistent kleurenschema (3 kleuren max)
-- [ ] Minimaal 2 verschillende fonts
-- [ ] Hero section met call-to-action
-- [ ] Minimaal 8 gestylede afbeeldingen
-- [ ] Gestylede lijsten (bullets of nummers)
-- [ ] 2-kolom layout ergens op de pagina
-- [ ] Gecentreerde content (max-width + margin)
-- [ ] Footer met links
-- [ ] Hover effecten OVERAL
-- [ ] Nette CSS met comments
-
-**Content - Minimaal:**
-- [ ] Header met logo/naam + navigatie
+**Inhoud:**
+- [ ] Header met navigatie (met active state)
 - [ ] Hero section
-- [ ] Over/Info sectie
-- [ ] Features/Diensten sectie
-- [ ] Gallery/Portfolio sectie
-- [ ] Contact info sectie
-- [ ] Footer
+- [ ] 2-3 content secties
+- [ ] Footer met contactinfo
+- [ ] Minimaal 4 afbeeldingen
 
-**Design - Kwaliteit:**
-- [ ] Consistent kleurenschema
-- [ ] Goede leesbaarheid
-- [ ] Professionele spacing
-- [ ] Aantrekkelijk design
+**Design & Styling:**
+- [ ] Consistent kleurenschema (2-3 kleuren)
+- [ ] 2 verschillende fonts (één voor headings, één voor body)
+- [ ] Alle links hebben hover effecten
+- [ ] Buttons zijn gestyled (primary + secondary minimaal)
+- [ ] Goede leesbaarheid (contrast, font-size, line-height)
 
-### Bonus Functies (Goed/Uitstekend)
+**Technisch:**
+- [ ] Semantische HTML (`<header>`, `<nav>`, `<main>`, `<footer>`, etc.)
+- [ ] Externe stylesheet (geen inline styles!)
+- [ ] Nette, georganiseerde CSS
+- [ ] Website geüpload naar GitHub Pages
+- [ ] Website live op URL: `https://username.github.io`
 
-**Extra Styling:**
-- [ ] Meerdere button sizes (small, medium, large)
+### Nice to Have (Goed)
+
+- [ ] Meerdere button types (primary, secondary, danger)
+- [ ] Gestylede lijsten (ul/ol met custom styling)
+- [ ] Afbeeldingen met hover effect (transform: scale)
+- [ ] Sidebar of 2-kolom layout ergens
+- [ ] Box shadows op kaarten/secties
+
+### Extra (Uitstekend)
+
+- [ ] Eigen creativiteit toepassen
+- [ ] Extra features (groepen, formuliervoorbereiding, etc.)
+- [ ] Professioneel design level
 - [ ] Button groepen (buttons naast elkaar)
 - [ ] Active state op navigatie links
 - [ ] Breadcrumb navigatie
