@@ -6,7 +6,7 @@
 - **Doelgroep:** MBO-4 studenten (SE & SD)
 - **Lesduur:** 90 minuten
 - **Voorkennis:** HTML lists, CSS selectoren, hover effecten
-- **Tools:** VS Code, Browser
+- **Tools:** VS Codium, Browser
 
 ---
 
@@ -73,7 +73,7 @@ Navigatie is altijd een `<ul>` / `<li>` + links:
 
 **Hypothese:** "Hoe krijgen zij items naast elkaar?"
 
-*Laat studenten gokken (talsen hints: display, float, flexbox?)*
+*Laat studenten gokken (hints: display, float, flexbox?)*
 
 **De waarheid - display: inline-block:**
 ```css

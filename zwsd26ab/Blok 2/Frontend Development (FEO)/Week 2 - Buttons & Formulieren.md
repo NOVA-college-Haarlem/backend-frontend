@@ -6,7 +6,7 @@
 - **Doelgroep:** MBO-4 studenten (SE & SD)
 - **Lesduur:** 90 minuten
 - **Voorkennis:** CSS selectoren, box model, :hover
-- **Tools:** VS Code, Browser
+- **Tools:** VS Codium, Browser
 
 ---
 
@@ -408,7 +408,8 @@ Style met:
 - **DevTools:** Inspecteer formulieren van bekende websites
 - **Voorbereiding:** Dit is voorbereiding op Blok 3 (form verwerking)
 - **Veelgemaakte fout:** `<label>` vergeten of `for` attribuut niet gekoppeld
-- **Veelgemaakte fout:** Input styling (box-sizing: border-box vergeten)
+- **Veelgemaakte fout:** Buttons/inputs zonder `padding` (zien er klein/smal uit)
+- **Veelgemaakte fout:** Geen `:focus` state op inputs (moeilijk om te zien waar je bent)
 
 ### Resources
 - [MDN: HTML Forms](https://developer.mozilla.org/en-US/docs/Learn/Forms)

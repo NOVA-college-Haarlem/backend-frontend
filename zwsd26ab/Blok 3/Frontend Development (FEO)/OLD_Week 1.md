@@ -4,7 +4,7 @@
 - **Doelgroep:** MBO studenten (15-22 jaar), basis HTML/CSS kennis
 - **Lesduur:** 90 minuten per week
 - **Voorkennis:** Blok 1 (HTML, basis CSS, classes, IDs)
-- **Tools:** VS Code, DevTools
+- **Tools:** VS Codium, DevTools
 
 ---
 
@@ -95,7 +95,7 @@ Met `flex-direction` bepaal je de richting van je items.
 ```css
 .container {
     display: flex;
-    flex-direction: row; /* Standaard: horizontaal ’  */
+    flex-direction: row; /* Standaard: horizontaal ï¿½  */
 }
 ```
 

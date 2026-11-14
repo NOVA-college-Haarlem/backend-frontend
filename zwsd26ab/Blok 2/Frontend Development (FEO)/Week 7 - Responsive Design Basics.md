@@ -4,7 +4,7 @@
 - **Doelgroep:** MBO-4 studenten (SE & SD)
 - **Lesduur:** 90 minuten
 - **Voorkennis:** HTML semantiek, CSS selectoren, flexbox NIET nodig (we introduceren het)
-- **Tools:** VS Code, Browser (test op mobiel / browser DevTools)
+- **Tools:** VS Codium, Browser (test op mobiel / browser DevTools)
 
 ---
 
@@ -427,16 +427,51 @@ header h1 {
 
 Test op DevTools → Phone
 
-### Oefening 4: Echte Telefoon Test (20 min)
-1. Start local server: `python -m http.server 8000`
-2. Vind je IP: `ifconfig` (Mac/Linux)
-3. Open op telefoon: `http://192.168.x.x:8000`
+### Oefening 5: Update GitHub Pages (10 min)
+
+**Nu moet je je responsive changes naar GitHub Pages pushen!**
+
+**Via GitHub Web UI (Aanbevolen):**
+
+1. Ga naar je repository op GitHub: `https://github.com/username/username.github.io`
+2. Klik "Add file" → "Upload files"
+3. Sleep je bijgewerkte `style.css` en `index.html` erin (overwrite!)
+4. Vul commit message in: "Add responsive design with media queries"
+5. Klik "Commit changes"
+6. Wacht ~2 minuten
+7. Ga naar `https://username.github.io`
+8. **Test op telefoon:** Responsive changes zichtbaar?
+
+**Checklist:**
+- [ ] Files geupload naar GitHub
+- [ ] Website laadt op `https://username.github.io`
+- [ ] Nav responsive op mobiel
+- [ ] Header responsive op mobiel
+- [ ] Geen horizontal scrolling
+
+**Pro tip:** Test in DevTools VOOR je upload (F12 → Phone icon)
+
+---
+
+### Oefening 6: Echte Telefoon Test van GitHub Pages (10 min)
+
+**Nu testen we je LIVE website op je echte telefoon:**
+
+1. Je website staat al online op `https://username.github.io`
+2. Open telefoon → browser
+3. Ga naar jouw GitHub Pages URL
 4. Test:
-   - [ ] Website laadt
-   - [ ] Text leesbaar
-   - [ ] Buttons clickable
-   - [ ] Geen horizontal scroll
-   - [ ] Nav werkt op mobiel
+   - [ ] Website laadt normaal
+   - [ ] Text is leesbaar op klein scherm
+   - [ ] Nav werkt op mobiel (vertical layout?)
+   - [ ] Buttons zijn clickable
+   - [ ] Geen horizontal scrolling
+   - [ ] Header past goed op mobiel
+
+**Meer testen (voor wie klaar is):**
+- Test ook op tablet (vergroot browser window langzaam)
+- Test landscape mode vs portrait
+- Test op ander telefoonmerk (iOS vs Android)
 
 ---
 

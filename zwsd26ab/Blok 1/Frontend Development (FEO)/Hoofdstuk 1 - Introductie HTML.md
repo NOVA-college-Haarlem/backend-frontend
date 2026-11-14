@@ -3,7 +3,7 @@
 ## Algemene Informatie
 
 - **Doelgroep:** MBO studenten - niveau 4, eerstejaars
-- **Tools:** VS Code, DevTools (vanaf week 2), Copilot (vanaf week 3)
+- **Tools:** VS Codium, DevTools (vanaf week 2), Copilot (vanaf week 3)
 
 ---
 

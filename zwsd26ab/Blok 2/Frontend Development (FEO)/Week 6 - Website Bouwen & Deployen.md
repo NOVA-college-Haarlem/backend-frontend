@@ -1,4 +1,4 @@
-# Week 6: Website Bouwen & Online Zetten (Capstone)
+# Week 6: Website Bouwen & Online Zetten
 
 ## Leerdoelen
 Na deze les kan de student:
@@ -11,7 +11,7 @@ Na deze les kan de student:
 - **Doelgroep:** MBO-4 studenten (SE & SD)
 - **Lesduur:** 90 minuten
 - **Voorkennis:** Alle vorige lessen van Blok 2
-- **Tools:** VS Code, GitHub, Browser
+- **Tools:** VS Codium, GitHub, Browser
 
 ---
 
