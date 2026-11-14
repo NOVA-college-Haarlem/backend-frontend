@@ -166,48 +166,58 @@ CSS:
 }
 ```
 
-**Oefening 1 (5 min):**
-Maak deze 3 button types en test hover effects.
+---
 
-**CSS:**
+**🚀 OEFENING 1: Button Hackathon (15 min)**
+
+**Doel:** Vind buttons in het wild en reverse-engineer ze!
+
+**Fase 1: Onderzoek (5 min) - Duo's**
+- Duo krijgt een website: GitHub, Amazon, Spotify, Gmail, of Netflix
+- **Missie:** Vind de "interessantste" button
+- Vraag: "Waarom valt deze op?"
+- Inspect Element (F12) → toon de CSS
+
+**Fase 2: Nabootsen (8 min)**
+- Probeer de button na te bouwen in VS Code
+- Match:
+  - Kleur (background-color)
+  - Grootte (padding)
+  - Hoeken (border-radius)
+  - Hover effect
+
+**Fase 3: Presentatie (2 min)**
+- Toon je button op beamer
+- "Dit is van [website]"
+- Toon de echte button ernaast
+- Groep applaudisseert!
+
+**HTML Template:**
+```html
+<button class="btn-hack">Mijn Button</button>
+```
+
+**CSS (aanpassen per duo):**
 ```css
-.btn {
+.btn-hack {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-primary {
     background-color: #007bff;
     color: white;
+    cursor: pointer;
 }
-.btn-primary:hover {
+
+.btn-hack:hover {
     background-color: #0056b3;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    color: white;
-}
-.btn-secondary:hover {
-    background-color: #545b62;
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    color: white;
-}
-.btn-danger:hover {
-    background-color: #c82333;
 }
 ```
 
-**Oefening 1 (5 min):**
-Maak deze 3 button types.
+**Voordeel:**
+- Real-world relevance (niet abstract)
+- Groepswerk = meer engagement
+- Visual feedback (beamer)
+- Competition aspect ("wie heeft coolste button?")
 
 ---
 
@@ -243,6 +253,37 @@ Maak deze 3 button types.
 
 **Oefening 2 (5 min):**
 Maak buttons met alle states: normal, hover, active, disabled.
+
+---
+
+**🎮 INTERMEZZO: Live CSS Tweaking Sessie (10 min)**
+
+**Setup:** Beamer + 1 docent-laptop + studenten kijken
+
+**Doel:** Students voelen de MACHT van CSS door direct visuele feedback
+
+**Hoe:**
+1. Open je button code op beamer (grote font!)
+2. Vraag: "Wie wil iets proberen?"
+3. Student zegt: "Maak padding groter!"
+4. Typ: `padding: 30px;` → CLICK Save → button wordt MASSIVE!
+5. Volgende student: "Maak het rond!"
+6. Typ: `border-radius: 50%;` → POOF, RONDE BUTTON!
+7. Volgende: "Maak achtergrond paars!"
+8. Typ: `background-color: purple;` → WHOA!
+
+**Waarom dit werkt:**
+- Immediate visual feedback (geen wachten)
+- Students durven experimenteren ("ik breek het niet")
+- Humor moment (paarse buttons = grappig)
+- Concretiseert: "Dit CSS property doet DIT"
+
+**Je kan ook:**
+- Vraag: "Wat gebeurt er als ik dit weghaal?" (remove padding)
+- Vraag: "Wat als ik dit veranderen?" (change color to random)
+- "Wie durft het gekste te proberen?"
+
+**Pro Tip:** Screen share of zelfs fysieke beamer - grote letters!
 
 ---
 
@@ -284,7 +325,7 @@ HTML formulieren verzamelen data van gebruikers.
 <input type="date">       <!-- Datepicker -->
 ```
 
-**Oefening 3 (10 min):**
+**Oefening 2b: Maak een Contact Form HTML (10 min):**
 ```html
 <form class="contact-form">
     <label for="name">Naam:</label>
@@ -350,12 +391,101 @@ label {
 }
 ```
 
-**Oefening 4 (5 min):**
-Style het contactformulier van Oefening 3.
+**Oefening 3: Button & CSS Matching Game (Papier) (10 min)**
+
+**Voorbereiding (docent print):**
+
+Print deze 2 sets op papier:
+
+**Set A - Buttons (Visual):**
+```
+┌─────────────────────┐
+│ Button 1:           │
+│ 🔵 Blauw, groot     │
+│ Padding flink       │
+│ Afgerond            │
+└─────────────────────┘
+
+┌─────────────────────┐
+│ Button 2:           │
+│ ⚫ Grijs, klein      │
+│ Minimale padding    │
+│ Scherp              │
+└─────────────────────┘
+
+┌─────────────────────┐
+│ Button 3:           │
+│ 🔴 Rood, groot      │
+│ Bold padding        │
+│ Afgerond            │
+└─────────────────────┘
+
+┌─────────────────────┐
+│ Button 4:           │
+│ ⚪ Wit, klein       │
+│ Geen padding        │
+│ Scherp              │
+└─────────────────────┘
+```
+
+**Set B - CSS Code (Snippets):**
+```
+┌─────────────────────────────┐
+│ CSS 1:                      │
+│ padding: 5px;               │
+│ background: white;          │
+│ border-radius: 0;           │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│ CSS 2:                      │
+│ padding: 20px;              │
+│ background: #dc3545;        │
+│ border-radius: 8px;         │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│ CSS 3:                      │
+│ padding: 10px;              │
+│ background: #6c757d;        │
+│ border-radius: 0;           │
+└─────────────────────────────┘
+
+┌─────────────────────────────┐
+│ CSS 4:                      │
+│ padding: 20px;              │
+│ background: #007bff;        │
+│ border-radius: 8px;         │
+└─────────────────────────────┘
+```
+
+**Hoe Spelen:**
+1. Duo's krijgen beide sets
+2. **Missie:** Match Button 1-4 met CSS 1-4
+3. Leg de kaarten naast elkaar
+4. Verantwoord: "Button 1 (blauw, groot, afgerond) = CSS 4 (padding 20px, #007bff, radius 8px)"
+5. Docent check de antwoorden
+
+**Waarom dit werkt:**
+- Tactiel/kinesthetisch leren (papier)
+- Logisch nadenken (welke properties horen bij welke visual?)
+- Duo work = teamwork
+- Geen scherm (rust voor ogen)
+- Snel feedback (docent kan checken)
+
+**Pro Tip:** 
+- Maak extra kaarten met "verwarrende" eigenschappen
+- Bijv. CSS met `color: red` (tekst, niet achtergrond!)
+- Students moeten echt goed kijken
 
 ---
 
-**7. Grote Oefening: Contact Form (10 min)**
+**Oefening 4: Form Styling (5 min)**
+Style het contactformulier van Oefening 2b.
+
+---
+
+**🎯 Grote Oefening: Complete Contact Form (10 min)**
 
 **Opdracht:**
 Maak een contact formulier met:
@@ -410,6 +540,7 @@ Style met:
 - **Veelgemaakte fout:** `<label>` vergeten of `for` attribuut niet gekoppeld
 - **Veelgemaakte fout:** Buttons/inputs zonder `padding` (zien er klein/smal uit)
 - **Veelgemaakte fout:** Geen `:focus` state op inputs (moeilijk om te zien waar je bent)
+- **Button/CSS Matching Game:** Print beide sets en laat duo's de juiste matches vinden. Voeg extra "verwarrende" CSS kaarten toe (bijv. `color: red;`, `width: 100%;`) voor extra challenge.
 
 ### Resources
 - [MDN: HTML Forms](https://developer.mozilla.org/en-US/docs/Learn/Forms)
