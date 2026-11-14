@@ -1,16 +1,17 @@
-# Week 7: Eindproject - "Complete Website"
+# Week 8: Eindproject - "Complete Responsive Website"
 
 ## Projectomschrijving
-Bouw een complete website met ALLE technieken uit Blok 2. Publish het online!
+Bouw een complete, **responsive** website met ALLE technieken uit Blok 2. Publish het online!
 
-Dit is je capstone: laat zien dat je HTML, CSS, Navigatie, Design en Deployment beheerst.
+Dit is je capstone: laat zien dat je HTML, CSS, Navigatie, Responsive Design en Deployment beheerst.
 
 ## Leerdoelen
 Na deze week kan de student:
 - Een complete website zelfstandig bouwen
-- Alle Blok 2 technieken combineren
+- Alle Blok 2 technieken combineren (inclusief responsive design)
+- Website optimaliseren voor mobiel
 - Website publiceren naar GitHub Pages
-- Design keuzes maken
+- Design keuzes maken voor desktop en mobiel
 
 ## Projecteisen
 
@@ -34,16 +35,22 @@ Na deze week kan de student:
 - [ ] Semantische HTML (`<header>`, `<nav>`, `<main>`, `<footer>`, etc.)
 - [ ] Externe stylesheet (geen inline styles!)
 - [ ] Nette, georganiseerde CSS
+- [ ] **Viewport meta tag aanwezig**
+- [ ] **Media queries voor mobiel** (minimaal 1, voor navigatie of layout)
+- [ ] **Getest op mobiel** (via DevTools of echte telefoon)
 - [ ] Website geüpload naar GitHub Pages
 - [ ] Website live op URL: `https://username.github.io`
 
 ### Nice to Have (Goed)
 
+- [ ] **Media queries voor tablet/desktop**
+- [ ] **Mobile-first approach** (eerst mobiel, dan desktop)
 - [ ] Meerdere button types (primary, secondary, danger)
 - [ ] Gestylede lijsten (ul/ol met custom styling)
 - [ ] Afbeeldingen met hover effect (transform: scale)
-- [ ] Sidebar of 2-kolom layout ergens
+- [ ] Sidebar of 2-kolom layout ergens (responsief!)
 - [ ] Box shadows op kaarten/secties
+- [ ] Flexbox voor layout elementen
 
 ### Extra (Uitstekend)
 

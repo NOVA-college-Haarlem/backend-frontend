@@ -1,18 +1,18 @@
 # Blok 2 - Frontend Ontwikkeling Samenvatting
 
 **Doelgroep:** MBO-4 studenten (SE & SD) met basis HTML/CSS kennis uit Blok 1  
-**Duur:** 6 lessen (90 min elk) + 1 projectweek + 1 eindproject  
-**Focus:** Essentiële Frontend Skills - Websites Bouwen & Publiceren
+**Duur:** 7 lessen (90 min elk) + 1 projectweek + 1 eindproject  
+**Focus:** Essentiële Frontend Skills - Responsive Websites Bouwen & Publiceren
 
 ---
 
 ## 📌 Filosofie
 
 Blok 2 is **compact en praktisch** gericht:
-- **SE'ers** (System Engineers): Leren hoe websites werken, kunnen een website publiceren
-- **SD'ers** (Software Developers): Voorbereiding op Blok 3 (PHP, databases, dynamische content)
+- **SE'ers** (System Engineers): Leren hoe websites werken, kunnen een responsive website publiceren
+- **SD'ers** (Software Developers): Voorbereiding op Blok 3 (PHP, databases, dynamische content, flexbox/grid)
 
-Alle studenten vertrekken met: **"Ik kan een website bouwen en online zetten!"**
+Alle studenten vertrekken met: **"Ik kan een responsive website bouwen en online zetten!"**
 
 ---
 
@@ -64,17 +64,17 @@ Alle studenten vertrekken met: **"Ik kan een website bouwen en online zetten!"**
 ## Week 5: Navigatie & HTML Structuur
 **Leerdoelen:**
 - HTML lists stylen (`<ul>`, `<ol>`, `<li>`)
-- Horizontale navigatie met `display: inline-block`
+- Horizontale navigatie
 - Verticale/sidebar navigatie
 - Active/current state op links
 - Semantische HTML (`<header>`, `<nav>`, `<main>`, `<footer>`, etc.)
 - **Waarom** semantische HTML belangrijk is (SEO, accessibility)
 
-**Oefening:** Bouw horizontale + verticale navigatie systeem
+**Oefening:** Bouw horizontaal + verticaal navigatie systeem
 
 ---
 
-## Week 6: Website Bouwen & Online Zetten (CAPSTONE! 🚀)
+## Week 6: Website Bouwen & Online Zetten (CAPSTONE DEEL 1 🚀)
 **Leerdoelen:**
 - Complete website structureren (header, nav, hero, content, footer)
 - CSS reset en basis styling
@@ -87,16 +87,33 @@ Alle studenten vertrekken met: **"Ik kan een website bouwen en online zetten!"**
 
 ---
 
-## Week 7: Eindproject - "Complete Website"
-**Project:** Zelfstandig een volledige website bouwen met:
+## Week 7: Responsive Design Basics (CAPSTONE DEEL 2 📱)
+**Leerdoelen:**
+- Viewport meta tag toevoegen
+- Begrijpen waarom responsive design nodig is
+- Flexbox gebruiken voor horizontale layouts
+- Media queries schrijven voor verschillende schermgroottes
+- Mobile-first approach
+- Website testen op mobiel (DevTools + echte telefoon)
+
+**Oefening:** Eigen Week 6 website responsive maken voor tablets + telefoon
+
+**Result:** Website werkt mooi op desktop, tablet EN telefoon!
+
+---
+
+## Week 8: Eindproject - "Complete Responsive Website"
+**Project:** Zelfstandig een volledige responsive website bouwen met:
 - Semantische HTML structuur
 - Consistent kleurenschema
-- Professionele navigatie
-- Minimaal 4 afbeeldingen
+- Professionele responsive navigatie
+- Viewport meta tag + media queries
+- Minimaal 4 afbeeldingen (responsief)
 - Gestylede buttons
+- Getest op mobiel
 - Gepubliceerd op GitHub Pages
 
-**Focus:** Combineer alles, laat zien wat je kan!
+**Focus:** Combineer alles, laat zien dat je responsive design en deployment beheerst!
 
 ---
 
