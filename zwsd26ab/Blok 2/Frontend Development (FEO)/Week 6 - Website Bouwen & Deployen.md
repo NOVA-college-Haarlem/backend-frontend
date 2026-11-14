@@ -273,14 +273,26 @@ Gratis hosting voor statische websites (HTML, CSS, JavaScript).
 - Initialiseer met README.md
 - Create repository
 
-**Stap 3: Files Uploaden (10 min)**
+**Stap 3: Files Uploaden via GitHub Web UI (10 min)**
 
-Optie A: Via GitHub Web UI
-- Klik "Add file" → "Upload files"
-- Sleep `index.html` en `style.css` erin
-- Commit message: "Add initial website"
+**GEMAKKELIJKSTE MANIER (aanbevolen):**
 
-Optie B: Via Git (voor gevorderden)
+1. Klik op je repository
+2. Klik "Add file" → "Upload files"
+3. Sleep `index.html` en `style.css` erin (of browse)
+4. Vul commit message in: "Add initial website"
+5. Klik "Commit changes"
+
+**Klaar!** Je website is nu op GitHub.
+
+---
+
+**ALTERNATIEF: Via Git Command Line (voor gevorderden)**
+
+*Dit is optioneel - veel moeilijker dan Web UI!*
+
+Voorwaarde: Git moet geïnstalleerd zijn
+
 ```bash
 cd je-website-folder
 git init
@@ -290,16 +302,22 @@ git remote add origin https://github.com/username/username.github.io.git
 git push -u origin main
 ```
 
+⚠️ **Opmerking:** Je hoeft dit NIET te doen - GitHub Web UI is veel simpeler! Alleen voor wie al Git kent.
+
+---
+
 **Stap 4: Website is LIVE! (10 min)**
+- Wacht ~2 minuten
 - Ga naar `https://username.github.io`
-- Je website staat online!
+- Je website staat online! 🎉
 - Test in browser
-- Share de link
+- Share de link met vrienden
 
 **Controleer:**
 - [ ] Navigatie werkt
-- [ ] Styles laden
+- [ ] Styles laden (kleuren, fonts)
 - [ ] Pagina ziet er goed uit
+- [ ] URL is: `https://username.github.io`
 
 ---
 
@@ -355,12 +373,16 @@ git push -u origin main
 
 ## Tips voor Docent
 - **Voorbereiding:** Test deployment zelf vooraf!
-- **GitHub:** Veel studenten hebben dit niet eerder gedaan - wees geduldig
-- **Live demo:** Laat je eigen website zien, online
-- **Celebrate:** Dit moment is special - ze publiceren echt iets!
-- **Veelgemaakte fout:** Repository naam moet `username.github.io` zijn
-- **Veelgemaakte fout:** Vergeten HTML/CSS te committen
+- **GitHub Web UI:** Dit is de PRIMAIRE methode - simpel en intuïtief
+- **Git is optional:** Veel studenten hebben Git niet - dwing niet af!
 - **Timing:** Deployment kan langer duren - start vroeg
+- **Live demo:** Toon je eigen website online
+- **Celebrate:** Dit moment is special - ze publiceren echt iets!
+- **Troubleshooting:** 
+  - Website laadt niet? Wacht 2 minuten (propagatie)
+  - Styles niet zichtbaar? Harde refresh (Ctrl+F5)
+  - Repository naam fout? Moet `username.github.io` zijn
+- **Veelgemaakte fout:** Repository naam anders dan `username.github.io`
 
 ## Resources
 - [GitHub Pages Guide](https://pages.github.com/)

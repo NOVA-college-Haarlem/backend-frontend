@@ -28,15 +28,17 @@ Alle studenten vertrekken met: **"Ik kan een website bouwen en online zetten!"**
 
 ---
 
-## Week 2: Buttons & Interactiviteit
+## Week 2: Buttons & Formulieren
 **Leerdoelen:**
 - Button basics stylen (padding, border, border-radius, background)
 - Button types (primary, secondary, danger)
-- Hover, active, disabled states
-- `cursor: pointer` voor UX
-- Transitions voor smooth effecten
+- Button states (hover, active, disabled)
+- HTML formulierelementen (`<form>`, `<input>`, `<label>`, `<textarea>`)
+- Input velden en formulieren stylen
+- Focus states implementeren
+- Accessibility basics (`<label>` en `for` attribuut)
 
-**Oefening:** Maak 3 button types met hover effects
+**Oefening:** Maak contact formulier met styled inputs en buttons
 
 ---
 
