@@ -27,7 +27,7 @@ Na deze les kan de student:
 **1. Introductie: Buttons in de Wildernis (5 min)**
 
 **Live Demo:**
-- Open https://github.com (of Amazon, Spotify, Gmail)
+- Open GitHub, Spotify of Gmail
 - Kijk naar de buttons
 - Vragen aan studenten:
   - "Zie je alle buttons?"
@@ -95,6 +95,11 @@ CSS:
     border: none;
     cursor: pointer;
 }
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
 ```
 
 Test in browser!
@@ -104,115 +109,61 @@ Test in browser!
 
 ---
 
-**3. Button Types: Primary, Secondary, Danger (15 min)**
-
-**Observatie van echte websites:**
-- GitHub: blauwe "Sign up" (primary), grijze "Sign in" (secondary)
-- Spotify: groene "Afspelen" (primary), witte "Meer opties" (secondary)
-- Gmail: rode "Verwijderen" knop (danger)
-
-**Vraag:** "Waarom hebben ze verschillende kleuren?"
-
-**Antwoord - Button Hiërarchie:**
-- **Primary (blauw/groen):** "Dit is de BESTE keus" → "Kopen", "Verzenden", "Registreren"
-- **Secondary (grijs):** "Alternatief" → "Annuleren", "Later"
-- **Danger (rood):** "LET OP!" → "Verwijderen", "Account sluiten"
-
-**De code (hoe doen zij het?):**
-
-HTML:
-```html
-<button class="btn btn-primary">Verzenden</button>
-<button class="btn btn-secondary">Annuleren</button>
-<button class="btn btn-danger">Verwijderen</button>
-```
-
-CSS:
-```css
-/* Base style - alle buttons */
-.btn {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* Primary - MAIN ACTION */
-.btn-primary {
-    background-color: #007bff;
-    color: white;
-}
-.btn-primary:hover {
-    background-color: #0056b3;  /* Donkerder blauw */
-}
-
-/* Secondary - ALTERNATIVE */
-.btn-secondary {
-    background-color: #6c757d;
-    color: white;
-}
-.btn-secondary:hover {
-    background-color: #545b62;  /* Donkerder grijs */
-}
-
-/* Danger - WARNING! */
-.btn-danger {
-    background-color: #dc3545;
-    color: white;
-}
-.btn-danger:hover {
-    background-color: #c82333;  /* Donkerder rood */
-}
-```
-
----
-
 **🚀 OEFENING 1: Button Hackathon (15 min)**
 
 **Doel:** Vind buttons in het wild en reverse-engineer ze!
 
 **Fase 1: Onderzoek (5 min) - Duo's**
-- Duo krijgt een website: GitHub, Amazon, Spotify, Gmail, of Netflix
-- **Missie:** Vind de "interessantste" button
+- Duo krijgt een website: GitHub, Spotify of Gmail
+- **Missie:** Vind een **simpele** button (niet te veel effecten/gradients/animaties)
 - Vraag: "Waarom valt deze op?"
-- Inspect Element (F12) → toon de CSS
+- Inspect Element (F12) → let op de **kern properties**: padding, background-color, border-radius, color
 
 **Fase 2: Nabootsen (8 min)**
-- Probeer de button na te bouwen in VS Code
+- Probeer de button na te bouwen met de **kern properties**
 - Match:
   - Kleur (background-color)
   - Grootte (padding)
   - Hoeken (border-radius)
-  - Hover effect
+  - (Hover effect - optioneel)
+- Je hoeft niet alles perfect te doen - focus op: **wat maakt deze button herkenbaar?**
 
 **Fase 3: Presentatie (2 min)**
-- Toon je button op beamer
-- "Dit is van [website]"
-- Toon de echte button ernaast
-- Groep applaudisseert!
+- Duo zit aan hun plek
+- Duo vertelt: *"Onze button van GitHub is blauw met 15px padding en afgeronde hoeken"*
+- Jij typt snel in VS Code: de **kern properties** van hun button
+- Toon de echte button op browser-tab ernaast
+- Vergelijk: *"Zien jullie dat de basis hetzelfde is?"*
+- Applaus!
 
-**HTML Template:**
-```html
-<button class="btn-hack">Mijn Button</button>
-```
+---
 
-**CSS (aanpassen per duo):**
-```css
-.btn-hack {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
+**🎮 INTERMEZZO: Live CSS Tweaking Sessie (10 min)**
 
-.btn-hack:hover {
-    background-color: #0056b3;
-}
-```
+**Setup:** Beamer + 1 docent-laptop + studenten kijken
 
+**Doel:** Students voelen de MACHT van CSS door direct visuele feedback
+
+**Hoe:**
+1. Open je button code op beamer (grote font!)
+2. Vraag: "Wie wil iets proberen?"
+3. Student zegt: "Maak padding groter!"
+4. Typ: `padding: 30px;` → CLICK Save → button wordt MASSIVE!
+5. Volgende student: "Maak het rond!"
+6. Typ: `border-radius: 50%;` → POOF, RONDE BUTTON!
+7. Volgende: "Maak achtergrond paars!"
+8. Typ: `background-color: purple;` → WHOA!
+
+**Waarom dit werkt:**
+- Immediate visual feedback (geen wachten)
+- Students durven experimenteren ("ik breek het niet")
+- Humor moment (paarse buttons = grappig)
+- Concretiseert: "Dit CSS property doet DIT"
+
+**Je kan ook:**
+- Vraag: "Wat gebeurt er als ik dit weghaal?" (remove padding)
+- Vraag: "Wat als ik dit veranderen?" (change color to random)
+- "Wie durft het gekste te proberen?"
 
 ---
 
@@ -248,37 +199,6 @@ CSS:
 
 **Oefening 2 (5 min):**
 Maak buttons met alle states: normal, hover, active, disabled.
-
----
-
-**🎮 INTERMEZZO: Live CSS Tweaking Sessie (10 min)**
-
-**Setup:** Beamer + 1 docent-laptop + studenten kijken
-
-**Doel:** Students voelen de MACHT van CSS door direct visuele feedback
-
-**Hoe:**
-1. Open je button code op beamer (grote font!)
-2. Vraag: "Wie wil iets proberen?"
-3. Student zegt: "Maak padding groter!"
-4. Typ: `padding: 30px;` → CLICK Save → button wordt MASSIVE!
-5. Volgende student: "Maak het rond!"
-6. Typ: `border-radius: 50%;` → POOF, RONDE BUTTON!
-7. Volgende: "Maak achtergrond paars!"
-8. Typ: `background-color: purple;` → WHOA!
-
-**Waarom dit werkt:**
-- Immediate visual feedback (geen wachten)
-- Students durven experimenteren ("ik breek het niet")
-- Humor moment (paarse buttons = grappig)
-- Concretiseert: "Dit CSS property doet DIT"
-
-**Je kan ook:**
-- Vraag: "Wat gebeurt er als ik dit weghaal?" (remove padding)
-- Vraag: "Wat als ik dit veranderen?" (change color to random)
-- "Wie durft het gekste te proberen?"
-
-**Pro Tip:** Screen share of zelfs fysieke beamer - grote letters!
 
 ---
 
