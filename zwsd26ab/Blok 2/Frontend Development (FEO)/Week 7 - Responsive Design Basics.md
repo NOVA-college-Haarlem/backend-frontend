@@ -24,21 +24,37 @@ Na deze les kan de student:
 ### 1. Waarom Responsive? (10 min)
 
 **Live Demo:**
-- Open je Week 6 website op telefoon (via WiFi delen met https://localhost:port)
-- Laat zien dat het eruit ziet als... chaos 😅
-- Toon dezelfde site op desktop → verschil!
-- Toon professionele websites op mobiel: hoe zien die er uit?
+- Toon je eigen laptop scherm (groot)
+- Toon dezelfde site op telefoon (klein)
+- Vraag: "Wat zie je verschil?"
 
-**Uitleg:**
-> Responsive design betekent: je website ziet er goed uit op **elk scherm** (mobiel, tablet, desktop).
+**Real-world voorbeelden:**
+- Twitter op desktop: 3 kolommen
+- Twitter op mobiel: 1 kolom (articles vet)
+- Amazon op desktop: grid van producten
+- Amazon op mobiel: 1 kolom (swipeable)
 
-**Waarom is dit belangrijk?**
-- 50%+ van web traffic is mobiel
-- Google rankt responsieve websites hoger
-- Professioneel = werkt overal
+**Observatie:**
+```
+DESKTOP:                MOBIEL:
+┌─────────────┐        ┌──────┐
+│ Sidebar 25% │ Main   │ Main │
+│             │ 75%    │ 100% │
+└─────────────┘        │      │
+                       │      │
+                       └──────┘
+```
 
-**Voor SD:** Blok 3 gaat ervanuit dat je dit begrijpt
-**Voor SE:** Dit is standaard nu
+**Statistiek:**
+- 60% van web traffic = mobiel
+- Google rankt mobiele sites hoger
+- Broken mobile site = users klikken weg
+
+**Hypothese:** "Hoe krijgen zij dit voor elkaar?"
+
+*Laat studenten gokken (CSS? JavaScript? Iets anders?)*
+
+**De waarheid:** CSS + HTML + Mobile-first thinking
 
 ---
 

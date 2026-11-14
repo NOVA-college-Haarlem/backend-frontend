@@ -23,60 +23,243 @@ Na deze les kan de student:
 
 ### Lesopbouw (90 minuten)
 
-**2. Descendant Selectors**
+**1. Introductie: Selectors in het Wild (10 min)**
 
-**Wat is een Descendant Selector?**
-Een descendant selector selecteert elementen die *binnen* een ander element zitten.
+**Live Demo:**
+- Open https://github.com
+- Inspect Element (F12 → rechtsklik → Inspect)
+- Toon de DOM
+- Vraag: "Zie je classes, IDs, en nesten?"
 
-**Syntax:** `ouder kind`
-
-**Voorbeeld 1: Basis**
+**Observaties:**
 ```html
-<div class="artikel">
-    <h2>Titel van Artikel</h2>
-    <p>Dit is de eerste paragraaf.</p>
-    <p>Dit is de tweede paragraaf.</p>
-</div>
-
-<p>Deze paragraaf staat BUITEN het artikel.</p>
+<!-- GitHub pagina -->
+<header class="Header">
+    <nav class="Header-nav">
+        <a class="Header-link" href="/">Home</a>
+        <a class="Header-link Header-link--active">About</a>
+    </nav>
+</header>
 ```
 
+- Elk element heeft classes
+- Sommige elementen NESTEN (nav in header)
+- Active link heeft extra class
+
+**Vraag:** "Hoe selecteren zij deze elementen met CSS?"
+
+---
+
+**2. Descendant Selectors - Hoe zouden zij dit doen? (15 min)**
+
+**Observatie van pagina:**
+- Navigatie linken hebben een bepaalde stijl
+- Maar alleen linken die IN de nav staan
+
+**Hypothese:** "Wat zou de CSS selector zijn?"
+
+*Laat studenten gokken*
+
+**De waarheid - Descendant Selector:**
 ```css
-/* Alleen paragrafen BINNEN .artikel worden rood */
-.artikel p {
-    color: red;
+/* ALLEEN links die in nav staan */
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* ALLE andere links zijn anders */
+a {
+    color: blue;
 }
 ```
 
-**Uitleg:**
-- `.artikel p` = "alle `<p>` die binnen `.artikel` zitten"
-- De paragraaf buiten het artikel wordt NIET rood
-- Spatie tussen `.artikel` en `p` is belangrijk!
-
-**Voorbeeld 2: Dieper nesten**
+**Praktisch voorbeeld:**
 ```html
-<div class="container">
-    <div class="content">
-        <h2>Hoofdtitel</h2>
-        <p>Tekst in content</p>
+<nav class="navigation">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+</nav>
+
+<footer>
+    <a href="/privacy">Privacy</a>
+</footer>
+```
+
+```css
+/* Alleen nav links worden wit */
+nav a {
+    color: white;
+    padding: 10px;
+}
+
+/* Footer link is blauw */
+footer a {
+    color: #3498db;
+}
+```
+
+**Oefening 1:** Maak een artikel met nested paragraphen. Style alleen de paragrafen IN het artikel.
+
+---
+
+**3. Child Selectors - "Alleen directe kinderen" (15 min)**
+
+**Observatie:**
+- Sommige selectors selecteren álle kinderen
+- Sommige selecteren ALLEEN directe kinderen
+
+**Voorbeeld uit echte website:**
+```html
+<div class="card">
+    <h2>Titel</h2>           <!-- Directe kind! -->
+    <div class="description">
+        <p>Beschrijving</p>  <!-- NIET directe kind! -->
     </div>
 </div>
 ```
 
+**Descendant vs. Child:**
 ```css
-/* H2 binnen .content binnen .container */
-.container .content h2 {
+/* Dit selecteert ALLES wat een <p> is, diep genest */
+.card p {
+    color: red;
+}
+
+/* Dit selecteert ALLEEN <p> direct in .card */
+.card > p {
     color: blue;
-    font-size: 24px;
 }
 ```
 
-**Waarom is dit handig?**
-- Je hoeft niet elke `<p>` een class te geven
-- Specifieke styling voor specifieke plekken
-- Code blijft overzichtelijker
+**Praktijk:**
+```css
+/* Alleen h2 direct in .card */
+.card > h2 {
+    font-size: 24px;
+}
+
+/* Alle p tags, zelfs diep genest */
+.card p {
+    line-height: 1.6;
+}
+```
+
+**Oefening 2:** Maak een website met nested divs. Gebruik `>` om alleen directe children te selecteren.
 
 ---
+
+**4. Sibling Selectors - "Die Naast Elkaar" (15 min)**
+
+**Real-world:**
+```html
+<div class="post">
+    <h2>Titel</h2>
+    <p>Eerste paragraaf</p>  <!-- Direct na h2! -->
+    <p>Tweede paragraaf</p>  <!-- Niet direct na h2 -->
+</div>
+```
+
+**Adjacent Sibling (`+`):**
+```css
+/* ALLEEN de paragraaf DIRECT na h2 */
+h2 + p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+```
+
+**Praktijk:**
+```html
+<h3>Antwoord</h3>
+<p>Dit is het antwoord</p>  <!-- Bold! -->
+<p>Meer details.</p>        <!-- Normaal */
+```
+
+```css
+h3 + p {
+    font-weight: bold;
+}
+```
+
+**Oefening 3:** Maak een FAQ met h3 (vraag) en p (antwoord). Maak de paragraaf direct na h3 bold.
+
+---
+
+**5. Multiple Selectors - "Alle Tegelijk" (10 min)**
+
+**Observatie van website:**
+- h1, h2, h3 hebben dezelfde font-family
+- Maar niet dezelfde kleur
+
+**Efficient stylen:**
+```css
+/* Zet alle headings hetzelfde font */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+}
+
+/* Maar andere sizes */
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+```
+
+**Oefening 4:** Maak headings met dezelfde font, maar verschillende sizes.
+
+---
+
+**6. Pseudo-classes: :hover & :focus (15 min)**
+
+**Observatie van echte website:**
+- Links veranderen kleur bij hover
+- Buttons worden darker bij hover
+- Inputs krijgen glow bij focus
+
+**HTML:**
+```html
+<a href="/">Klik mij</a>
+<button>Druk mij</button>
+<input type="text" placeholder="Typ hier">
+```
+
+**CSS - Hoe zouden zij het doen?**
+```css
+a {
+    color: #3498db;
+}
+a:hover {
+    color: #2980b9;  /* Donkerder */
+    text-decoration: underline;
+}
+
+button:hover {
+    background-color: #34495e;  /* Darker on hover */
+}
+
+input:focus {
+    outline: 2px solid #3498db;
+    background-color: #f0f8ff;
+}
+```
+
+**Oefening 5:** Voeg hover effects toe aan links, buttons, en focus states aan inputs.
+
+---
+
+**7. Afsluiting & Praktijk (10 min)**
+
+**Challenge:** Open eigen website. Use DevTools (F12) om:
+1. Descendant selectors te vinden
+2. Child selectors te vinden
+3. Pseudo-classes (hover/focus) te testen
 
 **3. Child Selector (>)**
 

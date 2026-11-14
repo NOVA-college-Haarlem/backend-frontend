@@ -24,81 +24,150 @@ Na deze les kan de student:
 
 ### Lesopbouw (90 minuten)
 
-**1. Introductie: Buttons & Formulieren (5 min)**
+**1. Introductie: Buttons in de Wildernis (5 min)**
 
-Waar zie je buttons en formulieren op websites?
-- "Koop Nu" button
-- "Zoeken" formulier
-- "Inloggen" formulier
-- "Contact" formulier
+**Live Demo:**
+- Open https://github.com (of Amazon, Spotify, Gmail)
+- Kijk naar de buttons
+- Vragen aan studenten:
+  - "Zie je alle buttons?"
+  - "Zijn ze allemaal hetzelfde?"
+  - "Welke vallen het meest op?"
+  - "Wat gebeurt er als je erover hovert?"
 
-Beide zijn essentieel voor interactieve websites!
+**Observaties:**
+- Primary button (blauw/groen, groot) = "Belangrijkste actie"
+- Secondary button (grijs, klein) = "Alternatief"
+- Buttons hebben hover effect (kleur verandert!)
+- "Hover" zegt: "Jij kan op mij klikken"
+
+**Vraag:** "Hoe maken zij deze effecten met CSS?"
 
 ---
 
-**2. Button Basics (20 min)**
+**2. Button Basics - Hoe zouden zij dit gedaan hebben? (20 min)**
 
-**De Basis Properties:**
+**Observatie van echte website:**
+- Button heeft padding (ruimte rond tekst)
+- Button is afgerond (border-radius)
+- Button heeft achtergrondkleur
+- Button verandert kleur bij hover
 
+**Hypothese:** "Wat doen jullie denken dat er in CSS staat?"
+
+*Laat studenten gokken/discussiëren*
+
+**De waarheid - CSS Properties:**
 ```css
 .btn {
-    /* Tekst */
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-
-    /* Ruimte */
+    /* Ruimte rond tekst */
     padding: 10px 20px;
 
-    /* Rand */
-    border: none;
+    /* Afgeronde hoeken */
     border-radius: 5px;
 
-    /* Achtergrond */
-    background-color: blue;
+    /* Kleur achtergrond */
+    background-color: #3498db;
+    color: white;
 
-    /* Cursor */
+    /* Geen border (cleanere look) */
+    border: none;
+
+    /* Cursor verandert in pointer */
     cursor: pointer;
 }
 ```
 
-**Samen Doen: Eerste Button (10 min)**
+**Samen Doen: Jouw Eerste Button (10 min)**
 
 HTML:
 ```html
 <button class="btn">Mijn Eerste Button</button>
 ```
 
-CSS - Stap voor stap:
+CSS:
 ```css
 .btn {
-    color: white;
-    background-color: #3498db;
     padding: 10px 20px;
-    border: none;
     border-radius: 5px;
-    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
     cursor: pointer;
 }
 ```
 
 Test in browser!
+- Klik → voelt het aan als een button?
+- Pas padding aan → voelt anders?
+- Pas border-radius aan → voelt anders?
 
 ---
 
 **3. Button Types: Primary, Secondary, Danger (15 min)**
 
-**Waarom verschillende types?**
-- **Primary:** Belangrijkste actie ("Kopen", "Verzenden")
-- **Secondary:** Minder belangrijk ("Annuleren")
-- **Danger:** Gevaarlijke actie ("Verwijderen")
+**Observatie van echte websites:**
+- GitHub: blauwe "Sign up" (primary), grijze "Sign in" (secondary)
+- Spotify: groene "Afspelen" (primary), witte "Meer opties" (secondary)
+- Gmail: rode "Verwijderen" knop (danger)
 
-**HTML:**
+**Vraag:** "Waarom hebben ze verschillende kleuren?"
+
+**Antwoord - Button Hiërarchie:**
+- **Primary (blauw/groen):** "Dit is de BESTE keus" → "Kopen", "Verzenden", "Registreren"
+- **Secondary (grijs):** "Alternatief" → "Annuleren", "Later"
+- **Danger (rood):** "LET OP!" → "Verwijderen", "Account sluiten"
+
+**De code (hoe doen zij het?):**
+
+HTML:
 ```html
 <button class="btn btn-primary">Verzenden</button>
 <button class="btn btn-secondary">Annuleren</button>
 <button class="btn btn-danger">Verwijderen</button>
 ```
+
+CSS:
+```css
+/* Base style - alle buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Primary - MAIN ACTION */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #0056b3;  /* Donkerder blauw */
+}
+
+/* Secondary - ALTERNATIVE */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #545b62;  /* Donkerder grijs */
+}
+
+/* Danger - WARNING! */
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-danger:hover {
+    background-color: #c82333;  /* Donkerder rood */
+}
+```
+
+**Oefening 1 (5 min):**
+Maak deze 3 button types en test hover effects.
 
 **CSS:**
 ```css

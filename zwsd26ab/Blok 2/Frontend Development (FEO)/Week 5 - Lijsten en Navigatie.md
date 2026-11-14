@@ -23,80 +23,238 @@ Na deze les kan de student:
 
 ### Lesopbouw (90 minuten)
 
-**1. HTML Lists Recap (10 min)**
+**1. Introductie: Navigatie overal (5 min)**
 
-**Twee soorten lists:**
+**Live Demo:**
+- Open Amazon, Twitter/X, GitHub
+- Vraag: "Waar zien jullie navigatie?"
+- Toon: top-nav, sidebar nav, footer links
 
-```html
-<ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-</ul>
-
-<ol>
-    <li>Stap 1</li>
-    <li>Stap 2</li>
-</ol>
-```
-
-**List Styling Basics:**
-```css
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-```
+**Observaties:**
+- Sommige nav is horizontaal (top)
+- Sommige is verticaal (sidebar)
+- Alle hebben "active" state (je weet waar je bent)
 
 ---
 
-**2. Horizontale Navigatie (25 min)**
+**2. HTML Lists Recap (5 min)**
 
-**HTML:**
+Navigatie is altijd een `<ul>` / `<li>` + links:
+
 ```html
-<nav class="horizontal-nav">
+<nav>
     <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Over</a></li>
-        <li><a href="#services">Diensten</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
     </ul>
 </nav>
 ```
 
-**CSS Stap voor Stap:**
+---
 
-Stap 1: Bullets weg
+**3. Horizontale Navigatie - Hoe zouden zij dit doen? (25 min)**
+
+**Observatie van website:**
+- GitHub top nav: items naast elkaar
+- Items hebben hover effect
+- Active state is duidelijk (andere kleur)
+
+**HTML:**
+```html
+<nav class="main-nav">
+    <ul>
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/about">Over</a></li>
+        <li><a href="/services">Services</a></li>
+    </ul>
+</nav>
+```
+
+**Hypothese:** "Hoe krijgen zij items naast elkaar?"
+
+*Laat studenten gokken (talsen hints: display, float, flexbox?)*
+
+**De waarheid - display: inline-block:**
 ```css
-.horizontal-nav ul {
+.main-nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
-```
 
-Stap 2: Items naast elkaar
-```css
-.horizontal-nav li {
-    display: inline-block;
+.main-nav li {
+    display: inline-block;  /* ITEMS NAAST ELKAAR */
 }
-```
 
-Stap 3: Links stylen
-```css
-.horizontal-nav a {
+.main-nav a {
     display: block;
     padding: 15px 20px;
     color: white;
     text-decoration: none;
+    background-color: #333;
+}
+
+.main-nav a:hover {
+    background-color: #555;
+}
+
+/* Active state */
+.main-nav a.active {
+    background-color: #007bff;  /* Blauw = je bent hier! */
 }
 ```
 
-Stap 4: Hover effect
+**Test live:**
+- Hover over links → kleur verandert
+- Active link is anders gekleurd
+- Spacing is consistent
+
+**Oefening 1 (15 min):**
+Maak jouw eigen horizontale nav met:
+- Minimaal 4 links
+- Hover effect
+- Active state op 1 link
+
+---
+
+**4. Verticale Navigatie - Sidebar (20 min)**
+
+**Observatie van website:**
+- Reddit sidebar: items onder elkaar
+- Veel padding rond items
+- Hover effect op hele item (niet alleen tekst)
+
+**HTML:**
+```html
+<nav class="sidebar-nav">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li><a href="/profile">Profile</a></li>
+    </ul>
+</nav>
+```
+
+**CSS - Verticaal:**
 ```css
-.horizontal-nav {
-    background-color: #333;
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
 }
+
+.sidebar-nav a {
+    display: block;           /* Maakt hele rule clickable */
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: all 0.3s;
+}
+
+.sidebar-nav a:hover {
+    background-color: #f0f0f0;
+    border-left-color: #007bff;  /* Kleur left border */
+}
+
+.sidebar-nav a.active {
+    background-color: #e8f4ff;
+    border-left-color: #007bff;
+    font-weight: bold;
+}
+```
+
+**Oefening 2 (15 min):**
+Maak een sidebar nav met:
+- Items onder elkaar
+- Hover effect
+- Active state met border-left highlight
+
+---
+
+**5. Semantic HTML - Waarom matters (20 min)**
+
+**Observatie:**
+- Je gebruikt `<nav>` maar je KAN overal een `<div>` gebruiken
+- Waarom kiezen zij `<nav>`?
+
+**De waarheid:**
+
+```html
+<!-- ❌ Onsemantics - browser weet niet wat dit is -->
+<div class="navigation">
+    <ul>...</ul>
+</div>
+
+<!-- ✅ Semantic - browser EN screenreaders weten dit is navigatie -->
+<nav>
+    <ul>...</ul>
+</nav>
+```
+
+**Andere semantische elementen:**
+```html
+<header>              <!-- Website header -->
+<nav>                 <!-- Navigatie -->
+<main>                <!-- Hoofdinhoud -->
+<article>             <!-- Blog post, artikel -->
+<section>             <!-- Thematische sectie -->
+<footer>              <!-- Website footer -->
+```
+
+**Waarom is dit belangrijk?**
+
+1. **SEO:** Google begrijpt je pagina beter
+2. **Accessibility:** Screenreaders weten wat belangrijk is
+3. **Maintainability:** Code is duidelijker
+
+**Voorbeeld - Semantic Website:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mijn Website</title>
+</head>
+<body>
+    <header>
+        <h1>Mijn Website</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <article>
+            <h2>Blog Post</h2>
+            <p>Inhoud...</p>
+        </article>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
+</body>
+</html>
+```
+
+**Oefening 3 (10 min):**
+Restructureer je website met semantische HTML:
+- Gebruik `<header>`, `<nav>`, `<main>`, `<footer>`
+- Test in browser (werkt hetzelfde!)
+- Voordeel: code is veel duidelijker
+
+---
+
+**6. Afsluiting (5 min)**
+
+**Checklist:**
+- [ ] Horizontale nav gemaakt?
+- [ ] Verticale nav gemaakt?
+- [ ] Active state zichtbaar?
+- [ ] Semantische HTML gebruikt?
 
 .horizontal-nav a:hover {
     background-color: #555;

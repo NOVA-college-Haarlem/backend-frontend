@@ -9,73 +9,209 @@ Na deze les kan de student:
 
 ## Lesopbouw (90 minuten)
 
-### 1. Kleuren in Webdesign (20 min)
+### 1. Kleuren in Webdesign - Real-World Examples (15 min)
 
-**Waarom zijn kleuren belangrijk?**
-- Maken je website aantrekkelijk
-- Helpen bezoekers informatie te begrijpen
-- Geven je website een "gevoel"
+**Live Demo:**
+- Open Spotify (groen + zwart) vs. Netflix (zwart + rood) vs. Twitter/X (blauw)
+- Vraag: "Voelen deze sites anders?"
+- Vraag: "Welke kleuren zien jullie teruggaan?"
+
+**Observaties:**
+- Spotify = energiek, jong → groen accent
+- Netflix = dramatisch → rood accent
+- Each brand heeft 2-3 kleuren die overal terugkomen
+
+**Hypothese:** "Hoe zou de CSS kleurkeuze eruit zien?"
+
+*Laat studenten gokken*
+
+**De waarheid - Brand Colors in CSS:**
+```css
+:root {
+    --primary: #1DB954;    /* Spotify groen */
+    --background: #191414;  /* Donkergrijs */
+    --text: #FFFFFF;        /* Wit */
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+button {
+    background-color: var(--primary);
+}
+```
+
+**Waarom dit echt is:**
+- Professionele websites kiezen kleurenpaletten
+- Ze gebruiken dezelfde kleuren overal
+- Dit heet een "brand identity"
 
 **Kleurnotaties in CSS:**
 ```css
-/* Hex codes (meest gebruikt) */
-.box {
-    background-color: #3498db;
-    color: #2c3e50;
-}
+/* Hex (meest gebruikt) */
+.box { background-color: #1DB954; }
 
 /* RGB */
-.box {
-    background-color: rgb(52, 152, 219);
-}
+.box { background-color: rgb(29, 185, 84); }
 
 /* Kleurnamen */
-.box {
-    background-color: lightblue;
-}
-```
+.box { background-color: green; }
 
-**Kleurenschema:**
-```css
-body {
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-h1, h2, h3 {
-    color: #2c3e50;
-}
-
-a {
-    color: #3498db;
-}
-```
-
-**Contrast en Leesbaarheid:**
-```css
-/* Goed contrast */
-.goed {
-    background-color: white;
-    color: #333;
-}
-
-/* Slecht contrast - vermijden! */
-.slecht {
-    background-color: #f0f0f0;
-    color: #ddd;
-}
+/* CSS Variables (modern) */
+.box { background-color: var(--primary); }
 ```
 
 **Oefening 1 (10 min):**
-Maak een pagina met:
-- Lichte achtergrondkleur
-- Donkere tekstkleur
-- Één accent kleur
-- Test je contrast
+Kies 3 kleuren voor jouw website:
+- Primary (accent, buttons)
+- Secondary (backgrounds)
+- Text (content)
+
+Test contrast: https://webaim.org/resources/contrastchecker/
 
 ---
 
-### 2. Typografie (30 min)
+### 2. Typografie - De Kracht van Fonts (25 min)
+
+**Observatie van echte websites:**
+- Reddit uses Arial (clean, modern)
+- Medium uses custom serif (elegant, readable)
+- GitHub uses system fonts (fast, professional)
+
+**Vraag:** "Waarom kiezen zij verschillende fonts?"
+
+**De waarheid:**
+
+| Font Type | Feeling | Gebruik |
+|-----------|---------|---------|
+| **Serif** (Georgia, Times) | Klassiek, elegant | Artikel, books, luxury |
+| **Sans-serif** (Arial, Helvetica) | Modern, clean | Tech, corporate, web |
+| **Monospace** (Courier, Courier New) | Technical | Code, documentation |
+
+**Real HTML/CSS:**
+```html
+<article>
+    <h1>Blog Titel</h1>
+    <p>Dit is de artikel tekst...</p>
+</article>
+
+<code>const x = 5;</code>
+```
+
+```css
+/* Serif voor artikel - eleganter */
+article {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+}
+
+/* Sans-serif voor headings - modern */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 32px;
+}
+
+/* Monospace voor code - technical */
+code {
+    font-family: 'Courier New', monospace;
+}
+```
+
+**Font-size Hiërarchie (waarom groot/klein verschilt):**
+```css
+h1 { font-size: 32px; }   /* Grootste - MAIN MESSAGE */
+h2 { font-size: 24px; }   /* Medium - subsection */
+h3 { font-size: 18px; }   /* Klein - sub-subsection */
+p  { font-size: 16px; }   /* Body text */
+```
+
+**Line-height (leesbaarheid):**
+```css
+/* Slecht - tekst zit op elkaar */
+p { line-height: 1.0; }
+
+/* Goed - ruimte om te ademen */
+p { line-height: 1.6; }
+```
+
+**Contrast Checken:**
+- Donkere tekst op licht → goed
+- Lichte tekst op donker → goed
+- Grijs op grijs → slecht (vermijden!)
+
+**Oefening 2 (15 min):**
+Maak een artikel met:
+- H1, H2, H3 met verschillende sizes
+- Body text met line-height 1.6
+- Test leesbaarheid
+
+---
+
+### 3. Afbeeldingen Stylen (20 min)
+
+**Observatie van websites:**
+- Afbeeldingen hebben borders (clean)
+- Afbeeldingen hebben shadows (depth)
+- Afbeeldingen zijn afgerond (modern)
+- Afbeeldingen worden groter bij hover (interaction)
+
+**Real Example:**
+```html
+<img src="cat.jpg" alt="Cute cat" class="card-image">
+```
+
+**Hoe zouden zij het stylen?**
+
+```css
+.card-image {
+    /* Maximale breedte */
+    max-width: 100%;
+    
+    /* Afgeronde hoeken */
+    border-radius: 8px;
+    
+    /* Shadow voor depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Transition voor smooth hover */
+    transition: transform 0.3s;
+}
+
+.card-image:hover {
+    /* Zoom effect */
+    transform: scale(1.05);
+    
+    /* Shadow groter */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+```
+
+**Waarom dit werkt:**
+- `border-radius` → modern look
+- `box-shadow` → professioneel
+- `transform: scale(1.05)` → interactie (voelt responsief)
+- `transition` → smooth, niet abrupt
+
+**Oefening 3 (10 min):**
+Voeg afbeeldingen toe aan je website met:
+- Border-radius (afgeronde hoeken)
+- Box-shadow
+- Hover effect (scale)
+
+---
+
+### 4. Afsluiting & Reflectie (5 min)
+
+**Wat hebben we geleerd?**
+- Kleurenpaletten zijn intentioneel
+- Typografie veel meer dan "groot/klein" - het is hierachie
+- Afbeeldingen kunnen interactief en professioneel
+
+**Voor volgende les:**
+- Je website krijgt "brand identity"
+- Kleuren + Fonts + Afbeeldingen = geheel
 
 **Font Families:**
 ```css
