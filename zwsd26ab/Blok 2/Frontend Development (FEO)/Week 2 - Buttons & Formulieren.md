@@ -213,11 +213,6 @@ CSS:
 }
 ```
 
-**Voordeel:**
-- Real-world relevance (niet abstract)
-- Groepswerk = meer engagement
-- Visual feedback (beamer)
-- Competition aspect ("wie heeft coolste button?")
 
 ---
 

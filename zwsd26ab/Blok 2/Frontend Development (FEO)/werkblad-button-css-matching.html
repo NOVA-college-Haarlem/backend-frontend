@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button CSS Matching Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .instructions {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .buttons-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .css-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .button-item {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .button-label {
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .button-display {
+            min-height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .css-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 15px;
+            background: #f0f4f8;
+            border-radius: 6px;
+            border: 2px solid #d0dce6;
+            font-family: 'Courier New', monospace;
+            min-height: auto;
+        }
+
+        .css-label {
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .css-code {
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 3px solid #007bff;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #333;
+            overflow-x: auto;
+        }
+
+        /* Button Styles untuk Display */
+        .btn-blue-large {
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-gray-small {
+            padding: 10px;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-red-large {
+            padding: 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-white-small {
+            padding: 5px;
+            background-color: white;
+            color: #333;
+            border: 2px solid #ddd;
+            border-radius: 0;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-green-medium {
+            padding: 12px 18px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .answer-space {
+            display: none;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .content {
+                gap: 40px;
+            }
+
+            .button-item, .css-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Button CSS Matching Game</h1>
+        <p class="instructions">Verbind met pen de juiste CSS code met de bijbehorende button</p>
+
+        <div class="content">
+            <!-- BUTTONS COLUMN -->
+            <div class="buttons-column">
+                <div class="button-item">
+                    <div class="button-label">Button 1</div>
+                    <div class="button-display">
+                        <button class="btn-blue-large">Verzenden</button>
+                    </div>
+                    <div class="answer-space"></div>
+                </div>
+
+                <div class="button-item">
+                    <div class="button-label">Button 2</div>
+                    <div class="button-display">
+                        <button class="btn-gray-small">Annuleren</button>
+                    </div>
+                    <div class="answer-space"></div>
+                </div>
+
+                <div class="button-item">
+                    <div class="button-label">Button 3</div>
+                    <div class="button-display">
+                        <button class="btn-red-large">Verwijderen</button>
+                    </div>
+                    <div class="answer-space"></div>
+                </div>
+
+                <div class="button-item">
+                    <div class="button-label">Button 4</div>
+                    <div class="button-display">
+                        <button class="btn-white-small">Help</button>
+                    </div>
+                    <div class="answer-space"></div>
+                </div>
+
+                <div class="button-item">
+                    <div class="button-label">Button 5</div>
+                    <div class="button-display">
+                        <button class="btn-green-medium">Opslaan</button>
+                    </div>
+                    <div class="answer-space"></div>
+                </div>
+            </div>
+
+            <!-- CSS COLUMN -->
+            <div class="css-column">
+                <div class="css-item">
+                    <div class="css-label">CSS A</div>
+                    <div class="css-code">
+padding: 5px;<br>
+background: white;<br>
+border: 2px solid #ddd;<br>
+border-radius: 0;
+                    </div>
+                </div>
+
+                <div class="css-item">
+                    <div class="css-label">CSS B</div>
+                    <div class="css-code">
+padding: 20px;<br>
+background: #dc3545;<br>
+color: white;<br>
+border: none;<br>
+border-radius: 8px;
+                    </div>
+                </div>
+
+                <div class="css-item">
+                    <div class="css-label">CSS C</div>
+                    <div class="css-code">
+padding: 10px;<br>
+background: #6c757d;<br>
+color: white;<br>
+border: none;<br>
+border-radius: 0;
+                    </div>
+                </div>
+
+                <div class="css-item">
+                    <div class="css-label">CSS D</div>
+                    <div class="css-code">
+padding: 20px;<br>
+background: #007bff;<br>
+color: white;<br>
+border: none;<br>
+border-radius: 8px;
+                    </div>
+                </div>
+
+                <div class="css-item">
+                    <div class="css-label">CSS E</div>
+                    <div class="css-code">
+padding: 12px 18px;<br>
+background: #28a745;<br>
+color: white;<br>
+border: none;<br>
+border-radius: 4px;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
