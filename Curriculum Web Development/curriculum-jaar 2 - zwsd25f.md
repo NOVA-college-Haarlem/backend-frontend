@@ -16,9 +16,9 @@
 | **5** | Uitgewerkt | Backend-verdieping: PDO, security, soft delete, AJAX, filtering, error handling (plain PHP) + eindproject |
 | **6** | Uitgewerkt | Laravel: MVC, Eloquent-relaties, CRUD, authenticatie/autorisatie, bestellingen (many-to-many) + projecten |
 | **7** | Uitgewerkt | API's: consumeren, cachen, visualiseren, e-mail, een eigen REST API bouwen, full stack app + projectlessen |
-| **8** | Gedeeltelijk | Lessenreeks *Je code mondeling toelichten* (4 lessen): eigen Laravel-app verantwoorden met WHWA, design patterns, kwaliteit en beveiliging, proefassessment. `blok 8/Je code mondeling toelichten.md`; docentenhandleiding in de docentenrepo |
+| **8** | Gedeeltelijk | Lessenreeks *Je code mondeling toelichten* (4 lessen): eigen Laravel-app verantwoorden met WHWA, design patterns, kwaliteit en beveiliging, proefassessment. `blok 8/Je code mondeling toelichten.md`. *OWASP in de praktijk* (week 3-6, 6 kaarten): lekke Laravel-webshop LekkerShop, per OWASP Top 10-categorie hacken → PHPUnit-test (rood) → fixen (groen), afsluitend een audit van de eigen app. `blok 8/OWASP in de praktijk/`; template-repo `ZWSD25F---OWASP-Blok-8`; docentenhandleidingen in de docentenrepo |
 
-Van Blok 8 staat alleen de lessenreeks *Je code mondeling toelichten* in deze repo (voorbereiding op het mondeling assessment).
+Van Blok 8 staan de lessenreeksen *Je code mondeling toelichten* (voorbereiding op het mondeling assessment) en *OWASP in de praktijk* (beveiliging en eerste kennismaking met PHPUnit) in deze repo.
 
 ---
 
@@ -146,5 +146,5 @@ Na deze drie blokken kan een zwsd25f-student:
 
 ## 6. Openstaande punten
 
-- **Blok 8 is gedeeltelijk:** alleen de lessenreeks *Je code mondeling toelichten*. Overige inhoud nog te documenteren.
+- **Blok 8 is gedeeltelijk:** de lessenreeksen *Je code mondeling toelichten* en *OWASP in de praktijk*. Overige inhoud (o.a. de projectweek) nog te documenteren.
 - Zie ook `.claude/todo.md` voor de actuele stand van openstaand werk.
