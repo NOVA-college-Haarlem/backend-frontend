@@ -189,8 +189,7 @@ h1 {
 }
 ```
 
-## Deel 2: Extra Statuskaarten & Afbeeldingen Stylen (na uitleg 3)
-
+## Deel 2: Extra Statuskaarten & Afbeeldingen Stylen
 
 ### Doel
 
