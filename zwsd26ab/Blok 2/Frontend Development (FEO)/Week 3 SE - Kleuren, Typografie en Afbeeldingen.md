@@ -8,10 +8,10 @@
 
 Zet de basis van je Game Server Status-pagina op met een duidelijk kleurenpalet, goede leesbaarheid en technische server-info in monospace.
 
-### Stappen
+### Opdrachten
 
-1. Maak een nieuw projectmapje aan (bijv. server-status) met index.html en style.css.
-2. Neem de startcode hieronder over en kies je eigen kleuren in :root (check het contrast van je tekst op WebAIM Contrast Checker).
+1. Maak een nieuwe map aan met de naam `server-status` en maak daarin de bestanden `index.html` en `style.css` aan.
+2. Neem de startcode hieronder over.
 3. Pas de tekst aan naar jouw favoriete online game of eigen server (bijv. Valorant EU-West, Minecraft Survival, FiveM RP).
 4. Check: Staat de paginatitel (`<h1>`) strak in een sans-serif font en staan het IP-adres, poortnummer en ping netjes in een monospace blok?
 
@@ -196,15 +196,19 @@ h1 {
 
 Breid je dashboard uit naar een compleet overzicht met verschillende serverstatussen en strak gestylede afbeeldingen.
 
-### Stappen
+### Opdrachten deel 2
 
 1. Voeg 2 extra `<article class="server-card">` kaarten toe in index.html:
 	• Kaart 2: Een dienst met status Maintenance (bijv. Voice Chat of Database), inclusief eigen IP/poort in monospace.
 	• Kaart 3: Een dienst met status Offline (bijv. Login Server of EU-North Node).
-2. Maak de CSS-classes .maintenance en .offline aan en gebruik de statuskleuren uit :root (let op dat de tekst op de gele/oranje badge goed leesbaar blijft!).
+2. Maak de CSS-classes `.maintenance` en `.offline` aan en gebruik de statuskleuren uit :root (let op dat de tekst op de gele/oranje badge goed leesbaar blijft!).
 3. Voeg aan elke kaart een afbeelding toe (bijv. een afbeelding van de game-map, een serverrack of een netwerkicoon) met `<img src="..." alt="..." class="card-img">` bovenaan in de kaart.
-4. Style .card-img in CSS met:
-	• max-width: 100% (of width: 100%)
-	• border-radius: 8px
-	• box-shadow voor diepte
-	• Een :hover-effect met transform: scale(1.03) en een soepele transition: transform 0.3s
+4. Style `.card-img` in CSS met:
+	• `max-width: 100%` (of `width: 100%`)
+	• `border-radius: 8px`
+	• `box-shadow` voor diepte
+	• Een `:hover`-effect met `transform: scale(1.03)` en een soepele `transition: transform 0.3s`
+
+## Extra uitdaging
+
+Maak het formulier werkend met [Formspree](https://formspree.io/). Je kunt je formulier laten submitten naar Formspree, waarna het doorgestuurd wordt naar jouw eigen mailadres.
