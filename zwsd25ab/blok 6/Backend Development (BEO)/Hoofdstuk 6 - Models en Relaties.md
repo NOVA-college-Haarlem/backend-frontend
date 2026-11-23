@@ -126,7 +126,7 @@ Een product kan meerdere prijzen hebben (bijhouden van prijsgeschiedenis). We bo
        public function run(): void
        {
            $catan = Product::where('name', 'Catan')->first();
-           $carcassonne = Product::where('name', 'Carcassone')->first();
+           $carcassonne = Product::where('name', 'Carcassonne')->first();
            $uno = Product::where('name', 'Uno')->first();
 
            Price::insert([
